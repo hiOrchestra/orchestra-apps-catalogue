@@ -83,7 +83,7 @@
           "device": "desktop"
         }
       ],
-      "version": "0.2.1",
+      "version": "0.2.2",
       "tables": [
         "crm_settings",
         "crm_companies",
@@ -97,9 +97,9 @@
         "name": "app-crm"
       },
       "package": {
-        "path": "apps/crm/crm-0.2.1.tgz",
-        "sha256": "ab24fbc98cea4aca0a3185d53237e9c5ad6cb03944d69ee56867da945deef93e",
-        "size": 69880,
+        "path": "apps/crm/crm-0.2.2.tgz",
+        "sha256": "a7c7dde46142d05c07a589619c59ca03acf03222286e60f6db51004d834ef31a",
+        "size": 70325,
         "installer": "install.js"
       }
     },
@@ -185,7 +185,7 @@
           "title": "Your answers"
         }
       ],
-      "version": "0.2.1",
+      "version": "0.2.2",
       "tables": [
         "hd_settings",
         "hd_tickets",
@@ -198,9 +198,9 @@
         "name": "app-helpdesk"
       },
       "package": {
-        "path": "apps/helpdesk/helpdesk-0.2.1.tgz",
-        "sha256": "923e6f32dee34999b689cabb81d27a17f10832022add3b490d3366601d9a2b8b",
-        "size": 50902,
+        "path": "apps/helpdesk/helpdesk-0.2.2.tgz",
+        "sha256": "5f763f2ff655403fdcdadd291b6b69d5760fd6cee9e23e492a2fc7caf790da01",
+        "size": 50999,
         "installer": "install.js"
       }
     },
@@ -294,7 +294,7 @@
           "title": "Share your link"
         }
       ],
-      "version": "0.2.3",
+      "version": "0.2.4",
       "tables": [
         "bk_settings",
         "bk_types",
@@ -305,9 +305,9 @@
         "name": "app-booking"
       },
       "package": {
-        "path": "apps/booking/booking-0.2.3.tgz",
-        "sha256": "b2dcf203919fe0583ff56b05c9234c4ba906e4d23ccbf4154a12a072ebb62c6d",
-        "size": 56790,
+        "path": "apps/booking/booking-0.2.4.tgz",
+        "sha256": "15b405c4e32bdb1ca101e8ad457018070427a89cc68b5377d598cc1b9d5bda6f",
+        "size": 58452,
         "installer": "install.js"
       }
     },
@@ -376,7 +376,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.2.1",
+      "version": "0.2.2",
       "tables": [
         "forms_settings",
         "forms_templates",
@@ -389,9 +389,9 @@
         "name": "app-forms"
       },
       "package": {
-        "path": "apps/forms/forms-0.2.1.tgz",
-        "sha256": "7cd24815729c12829a8e4e3d07318bcd10e08bec3084ac90966ee970fa469236",
-        "size": 119223,
+        "path": "apps/forms/forms-0.2.2.tgz",
+        "sha256": "2ffa97ae12e95c80a2a72058c1ba8ad24efe8ed80d9d6fddb519f27ca2f829af",
+        "size": 119318,
         "installer": "install.js"
       }
     },
@@ -462,7 +462,7 @@
           "device": "desktop"
         }
       ],
-      "version": "0.2.1",
+      "version": "0.2.2",
       "tables": [
         "analytics_settings",
         "analytics_sites",
@@ -474,9 +474,9 @@
         "name": "app-analytics"
       },
       "package": {
-        "path": "apps/analytics/analytics-0.2.1.tgz",
-        "sha256": "e39d53a924b99bf9c286bfce659eac2accd753114ad567fb99ca2533414e4412",
-        "size": 50726,
+        "path": "apps/analytics/analytics-0.2.2.tgz",
+        "sha256": "52a1f8b262e9ca37d6e65c5c20002918b0d5f75a6a5645521247de228faf4879",
+        "size": 52856,
         "installer": "install.js"
       }
     },
@@ -549,7 +549,7 @@
           "title": "Your first role"
         }
       ],
-      "version": "0.3.4",
+      "version": "0.3.5",
       "tables": [
         "hr_company",
         "hr_settings",
@@ -561,9 +561,9 @@
         "name": "app-recruiter"
       },
       "package": {
-        "path": "apps/recruiter/recruiter-0.3.4.tgz",
-        "sha256": "d40bfc7c4ca579fd7eb58b4ae54ec6fbbf404ab122cf4e2102246adb32fddec1",
-        "size": 46915,
+        "path": "apps/recruiter/recruiter-0.3.5.tgz",
+        "sha256": "e6314e3b6fd3cfb27c8de063da6fc8b23e1e60fea8da1803b6f6a85d88430901",
+        "size": 47387,
         "installer": "install.js"
       }
     },
@@ -649,7 +649,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.3.1",
+      "version": "0.3.2",
       "tables": [
         "outreach_settings",
         "outreach_fields",
@@ -665,9 +665,9 @@
         "name": "app-outreach"
       },
       "package": {
-        "path": "apps/outreach/outreach-0.3.1.tgz",
-        "sha256": "ce4f788eea2cd7f0181145b5608067d54a6d2a13e02e83260355d08aac5ae78b",
-        "size": 111402,
+        "path": "apps/outreach/outreach-0.3.2.tgz",
+        "sha256": "098c527ea4d6f063023d1a420faa52e4ec49fdc3be2084184539675d795709db",
+        "size": 112874,
         "installer": "install.js"
       }
     },
@@ -759,7 +759,7 @@
           "title": "How you get paid"
         }
       ],
-      "version": "0.1.3",
+      "version": "0.1.4",
       "tables": [
         "inv_settings",
         "inv_series",
@@ -773,9 +773,9 @@
         "name": "app-invoices"
       },
       "package": {
-        "path": "apps/invoices/invoices-0.1.3.tgz",
-        "sha256": "f7c4b787165a6638e1656cd35133469b86424eb4e52d179de7e84d83fc9272af",
-        "size": 86426,
+        "path": "apps/invoices/invoices-0.1.4.tgz",
+        "sha256": "daceb8e3c63e3f3007fe84d36e6de14585e24ff0c05421b73fd6c759af5e918c",
+        "size": 90060,
         "installer": "install.js"
       }
     }
