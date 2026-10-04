@@ -649,6 +649,111 @@
         "size": 106829,
         "installer": "install.js"
       }
+    },
+    {
+      "id": "invoices",
+      "name": "Invoices",
+      "category": "Finance",
+      "summary": "Quotes and invoices your clients accept and pay online. Like Holded.",
+      "description": "Write a quote (or let the agent draft it from one sentence), issue it with the next number, and send the client a link where they accept it or pay the invoice by bank transfer or card. The agent drafts payment reminders for overdue invoices; nothing is sent until you approve it. Not certified fiscal software: it does not submit anything to a tax authority (no Verifactu, SII or e-invoicing).",
+      "brief": {
+        "user": "The owner, or whoever keeps the books, of a small company or a freelancer",
+        "frequency": "Several times a week",
+        "questions": [
+          "How much am I owed, and who is late?",
+          "Which quotes are waiting for an answer?",
+          "What did I invoice this client?"
+        ],
+        "primaryAction": "Issue an invoice or a quote, and send it to the client"
+      },
+      "surfaces": [
+        {
+          "id": "invoices",
+          "title": "Invoices",
+          "audience": "members",
+          "role": "desk"
+        },
+        {
+          "id": "invoice",
+          "title": "Invoice",
+          "audience": "public",
+          "role": "public"
+        }
+      ],
+      "needs": {
+        "agent": {
+          "required": true,
+          "why": "Drafts quotes from a sentence and writes payment reminders for you to approve."
+        },
+        "integrations": [
+          {
+            "slug": "gmail",
+            "why": "Sends quotes, invoices and reminders from your address, only when you press Send or Approve.",
+            "optional": true
+          },
+          {
+            "slug": "stripe",
+            "why": "A Pay by card button on each invoice, marked paid by itself. Card details never reach your workspace.",
+            "optional": true
+          }
+        ]
+      },
+      "outward": [
+        "Sends emails from your Gmail, only the ones you send or approve.",
+        "Creates a Stripe payment link for each invoice, when you turn Stripe on.",
+        "Publishes a page per document that only someone with its link can open."
+      ],
+      "by": "Orchestra",
+      "price": {
+        "model": "free"
+      },
+      "icon": "invoices",
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/invoices/screens/1-overview.png",
+          "caption": "What you are owed, who is late, and the quotes waiting for an answer",
+          "surface": "desk",
+          "device": "desktop"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/invoices/screens/2-invoice.png",
+          "caption": "An invoice exactly as the client sees it, with its link, email and payment beside it",
+          "surface": "desk",
+          "device": "desktop"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/invoices/screens/3-invoice-phone.png",
+          "caption": "The client's page on a phone: pay by card or bank transfer, or save it as a PDF",
+          "surface": "public",
+          "device": "mobile"
+        }
+      ],
+      "onboarding": [
+        {
+          "id": "company",
+          "title": "Your company"
+        },
+        {
+          "id": "pay",
+          "title": "How you get paid"
+        }
+      ],
+      "version": "0.1.0",
+      "tables": [
+        "inv_settings",
+        "inv_series",
+        "inv_clients",
+        "inv_documents",
+        "inv_emails",
+        "inv_links",
+        "inv_responses"
+      ],
+      "package": {
+        "path": "apps/invoices/invoices-0.1.0.tgz",
+        "sha256": "53349415e0fec04a24c746ec7edade04d5ca16c606bb3266b8f25ce2ca2a126a",
+        "size": 82314,
+        "installer": "install.js"
+      }
     }
   ]
 }
