@@ -56,6 +56,27 @@
       "price": {
         "model": "free"
       },
+      "icon": "crm",
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/crm/screens/1-today.png",
+          "caption": "Today: who to talk to, the steps the agent suggests and the emails waiting for your OK",
+          "surface": "desk",
+          "device": "desktop"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/crm/screens/2-pipeline.png",
+          "caption": "The pipeline by stage, with what each stage is worth",
+          "surface": "desk",
+          "device": "desktop"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/crm/screens/3-deal.png",
+          "caption": "A deal: its next step, the agent's suggestion and the whole history",
+          "surface": "desk",
+          "device": "desktop"
+        }
+      ],
       "version": "0.1.0",
       "tables": [
         "crm_settings",
@@ -124,6 +145,27 @@
       "price": {
         "model": "free"
       },
+      "icon": "helpdesk",
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/helpdesk/screens/1-inbox.png",
+          "caption": "The inbox: what waits for an answer, the most urgent first",
+          "surface": "desk",
+          "device": "desktop"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/helpdesk/screens/2-ticket.png",
+          "caption": "A ticket with the reply the agent drafted, ready to review and send",
+          "surface": "desk",
+          "device": "desktop"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/helpdesk/screens/3-contact.png",
+          "caption": "The public contact page, on a phone",
+          "surface": "public",
+          "device": "mobile"
+        }
+      ],
       "version": "0.1.0",
       "tables": [
         "hd_settings",
@@ -191,6 +233,27 @@
       "price": {
         "model": "free"
       },
+      "icon": "booking",
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/booking/screens/1-upcoming.png",
+          "caption": "Upcoming meetings, each with the agent's brief on the person",
+          "surface": "desk",
+          "device": "desktop"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/booking/screens/2-requests.png",
+          "caption": "Requests waiting for your OK",
+          "surface": "desk",
+          "device": "desktop"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/booking/screens/3-book.png",
+          "caption": "The booking page, on a phone, with your real free times",
+          "surface": "public",
+          "device": "mobile"
+        }
+      ],
       "version": "0.1.0",
       "tables": [
         "bk_settings",
@@ -249,6 +312,15 @@
       "price": {
         "model": "free"
       },
+      "icon": "forms",
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/forms/screens/1-form.png",
+          "caption": "A published form, one question at a time, on a phone",
+          "surface": "public",
+          "device": "mobile"
+        }
+      ],
       "version": "0.1.0",
       "tables": [
         "forms_settings",
@@ -309,6 +381,15 @@
       "price": {
         "model": "free"
       },
+      "icon": "analytics",
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/analytics/screens/1-overview.png",
+          "caption": "Visitors, visits and pages, compared with the period before",
+          "surface": "desk",
+          "device": "desktop"
+        }
+      ],
       "version": "0.1.0",
       "tables": [
         "analytics_sites",
@@ -367,6 +448,21 @@
       "price": {
         "model": "free"
       },
+      "icon": "recruiter",
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/recruiter/screens/1-careers.png",
+          "caption": "The public careers page with the open roles",
+          "surface": "public",
+          "device": "desktop"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/recruiter/screens/2-careers-phone.png",
+          "caption": "The careers page on a phone",
+          "surface": "public",
+          "device": "mobile"
+        }
+      ],
       "version": "0.1.0",
       "tables": [
         "hr_company",
