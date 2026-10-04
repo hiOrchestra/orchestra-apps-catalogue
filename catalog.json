@@ -522,7 +522,7 @@
           "title": "Your first role"
         }
       ],
-      "version": "0.3.2",
+      "version": "0.3.3",
       "tables": [
         "hr_company",
         "hr_settings",
@@ -531,9 +531,9 @@
         "hr_imports"
       ],
       "package": {
-        "path": "apps/recruiter/recruiter-0.3.2.tgz",
-        "sha256": "a07492269622ae93ceeaa94501965ba581be819de6b07425723813544f959f38",
-        "size": 42344,
+        "path": "apps/recruiter/recruiter-0.3.3.tgz",
+        "sha256": "48d97007cd439f56f528df2430bff9399613cbc348acf0661d5be03cd783f91d",
+        "size": 42719,
         "installer": "install.js"
       }
     }
