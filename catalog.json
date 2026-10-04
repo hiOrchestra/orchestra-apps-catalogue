@@ -349,8 +349,20 @@
       "icon": "forms",
       "screenshots": [
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/forms/screens/1-form.png",
-          "caption": "A published form, one question at a time, on a phone",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/forms/screens/1-build.png",
+          "caption": "Build a form question by question, with a live preview beside it",
+          "surface": "desk",
+          "device": "desktop"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/forms/screens/2-form.png",
+          "caption": "What people answer: one question at a time",
+          "surface": "public",
+          "device": "desktop"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/forms/screens/3-form-phone.png",
+          "caption": "The same form on a phone",
           "surface": "public",
           "device": "mobile"
         }
