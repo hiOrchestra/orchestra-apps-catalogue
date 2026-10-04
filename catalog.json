@@ -254,7 +254,25 @@
           "device": "mobile"
         }
       ],
-      "version": "0.1.0",
+      "onboarding": [
+        {
+          "id": "profile",
+          "title": "Your name and time zone"
+        },
+        {
+          "id": "calendar",
+          "title": "Connect Google Calendar"
+        },
+        {
+          "id": "hours",
+          "title": "Your available hours"
+        },
+        {
+          "id": "share",
+          "title": "Share your link"
+        }
+      ],
+      "version": "0.2.0",
       "tables": [
         "bk_settings",
         "bk_types",
@@ -262,9 +280,9 @@
         "bk_bookings"
       ],
       "package": {
-        "path": "apps/booking/booking-0.1.0.tgz",
-        "sha256": "9d23c7b3f26cd026019b9d4b0ce29e663e73bb1d68bd062e1e5b1f135b923de7",
-        "size": 47232,
+        "path": "apps/booking/booking-0.2.0.tgz",
+        "sha256": "669b6406510cd1990de5b8bbdda50b9b452f58fe761f512f5f37bed16901d876",
+        "size": 52046,
         "installer": "install.js"
       }
     },
@@ -375,7 +393,21 @@
         "integrations": []
       },
       "outward": [
-        "Serves a small tracking script and accepts visits, only from the sites you list."
+        "Serves a small tracking script and accepts visits, only from the websites you add."
+      ],
+      "onboarding": [
+        {
+          "id": "site",
+          "title": "Add your website"
+        },
+        {
+          "id": "snippet",
+          "title": "Paste the tracking line"
+        },
+        {
+          "id": "first-visit",
+          "title": "Receive the first visit"
+        }
       ],
       "by": "Orchestra",
       "price": {
@@ -390,17 +422,18 @@
           "device": "desktop"
         }
       ],
-      "version": "0.1.0",
+      "version": "0.2.0",
       "tables": [
+        "analytics_settings",
         "analytics_sites",
         "analytics_events",
         "analytics_daily",
         "analytics_reports"
       ],
       "package": {
-        "path": "apps/analytics/analytics-0.1.0.tgz",
-        "sha256": "970f46a58f42515d96f0532949b7cc86f89581ac753bf31ae2c3913ce673616d",
-        "size": 38261,
+        "path": "apps/analytics/analytics-0.2.0.tgz",
+        "sha256": "976a0f1abca07f7a13c75f3a95b0c0422ae37b505f69034a8907584cb35a7a46",
+        "size": 46828,
         "installer": "install.js"
       }
     },
