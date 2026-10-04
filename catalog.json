@@ -272,7 +272,7 @@
           "title": "Share your link"
         }
       ],
-      "version": "0.2.0",
+      "version": "0.2.1",
       "tables": [
         "bk_settings",
         "bk_types",
@@ -280,9 +280,9 @@
         "bk_bookings"
       ],
       "package": {
-        "path": "apps/booking/booking-0.2.0.tgz",
-        "sha256": "669b6406510cd1990de5b8bbdda50b9b452f58fe761f512f5f37bed16901d876",
-        "size": 52046,
+        "path": "apps/booking/booking-0.2.1.tgz",
+        "sha256": "4a2b87a249e876175c51fa80e236a48b00d2506d0502de5881eb11fcd011593f",
+        "size": 52229,
         "installer": "install.js"
       }
     },
