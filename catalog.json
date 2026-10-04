@@ -548,6 +548,107 @@
         "size": 42719,
         "installer": "install.js"
       }
+    },
+    {
+      "id": "outreach",
+      "name": "Outreach",
+      "category": "Marketing",
+      "summary": "Newsletters and email campaigns to your lists, with the agent finding missing emails. Like Mailchimp.",
+      "description": "Keep contacts and lists, write a newsletter or an announcement, see exactly who gets it and send it through your Resend account, now or at a set time. Every campaign has a report where each number opens the people behind it. Sequences write to people one at a time, reviewed first if you want, and the agent looks up the public email of contacts who have none. Unsubscribes, bounces and spam complaints are handled for you.",
+      "brief": {
+        "user": "Whoever sends the company's newsletters, announcements and outreach",
+        "frequency": "A few times a week",
+        "questions": [
+          "Who gets this email, and who is left out and why?",
+          "What went out, and who opened, replied, unsubscribed or bounced?",
+          "What is going out next?"
+        ],
+        "primaryAction": "Write an email, pick its lists, send yourself a test, then send or schedule it"
+      },
+      "surfaces": [
+        {
+          "id": "outreach",
+          "title": "Outreach",
+          "audience": "members",
+          "role": "desk"
+        },
+        {
+          "id": "outreach-unsubscribe",
+          "title": "Unsubscribe",
+          "audience": "public",
+          "role": "public"
+        }
+      ],
+      "needs": {
+        "agent": {
+          "required": true,
+          "why": "Looks up the public email of contacts who have none, with the page it read it on."
+        },
+        "integrations": [
+          {
+            "slug": "resend",
+            "why": "Sends every email from your own domain, and tells Outreach about bounces, opens and clicks.",
+            "optional": false
+          }
+        ]
+      },
+      "outward": [
+        "Sends the emails you send, schedule or start, from your Resend account; nothing leaves on its own.",
+        "Publishes an unsubscribe page that anyone with a link from one of your emails can use."
+      ],
+      "by": "Orchestra",
+      "price": {
+        "model": "free"
+      },
+      "icon": "outreach",
+      "onboarding": [
+        {
+          "id": "resend",
+          "title": "Connect Resend"
+        },
+        {
+          "id": "sender",
+          "title": "Your sender"
+        }
+      ],
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/outreach/screens/1-report.png",
+          "caption": "A newsletter's report: every number opens the people behind it",
+          "surface": "desk",
+          "device": "desktop"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/outreach/screens/2-contacts.png",
+          "caption": "Contacts with their lists, status and last email",
+          "surface": "desk",
+          "device": "desktop"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/outreach/screens/3-unsubscribe.png",
+          "caption": "The unsubscribe page a reader lands on, on a phone",
+          "surface": "public",
+          "device": "mobile"
+        }
+      ],
+      "version": "0.3.0",
+      "tables": [
+        "outreach_settings",
+        "outreach_fields",
+        "outreach_contacts",
+        "outreach_audiences",
+        "outreach_templates",
+        "outreach_campaigns",
+        "outreach_sends",
+        "outreach_suppressions",
+        "outreach_imports"
+      ],
+      "package": {
+        "path": "apps/outreach/outreach-0.3.0.tgz",
+        "sha256": "8241d59b066f1c884c1f1b52c59887aa671540392c37aebf4f77dd7ec49fdb82",
+        "size": 106829,
+        "installer": "install.js"
+      }
     }
   ]
 }
