@@ -1,0 +1,385 @@
+{
+  "version": 1,
+  "apps": [
+    {
+      "id": "crm",
+      "name": "CRM",
+      "category": "Sales",
+      "summary": "Contacts, companies and deals, with the agent doing the follow-up. Like HubSpot.",
+      "description": "A pipeline of deals, the people and companies behind them, and a timeline of every email and meeting. The agent enriches companies, proposes the next step for each deal and drafts the email; nothing is sent until you approve it.",
+      "brief": {
+        "user": "Founders and the sales team of a small company",
+        "frequency": "Every day",
+        "questions": [
+          "Who do I have to talk to today, and why?",
+          "At what stage is each deal, and which one is stuck?",
+          "What happened with this person or company?"
+        ],
+        "primaryAction": "Do or approve the next step of a deal"
+      },
+      "surfaces": [
+        {
+          "id": "crm",
+          "title": "CRM",
+          "audience": "members",
+          "role": "desk"
+        }
+      ],
+      "needs": {
+        "agent": {
+          "required": true,
+          "why": "Enriches companies and proposes next steps with a draft email."
+        },
+        "integrations": [
+          {
+            "slug": "gmail",
+            "why": "Reads mail with your contacts and sends the emails you approve.",
+            "optional": true
+          },
+          {
+            "slug": "googlecalendar",
+            "why": "Adds your meetings with contacts to their timeline.",
+            "optional": true
+          },
+          {
+            "slug": "hubspot",
+            "why": "Imports your existing companies, contacts and deals once.",
+            "optional": true
+          }
+        ]
+      },
+      "outward": [
+        "Sends emails from your Gmail, only the drafts you approve.",
+        "Reads your Gmail and Google Calendar when you turn sync on (read only)."
+      ],
+      "by": "Orchestra",
+      "price": {
+        "model": "free"
+      },
+      "version": "0.1.0",
+      "tables": [
+        "crm_settings",
+        "crm_companies",
+        "crm_contacts",
+        "crm_deals",
+        "crm_activities",
+        "crm_tasks",
+        "crm_drafts"
+      ],
+      "package": {
+        "path": "apps/crm/crm-0.1.0.tgz",
+        "sha256": "698c580f83c2e1bb32f8a09e1c959aebe9dabe800418844caca838a77ef3837a",
+        "size": 64999,
+        "installer": "install.js"
+      }
+    },
+    {
+      "id": "helpdesk",
+      "name": "Helpdesk",
+      "category": "Support",
+      "summary": "Customer requests by email and a contact page, with drafted replies. Like Zendesk.",
+      "description": "Every request becomes a ticket. The agent classifies it and drafts the answer from your knowledge base; a person reads it, edits it if needed and sends it. Includes a public contact page.",
+      "brief": {
+        "user": "Whoever answers customers in a small company",
+        "frequency": "Several times a day",
+        "questions": [
+          "Which requests wait for an answer, and which is most urgent?",
+          "What happened with this customer, and what do we answer?",
+          "What do they ask most, and how fast do we answer?"
+        ],
+        "primaryAction": "Review the agent's reply and send it"
+      },
+      "surfaces": [
+        {
+          "id": "helpdesk",
+          "title": "Helpdesk",
+          "audience": "members",
+          "role": "desk"
+        },
+        {
+          "id": "support",
+          "title": "Contact us",
+          "audience": "public",
+          "role": "public"
+        }
+      ],
+      "needs": {
+        "agent": {
+          "required": true,
+          "why": "Classifies each request and drafts the reply."
+        },
+        "integrations": [
+          {
+            "slug": "gmail",
+            "why": "Answers requests that came from the contact page.",
+            "optional": true
+          }
+        ]
+      },
+      "outward": [
+        "Sends the replies you approve: from the workspace address for email tickets, from your Gmail for contact-page tickets.",
+        "Publishes a contact page that anyone with the link can use."
+      ],
+      "by": "Orchestra",
+      "price": {
+        "model": "free"
+      },
+      "version": "0.1.0",
+      "tables": [
+        "hd_settings",
+        "hd_tickets",
+        "hd_messages",
+        "hd_articles",
+        "hd_macros",
+        "hd_requests"
+      ],
+      "package": {
+        "path": "apps/helpdesk/helpdesk-0.1.0.tgz",
+        "sha256": "d061274303b748162b9c0ca431d0694633457d51fcfbf8a4008111d5aa98956b",
+        "size": 45333,
+        "installer": "install.js"
+      }
+    },
+    {
+      "id": "booking",
+      "name": "Booking",
+      "category": "Sales",
+      "summary": "A booking page with your real availability, and a brief on each person. Like Calendly.",
+      "description": "People pick a time on your public page, computed from your Google Calendar without showing anything in it. You confirm each request, which creates the event and sends the invitation; the agent prepares a brief on the person.",
+      "brief": {
+        "user": "Whoever takes meetings: sales, demos, interviews, consultations",
+        "frequency": "Once to set it up, then when a booking arrives",
+        "questions": [
+          "What meetings do I have, and with whom?",
+          "Which bookings wait for my OK?",
+          "What times do I offer, for which kind of meeting?"
+        ],
+        "primaryAction": "Confirm a booking"
+      },
+      "surfaces": [
+        {
+          "id": "scheduling",
+          "title": "Scheduling",
+          "audience": "members",
+          "role": "desk"
+        },
+        {
+          "id": "book",
+          "title": "Book",
+          "audience": "public",
+          "role": "public"
+        }
+      ],
+      "needs": {
+        "agent": {
+          "required": true,
+          "why": "Prepares a brief on each person before the meeting."
+        },
+        "integrations": [
+          {
+            "slug": "googlecalendar",
+            "why": "Reads when you are busy and creates the confirmed events.",
+            "optional": false
+          }
+        ]
+      },
+      "outward": [
+        "Creates events in your Google Calendar and invites the person, only when you confirm (or if you turn on auto-confirm).",
+        "Publishes a booking page that anyone with the link can use."
+      ],
+      "by": "Orchestra",
+      "price": {
+        "model": "free"
+      },
+      "version": "0.1.0",
+      "tables": [
+        "bk_settings",
+        "bk_types",
+        "bk_slots",
+        "bk_bookings"
+      ],
+      "package": {
+        "path": "apps/booking/booking-0.1.0.tgz",
+        "sha256": "9d23c7b3f26cd026019b9d4b0ce29e663e73bb1d68bd062e1e5b1f135b923de7",
+        "size": 47232,
+        "installer": "install.js"
+      }
+    },
+    {
+      "id": "forms",
+      "name": "Forms",
+      "category": "Operations",
+      "summary": "Forms and surveys one question at a time, like Typeform.",
+      "description": "Build forms from a template or a description, publish them as a link, and read every response in your workspace. Responses can feed the CRM as leads.",
+      "brief": {
+        "user": "Anyone who collects answers: sign-ups, surveys, requests",
+        "frequency": "When a form is built, then as responses arrive",
+        "questions": [
+          "Which forms are live?",
+          "Who answered, and what did they say?",
+          "How many finish the form?"
+        ],
+        "primaryAction": "Publish a form and read its responses"
+      },
+      "surfaces": [
+        {
+          "id": "forms",
+          "title": "Forms",
+          "audience": "members",
+          "role": "desk"
+        },
+        {
+          "id": "form",
+          "title": "Form",
+          "audience": "public",
+          "role": "public"
+        }
+      ],
+      "needs": {
+        "agent": {
+          "required": true,
+          "why": "Drafts a form from a description you write."
+        },
+        "integrations": []
+      },
+      "outward": [
+        "Publishes forms as public pages that anyone with the link can answer."
+      ],
+      "by": "Orchestra",
+      "price": {
+        "model": "free"
+      },
+      "version": "0.1.0",
+      "tables": [
+        "forms_settings",
+        "forms_templates",
+        "forms_forms",
+        "forms_versions",
+        "forms_responses",
+        "forms_answers"
+      ],
+      "package": {
+        "path": "apps/forms/forms-0.1.0.tgz",
+        "sha256": "c509bb2f011fbbf8002c532e90427094d54c9b74fdc0dfc4f1a368eab48065f3",
+        "size": 105629,
+        "installer": "install.js"
+      }
+    },
+    {
+      "id": "analytics",
+      "name": "Analytics",
+      "category": "Marketing",
+      "summary": "Cookieless website analytics, a lighter Google Analytics.",
+      "description": "Counts visits, pages, sources and countries on your sites without cookies or personal data, and keeps the numbers in your own workspace. A tiny script on your site sends the visits; reports are rebuilt every hour.",
+      "brief": {
+        "user": "Whoever runs the website and its marketing",
+        "frequency": "A few times a week",
+        "questions": [
+          "How many people visit, and is it growing?",
+          "Where do they come from?",
+          "Which pages do they read?"
+        ],
+        "primaryAction": "Read the overview for a period"
+      },
+      "surfaces": [
+        {
+          "id": "analytics",
+          "title": "Analytics",
+          "audience": "members",
+          "role": "desk"
+        },
+        {
+          "id": "visits",
+          "title": "Visits",
+          "audience": "public",
+          "role": "public"
+        }
+      ],
+      "needs": {
+        "agent": {
+          "required": false,
+          "why": "Runs the hourly report as a script; no agent turns."
+        },
+        "integrations": []
+      },
+      "outward": [
+        "Serves a small tracking script and accepts visits, only from the sites you list."
+      ],
+      "by": "Orchestra",
+      "price": {
+        "model": "free"
+      },
+      "version": "0.1.0",
+      "tables": [
+        "analytics_sites",
+        "analytics_events",
+        "analytics_daily",
+        "analytics_reports"
+      ],
+      "package": {
+        "path": "apps/analytics/analytics-0.1.0.tgz",
+        "sha256": "970f46a58f42515d96f0532949b7cc86f89581ac753bf31ae2c3913ce673616d",
+        "size": 38261,
+        "installer": "install.js"
+      }
+    },
+    {
+      "id": "recruiter",
+      "name": "Recruiter",
+      "category": "Hiring",
+      "summary": "A careers page and a hiring desk, with every applicant read and scored.",
+      "description": "Publish open roles on a careers page; applications land in a hiring desk where the agent reads each CV, scores it against the role and writes why. You decide who moves on.",
+      "brief": {
+        "user": "Founders and whoever hires in a small company",
+        "frequency": "While a role is open, a few times a week",
+        "questions": [
+          "Who applied, and who is worth a call?",
+          "Why does the agent rate them so?",
+          "Which roles are open, and how are they going?"
+        ],
+        "primaryAction": "Read the shortlist and move a candidate on"
+      },
+      "surfaces": [
+        {
+          "id": "recruiter",
+          "title": "Recruiter",
+          "audience": "members",
+          "role": "desk"
+        },
+        {
+          "id": "careers",
+          "title": "Careers",
+          "audience": "public",
+          "role": "public"
+        }
+      ],
+      "needs": {
+        "agent": {
+          "required": true,
+          "why": "Reads and scores every application."
+        },
+        "integrations": []
+      },
+      "outward": [
+        "Publishes a careers page and an application form that anyone with the link can use."
+      ],
+      "by": "Orchestra",
+      "price": {
+        "model": "free"
+      },
+      "version": "0.1.0",
+      "tables": [
+        "hr_company",
+        "hr_settings",
+        "hr_roles",
+        "hr_applications"
+      ],
+      "package": {
+        "path": "apps/recruiter/recruiter-0.1.0.tgz",
+        "sha256": "26bc5cb29074c14693f5653677544d4ea0de49473f4e93ee5b88a1422c2b8f42",
+        "size": 28656,
+        "installer": "install.js"
+      }
+    }
+  ]
+}
