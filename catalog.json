@@ -355,7 +355,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.1.0",
+      "version": "0.2.0",
       "tables": [
         "forms_settings",
         "forms_templates",
@@ -365,9 +365,9 @@
         "forms_answers"
       ],
       "package": {
-        "path": "apps/forms/forms-0.1.0.tgz",
-        "sha256": "c509bb2f011fbbf8002c532e90427094d54c9b74fdc0dfc4f1a368eab48065f3",
-        "size": 105629,
+        "path": "apps/forms/forms-0.2.0.tgz",
+        "sha256": "d864ba04f6e6e3b931c483be6c9c39c7923ed7d96cc3d512b5a812c84dbe83d2",
+        "size": 117809,
         "installer": "install.js"
       }
     },
