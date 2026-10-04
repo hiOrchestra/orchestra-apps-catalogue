@@ -738,7 +738,7 @@
           "title": "How you get paid"
         }
       ],
-      "version": "0.1.0",
+      "version": "0.1.1",
       "tables": [
         "inv_settings",
         "inv_series",
@@ -749,9 +749,9 @@
         "inv_responses"
       ],
       "package": {
-        "path": "apps/invoices/invoices-0.1.0.tgz",
-        "sha256": "53349415e0fec04a24c746ec7edade04d5ca16c606bb3266b8f25ce2ca2a126a",
-        "size": 82314,
+        "path": "apps/invoices/invoices-0.1.1.tgz",
+        "sha256": "d3a1c354bb698e91aebe43f6e52d65696977ba4a988cc5f382e053f5d8fa37cf",
+        "size": 82423,
         "installer": "install.js"
       }
     }
