@@ -376,7 +376,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.2.2",
+      "version": "0.2.3",
       "tables": [
         "forms_settings",
         "forms_templates",
@@ -389,9 +389,9 @@
         "name": "app-forms"
       },
       "package": {
-        "path": "apps/forms/forms-0.2.2.tgz",
-        "sha256": "2ffa97ae12e95c80a2a72058c1ba8ad24efe8ed80d9d6fddb519f27ca2f829af",
-        "size": 119318,
+        "path": "apps/forms/forms-0.2.3.tgz",
+        "sha256": "ed5c3b2d35b39b10cb4b06ae786605a5c214c977b2779c02282553292f46d453",
+        "size": 119294,
         "installer": "install.js"
       }
     },
@@ -649,7 +649,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.3.2",
+      "version": "0.3.3",
       "tables": [
         "outreach_settings",
         "outreach_fields",
@@ -665,9 +665,9 @@
         "name": "app-outreach"
       },
       "package": {
-        "path": "apps/outreach/outreach-0.3.2.tgz",
-        "sha256": "098c527ea4d6f063023d1a420faa52e4ec49fdc3be2084184539675d795709db",
-        "size": 112874,
+        "path": "apps/outreach/outreach-0.3.3.tgz",
+        "sha256": "febfea712f92409eee95c215df6dddcfd534c5df08943e97e05a6db6b3874e57",
+        "size": 113030,
         "installer": "install.js"
       }
     },
@@ -776,6 +776,236 @@
         "path": "apps/invoices/invoices-0.1.4.tgz",
         "sha256": "daceb8e3c63e3f3007fe84d36e6de14585e24ff0c05421b73fd6c759af5e918c",
         "size": 90060,
+        "installer": "install.js"
+      }
+    },
+    {
+      "id": "tables",
+      "name": "Tables",
+      "category": "Hospitality",
+      "summary": "Restaurant bookings without per-cover fees: your own booking page and a service sheet for the door. Like CoverManager or TheFork Manager.",
+      "description": "Guests book a table on your own page (from Instagram, Google Maps or your website): they pick a day, how many they are and a time, and inside your rules the table is theirs at once, with the smallest free table that fits. Each guest gets a link to confirm, change or cancel. At the door, Today is the service sheet: who comes, at what time, how many, at which table, with notes and allergies, and Arrived or No-show on each row; a walk-in or a phone booking is one button. Guests build up by themselves (visits, no-shows, VIPs), or import them from TheFork, CoverManager or Quandoo. Sources shows where bookings come from and estimates the commission you avoided. Optional: confirmations and reminders from your Gmail, and an agent that reads booking emails and books them for you.",
+      "brief": {
+        "user": "A restaurant: the host at the door, the manager, the owner",
+        "frequency": "Every service, and whenever the phone rings",
+        "questions": [
+          "Who comes today, at what time, how many, at which table?",
+          "Which bookings wait for my OK?",
+          "Who are my guests, and where do bookings come from?"
+        ],
+        "primaryAction": "Seat a guest: mark Arrived, or add a walk-in or a phone booking"
+      },
+      "surfaces": [
+        {
+          "id": "tables",
+          "title": "Tables",
+          "audience": "members",
+          "role": "desk"
+        },
+        {
+          "id": "tables-book",
+          "title": "Book a table",
+          "audience": "public",
+          "role": "public"
+        }
+      ],
+      "needs": {
+        "agent": {
+          "required": false,
+          "why": "Optional: reads booking emails in your Gmail and writes a brief before each service. Off until you turn it on."
+        },
+        "integrations": [
+          {
+            "slug": "gmail",
+            "why": "Optional: sends guests their confirmation, a reminder the day before and change notices from your own address. Bookings work without it.",
+            "optional": true
+          }
+        ]
+      },
+      "outward": [
+        "Publishes a booking page that anyone with the link can use; inside your rules a booking is confirmed at once.",
+        "When you turn emails on: sends each guest their confirmation, a reminder about a day before and a note when the booking changes, from your Gmail.",
+        "When you turn booking emails on: answers booking emails inside your rules from your Gmail; every other reply waits for your OK."
+      ],
+      "by": "Orchestra",
+      "price": {
+        "model": "free"
+      },
+      "icon": "tables",
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/tables/screens/1-today.png",
+          "caption": "Today's service sheet: who comes, when, how many, which table, notes and allergies",
+          "surface": "desk",
+          "device": "desktop"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/tables/screens/2-sources.png",
+          "caption": "Where bookings come from, and the commission booking direct avoids (an estimate)",
+          "surface": "desk",
+          "device": "desktop"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/tables/screens/3-book.png",
+          "caption": "The booking page on a phone: day, people, time, done",
+          "surface": "public",
+          "device": "mobile"
+        }
+      ],
+      "onboarding": [
+        {
+          "id": "hours",
+          "title": "Your restaurant and its hours"
+        },
+        {
+          "id": "tables",
+          "title": "Your tables"
+        },
+        {
+          "id": "emails",
+          "title": "Emails to guests (optional)"
+        }
+      ],
+      "version": "0.1.0",
+      "tables": [
+        "tb_settings",
+        "tb_services",
+        "tb_exceptions",
+        "tb_tables",
+        "tb_guests",
+        "tb_bookings",
+        "tb_days",
+        "tb_times",
+        "tb_links",
+        "tb_changes",
+        "tb_emails",
+        "tb_mail",
+        "tb_briefs",
+        "tb_imports"
+      ],
+      "skill": {
+        "name": "app-tables"
+      },
+      "package": {
+        "path": "apps/tables/tables-0.1.0.tgz",
+        "sha256": "f047f67adf3ac4be73d3f84c66e055ae53f2b5206cf15fa136ab8f6ea0a57e21",
+        "size": 114982,
+        "installer": "install.js"
+      }
+    },
+    {
+      "id": "appointments",
+      "name": "Appointments",
+      "category": "Services",
+      "summary": "Appointments for salons and clinics with no commission on new clients: a booking page, the day's agenda per person, and where every client came from. Like Fresha or Booksy.",
+      "description": "Clients book online from your page (from Instagram, Google Maps or your website: a link for each), picking the service, the person or whoever is free, a day and a time, and get a private link to change or cancel before your deadline. The desk shows today's agenda with a column per person: book a phone call in two clicks, mark arrived or no-show, block time; the week, clients with their history and notes, services with buffers, your team's hours with breaks and days off. Sources shows where appointments come from and what booking direct saved against a marketplace's new-client fee. Confirmations and reminders go from your Gmail if you connect it; optionally, the agent books from booking emails too.",
+      "brief": {
+        "user": "The owner and the front desk of a hair or beauty salon, barber, aesthetics or physio clinic",
+        "frequency": "All day: the agenda is open while the business is",
+        "questions": [
+          "Who is coming today, with whom, and at what time?",
+          "When is someone free for this service?",
+          "Who is this client, and where do my clients come from?"
+        ],
+        "primaryAction": "Book an appointment from a phone call in two clicks"
+      },
+      "surfaces": [
+        {
+          "id": "appointments",
+          "title": "Appointments",
+          "audience": "members",
+          "role": "desk"
+        },
+        {
+          "id": "appointments-book",
+          "title": "Book an appointment",
+          "audience": "public",
+          "role": "public"
+        }
+      ],
+      "needs": {
+        "agent": {
+          "required": false,
+          "why": "Optional: reads booking emails and books them within your rules, and drafts invitations for clients due back. The app works fully without it."
+        },
+        "integrations": [
+          {
+            "slug": "gmail",
+            "why": "Sends clients their confirmation, change notices and reminders from your own address (and, if you turn it on, lets the agent read booking emails). Without it bookings work the same, with no emails.",
+            "optional": true
+          }
+        ]
+      },
+      "outward": [
+        "Publishes a booking page that anyone with the link can use, and a private page for each client to change or cancel their appointment.",
+        "Sends each client their confirmation, any change or cancellation and reminders from your Gmail, only if you connect it and turn emails on.",
+        "Anything the agent writes outside your rules waits for your Approve."
+      ],
+      "by": "Orchestra",
+      "price": {
+        "model": "free"
+      },
+      "icon": "appointments",
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/appointments/screens/1-today.png",
+          "caption": "Today's agenda, a column per person: arrived, no-shows, blocked time",
+          "surface": "desk",
+          "device": "desktop"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/appointments/screens/2-services.png",
+          "caption": "Services with their length, price, buffers and when clients are due back",
+          "surface": "desk",
+          "device": "desktop"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/appointments/screens/3-book.png",
+          "caption": "The booking page on a phone, in your clients' language",
+          "surface": "public",
+          "device": "mobile"
+        }
+      ],
+      "onboarding": [
+        {
+          "id": "business",
+          "title": "Your business"
+        },
+        {
+          "id": "services",
+          "title": "Your services"
+        },
+        {
+          "id": "team",
+          "title": "Your team and their hours"
+        },
+        {
+          "id": "gmail",
+          "title": "Emails from your Gmail (optional)"
+        }
+      ],
+      "version": "0.1.0",
+      "tables": [
+        "ap_settings",
+        "ap_services",
+        "ap_staff",
+        "ap_time_off",
+        "ap_blocks",
+        "ap_clients",
+        "ap_bookings",
+        "ap_holds",
+        "ap_requests",
+        "ap_links",
+        "ap_emails",
+        "ap_inbox"
+      ],
+      "skill": {
+        "name": "app-appointments"
+      },
+      "package": {
+        "path": "apps/appointments/appointments-0.1.0.tgz",
+        "sha256": "b4c09569674007a8d14d5a91babc9a987ad1f94c7f390bd0d2396901efd32b9b",
+        "size": 120781,
         "installer": "install.js"
       }
     }
