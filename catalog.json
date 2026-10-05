@@ -866,7 +866,7 @@
           "title": "Emails to guests (optional)"
         }
       ],
-      "version": "0.1.0",
+      "version": "0.1.1",
       "tables": [
         "tb_settings",
         "tb_services",
@@ -887,9 +887,9 @@
         "name": "app-tables"
       },
       "package": {
-        "path": "apps/tables/tables-0.1.0.tgz",
-        "sha256": "f047f67adf3ac4be73d3f84c66e055ae53f2b5206cf15fa136ab8f6ea0a57e21",
-        "size": 114982,
+        "path": "apps/tables/tables-0.1.1.tgz",
+        "sha256": "8876891537922c4db7a47cae315541618a0984d69888a96df139a2bee17ebb8f",
+        "size": 115159,
         "installer": "install.js"
       }
     },
@@ -984,7 +984,7 @@
           "title": "Emails from your Gmail (optional)"
         }
       ],
-      "version": "0.1.0",
+      "version": "0.1.1",
       "tables": [
         "ap_settings",
         "ap_services",
@@ -1003,9 +1003,9 @@
         "name": "app-appointments"
       },
       "package": {
-        "path": "apps/appointments/appointments-0.1.0.tgz",
-        "sha256": "b4c09569674007a8d14d5a91babc9a987ad1f94c7f390bd0d2396901efd32b9b",
-        "size": 120781,
+        "path": "apps/appointments/appointments-0.1.1.tgz",
+        "sha256": "5c612c913eafb14caf7f30a7cbacaee29aeef057dbc2f0efc99945591e8e8cec",
+        "size": 120965,
         "installer": "install.js"
       }
     }
