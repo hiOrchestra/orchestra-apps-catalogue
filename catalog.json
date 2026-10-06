@@ -83,7 +83,7 @@
           "device": "desktop"
         }
       ],
-      "version": "0.2.2",
+      "version": "0.2.3",
       "tables": [
         "crm_settings",
         "crm_companies",
@@ -97,9 +97,9 @@
         "name": "app-crm"
       },
       "package": {
-        "path": "apps/crm/crm-0.2.2.tgz",
-        "sha256": "a7c7dde46142d05c07a589619c59ca03acf03222286e60f6db51004d834ef31a",
-        "size": 70325,
+        "path": "apps/crm/crm-0.2.3.tgz",
+        "sha256": "991165c794c11b5bbd32e1d319d285a346ba44f8ad8ef4c31fceda8e56fdb86e",
+        "size": 71229,
         "installer": "install.js"
       }
     },
@@ -294,7 +294,7 @@
           "title": "Share your link"
         }
       ],
-      "version": "0.2.4",
+      "version": "0.2.5",
       "tables": [
         "bk_settings",
         "bk_types",
@@ -305,9 +305,9 @@
         "name": "app-booking"
       },
       "package": {
-        "path": "apps/booking/booking-0.2.4.tgz",
-        "sha256": "15b405c4e32bdb1ca101e8ad457018070427a89cc68b5377d598cc1b9d5bda6f",
-        "size": 58452,
+        "path": "apps/booking/booking-0.2.5.tgz",
+        "sha256": "9fcc9177bc02243a7b602f1779776a066c4de2d535943d01f729a1a30a099833",
+        "size": 59360,
         "installer": "install.js"
       }
     },
@@ -376,7 +376,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.2.3",
+      "version": "0.2.4",
       "tables": [
         "forms_settings",
         "forms_templates",
@@ -389,9 +389,9 @@
         "name": "app-forms"
       },
       "package": {
-        "path": "apps/forms/forms-0.2.3.tgz",
-        "sha256": "ed5c3b2d35b39b10cb4b06ae786605a5c214c977b2779c02282553292f46d453",
-        "size": 119294,
+        "path": "apps/forms/forms-0.2.4.tgz",
+        "sha256": "fcf1ca03455767026f3234b13808db5253df2e032b2defb0d289d631d733695e",
+        "size": 120263,
         "installer": "install.js"
       }
     },
@@ -649,7 +649,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.3.3",
+      "version": "0.3.4",
       "tables": [
         "outreach_settings",
         "outreach_fields",
@@ -665,9 +665,9 @@
         "name": "app-outreach"
       },
       "package": {
-        "path": "apps/outreach/outreach-0.3.3.tgz",
-        "sha256": "febfea712f92409eee95c215df6dddcfd534c5df08943e97e05a6db6b3874e57",
-        "size": 113030,
+        "path": "apps/outreach/outreach-0.3.4.tgz",
+        "sha256": "1daec916b0f98081beb0bb41fb1eeab83a366a56eb63ae8e31688f8a61d197e9",
+        "size": 113989,
         "installer": "install.js"
       }
     },
