@@ -1,9 +1,13 @@
-# Orchestra apps catalogue
+# Orchestra catalogue of ready-made projects
 
-The apps an Orchestra workspace can install with one click: a CRM, a helpdesk,
-a booking page, forms, website analytics, a hiring desk. Each one runs inside
-the workspace that installs it: its data, its automations and its pages live
-there, and nothing leaves it unless the app says so and a person approves it.
+The ready-made projects an Orchestra workspace can create with one click: a CRM,
+a helpdesk, a booking page, forms, website analytics, a hiring desk. Each one is
+created as a PROJECT of its own in the workspace that installs it — its data,
+its processes and its pages live there, run by the project's coordinator — and
+nothing leaves it unless the setup says so and a person approves it.
+
+(The repository keeps its name; inside Orchestra these are "Proyectos listos
+para usar". Each entry is still called an app in `catalog.json`.)
 
 This repository is the catalogue's index. Orchestra curates it: an app or a
 new version reaches workspaces only when it is merged here.
@@ -21,8 +25,13 @@ new version reaches workspaces only when it is merged here.
 
 ## How an install works
 
-From the portal, an admin opens Canvas → Catalogue, picks an app, reads what it
-creates and what it can send out, chooses the agent that runs it, and installs.
+From the portal, an admin opens Projects → New project → A ready-made one, picks a
+setup, reads what it creates and what it can send out, names the project, and
+creates it. The workspace makes a NEW project with its own coordinator and runs
+the installer with `--project <the new project> --agent <its coordinator>`.
+Installing a setup that is already there updates it in its own project. An
+assistant does the same through the Orchestra MCP (projects.catalogue,
+projects.install).
 
 The installer converges:
 
