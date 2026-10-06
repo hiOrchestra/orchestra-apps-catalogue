@@ -784,7 +784,7 @@
       "name": "Tables",
       "category": "Hospitality",
       "summary": "Restaurant bookings without per-cover fees: your own booking page and a service sheet for the door. Like CoverManager or TheFork Manager.",
-      "description": "Guests book a table on your own page (from Instagram, Google Maps or your website): they pick a day, how many they are and a time, and inside your rules the table is theirs at once, with the smallest free table that fits. Each guest gets a link to confirm, change or cancel. At the door, Today is the service sheet: who comes, at what time, how many, at which table, with notes and allergies, and Arrived or No-show on each row; a walk-in or a phone booking is one button. Guests build up by themselves (visits, no-shows, VIPs), or import them from TheFork, CoverManager or Quandoo. Sources shows where bookings come from and estimates the commission you avoided. Optional: confirmations and reminders from your Gmail, and an agent that reads booking emails and books them for you.",
+      "description": "Guests book a table on your own page (from Instagram, Google Maps or your website): they pick a day, how many they are and a time, and inside your rules the table is theirs at once, with the smallest free table that fits. Each guest gets a link to confirm, change or cancel. At the door, Today is the service sheet: who comes, at what time, how many, at which table, with notes and allergies, and Arrived or No-show on each row; a walk-in or a phone booking is one button. Guests build up by themselves (visits, no-shows, VIPs), or import them from TheFork, CoverManager or Quandoo. Sources shows where bookings come from and estimates the commission you avoided. Optional: confirmations and reminders through your Gmail or your Resend, and an agent that reads booking emails in Gmail and books them for you.",
       "brief": {
         "user": "A restaurant: the host at the door, the manager, the owner",
         "frequency": "Every service, and whenever the phone rings",
@@ -817,14 +817,19 @@
         "integrations": [
           {
             "slug": "gmail",
-            "why": "Optional: sends guests their confirmation, a reminder the day before and change notices from your own address. Bookings work without it.",
+            "why": "Optional, one of Gmail or Resend, to email guests: their confirmation, reminders and change notices, from your own address (replies land there). Also the inbox the optional agent reads. Bookings work without it.",
+            "optional": true
+          },
+          {
+            "slug": "resend",
+            "why": "Optional, one of Gmail or Resend, to email guests: the same emails, from an address on your own domain verified in Resend. Bookings work without it.",
             "optional": true
           }
         ]
       },
       "outward": [
         "Publishes a booking page that anyone with the link can use; inside your rules a booking is confirmed at once.",
-        "When you turn emails on: sends each guest their confirmation, a reminder about a day before and a note when the booking changes, from your Gmail.",
+        "When you turn emails on: sends each guest their confirmation, a reminder about a day before and a note when the booking changes, through the sender you choose (your Gmail or your Resend).",
         "When you turn booking emails on: answers booking emails inside your rules from your Gmail; every other reply waits for your OK."
       ],
       "by": "Orchestra",
@@ -863,10 +868,10 @@
         },
         {
           "id": "emails",
-          "title": "Emails to guests (optional)"
+          "title": "Emails to guests, through Gmail or Resend (optional)"
         }
       ],
-      "version": "0.1.2",
+      "version": "0.1.3",
       "tables": [
         "tb_settings",
         "tb_services",
@@ -887,9 +892,9 @@
         "name": "app-tables"
       },
       "package": {
-        "path": "apps/tables/tables-0.1.2.tgz",
-        "sha256": "78de9bb12dc2907aaeaec01773598bcf6ce2d3322a7cb18a226f74d58e47649a",
-        "size": 115349,
+        "path": "apps/tables/tables-0.1.3.tgz",
+        "sha256": "0535a076f2e7637a117528e6def7463492d2f383e7b01a88e4cf9e1f07c04fe1",
+        "size": 126016,
         "installer": "install.js"
       }
     },
@@ -898,7 +903,7 @@
       "name": "Appointments",
       "category": "Services",
       "summary": "Appointments for salons and clinics with no commission on new clients: a booking page, the day's agenda per person, and where every client came from. Like Fresha or Booksy.",
-      "description": "Clients book online from your page (from Instagram, Google Maps or your website: a link for each), picking the service, the person or whoever is free, a day and a time, and get a private link to change or cancel before your deadline. The desk shows today's agenda with a column per person: book a phone call in two clicks, mark arrived or no-show, block time; the week, clients with their history and notes, services with buffers, your team's hours with breaks and days off. Sources shows where appointments come from and what booking direct saved against a marketplace's new-client fee. Confirmations and reminders go from your Gmail if you connect it; optionally, the agent books from booking emails too.",
+      "description": "Clients book online from your page (from Instagram, Google Maps or your website: a link for each), picking the service, the person or whoever is free, a day and a time, and get a private link to change or cancel before your deadline. The desk shows today's agenda with a column per person: book a phone call in two clicks, mark arrived or no-show, block time; the week, clients with their history and notes, services with buffers, your team's hours with breaks and days off. Sources shows where appointments come from and what booking direct saved against a marketplace's new-client fee. Confirmations and reminders go through your Gmail or your Resend, whichever you choose; optionally, the agent books from booking emails in Gmail too.",
       "brief": {
         "user": "The owner and the front desk of a hair or beauty salon, barber, aesthetics or physio clinic",
         "frequency": "All day: the agenda is open while the business is",
@@ -931,14 +936,19 @@
         "integrations": [
           {
             "slug": "gmail",
-            "why": "Sends clients their confirmation, change notices and reminders from your own address (and, if you turn it on, lets the agent read booking emails). Without it bookings work the same, with no emails.",
+            "why": "Optional, one of Gmail or Resend, to email clients: their confirmation, reminders and change notices, from your own address (replies land there). Also the inbox the optional agent reads. Bookings work without it.",
+            "optional": true
+          },
+          {
+            "slug": "resend",
+            "why": "Optional, one of Gmail or Resend, to email clients: the same emails, from an address on your own domain verified in Resend. Bookings work without it.",
             "optional": true
           }
         ]
       },
       "outward": [
         "Publishes a booking page that anyone with the link can use, and a private page for each client to change or cancel their appointment.",
-        "Sends each client their confirmation, any change or cancellation and reminders from your Gmail, only if you connect it and turn emails on.",
+        "Sends each client their confirmation, any change or cancellation and reminders through the sender you choose (your Gmail or your Resend), only if you turn emails on.",
         "Anything the agent writes outside your rules waits for your Approve."
       ],
       "by": "Orchestra",
@@ -981,10 +991,10 @@
         },
         {
           "id": "gmail",
-          "title": "Emails from your Gmail (optional)"
+          "title": "Emails to clients, through Gmail or Resend (optional)"
         }
       ],
-      "version": "0.1.2",
+      "version": "0.1.3",
       "tables": [
         "ap_settings",
         "ap_services",
@@ -1003,9 +1013,9 @@
         "name": "app-appointments"
       },
       "package": {
-        "path": "apps/appointments/appointments-0.1.2.tgz",
-        "sha256": "bb7ac195f2b551597357aa64424c2f90977d8f46ca085eb60051f9ea56bc6136",
-        "size": 121023,
+        "path": "apps/appointments/appointments-0.1.3.tgz",
+        "sha256": "94fbac5cf7599e2fa7eeaff88252a4f72b413603924a67be95efb307b879457f",
+        "size": 131883,
         "installer": "install.js"
       }
     }
