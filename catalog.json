@@ -101,6 +101,74 @@
         "sha256": "991165c794c11b5bbd32e1d319d285a346ba44f8ad8ef4c31fceda8e56fdb86e",
         "size": 71229,
         "installer": "install.js"
+      },
+      "emoji": "🤝",
+      "coordinator": {
+        "objective": "Keep every deal moving: the right next step for each one, nothing forgotten, and every email reviewed before it goes out.",
+        "instructions": [
+          "Each morning, list who the team has to talk to today and why.",
+          "When a deal has had no activity for a week, propose its next step with a draft email.",
+          "Enrich new companies and link new contacts to their company.",
+          "Never mark a deal won or lost yourself: suggest it."
+        ],
+        "level": "keep",
+        "alwaysAsk": [
+          "sending any email to a contact",
+          "changing the stage of a deal"
+        ]
+      },
+      "i18n": {
+        "es": {
+          "name": "CRM",
+          "category": "Ventas",
+          "summary": "Contactos, empresas y oportunidades, con el agente haciendo el seguimiento. Como HubSpot.",
+          "description": "Un embudo de oportunidades, las personas y empresas que hay detrás y una línea de tiempo de cada correo y reunión. El agente completa las empresas, propone el siguiente paso de cada oportunidad y redacta el correo; no se envía nada hasta que lo apruebas.",
+          "brief": {
+            "user": "Fundadores y el equipo comercial de una empresa pequeña",
+            "frequency": "Cada día",
+            "questions": [
+              "¿Con quién tengo que hablar hoy, y por qué?",
+              "¿En qué etapa está cada oportunidad, y cuál está parada?",
+              "¿Qué pasó con esta persona o empresa?"
+            ],
+            "primaryAction": "Hacer o aprobar el siguiente paso de una oportunidad"
+          },
+          "needs": {
+            "agent": {
+              "why": "Completa las empresas y propone los siguientes pasos con un borrador de correo."
+            },
+            "integrations": {
+              "gmail": "Lee el correo con tus contactos y envía los correos que apruebas.",
+              "googlecalendar": "Añade tus reuniones con contactos a su línea de tiempo.",
+              "hubspot": "Importa una vez tus empresas, contactos y oportunidades."
+            }
+          },
+          "outward": [
+            "Envía correos desde tu Gmail, solo los borradores que apruebas.",
+            "Lee tu Gmail y tu Google Calendar cuando activas la sincronización (solo lectura)."
+          ],
+          "onboarding": [
+            "Trae tus conversaciones"
+          ],
+          "captions": [
+            "Hoy: con quién hablar, los pasos que sugiere el agente y los correos que esperan tu OK",
+            "El embudo por etapas, con lo que vale cada una",
+            "Una oportunidad: su siguiente paso, la sugerencia del agente y todo el historial"
+          ],
+          "coordinator": {
+            "objective": "Que cada oportunidad avance: el siguiente paso correcto para cada una, nada olvidado, y cada correo revisado antes de salir.",
+            "instructions": [
+              "Cada mañana, lista con quién tiene que hablar el equipo hoy y por qué.",
+              "Cuando una oportunidad lleve una semana sin actividad, propone su siguiente paso con un borrador de correo.",
+              "Completa las empresas nuevas y vincula los contactos nuevos a su empresa.",
+              "Nunca marques una oportunidad como ganada o perdida tú: sugiérelo."
+            ],
+            "alwaysAsk": [
+              "enviar cualquier correo a un contacto",
+              "cambiar la etapa de una oportunidad"
+            ]
+          }
+        }
       }
     },
     {
@@ -202,6 +270,73 @@
         "sha256": "5f763f2ff655403fdcdadd291b6b69d5760fd6cee9e23e492a2fc7caf790da01",
         "size": 50999,
         "installer": "install.js"
+      },
+      "emoji": "🎧",
+      "coordinator": {
+        "objective": "Every customer gets a correct answer in time, and the knowledge base covers more of what they ask.",
+        "instructions": [
+          "Classify each new request and draft the reply from the knowledge base.",
+          "Answer the most urgent first; flag anything waiting more than a day.",
+          "When the same question comes three times with no article, propose one.",
+          "Never promise what the sources do not say: ask instead."
+        ],
+        "level": "keep",
+        "alwaysAsk": [
+          "sending any reply to a customer",
+          "publishing or changing a knowledge-base article"
+        ]
+      },
+      "i18n": {
+        "es": {
+          "name": "Helpdesk",
+          "category": "Soporte",
+          "summary": "Peticiones de clientes por correo y una página de contacto, con respuestas redactadas. Como Zendesk.",
+          "description": "Cada petición se convierte en un ticket. El agente la clasifica y redacta la respuesta desde tu base de conocimiento; una persona la lee, la edita si hace falta y la envía. Incluye una página de contacto pública.",
+          "brief": {
+            "user": "Quien atiende a los clientes en una empresa pequeña",
+            "frequency": "Varias veces al día",
+            "questions": [
+              "¿Qué peticiones esperan respuesta, y cuál es la más urgente?",
+              "¿Qué pasó con este cliente, y qué le respondemos?",
+              "¿Qué preguntan más, y lo rápido que respondemos?"
+            ],
+            "primaryAction": "Revisar la respuesta del agente y enviarla"
+          },
+          "needs": {
+            "agent": {
+              "why": "Clasifica cada petición y redacta la respuesta."
+            },
+            "integrations": {
+              "gmail": "Responde las peticiones que llegaron por la página de contacto."
+            }
+          },
+          "outward": [
+            "Envía las respuestas que apruebas: desde la dirección del espacio para los tickets por correo, desde tu Gmail para los de la página de contacto.",
+            "Publica una página de contacto que puede usar cualquiera con el enlace."
+          ],
+          "onboarding": [
+            "Dónde te escriben tus clientes",
+            "Tus respuestas"
+          ],
+          "captions": [
+            "La bandeja: lo que espera respuesta, lo más urgente primero",
+            "Un ticket con la respuesta que redactó el agente, lista para revisar y enviar",
+            "La página de contacto pública, en un móvil"
+          ],
+          "coordinator": {
+            "objective": "Que cada cliente reciba una respuesta correcta y a tiempo, y que la base de conocimiento cubra cada vez más de lo que preguntan.",
+            "instructions": [
+              "Clasifica cada petición nueva y redacta la respuesta desde la base de conocimiento.",
+              "Atiende primero lo más urgente; avisa de lo que lleve más de un día esperando.",
+              "Cuando la misma pregunta llegue tres veces sin artículo, propón uno.",
+              "Nunca prometas lo que no dicen las fuentes: pregunta."
+            ],
+            "alwaysAsk": [
+              "enviar cualquier respuesta a un cliente",
+              "publicar o cambiar un artículo de la base de conocimiento"
+            ]
+          }
+        }
       }
     },
     {
@@ -309,6 +444,73 @@
         "sha256": "9fcc9177bc02243a7b602f1779776a066c4de2d535943d01f729a1a30a099833",
         "size": 59360,
         "installer": "install.js"
+      },
+      "emoji": "📅",
+      "coordinator": {
+        "objective": "People book meetings easily, every booking is confirmed in time, and each meeting starts with a brief on the person.",
+        "instructions": [
+          "Prepare a brief on each person before their meeting.",
+          "Flag bookings that wait for confirmation more than a few hours.",
+          "Keep the available hours in line with what the person says."
+        ],
+        "level": "keep",
+        "alwaysAsk": [
+          "confirming or declining a booking",
+          "changing the available hours"
+        ]
+      },
+      "i18n": {
+        "es": {
+          "name": "Reservas",
+          "category": "Ventas",
+          "summary": "Una página de reservas con tu disponibilidad real, y un resumen de cada persona. Como Calendly.",
+          "description": "La gente elige una hora en tu página pública, calculada desde tu Google Calendar sin mostrar nada de él. Confirmas cada petición, lo que crea el evento y envía la invitación; el agente prepara un resumen de la persona.",
+          "brief": {
+            "user": "Quien tiene reuniones: ventas, demos, entrevistas, consultas",
+            "frequency": "Una vez para configurarla, y luego cuando llega una reserva",
+            "questions": [
+              "¿Qué reuniones tengo, y con quién?",
+              "¿Qué reservas esperan mi OK?",
+              "¿Qué horas ofrezco, y para qué tipo de reunión?"
+            ],
+            "primaryAction": "Confirmar una reserva"
+          },
+          "needs": {
+            "agent": {
+              "why": "Prepara un resumen de cada persona antes de la reunión."
+            },
+            "integrations": {
+              "googlecalendar": "Lee cuándo estás ocupado y crea los eventos confirmados."
+            }
+          },
+          "outward": [
+            "Crea eventos en tu Google Calendar e invita a la persona, solo cuando confirmas (o si activas la confirmación automática).",
+            "Publica una página de reservas que puede usar cualquiera con el enlace."
+          ],
+          "onboarding": [
+            "Tu nombre y zona horaria",
+            "Conecta Google Calendar",
+            "Tus horas disponibles",
+            "Comparte tu enlace"
+          ],
+          "captions": [
+            "Próximas reuniones, cada una con el resumen del agente",
+            "Peticiones que esperan tu OK",
+            "La página de reservas, en un móvil, con tus huecos reales"
+          ],
+          "coordinator": {
+            "objective": "Que reservar sea fácil, cada reserva se confirme a tiempo y cada reunión empiece con un resumen de la persona.",
+            "instructions": [
+              "Prepara un resumen de cada persona antes de su reunión.",
+              "Avisa de las reservas que lleven más de unas horas esperando confirmación.",
+              "Mantén las horas disponibles como diga la persona."
+            ],
+            "alwaysAsk": [
+              "confirmar o rechazar una reserva",
+              "cambiar las horas disponibles"
+            ]
+          }
+        }
       }
     },
     {
@@ -393,6 +595,63 @@
         "sha256": "fcf1ca03455767026f3234b13808db5253df2e032b2defb0d289d631d733695e",
         "size": 120263,
         "installer": "install.js"
+      },
+      "emoji": "📝",
+      "coordinator": {
+        "objective": "Forms that people finish, and every response read and put to use.",
+        "instructions": [
+          "Draft a form from the description the person gives, one question at a time.",
+          "Summarise new responses once a day and flag the ones that need someone.",
+          "Suggest where a form loses people."
+        ],
+        "level": "keep",
+        "alwaysAsk": [
+          "publishing a form or changing a live one"
+        ]
+      },
+      "i18n": {
+        "es": {
+          "name": "Formularios",
+          "category": "Operaciones",
+          "summary": "Formularios y encuestas de una pregunta a la vez, como Typeform.",
+          "description": "Crea formularios desde una plantilla o una descripción, publícalos como un enlace y lee cada respuesta en tu espacio de trabajo. Las respuestas pueden entrar en el CRM como contactos.",
+          "brief": {
+            "user": "Cualquiera que recoge respuestas: inscripciones, encuestas, solicitudes",
+            "frequency": "Al crear un formulario, y luego según llegan respuestas",
+            "questions": [
+              "¿Qué formularios están publicados?",
+              "¿Quién respondió, y qué dijo?",
+              "¿Cuántos terminan el formulario?"
+            ],
+            "primaryAction": "Publicar un formulario y leer sus respuestas"
+          },
+          "needs": {
+            "agent": {
+              "why": "Redacta un formulario desde una descripción que escribes."
+            },
+            "integrations": {}
+          },
+          "outward": [
+            "Publica formularios como páginas públicas que puede responder cualquiera con el enlace."
+          ],
+          "onboarding": [],
+          "captions": [
+            "Crea un formulario pregunta a pregunta, con la vista previa al lado",
+            "Lo que responde la gente: una pregunta a la vez",
+            "El mismo formulario en un móvil"
+          ],
+          "coordinator": {
+            "objective": "Formularios que la gente termina, y cada respuesta leída y aprovechada.",
+            "instructions": [
+              "Redacta un formulario desde la descripción que te den, una pregunta a la vez.",
+              "Resume las respuestas nuevas una vez al día y avisa de las que necesitan a alguien.",
+              "Sugiere dónde un formulario pierde a la gente."
+            ],
+            "alwaysAsk": [
+              "publicar un formulario o cambiar uno publicado"
+            ]
+          }
+        }
       }
     },
     {
@@ -478,6 +737,63 @@
         "sha256": "52a1f8b262e9ca37d6e65c5c20002918b0d5f75a6a5645521247de228faf4879",
         "size": 52856,
         "installer": "install.js"
+      },
+      "emoji": "📈",
+      "coordinator": {
+        "objective": "Know how the website is doing without cookies: visits, sources and pages, and what changed.",
+        "instructions": [
+          "Once a week, summarise visits, sources and top pages against the week before.",
+          "Flag a sudden drop or jump in visits."
+        ],
+        "level": "observe",
+        "alwaysAsk": [
+          "adding or removing a tracked website"
+        ]
+      },
+      "i18n": {
+        "es": {
+          "name": "Analítica",
+          "category": "Marketing",
+          "summary": "Analítica web sin cookies, un Google Analytics más ligero.",
+          "description": "Cuenta visitas, páginas, orígenes y países de tus webs sin cookies ni datos personales, y guarda los números en tu propio espacio de trabajo. Un pequeño script en tu web envía las visitas; los informes se rehacen cada hora.",
+          "brief": {
+            "user": "Quien lleva la web y su marketing",
+            "frequency": "Unas veces por semana",
+            "questions": [
+              "¿Cuánta gente visita, y está creciendo?",
+              "¿De dónde vienen?",
+              "¿Qué páginas leen?"
+            ],
+            "primaryAction": "Leer el resumen de un periodo"
+          },
+          "needs": {
+            "agent": {
+              "why": "Hace el informe de cada hora como un script; sin turnos de agente."
+            },
+            "integrations": {}
+          },
+          "outward": [
+            "Sirve un pequeño script de seguimiento y acepta visitas, solo de las webs que añades."
+          ],
+          "onboarding": [
+            "Añade tu web",
+            "Pega la línea de seguimiento",
+            "Recibe la primera visita"
+          ],
+          "captions": [
+            "Visitantes, visitas y páginas, comparados con el periodo anterior"
+          ],
+          "coordinator": {
+            "objective": "Saber cómo va la web sin cookies: visitas, orígenes y páginas, y qué cambió.",
+            "instructions": [
+              "Una vez a la semana, resume visitas, orígenes y páginas principales frente a la semana anterior.",
+              "Avisa de una caída o subida brusca de visitas."
+            ],
+            "alwaysAsk": [
+              "añadir o quitar una web medida"
+            ]
+          }
+        }
       }
     },
     {
@@ -565,6 +881,67 @@
         "sha256": "e6314e3b6fd3cfb27c8de063da6fc8b23e1e60fea8da1803b6f6a85d88430901",
         "size": 47387,
         "installer": "install.js"
+      },
+      "emoji": "🧑‍💼",
+      "coordinator": {
+        "objective": "Every applicant read and scored fairly, and the right people moved on quickly.",
+        "instructions": [
+          "Read each new application and score it against the role, saying why.",
+          "Keep a shortlist per open role.",
+          "Flag candidates waiting for an answer more than a week."
+        ],
+        "level": "keep",
+        "alwaysAsk": [
+          "moving a candidate on or rejecting them",
+          "publishing or closing a role"
+        ]
+      },
+      "i18n": {
+        "es": {
+          "name": "Selección",
+          "category": "Contratación",
+          "summary": "Una página de empleo y un panel de selección, con cada candidatura leída y puntuada.",
+          "description": "Publica las vacantes en una página de empleo; las candidaturas llegan a un panel donde el agente lee cada CV, lo puntúa frente al puesto y explica por qué. Tú decides quién sigue.",
+          "brief": {
+            "user": "Fundadores y quien contrata en una empresa pequeña",
+            "frequency": "Mientras haya una vacante, unas veces por semana",
+            "questions": [
+              "¿Quién se presentó, y a quién vale la pena llamar?",
+              "¿Por qué lo puntúa así el agente?",
+              "¿Qué vacantes hay, y cómo van?"
+            ],
+            "primaryAction": "Leer la lista corta y hacer avanzar a un candidato"
+          },
+          "needs": {
+            "agent": {
+              "why": "Lee y puntúa cada candidatura."
+            },
+            "integrations": {}
+          },
+          "outward": [
+            "Publica una página de empleo y un formulario de candidatura que puede usar cualquiera con el enlace."
+          ],
+          "onboarding": [
+            "Tu empresa",
+            "Tu primera vacante"
+          ],
+          "captions": [
+            "La página de empleo pública con las vacantes",
+            "La página de empleo en un móvil"
+          ],
+          "coordinator": {
+            "objective": "Cada candidatura leída y puntuada con justicia, y las personas adecuadas avanzando rápido.",
+            "instructions": [
+              "Lee cada candidatura nueva y puntúala frente al puesto, diciendo por qué.",
+              "Mantén una lista corta por vacante.",
+              "Avisa de candidatos que lleven más de una semana esperando respuesta."
+            ],
+            "alwaysAsk": [
+              "hacer avanzar o descartar a un candidato",
+              "publicar o cerrar una vacante"
+            ]
+          }
+        }
       }
     },
     {
@@ -669,6 +1046,71 @@
         "sha256": "1daec916b0f98081beb0bb41fb1eeab83a366a56eb63ae8e31688f8a61d197e9",
         "size": 113989,
         "installer": "install.js"
+      },
+      "emoji": "📣",
+      "coordinator": {
+        "objective": "Campaigns that reach the right people, with clean lists and every send reviewed.",
+        "instructions": [
+          "Look up the public email of contacts who have none, saying where you found it.",
+          "Report on each campaign a day after it goes out.",
+          "Keep lists clean: unsubscribes and bounces out."
+        ],
+        "level": "keep",
+        "alwaysAsk": [
+          "sending or scheduling any campaign",
+          "adding contacts to a list"
+        ]
+      },
+      "i18n": {
+        "es": {
+          "name": "Campañas",
+          "category": "Marketing",
+          "summary": "Newsletters y campañas de correo a tus listas, con el agente encontrando los correos que faltan. Como Mailchimp.",
+          "description": "Guarda contactos y listas, escribe una newsletter o un anuncio, ve exactamente quién lo recibe y envíalo con tu cuenta de Resend, ahora o a una hora. Cada campaña tiene un informe donde cada número abre a las personas que hay detrás. Las secuencias escriben a la gente de una en una, revisadas antes si quieres, y el agente busca el correo público de los contactos que no lo tienen. Las bajas, rebotes y quejas de spam se gestionan solas.",
+          "brief": {
+            "user": "Quien envía las newsletters, anuncios y campañas de la empresa",
+            "frequency": "Unas veces por semana",
+            "questions": [
+              "¿Quién recibe este correo, y quién se queda fuera y por qué?",
+              "¿Qué salió, y quién lo abrió, respondió, se dio de baja o rebotó?",
+              "¿Qué sale a continuación?"
+            ],
+            "primaryAction": "Escribir un correo, elegir sus listas, enviarte una prueba y enviarlo o programarlo"
+          },
+          "needs": {
+            "agent": {
+              "why": "Busca el correo público de los contactos que no lo tienen, con la página donde lo leyó."
+            },
+            "integrations": {
+              "resend": "Envía cada correo desde tu propio dominio y avisa de rebotes, aperturas y clics."
+            }
+          },
+          "outward": [
+            "Envía los correos que envías, programas o inicias, desde tu cuenta de Resend; nada sale solo.",
+            "Publica una página de baja que puede usar cualquiera con un enlace de uno de tus correos."
+          ],
+          "onboarding": [
+            "Conecta Resend",
+            "Tu remitente"
+          ],
+          "captions": [
+            "El informe de una newsletter: cada número abre a las personas que hay detrás",
+            "Contactos con sus listas, estado y último correo",
+            "La página de baja a la que llega un lector, en un móvil"
+          ],
+          "coordinator": {
+            "objective": "Campañas que llegan a quien deben, con listas limpias y cada envío revisado.",
+            "instructions": [
+              "Busca el correo público de los contactos que no lo tienen, diciendo dónde lo encontraste.",
+              "Informa de cada campaña un día después de salir.",
+              "Mantén las listas limpias: fuera bajas y rebotes."
+            ],
+            "alwaysAsk": [
+              "enviar o programar cualquier campaña",
+              "añadir contactos a una lista"
+            ]
+          }
+        }
       }
     },
     {
@@ -777,6 +1219,73 @@
         "sha256": "daceb8e3c63e3f3007fe84d36e6de14585e24ff0c05421b73fd6c759af5e918c",
         "size": 90060,
         "installer": "install.js"
+      },
+      "emoji": "🧾",
+      "coordinator": {
+        "objective": "Get paid on time: quotes answered, invoices sent, and late ones followed up politely.",
+        "instructions": [
+          "Draft a quote from the sentence the person gives.",
+          "Each week, list who is late and draft a polite reminder.",
+          "Never change an issued invoice: propose a correction instead."
+        ],
+        "level": "keep",
+        "alwaysAsk": [
+          "sending any quote, invoice or reminder",
+          "issuing an invoice"
+        ]
+      },
+      "i18n": {
+        "es": {
+          "name": "Facturas",
+          "category": "Finanzas",
+          "summary": "Presupuestos y facturas que tus clientes aceptan y pagan online. Como Holded.",
+          "description": "Escribe un presupuesto (o deja que el agente lo redacte desde una frase), emítelo con el siguiente número y envía al cliente un enlace donde lo acepta o paga la factura por transferencia o tarjeta. El agente redacta recordatorios de pago para las facturas vencidas; no se envía nada hasta que lo apruebas. No es software fiscal certificado: no envía nada a ninguna agencia tributaria (ni Verifactu, ni SII, ni factura electrónica).",
+          "brief": {
+            "user": "El dueño, o quien lleva las cuentas, de una empresa pequeña o un autónomo",
+            "frequency": "Varias veces por semana",
+            "questions": [
+              "¿Cuánto me deben, y quién va tarde?",
+              "¿Qué presupuestos esperan respuesta?",
+              "¿Qué le facturé a este cliente?"
+            ],
+            "primaryAction": "Emitir una factura o un presupuesto y enviarlo al cliente"
+          },
+          "needs": {
+            "agent": {
+              "why": "Redacta presupuestos desde una frase y escribe recordatorios de pago para que los apruebes."
+            },
+            "integrations": {
+              "gmail": "Envía presupuestos, facturas y recordatorios desde tu dirección, solo cuando pulsas Enviar o Aprobar.",
+              "stripe": "Un botón de Pagar con tarjeta en cada factura, que se marca pagada sola. Los datos de la tarjeta nunca llegan a tu espacio."
+            }
+          },
+          "outward": [
+            "Envía correos desde tu Gmail, solo los que envías o apruebas.",
+            "Crea un enlace de pago de Stripe para cada factura, cuando activas Stripe.",
+            "Publica una página por documento que solo puede abrir quien tenga su enlace."
+          ],
+          "onboarding": [
+            "Tu empresa",
+            "Cómo te pagan"
+          ],
+          "captions": [
+            "Lo que te deben, quién va tarde y los presupuestos que esperan respuesta",
+            "Una factura tal como la ve el cliente, con su enlace, correo y pago al lado",
+            "La página del cliente en un móvil: pagar con tarjeta o transferencia, o guardarla en PDF"
+          ],
+          "coordinator": {
+            "objective": "Cobrar a tiempo: presupuestos respondidos, facturas enviadas y las vencidas reclamadas con educación.",
+            "instructions": [
+              "Redacta un presupuesto desde la frase que te den.",
+              "Cada semana, lista quién va tarde y redacta un recordatorio educado.",
+              "Nunca cambies una factura emitida: propón una rectificación."
+            ],
+            "alwaysAsk": [
+              "enviar cualquier presupuesto, factura o recordatorio",
+              "emitir una factura"
+            ]
+          }
+        }
       }
     },
     {
@@ -896,6 +1405,74 @@
         "sha256": "0535a076f2e7637a117528e6def7463492d2f383e7b01a88e4cf9e1f07c04fe1",
         "size": 126016,
         "installer": "install.js"
+      },
+      "emoji": "🍽️",
+      "coordinator": {
+        "objective": "Every table booked directly, every service prepared, and fewer no-shows.",
+        "instructions": [
+          "Before each service, summarise who comes, special notes and allergies.",
+          "Flag repeated no-shows and VIP guests.",
+          "When booking emails are on, book only inside the rules; anything else waits."
+        ],
+        "level": "keep",
+        "alwaysAsk": [
+          "answering a booking email outside the rules",
+          "changing tables or opening hours"
+        ]
+      },
+      "i18n": {
+        "es": {
+          "name": "Mesas",
+          "category": "Hostelería",
+          "summary": "Reservas de restaurante sin comisión por cubierto: tu propia página de reservas y una hoja de servicio para la puerta. Como CoverManager o TheFork Manager.",
+          "description": "Los clientes reservan mesa en tu propia página (desde Instagram, Google Maps o tu web): eligen día, cuántos son y una hora, y dentro de tus reglas la mesa es suya al momento, con la mesa libre más pequeña que encaje. Cada cliente recibe un enlace para confirmar, cambiar o cancelar. En la puerta, Hoy es la hoja de servicio: quién viene, a qué hora, cuántos, en qué mesa, con notas y alergias, y Llegó o No vino en cada fila; un cliente sin reserva o una reserva por teléfono es un botón. Los clientes se van formando solos (visitas, no-shows, VIP), o los importas de TheFork, CoverManager o Quandoo. Orígenes muestra de dónde vienen las reservas y estima la comisión que te ahorras. Opcional: confirmaciones y recordatorios por tu Gmail o tu Resend, y un agente que lee los correos de reserva en Gmail y reserva por ti.",
+          "brief": {
+            "user": "Un restaurante: quien recibe en la puerta, el encargado, el dueño",
+            "frequency": "Cada servicio, y cada vez que suena el teléfono",
+            "questions": [
+              "¿Quién viene hoy, a qué hora, cuántos, en qué mesa?",
+              "¿Qué reservas esperan mi OK?",
+              "¿Quiénes son mis clientes, y de dónde vienen las reservas?"
+            ],
+            "primaryAction": "Sentar a un cliente: marcar Llegó, o añadir uno sin reserva o una reserva por teléfono"
+          },
+          "needs": {
+            "agent": {
+              "why": "Opcional: lee los correos de reserva en tu Gmail y escribe un resumen antes de cada servicio. Apagado hasta que lo enciendes."
+            },
+            "integrations": {
+              "gmail": "Opcional, Gmail o Resend, para escribir a los clientes: su confirmación, recordatorios y avisos de cambios, desde tu dirección (las respuestas llegan ahí). También el buzón que lee el agente opcional. Las reservas funcionan sin él.",
+              "resend": "Opcional, Gmail o Resend, para escribir a los clientes: los mismos correos, desde una dirección de tu dominio verificada en Resend. Las reservas funcionan sin él."
+            }
+          },
+          "outward": [
+            "Publica una página de reservas que puede usar cualquiera con el enlace; dentro de tus reglas, una reserva se confirma al momento.",
+            "Cuando activas los correos: envía a cada cliente su confirmación, un recordatorio un día antes y un aviso cuando la reserva cambia, con el remitente que elijas (tu Gmail o tu Resend).",
+            "Cuando activas los correos de reserva: responde los correos de reserva dentro de tus reglas desde tu Gmail; cualquier otra respuesta espera tu OK."
+          ],
+          "onboarding": [
+            "Tu restaurante y su horario",
+            "Tus mesas",
+            "Correos a los clientes, por Gmail o Resend (opcional)"
+          ],
+          "captions": [
+            "La hoja de servicio de hoy: quién viene, cuándo, cuántos, qué mesa, notas y alergias",
+            "De dónde vienen las reservas, y la comisión que te ahorra reservar directo (estimada)",
+            "La página de reservas en un móvil: día, personas, hora, listo"
+          ],
+          "coordinator": {
+            "objective": "Cada mesa reservada directamente, cada servicio preparado, y menos no-shows.",
+            "instructions": [
+              "Antes de cada servicio, resume quién viene, notas especiales y alergias.",
+              "Avisa de no-shows repetidos y de clientes VIP.",
+              "Cuando los correos de reserva estén activos, reserva solo dentro de las reglas; lo demás espera."
+            ],
+            "alwaysAsk": [
+              "responder un correo de reserva fuera de las reglas",
+              "cambiar mesas u horario"
+            ]
+          }
+        }
       }
     },
     {
@@ -1017,6 +1594,75 @@
         "sha256": "94fbac5cf7599e2fa7eeaff88252a4f72b413603924a67be95efb307b879457f",
         "size": 131883,
         "installer": "install.js"
+      },
+      "emoji": "💇",
+      "coordinator": {
+        "objective": "A full, well-kept agenda: clients booked directly, fewer no-shows, and the ones due back invited.",
+        "instructions": [
+          "Each morning, summarise the day per person and any gaps.",
+          "Draft invitations for clients due back for their next visit.",
+          "When booking emails are on, book only inside the rules; anything else waits."
+        ],
+        "level": "keep",
+        "alwaysAsk": [
+          "sending invitations or anything outside the rules to a client",
+          "changing services, prices or team hours"
+        ]
+      },
+      "i18n": {
+        "es": {
+          "name": "Citas",
+          "category": "Servicios",
+          "summary": "Citas para peluquerías y clínicas sin comisión por cliente nuevo: una página de reservas, la agenda del día por persona y de dónde vino cada cliente. Como Fresha o Booksy.",
+          "description": "Los clientes reservan online desde tu página (desde Instagram, Google Maps o tu web: un enlace para cada uno), eligiendo el servicio, la persona o quien esté libre, un día y una hora, y reciben un enlace privado para cambiar o cancelar antes de tu límite. El panel muestra la agenda de hoy con una columna por persona: reserva una llamada en dos clics, marca llegó o no vino, bloquea tiempo; la semana, los clientes con su historial y notas, los servicios con sus márgenes, el horario de tu equipo con descansos y días libres. Orígenes muestra de dónde vienen las citas y lo que te ahorró reservar directo frente a la comisión por cliente nuevo de un marketplace. Las confirmaciones y recordatorios van por tu Gmail o tu Resend, el que elijas; opcionalmente, el agente también reserva desde los correos de reserva en Gmail.",
+          "brief": {
+            "user": "El dueño y la recepción de una peluquería, barbería, centro de estética o fisioterapia",
+            "frequency": "Todo el día: la agenda está abierta mientras lo está el negocio",
+            "questions": [
+              "¿Quién viene hoy, con quién y a qué hora?",
+              "¿Cuándo hay alguien libre para este servicio?",
+              "¿Quién es este cliente, y de dónde vienen mis clientes?"
+            ],
+            "primaryAction": "Dar una cita desde una llamada en dos clics"
+          },
+          "needs": {
+            "agent": {
+              "why": "Opcional: lee los correos de reserva y reserva dentro de tus reglas, y redacta invitaciones para los clientes a los que les toca volver. Funciona del todo sin él."
+            },
+            "integrations": {
+              "gmail": "Opcional, Gmail o Resend, para escribir a los clientes: su confirmación, recordatorios y avisos de cambios, desde tu dirección (las respuestas llegan ahí). También el buzón que lee el agente opcional. Las reservas funcionan sin él.",
+              "resend": "Opcional, Gmail o Resend, para escribir a los clientes: los mismos correos, desde una dirección de tu dominio verificada en Resend. Las reservas funcionan sin él."
+            }
+          },
+          "outward": [
+            "Publica una página de reservas que puede usar cualquiera con el enlace, y una página privada para que cada cliente cambie o cancele su cita.",
+            "Envía a cada cliente su confirmación, cualquier cambio o cancelación y recordatorios con el remitente que elijas (tu Gmail o tu Resend), solo si activas los correos.",
+            "Todo lo que el agente escriba fuera de tus reglas espera tu Aprobar."
+          ],
+          "onboarding": [
+            "Tu negocio",
+            "Tus servicios",
+            "Tu equipo y su horario",
+            "Correos a los clientes, por Gmail o Resend (opcional)"
+          ],
+          "captions": [
+            "La agenda de hoy, una columna por persona: llegadas, no-shows, tiempo bloqueado",
+            "Servicios con su duración, precio, márgenes y cuándo les toca volver",
+            "La página de reservas en un móvil, en el idioma de tus clientes"
+          ],
+          "coordinator": {
+            "objective": "Una agenda llena y bien llevada: clientes que reservan directo, menos no-shows, y los que les toca volver, invitados.",
+            "instructions": [
+              "Cada mañana, resume el día por persona y los huecos.",
+              "Redacta invitaciones para los clientes a los que les toca su próxima visita.",
+              "Cuando los correos de reserva estén activos, reserva solo dentro de las reglas; lo demás espera."
+            ],
+            "alwaysAsk": [
+              "enviar invitaciones o cualquier cosa fuera de las reglas a un cliente",
+              "cambiar servicios, precios u horario del equipo"
+            ]
+          }
+        }
       }
     }
   ]
