@@ -1664,6 +1664,184 @@
           }
         }
       }
+    },
+    {
+      "id": "esign",
+      "name": "Sign",
+      "category": "Legal",
+      "summary": "Send a contract from Files for signature and get back a sealed, signed PDF. Like DocuSign.",
+      "description": "Pick a document in Files (Word, Markdown or HTML) and mark where each person signs with a marker in the text, like {{sign:Client}} or {{firma:Cliente}}; without markers a signature block goes at the end. Say who signs, all at once or in order, and press Send. Each signer gets their own link: they read the document, confirm their email with a code, type or draw their signature and agree to sign, or decline. When everyone has signed, the signed PDF (every signature in its place and a certificate page with the evidence) is sealed with your workspace's certificate, saved in Files and sent to each signer. A simple electronic signature under eIDAS and ESIGN, not an advanced or qualified one.",
+      "brief": {
+        "user": "The owner, or whoever closes agreements, of a small company or a freelancer",
+        "frequency": "Several times a week",
+        "questions": [
+          "What is waiting for a signature, and from whom?",
+          "What was signed, and where is the signed PDF?",
+          "Who signed what, when and how?"
+        ],
+        "primaryAction": "Send a document from Files for signature"
+      },
+      "surfaces": [
+        {
+          "id": "esign",
+          "title": "Sign",
+          "audience": "members",
+          "role": "desk"
+        },
+        {
+          "id": "sign",
+          "title": "Sign here",
+          "audience": "public",
+          "role": "public"
+        }
+      ],
+      "needs": {
+        "agent": {
+          "required": false,
+          "why": "Optional: it can prepare a draft from a file and the people who sign (\"send the NDA to Ana for signature\"). Only a person sends it. The scripts run as the project's coordinator."
+        },
+        "integrations": [
+          {
+            "slug": "gmail",
+            "why": "One of Gmail or Resend, to email the signers: their link, a code when they sign, reminders you ask for, and the signed copy, from your own address.",
+            "optional": true
+          },
+          {
+            "slug": "resend",
+            "why": "One of Gmail or Resend, to email the signers the same emails from an address on your own domain verified in Resend.",
+            "optional": true
+          }
+        ]
+      },
+      "outward": [
+        "Publishes a page for each signer that only someone with their link can open.",
+        "Emails each signer their link when you press Send, a code when they sign, reminders when you ask, and the signed copy, through your Gmail or Resend.",
+        "Saves each signed PDF in Files, in the project."
+      ],
+      "by": "Orchestra",
+      "price": {
+        "model": "free"
+      },
+      "icon": "esign",
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/esign/screens/1-envelopes.png",
+          "caption": "What waits for a signature and from whom, the drafts, and what was signed",
+          "surface": "desk",
+          "device": "desktop"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/esign/screens/2-envelope.png",
+          "caption": "An envelope: the document with each signature in its place, who signed, the signed PDF and the evidence",
+          "surface": "desk",
+          "device": "desktop"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/esign/screens/3-sign-phone.png",
+          "caption": "The signer's page on a phone: read it, confirm the email with a code, type or draw the signature",
+          "surface": "public",
+          "device": "mobile"
+        }
+      ],
+      "onboarding": [
+        {
+          "id": "company",
+          "title": "Your company"
+        },
+        {
+          "id": "sender",
+          "title": "Who sends the emails: Gmail or Resend"
+        }
+      ],
+      "version": "0.1.0",
+      "tables": [
+        "es_settings",
+        "es_sources",
+        "es_envelopes",
+        "es_docs",
+        "es_pdf",
+        "es_signers",
+        "es_links",
+        "es_inbox",
+        "es_events",
+        "es_emails"
+      ],
+      "skill": {
+        "name": "app-esign"
+      },
+      "package": {
+        "path": "apps/esign/esign-0.1.0.tgz",
+        "sha256": "3d1e69b756d5fc07a1574a9784e25865b01e087b59f8bc90270485ee5b71656b",
+        "size": 391269,
+        "installer": "install.js"
+      },
+      "emoji": "✍️",
+      "coordinator": {
+        "objective": "Get agreements signed: every envelope out on time, nobody forgotten, every signed PDF filed.",
+        "instructions": [
+          "Prepare a draft from the file and the people the person names; never send it.",
+          "Each week, list the envelopes still waiting and who has not signed.",
+          "Never change a document once it was sent: propose voiding it and sending a new one."
+        ],
+        "level": "keep",
+        "alwaysAsk": [
+          "sending an envelope or a reminder",
+          "voiding an envelope"
+        ]
+      },
+      "i18n": {
+        "es": {
+          "name": "Firma",
+          "category": "Legal",
+          "summary": "Envía un contrato de Files a firmar y recibe un PDF firmado y sellado. Como DocuSign.",
+          "description": "Elige un documento de Files (Word, Markdown o HTML) y marca dónde firma cada persona con un marcador en el texto, como {{firma:Cliente}} o {{sign:Client}}; sin marcadores, se añade un bloque de firma al final. Indica quién firma, todos a la vez o en orden, y pulsa Enviar. Cada firmante recibe su propio enlace: lee el documento, confirma su email con un código, escribe o dibuja su firma y acepta firmar, o lo rechaza. Cuando han firmado todos, el PDF firmado (cada firma en su lugar y una hoja de certificado con la evidencia) se sella con el certificado de tu espacio, se guarda en Files y se envía a cada firmante. Es una firma electrónica simple según eIDAS y ESIGN, no avanzada ni cualificada.",
+          "brief": {
+            "user": "El dueño, o quien cierra acuerdos, de una empresa pequeña o un autónomo",
+            "frequency": "Varias veces por semana",
+            "questions": [
+              "¿Qué espera una firma, y de quién?",
+              "¿Qué se firmó, y dónde está el PDF firmado?",
+              "¿Quién firmó qué, cuándo y cómo?"
+            ],
+            "primaryAction": "Enviar un documento de Files a firmar"
+          },
+          "needs": {
+            "agent": {
+              "why": "Opcional: prepara un borrador desde un archivo y las personas que firman (\"mándale el NDA a Ana para que lo firme\"). Solo una persona lo envía."
+            },
+            "integrations": {
+              "gmail": "Gmail o Resend, para enviar a los firmantes su enlace, un código al firmar, los recordatorios que pidas y la copia firmada, desde tu dirección.",
+              "resend": "Gmail o Resend, para enviar los mismos correos desde una dirección de tu dominio verificado en Resend."
+            }
+          },
+          "outward": [
+            "Publica una página por firmante que solo puede abrir quien tenga su enlace.",
+            "Envía a cada firmante su enlace cuando pulsas Enviar, un código al firmar, los recordatorios que pidas y la copia firmada, por tu Gmail o Resend.",
+            "Guarda cada PDF firmado en Files, en el proyecto."
+          ],
+          "onboarding": [
+            "Tu empresa",
+            "Quién envía los correos: Gmail o Resend"
+          ],
+          "captions": [
+            "Lo que espera firma y de quién, los borradores y lo firmado",
+            "Un sobre: el documento con cada firma en su lugar, quién firmó, el PDF firmado y la evidencia",
+            "La página del firmante en un móvil: leer, confirmar el email con un código, escribir o dibujar la firma"
+          ],
+          "coordinator": {
+            "objective": "Conseguir los acuerdos firmados: cada sobre enviado a tiempo, nadie olvidado y cada PDF firmado archivado.",
+            "instructions": [
+              "Prepara un borrador desde el archivo y las personas que te indiquen; nunca lo envíes.",
+              "Cada semana, lista los sobres que siguen esperando y quién no ha firmado.",
+              "Nunca cambies un documento ya enviado: propón anularlo y enviar uno nuevo."
+            ],
+            "alwaysAsk": [
+              "enviar un sobre o un recordatorio",
+              "anular un sobre"
+            ]
+          }
+        }
+      }
     }
   ]
 }
