@@ -1842,6 +1842,258 @@
           }
         }
       }
+    },
+    {
+      "id": "expenses",
+      "name": "Expenses",
+      "category": "Finance",
+      "summary": "Receipts read on their own, checked by you, and the month sent to your accountant. Like Dext or Expensify.",
+      "description": "Forward a receipt to your workspace's address, or drop it in a Files folder: Expenses reads it (a PDF's text with a cheap model, a photo of a paper ticket with your agent) and fills in the vendor, date, total, VAT and category. You check each one beside its picture and approve it. At the end of the month, one click makes a PDF with the summary (per category, VAT per rate, what is owed back to people) and every receipt behind it, plus a CSV, both saved in Files, and another emails your accountant a private link to download them. Not accounting software: it makes no ledger entries and files no tax returns.",
+      "brief": {
+        "user": "The owner, or whoever keeps the books, of a small company or a freelancer",
+        "frequency": "Several times a week, and once a month to close",
+        "questions": [
+          "Which expenses wait for me to look at them?",
+          "How much did I spend this month, on what, and how much VAT?",
+          "What do I send my accountant?"
+        ],
+        "primaryAction": "Approve an expense read from its receipt"
+      },
+      "surfaces": [
+        {
+          "id": "expenses",
+          "title": "Expenses",
+          "audience": "members",
+          "role": "desk"
+        },
+        {
+          "id": "expenses-month",
+          "title": "Expenses for the accountant",
+          "audience": "public",
+          "role": "public"
+        }
+      ],
+      "needs": {
+        "agent": {
+          "required": true,
+          "why": "Reads photos of paper receipts and scanned PDFs, answering only JSON that a script checks. Text receipts are read by a cheap model, with no agent turn."
+        },
+        "channels": [
+          {
+            "slug": "email",
+            "why": "Receipts forwarded to the workspace's own address come in by themselves, through mail rules Expenses keeps.",
+            "setup": [
+              {
+                "id": "on",
+                "where": "portal",
+                "what": "Channels → Email: turn the workspace email on.",
+                "why": "Off, mail to the address is discarded."
+              },
+              {
+                "id": "senders",
+                "where": "portal",
+                "what": "Channels → Email → Senders: add each address that forwards receipts (your Gmail, or *@yourcompany.com).",
+                "why": "The senders list is the owner's door: Expenses can only write rules for senders on it.",
+                "check": "rules"
+              },
+              {
+                "id": "forwarders",
+                "where": "app",
+                "what": "Settings → How receipts get in: the same addresses, and the subject words that mark a receipt.",
+                "why": "Other mail from those senders keeps reaching your agents.",
+                "check": "forwarders"
+              }
+            ]
+          }
+        ],
+        "integrations": [
+          {
+            "slug": "resend",
+            "group": "mail",
+            "optional": true,
+            "why": "One of Resend or Gmail, to email your accountant the link to the month's PDF and CSV, only when you press Send. Without either, download them from Files and send them yourself.",
+            "setup": [
+              {
+                "id": "connect",
+                "where": "portal",
+                "what": "Connect Resend in Integrations.",
+                "check": "resend_status"
+              },
+              {
+                "id": "domain",
+                "where": "provider",
+                "what": "Verify your sending domain in Resend (Domains: SPF and DKIM in your DNS).",
+                "why": "Without it Resend refuses the sender."
+              },
+              {
+                "id": "sender",
+                "where": "app",
+                "what": "Settings → The accountant: a From address on that domain, and the accountant's email.",
+                "check": "resend_from"
+              }
+            ]
+          },
+          {
+            "slug": "gmail",
+            "group": "mail",
+            "optional": true,
+            "why": "One of Resend or Gmail: the same email, from the Gmail account you connect.",
+            "setup": [
+              {
+                "id": "connect",
+                "where": "portal",
+                "what": "Connect Gmail in Integrations."
+              },
+              {
+                "id": "sender",
+                "where": "app",
+                "what": "Settings → The accountant: choose Gmail under Send through, and the accountant's email."
+              }
+            ]
+          }
+        ],
+        "groups": {
+          "mail": {
+            "oneOf": [
+              "resend",
+              "gmail"
+            ],
+            "why": "One of them emails your accountant the month's link; Settings chooses which."
+          }
+        }
+      },
+      "outward": [
+        "Saves the receipts it receives, the month's PDF and its CSV in Files, in the project.",
+        "Emails your accountant a private link to the month's PDF and CSV, through Resend or your Gmail, only when you press Send. The page behind the link opens nothing without it.",
+        "Writes mail rules on the workspace email for the senders you list."
+      ],
+      "by": "Orchestra",
+      "price": {
+        "model": "free"
+      },
+      "icon": "expenses",
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/expenses/screens/1-review.png",
+          "caption": "The receipts that were read, waiting for your look",
+          "surface": "desk",
+          "device": "desktop"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/expenses/screens/2-expense.png",
+          "caption": "A receipt beside what was read from it: check, correct, approve",
+          "surface": "desk",
+          "device": "desktop"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/expenses/screens/3-month.png",
+          "caption": "The month: totals, VAT per rate, what is owed back, and the close for your accountant",
+          "surface": "desk",
+          "device": "desktop"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/expenses/screens/4-accountant-phone.png",
+          "caption": "What your accountant opens from the month's email: the totals, the PDF and the CSV",
+          "surface": "public",
+          "device": "phone"
+        }
+      ],
+      "onboarding": [
+        {
+          "id": "company",
+          "title": "Your company"
+        },
+        {
+          "id": "in",
+          "title": "How receipts get in"
+        }
+      ],
+      "version": "0.1.0",
+      "tables": [
+        "ex_settings",
+        "ex_receipts",
+        "ex_expenses",
+        "ex_months",
+        "ex_emails",
+        "ex_links"
+      ],
+      "skill": {
+        "name": "app-expenses"
+      },
+      "package": {
+        "path": "apps/expenses/expenses-0.1.0.tgz",
+        "sha256": "044d9400a1ba3727a098132f038ced00a22b118e2686cd7a400e5c28b8451a41",
+        "size": 82037,
+        "installer": "install.js"
+      },
+      "emoji": "🧾",
+      "coordinator": {
+        "objective": "Every receipt read and approved within the week, and the month closed and sent to the accountant in its first days.",
+        "instructions": [
+          "When someone sends you a receipt, tell them to forward it to the workspace address or put it in the Files folder; never enter it yourself unless asked.",
+          "Each Monday, say how many expenses wait for review and what could not be read.",
+          "In the first days of a month, remind the person to close the last one and send it."
+        ],
+        "level": "keep",
+        "alwaysAsk": [
+          "sending anything to the accountant",
+          "closing or reopening a month"
+        ]
+      },
+      "i18n": {
+        "es": {
+          "name": "Gastos",
+          "category": "Finanzas",
+          "summary": "Recibos que se leen solos, que revisas tú, y el mes enviado a tu gestor. Como Dext o Expensify.",
+          "description": "Reenvía un recibo a la dirección de tu espacio, o déjalo en una carpeta de Files: Gastos lo lee (el texto de un PDF con un modelo barato, la foto de un ticket con tu agente) y rellena proveedor, fecha, total, IVA y categoría. Tú revisas cada uno junto a su imagen y lo apruebas. A fin de mes, un clic hace un PDF con el resumen (por categoría, IVA por tipo, lo que se debe a cada persona) y todos los recibos detrás, más un CSV, ambos guardados en Files, y otro clic le envía a tu gestor un enlace privado para descargarlos. No es software contable: no hace asientos ni presenta impuestos.",
+          "brief": {
+            "user": "El dueño, o quien lleva las cuentas, de una empresa pequeña o un autónomo",
+            "frequency": "Varias veces por semana, y una vez al mes para cerrar",
+            "questions": [
+              "¿Qué gastos esperan que los mire?",
+              "¿Cuánto gasté este mes, en qué, y cuánto IVA?",
+              "¿Qué le envío a mi gestor?"
+            ],
+            "primaryAction": "Aprobar un gasto leído de su recibo"
+          },
+          "needs": {
+            "agent": {
+              "why": "Lee las fotos de tickets de papel y los PDF escaneados, respondiendo solo JSON que comprueba un script. Los recibos con texto los lee un modelo barato, sin turno de agente."
+            },
+            "integrations": {
+              "resend": "Resend o Gmail, para enviar a tu gestor el enlace al PDF y al CSV del mes, solo cuando pulsas Enviar. Sin ninguno, los descargas de Files y los envías tú.",
+              "gmail": "Resend o Gmail: el mismo correo, desde la cuenta de Gmail que conectes."
+            }
+          },
+          "outward": [
+            "Guarda en Files, en el proyecto, los recibos que recibe, el PDF del mes y su CSV.",
+            "Envía a tu gestor un enlace privado al PDF y al CSV del mes, por Resend o tu Gmail, solo cuando pulsas Enviar. La página del enlace no abre nada sin él.",
+            "Escribe reglas de correo en el email del espacio para los remitentes que indicas."
+          ],
+          "onboarding": [
+            "Tu empresa",
+            "Cómo entran los recibos"
+          ],
+          "captions": [
+            "Los recibos leídos, esperando que los mires",
+            "Un recibo junto a lo que se leyó: comprueba, corrige, aprueba",
+            "El mes: totales, IVA por tipo, lo que se debe y el cierre para tu gestor",
+            "Lo que abre tu gestor desde el correo del mes: los totales, el PDF y el CSV"
+          ],
+          "coordinator": {
+            "objective": "Cada recibo leído y aprobado en la semana, y el mes cerrado y enviado al gestor en sus primeros días.",
+            "instructions": [
+              "Cuando alguien te mande un recibo, dile que lo reenvíe a la dirección del espacio o lo deje en la carpeta de Files; no lo cargues tú salvo que te lo pidan.",
+              "Cada lunes, di cuántos gastos esperan revisión y qué no se pudo leer.",
+              "En los primeros días de cada mes, recuerda cerrar el anterior y enviarlo."
+            ],
+            "alwaysAsk": [
+              "enviar cualquier cosa al gestor",
+              "cerrar o reabrir un mes"
+            ]
+          }
+        }
+      }
     }
   ]
 }
