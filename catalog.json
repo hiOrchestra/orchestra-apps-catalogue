@@ -2008,7 +2008,7 @@
           "title": "How receipts get in"
         }
       ],
-      "version": "0.1.0",
+      "version": "0.1.1",
       "tables": [
         "ex_settings",
         "ex_receipts",
@@ -2021,9 +2021,9 @@
         "name": "app-expenses"
       },
       "package": {
-        "path": "apps/expenses/expenses-0.1.0.tgz",
-        "sha256": "044d9400a1ba3727a098132f038ced00a22b118e2686cd7a400e5c28b8451a41",
-        "size": 82037,
+        "path": "apps/expenses/expenses-0.1.1.tgz",
+        "sha256": "bcd7106974304c312ca77d0e43f5847cd748a228f4816a8765de8f7307aabf2c",
+        "size": 82036,
         "installer": "install.js"
       },
       "emoji": "🧾",
@@ -2090,6 +2090,235 @@
             "alwaysAsk": [
               "enviar cualquier cosa al gestor",
               "cerrar o reabrir un mes"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "posts",
+      "name": "Posts",
+      "category": "Marketing",
+      "summary": "Your social posts on LinkedIn and X: the agent drafts the week in your voice, you approve, they go out on their own. Like Buffer or Postiz.",
+      "description": "Tell Posts how you write and what you talk about, and turn on the accounts it posts for: your LinkedIn profile, the company pages you run, and your X account. Once a week the agent writes posts for their free times — from your ideas, a link, a file, or a feed you follow — and you review each one as it will look: approve it, ask for another version, or mark a phrase and say what to change. Approved posts go out at their time; reactions come back, and the agent writes the next week with what worked. It can repost a post or add a first comment once it reaches the reactions you set. Rehearsal is on until you turn it off: everything runs, nothing reaches a network.",
+      "brief": {
+        "user": "The owner, or whoever does marketing, of a small company",
+        "frequency": "Once a week to approve, now and then to add an idea",
+        "questions": [
+          "What goes out this week, and where?",
+          "What did the agent write that waits for my approval?",
+          "What worked?"
+        ],
+        "primaryAction": "Approve a draft"
+      },
+      "surfaces": [
+        {
+          "id": "posts",
+          "title": "Posts",
+          "audience": "members",
+          "role": "desk"
+        }
+      ],
+      "needs": {
+        "agent": {
+          "required": true,
+          "why": "Writes the posts in your voice, as JSON a script checks; it never publishes. Publishing, numbers and feeds are scripts."
+        },
+        "integrations": [
+          {
+            "slug": "linkedin",
+            "group": "networks",
+            "optional": true,
+            "why": "Your LinkedIn profile and the company pages you run: publish, reactions, first comments and reposts, and each page's numbers.",
+            "setup": [
+              {
+                "id": "connect",
+                "where": "portal",
+                "what": "Connect LinkedIn in Integrations, with the account that runs your pages.",
+                "check": "accounts"
+              },
+              {
+                "id": "pages",
+                "where": "provider",
+                "what": "To post as a company page you must be its admin (or content admin) on LinkedIn.",
+                "why": "LinkedIn only lets an admin post for a page."
+              },
+              {
+                "id": "accounts",
+                "where": "app",
+                "what": "Settings → Accounts: Look for accounts, and turn on the ones Posts writes for.",
+                "check": "accounts"
+              }
+            ]
+          },
+          {
+            "slug": "twitter",
+            "group": "networks",
+            "optional": true,
+            "via": "skill",
+            "why": "Your X account, through the twitter skill and your own X API keys (Composio cannot connect X); the agent runs each X command, one at a time. X charges about US$0.015 a post, US$0.20 with a link, and each read of a post's numbers.",
+            "setup": [
+              {
+                "id": "keys",
+                "where": "provider",
+                "what": "console.x.com: an app set to Read and Write, and its four OAuth 1.0 keys.",
+                "why": "X takes posts from software only through the account's own keys."
+              },
+              {
+                "id": "connect",
+                "where": "portal",
+                "what": "Integrations → X: paste the four keys.",
+                "check": "accounts"
+              },
+              {
+                "id": "accounts",
+                "where": "app",
+                "what": "Settings → Accounts: Look for accounts, and turn X on.",
+                "check": "accounts"
+              }
+            ]
+          }
+        ],
+        "groups": {
+          "networks": {
+            "oneOf": [
+              "linkedin",
+              "twitter"
+            ],
+            "why": "At least one network to post to; each account is turned on in Settings."
+          }
+        }
+      },
+      "outward": [
+        "Publishes the posts a person approved, at their time, on the accounts turned on in Settings — never before rehearsal is turned off.",
+        "Reposts a post, or adds a first comment under it, once it reaches the number of reactions set in Settings for that account.",
+        "Reads the reactions of what it published, the numbers of your LinkedIn pages, and the feeds you follow."
+      ],
+      "by": "Orchestra",
+      "price": {
+        "model": "free"
+      },
+      "icon": "posts",
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/posts/screens/1-week.png",
+          "caption": "The week: what goes out, where, the free times, and what waits for you",
+          "surface": "desk",
+          "device": "desktop"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/posts/screens/2-post.png",
+          "caption": "A draft as it will look, with your notes on it: approve, or ask for another version",
+          "surface": "desk",
+          "device": "desktop"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/posts/screens/3-published.png",
+          "caption": "What went out and how it did",
+          "surface": "desk",
+          "device": "desktop"
+        }
+      ],
+      "onboarding": [
+        {
+          "id": "accounts",
+          "title": "Your accounts"
+        },
+        {
+          "id": "voice",
+          "title": "How you write"
+        },
+        {
+          "id": "week",
+          "title": "The first week"
+        }
+      ],
+      "version": "0.1.0",
+      "tables": [
+        "po_settings",
+        "po_accounts",
+        "po_ideas",
+        "po_feeds",
+        "po_posts",
+        "po_notes",
+        "po_templates",
+        "po_stats"
+      ],
+      "skill": {
+        "name": "app-posts"
+      },
+      "package": {
+        "path": "apps/posts/posts-0.1.0.tgz",
+        "sha256": "8016ca6e3824022c6e19cb31a6c1f47f99c314ae3e4d09752acc227c387c3683",
+        "size": 67516,
+        "installer": "install.js"
+      },
+      "emoji": "📣",
+      "coordinator": {
+        "objective": "A week of posts approved by Monday, in the owner's voice, on the accounts that are on — and the next week better than the last.",
+        "instructions": [
+          "When someone tells you an idea for a post, write it down with the app-posts skill (idea); never publish it yourself.",
+          "Each Monday, say how many drafts wait for review and what failed.",
+          "After a post does well, say which one and why you think it did."
+        ],
+        "level": "keep",
+        "alwaysAsk": [
+          "publishing or approving anything",
+          "turning rehearsal off",
+          "changing an account's times or plugs"
+        ]
+      },
+      "i18n": {
+        "es": {
+          "name": "Posts",
+          "category": "Marketing",
+          "summary": "Tus posts en LinkedIn y X: el agente escribe la semana con tu voz, tú apruebas, salen solos. Como Buffer o Postiz.",
+          "description": "Cuéntale a Posts cómo escribes y de qué hablas, y activa las cuentas: tu perfil de LinkedIn, las páginas de empresa que administras, y tu cuenta de X. Una vez por semana el agente escribe posts para sus horarios libres — desde tus ideas, un link, un archivo o un feed que sigues — y tú revisas cada uno tal como se va a ver: lo apruebas, pides otra versión, o marcas una frase y dices qué cambiar. Lo aprobado sale a su hora; vuelven las reacciones, y el agente escribe la semana siguiente con lo que funcionó. Puede repostear o agregar un primer comentario cuando un post llega a las reacciones que fijes. El modo ensayo está activo hasta que lo apagues: todo corre, nada llega a una red.",
+          "brief": {
+            "user": "El dueño, o quien hace el marketing, de una empresa pequeña",
+            "frequency": "Una vez por semana para aprobar, y de vez en cuando para anotar una idea",
+            "questions": [
+              "¿Qué sale esta semana, y dónde?",
+              "¿Qué escribió el agente que espera mi visto bueno?",
+              "¿Qué funcionó?"
+            ],
+            "primaryAction": "Aprobar un borrador"
+          },
+          "needs": {
+            "agent": {
+              "why": "Escribe los posts con tu voz, como JSON que revisa un script; nunca publica. Publicar, los números y los feeds son scripts."
+            },
+            "integrations": {
+              "linkedin": "Tu perfil de LinkedIn y las páginas de empresa que administras: publicar, reacciones, primeros comentarios y reposts, y los números de cada página.",
+              "twitter": "Tu cuenta de X, con el skill twitter y tus propias claves de la API de X (Composio no conecta X); el agente corre cada comando de X, uno por vez. X cobra unos US$0,015 por post, US$0,20 con link, y cada lectura de los números."
+            }
+          },
+          "outward": [
+            "Publica los posts que una persona aprobó, a su hora, en las cuentas activas en Settings — nunca antes de apagar el modo ensayo.",
+            "Repostea un post, o agrega un primer comentario, cuando llega a las reacciones fijadas para esa cuenta.",
+            "Lee las reacciones de lo que publicó, los números de tus páginas de LinkedIn y los feeds que sigues."
+          ],
+          "onboarding": [
+            "Tus cuentas",
+            "Cómo escribes",
+            "La primera semana"
+          ],
+          "captions": [
+            "La semana: qué sale, dónde, los horarios libres y lo que te espera",
+            "Un borrador tal como se va a ver, con tus notas: apruébalo, o pide otra versión",
+            "Lo que salió y cómo le fue"
+          ],
+          "coordinator": {
+            "objective": "Una semana de posts aprobada el lunes, con la voz del dueño, en las cuentas activas — y cada semana mejor que la anterior.",
+            "instructions": [
+              "Cuando alguien te cuente una idea para un post, anótala con el skill app-posts (idea); nunca la publiques vos.",
+              "Cada lunes, di cuántos borradores esperan revisión y qué falló.",
+              "Cuando un post anda bien, di cuál y por qué crees que anduvo."
+            ],
+            "alwaysAsk": [
+              "publicar o aprobar cualquier cosa",
+              "apagar el modo ensayo",
+              "cambiar los horarios o los plugs de una cuenta"
             ]
           }
         }
