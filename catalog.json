@@ -865,7 +865,7 @@
           "title": "Your first role"
         }
       ],
-      "version": "0.3.5",
+      "version": "0.3.6",
       "tables": [
         "hr_company",
         "hr_settings",
@@ -877,9 +877,9 @@
         "name": "app-recruiter"
       },
       "package": {
-        "path": "apps/recruiter/recruiter-0.3.5.tgz",
-        "sha256": "e6314e3b6fd3cfb27c8de063da6fc8b23e1e60fea8da1803b6f6a85d88430901",
-        "size": 47387,
+        "path": "apps/recruiter/recruiter-0.3.6.tgz",
+        "sha256": "05124d267b04791f556fcdea6652a739f53ad2f0643abaaf80d7872515072d06",
+        "size": 47578,
         "installer": "install.js"
       },
       "emoji": "🧑‍💼",
@@ -982,13 +982,76 @@
         "integrations": [
           {
             "slug": "resend",
-            "why": "Sends every email from your own domain, and tells Outreach about bounces, opens and clicks.",
-            "optional": false
+            "optional": true,
+            "group": "mail",
+            "why": "Sends every email from your own domain, in batches, and tells Outreach about bounces, opens and clicks. Either Resend or Gmail is needed; a campaign chooses which sends it.",
+            "setup": [
+              {
+                "id": "connect",
+                "where": "portal",
+                "what": "Connect Resend in Integrations."
+              },
+              {
+                "id": "domain",
+                "where": "provider",
+                "what": "Verify your sending domain in Resend (Domains: the SPF and DKIM records go in your DNS).",
+                "why": "Without it Resend refuses the sender.",
+                "check": "resend_ok_at"
+              },
+              {
+                "id": "sender",
+                "where": "app",
+                "what": "Settings → Sender: a name and an address on that domain.",
+                "check": "from_email"
+              },
+              {
+                "id": "tracking",
+                "where": "provider",
+                "optional": true,
+                "what": "Domains → your domain → Configuration: a tracking subdomain (track.yourdomain: a CNAME, and a CAA added next to the ones you have), Open tracking on, Click tracking off.",
+                "why": "Opens need the pixel, which only an email with an HTML part carries (the \"Plain text, tracked\" format). Click tracking rewrites every link through the subdomain; off for outreach."
+              },
+              {
+                "id": "quota",
+                "where": "provider",
+                "what": "Know your plan's daily quota (free: 100 emails a day, shared with everything else the account sends, the portal's own mail included) and set Settings → Broadcasts → At most a day below it.",
+                "why": "At the quota Resend refuses the rest; Outreach puts them back in line and carries on the next day."
+              }
+            ]
+          },
+          {
+            "slug": "gmail",
+            "optional": true,
+            "group": "mail",
+            "why": "Sends a campaign from the connected Gmail account instead, one email at a time; replies land in that inbox. No bounce or open tracking.",
+            "setup": [
+              {
+                "id": "connect",
+                "where": "portal",
+                "what": "Connect Gmail in Integrations, with the account the emails should come from.",
+                "check": "gmail_ok_at"
+              },
+              {
+                "id": "limits",
+                "where": "provider",
+                "what": "Google's own sending limits apply (about 500 a day on Workspace); Outreach cannot see bounces or opens for these.",
+                "optional": true
+              }
+            ]
           }
-        ]
+        ],
+        "groups": {
+          "mail": {
+            "oneOf": [
+              "resend",
+              "gmail"
+            ],
+            "why": "One of them sends; each campaign chooses which."
+          }
+        }
       },
       "outward": [
-        "Sends the emails you send, schedule or start, from your Resend account; nothing leaves on its own.",
+        "Sends the emails you send, schedule or start, from your Resend account or your Gmail, as each campaign chooses; nothing leaves on its own.",
         "Publishes an unsubscribe page that anyone with a link from one of your emails can use."
       ],
       "by": "Orchestra",
@@ -998,8 +1061,8 @@
       "icon": "outreach",
       "onboarding": [
         {
-          "id": "resend",
-          "title": "Connect Resend"
+          "id": "mail",
+          "title": "Connect Resend or Gmail"
         },
         {
           "id": "sender",
@@ -1026,7 +1089,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.3.4",
+      "version": "0.4.2",
       "tables": [
         "outreach_settings",
         "outreach_fields",
@@ -1042,9 +1105,9 @@
         "name": "app-outreach"
       },
       "package": {
-        "path": "apps/outreach/outreach-0.3.4.tgz",
-        "sha256": "1daec916b0f98081beb0bb41fb1eeab83a366a56eb63ae8e31688f8a61d197e9",
-        "size": 113989,
+        "path": "apps/outreach/outreach-0.4.2.tgz",
+        "sha256": "004063de03640b189a3d598abb994ad6d615246aa460e1d3d44b54d8965c75c2",
+        "size": 123559,
         "installer": "install.js"
       },
       "emoji": "📣",
@@ -1082,15 +1145,16 @@
               "why": "Busca el correo público de los contactos que no lo tienen, con la página donde lo leyó."
             },
             "integrations": {
-              "resend": "Envía cada correo desde tu propio dominio y avisa de rebotes, aperturas y clics."
+              "resend": "Envía cada correo desde tu propio dominio, por tandas, y avisa a Campañas de rebotes, aperturas y clics. Hace falta Resend o Gmail; cada campaña elige con cuál envía.",
+              "gmail": "Envía una campaña desde la cuenta de Gmail conectada, de un correo en uno; las respuestas llegan a esa bandeja. Sin seguimiento de rebotes ni aperturas."
             }
           },
           "outward": [
-            "Envía los correos que envías, programas o inicias, desde tu cuenta de Resend; nada sale solo.",
+            "Envía los correos que envías, programas o inicias, desde tu cuenta de Resend o tu Gmail, según elija cada campaña; nada sale solo.",
             "Publica una página de baja que puede usar cualquiera con un enlace de uno de tus correos."
           ],
           "onboarding": [
-            "Conecta Resend",
+            "Conecta Resend o Gmail",
             "Tu remitente"
           ],
           "captions": [
