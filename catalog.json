@@ -2297,7 +2297,7 @@
           "title": "The first week"
         }
       ],
-      "version": "0.2.1",
+      "version": "0.2.2",
       "tables": [
         "po_settings",
         "po_accounts",
@@ -2313,9 +2313,9 @@
         "name": "app-posts"
       },
       "package": {
-        "path": "apps/posts/posts-0.2.1.tgz",
-        "sha256": "3f4c236175fa52b25ea1f1a80038629bb5b286798329a79b3f676e45dfa4a697",
-        "size": 78555,
+        "path": "apps/posts/posts-0.2.2.tgz",
+        "sha256": "bfd9dd24efd1a74d7dd915c1b163881defece00271d1d2f36089b8298adc2c53",
+        "size": 78739,
         "installer": "install.js"
       },
       "emoji": "📣",
