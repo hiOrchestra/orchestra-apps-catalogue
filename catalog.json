@@ -578,7 +578,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.3.2",
+      "version": "0.3.3",
       "tables": [
         "forms_settings",
         "forms_templates",
@@ -591,9 +591,9 @@
         "name": "app-forms"
       },
       "package": {
-        "path": "apps/forms/forms-0.3.2.tgz",
-        "sha256": "425652896451a3d9e9d1b65978026c4abf18cff4654e05b7728ccc4c797b9e30",
-        "size": 121130,
+        "path": "apps/forms/forms-0.3.3.tgz",
+        "sha256": "c63a4b1f367581a77e7b241cb0321d40d9567b6675b11189972c871e9b9f0961",
+        "size": 121347,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
