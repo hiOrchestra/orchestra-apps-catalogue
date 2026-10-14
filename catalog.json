@@ -578,7 +578,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.3.0",
+      "version": "0.3.1",
       "tables": [
         "forms_settings",
         "forms_templates",
@@ -591,9 +591,9 @@
         "name": "app-forms"
       },
       "package": {
-        "path": "apps/forms/forms-0.3.0.tgz",
-        "sha256": "e5e4770be8b217a60b3cc762583bc6878e17c7c6310347d6c59386eadcdc6eff",
-        "size": 120985,
+        "path": "apps/forms/forms-0.3.1.tgz",
+        "sha256": "bd0e5d2981dcd3b1521946bb1e89e98eec54db1b5ac9ff1a544334db32bc8b0c",
+        "size": 121073,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
@@ -603,7 +603,16 @@
             "required": true,
             "why": "Drafts a form from a description someone types, answering only the JSON a script checks; a person reviews and publishes it."
           }
-        ]
+        ],
+        "connections": [
+          {
+            "id": "typeform",
+            "integration": "typeform",
+            "optional": true,
+            "why": "Import your Typeform forms and their responses."
+          }
+        ],
+        "variables": []
       },
       "emoji": "📝",
       "coordinator": {
