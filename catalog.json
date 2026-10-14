@@ -578,7 +578,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.2.4",
+      "version": "0.3.0",
       "tables": [
         "forms_settings",
         "forms_templates",
@@ -591,10 +591,19 @@
         "name": "app-forms"
       },
       "package": {
-        "path": "apps/forms/forms-0.2.4.tgz",
-        "sha256": "fcf1ca03455767026f3234b13808db5253df2e032b2defb0d289d631d733695e",
-        "size": 120263,
-        "installer": "install.js"
+        "path": "apps/forms/forms-0.3.0.tgz",
+        "sha256": "e5e4770be8b217a60b3cc762583bc6878e17c7c6310347d6c59386eadcdc6eff",
+        "size": 120985,
+        "installer": "install.js",
+        "manifest": "app.json",
+        "roles": [
+          {
+            "id": "drafter",
+            "name": "Form drafter",
+            "required": true,
+            "why": "Drafts a form from a description someone types, answering only the JSON a script checks; a person reviews and publishes it."
+          }
+        ]
       },
       "emoji": "📝",
       "coordinator": {
