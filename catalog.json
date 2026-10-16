@@ -578,7 +578,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.3.3",
+      "version": "0.3.4",
       "tables": [
         "forms_settings",
         "forms_templates",
@@ -587,13 +587,10 @@
         "forms_responses",
         "forms_answers"
       ],
-      "skill": {
-        "name": "app-forms"
-      },
       "package": {
-        "path": "apps/forms/forms-0.3.3.tgz",
-        "sha256": "c63a4b1f367581a77e7b241cb0321d40d9567b6675b11189972c871e9b9f0961",
-        "size": 121347,
+        "path": "apps/forms/forms-0.3.4.tgz",
+        "sha256": "aa15f8016492894f1989f943f07a9497cabee2de19aaad46cdf8086b6e5fe517",
+        "size": 117926,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
@@ -615,18 +612,6 @@
         "variables": []
       },
       "emoji": "📝",
-      "coordinator": {
-        "objective": "Forms that people finish, and every response read and put to use.",
-        "instructions": [
-          "Draft a form from the description the person gives, one question at a time.",
-          "Summarise new responses once a day and flag the ones that need someone.",
-          "Suggest where a form loses people."
-        ],
-        "level": "keep",
-        "alwaysAsk": [
-          "publishing a form or changing a live one"
-        ]
-      },
       "i18n": {
         "es": {
           "name": "Formularios",
@@ -657,18 +642,7 @@
             "Crea un formulario pregunta a pregunta, con la vista previa al lado",
             "Lo que responde la gente: una pregunta a la vez",
             "El mismo formulario en un móvil"
-          ],
-          "coordinator": {
-            "objective": "Formularios que la gente termina, y cada respuesta leída y aprovechada.",
-            "instructions": [
-              "Redacta un formulario desde la descripción que te den, una pregunta a la vez.",
-              "Resume las respuestas nuevas una vez al día y avisa de las que necesitan a alguien.",
-              "Sugiere dónde un formulario pierde a la gente."
-            ],
-            "alwaysAsk": [
-              "publicar un formulario o cambiar uno publicado"
-            ]
-          }
+          ]
         }
       }
     },
