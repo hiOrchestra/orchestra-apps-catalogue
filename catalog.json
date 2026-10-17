@@ -578,7 +578,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.3.4",
+      "version": "0.3.5",
       "tables": [
         "forms_settings",
         "forms_templates",
@@ -588,9 +588,9 @@
         "forms_answers"
       ],
       "package": {
-        "path": "apps/forms/forms-0.3.4.tgz",
-        "sha256": "aa15f8016492894f1989f943f07a9497cabee2de19aaad46cdf8086b6e5fe517",
-        "size": 117926,
+        "path": "apps/forms/forms-0.3.5.tgz",
+        "sha256": "1e80e88d6e1b3297594ab9b6ac65d2dd419fe1e0e97553d48fe23c0b3895a6ae",
+        "size": 118528,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
