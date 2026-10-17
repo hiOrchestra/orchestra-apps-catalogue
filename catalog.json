@@ -578,7 +578,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.3.6",
+      "version": "0.3.7",
       "tables": [
         "forms_settings",
         "forms_templates",
@@ -588,9 +588,9 @@
         "forms_answers"
       ],
       "package": {
-        "path": "apps/forms/forms-0.3.6.tgz",
-        "sha256": "0b61a53eff80a7072052480fdf019e903d9ae1ce38a0b42c3dd3b8f185938896",
-        "size": 118507,
+        "path": "apps/forms/forms-0.3.7.tgz",
+        "sha256": "5001cc9d6596804078ee5814957001f6565597b3148f2f8783823c23163e29da",
+        "size": 118302,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
@@ -2289,7 +2289,7 @@
           "title": "The first week"
         }
       ],
-      "version": "0.3.5",
+      "version": "0.3.6",
       "tables": [
         "po_settings",
         "po_accounts",
@@ -2302,9 +2302,9 @@
         "po_pillars"
       ],
       "package": {
-        "path": "apps/posts/posts-0.3.5.tgz",
-        "sha256": "1b59bef0fdfde08f2450e0e6facffc967f73cd29a05b5938d319f2787d97660d",
-        "size": 97380,
+        "path": "apps/posts/posts-0.3.6.tgz",
+        "sha256": "4230157deb523f9399c255d4ea912516895af3c7e8585f491bd966213130b593",
+        "size": 96282,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
