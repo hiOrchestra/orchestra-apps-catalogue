@@ -2289,7 +2289,7 @@
           "title": "The first week"
         }
       ],
-      "version": "0.2.19",
+      "version": "0.3.0",
       "tables": [
         "po_settings",
         "po_accounts",
@@ -2301,30 +2301,37 @@
         "po_stats",
         "po_pillars"
       ],
-      "skill": {
-        "name": "app-posts"
-      },
       "package": {
-        "path": "apps/posts/posts-0.2.19.tgz",
-        "sha256": "77836b6185da53bb94cf5434781905495f3a0174db9f8d7214a1757f9fa0ece2",
-        "size": 96246,
-        "installer": "install.js"
+        "path": "apps/posts/posts-0.3.0.tgz",
+        "sha256": "97fe341ea49a6b2cddc36a41874caacc6de7f28703939f65e242d212182d9fee",
+        "size": 95614,
+        "installer": "install.js",
+        "manifest": "app.json",
+        "roles": [
+          {
+            "id": "writer",
+            "name": "Writer",
+            "required": true,
+            "why": "Writes the posts and suggests the week's ideas in your voice, answering only JSON a script checks; runs the X commands one at a time. It never publishes on its own."
+          }
+        ],
+        "connections": [
+          {
+            "id": "linkedin",
+            "integration": "linkedin",
+            "optional": true,
+            "why": "Your LinkedIn profile and the company pages you run: publish, reactions, first comments, reposts and each page's numbers."
+          },
+          {
+            "id": "facebook",
+            "integration": "facebook",
+            "optional": true,
+            "why": "Your Facebook pages: publish, reactions and first comments."
+          }
+        ],
+        "variables": []
       },
       "emoji": "📣",
-      "coordinator": {
-        "objective": "A week of posts approved by Monday, in the owner's voice, on the accounts that are on — and the next week better than the last.",
-        "instructions": [
-          "When someone tells you an idea for a post, write it down with the app-posts skill (idea); never publish it yourself.",
-          "Each Monday, say how many drafts wait for review and what failed.",
-          "After a post does well, say which one and why you think it did."
-        ],
-        "level": "keep",
-        "alwaysAsk": [
-          "publishing or approving anything",
-          "turning rehearsal off",
-          "changing an account's times or plugs"
-        ]
-      },
       "i18n": {
         "es": {
           "name": "Posts",
@@ -2364,20 +2371,7 @@
             "La semana: qué sale, dónde, los horarios libres y lo que te espera",
             "Un borrador tal como se va a ver, con tus notas: apruébalo, o pide otra versión",
             "Lo que salió y cómo le fue"
-          ],
-          "coordinator": {
-            "objective": "Una semana de posts aprobada el lunes, con la voz del dueño, en las cuentas activas — y cada semana mejor que la anterior.",
-            "instructions": [
-              "Cuando alguien te cuente una idea para un post, anótala con el skill app-posts (idea); nunca la publiques vos.",
-              "Cada lunes, di cuántos borradores esperan revisión y qué falló.",
-              "Cuando un post anda bien, di cuál y por qué crees que anduvo."
-            ],
-            "alwaysAsk": [
-              "publicar o aprobar cualquier cosa",
-              "apagar el modo ensayo",
-              "cambiar los horarios o los plugs de una cuenta"
-            ]
-          }
+          ]
         }
       }
     }
