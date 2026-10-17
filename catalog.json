@@ -2289,7 +2289,7 @@
           "title": "The first week"
         }
       ],
-      "version": "0.3.0",
+      "version": "0.3.1",
       "tables": [
         "po_settings",
         "po_accounts",
@@ -2302,9 +2302,9 @@
         "po_pillars"
       ],
       "package": {
-        "path": "apps/posts/posts-0.3.0.tgz",
-        "sha256": "97fe341ea49a6b2cddc36a41874caacc6de7f28703939f65e242d212182d9fee",
-        "size": 95614,
+        "path": "apps/posts/posts-0.3.1.tgz",
+        "sha256": "d29e345bd9d35f1d6e40d529c67d8669a003621bb5ae21c7e68e05dc32682cc3",
+        "size": 95653,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
@@ -2320,13 +2320,27 @@
             "id": "linkedin",
             "integration": "linkedin",
             "optional": true,
-            "why": "Your LinkedIn profile and the company pages you run: publish, reactions, first comments, reposts and each page's numbers."
+            "why": "Your LinkedIn profile and the company pages you run: publish, reactions, first comments, reposts and each page's numbers.",
+            "from": {
+              "table": "po_accounts",
+              "column": "connection",
+              "match": {
+                "network": "linkedin"
+              }
+            }
           },
           {
             "id": "facebook",
             "integration": "facebook",
             "optional": true,
-            "why": "Your Facebook pages: publish, reactions and first comments."
+            "why": "Your Facebook pages: publish, reactions and first comments.",
+            "from": {
+              "table": "po_accounts",
+              "column": "connection",
+              "match": {
+                "network": "facebook"
+              }
+            }
           }
         ],
         "variables": []
