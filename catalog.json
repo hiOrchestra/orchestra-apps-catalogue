@@ -243,17 +243,7 @@
           "device": "mobile"
         }
       ],
-      "onboarding": [
-        {
-          "id": "contact",
-          "title": "Where customers reach you"
-        },
-        {
-          "id": "answers",
-          "title": "Your answers"
-        }
-      ],
-      "version": "0.2.2",
+      "version": "0.3.0",
       "tables": [
         "hd_settings",
         "hd_tickets",
@@ -262,30 +252,35 @@
         "hd_macros",
         "hd_requests"
       ],
-      "skill": {
-        "name": "app-helpdesk"
-      },
       "package": {
-        "path": "apps/helpdesk/helpdesk-0.2.2.tgz",
-        "sha256": "5f763f2ff655403fdcdadd291b6b69d5760fd6cee9e23e492a2fc7caf790da01",
-        "size": 50999,
-        "installer": "install.js"
+        "path": "apps/helpdesk/helpdesk-0.3.0.tgz",
+        "sha256": "2868579a412990918ca2a072f212c89abda218e006a59c3533c29a506005f0ec",
+        "size": 48709,
+        "installer": "install.js",
+        "manifest": "app.json",
+        "roles": [
+          {
+            "id": "responder",
+            "name": "Responder",
+            "required": true,
+            "why": "Reads each new customer message and the knowledge base, and drafts the reply (category, priority, a one-line summary), answering only the JSON a script checks; a person reviews it and presses Send. It never sends on its own."
+          }
+        ],
+        "connections": [
+          {
+            "id": "gmail",
+            "integration": "gmail",
+            "optional": true,
+            "why": "Answers to contact-page messages go out from it; mail tickets answer from the workspace address.",
+            "from": {
+              "table": "hd_settings",
+              "column": "gmail_account"
+            }
+          }
+        ],
+        "variables": []
       },
       "emoji": "🎧",
-      "coordinator": {
-        "objective": "Every customer gets a correct answer in time, and the knowledge base covers more of what they ask.",
-        "instructions": [
-          "Classify each new request and draft the reply from the knowledge base.",
-          "Answer the most urgent first; flag anything waiting more than a day.",
-          "When the same question comes three times with no article, propose one.",
-          "Never promise what the sources do not say: ask instead."
-        ],
-        "level": "keep",
-        "alwaysAsk": [
-          "sending any reply to a customer",
-          "publishing or changing a knowledge-base article"
-        ]
-      },
       "i18n": {
         "es": {
           "name": "Helpdesk",
@@ -314,28 +309,11 @@
             "Envía las respuestas que apruebas: desde la dirección del espacio para los tickets por correo, desde tu Gmail para los de la página de contacto.",
             "Publica una página de contacto que puede usar cualquiera con el enlace."
           ],
-          "onboarding": [
-            "Dónde te escriben tus clientes",
-            "Tus respuestas"
-          ],
           "captions": [
             "La bandeja: lo que espera respuesta, lo más urgente primero",
             "Un ticket con la respuesta que redactó el agente, lista para revisar y enviar",
             "La página de contacto pública, en un móvil"
-          ],
-          "coordinator": {
-            "objective": "Que cada cliente reciba una respuesta correcta y a tiempo, y que la base de conocimiento cubra cada vez más de lo que preguntan.",
-            "instructions": [
-              "Clasifica cada petición nueva y redacta la respuesta desde la base de conocimiento.",
-              "Atiende primero lo más urgente; avisa de lo que lleve más de un día esperando.",
-              "Cuando la misma pregunta llegue tres veces sin artículo, propón uno.",
-              "Nunca prometas lo que no dicen las fuentes: pregunta."
-            ],
-            "alwaysAsk": [
-              "enviar cualquier respuesta a un cliente",
-              "publicar o cambiar un artículo de la base de conocimiento"
-            ]
-          }
+          ]
         }
       }
     },
