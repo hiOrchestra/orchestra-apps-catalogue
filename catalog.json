@@ -168,6 +168,7 @@
         "variables": [],
         "channels": [],
         "processes": 7,
+        "skills": [],
         "related": [
           {
             "app": "helpdesk",
@@ -417,6 +418,7 @@
           "telegram"
         ],
         "processes": 4,
+        "skills": [],
         "related": [
           {
             "app": "crm",
@@ -626,6 +628,7 @@
           "telegram"
         ],
         "processes": 4,
+        "skills": [],
         "related": [
           {
             "app": "crm",
@@ -759,7 +762,13 @@
           "required": true,
           "why": "Drafts a form from a description you write."
         },
-        "integrations": []
+        "integrations": [
+          {
+            "slug": "typeform",
+            "optional": true,
+            "why": "To bring your Typeform forms and answers over, if you come from there."
+          }
+        ]
       },
       "outward": [
         "Publishes forms as public pages that anyone with the link can answer."
@@ -828,6 +837,7 @@
           "telegram"
         ],
         "processes": 5,
+        "skills": [],
         "related": [
           {
             "app": "crm",
@@ -879,7 +889,9 @@
             "agent": {
               "why": "Redacta un formulario desde una descripción que escribes."
             },
-            "integrations": {}
+            "integrations": {
+              "typeform": "Para traer tus formularios y respuestas de Typeform, si vienes de allí."
+            }
           },
           "outward": [
             "Publica formularios como páginas públicas que puede responder cualquiera con el enlace."
@@ -1151,7 +1163,8 @@
         "channels": [
           "telegram"
         ],
-        "processes": 2
+        "processes": 2,
+        "skills": []
       },
       "emoji": "🧑‍💼",
       "i18n": {
@@ -1419,6 +1432,7 @@
           "telegram"
         ],
         "processes": 13,
+        "skills": [],
         "related": [
           {
             "app": "crm",
@@ -1649,6 +1663,7 @@
           "telegram"
         ],
         "processes": 6,
+        "skills": [],
         "related": [
           {
             "app": "crm",
@@ -1888,7 +1903,8 @@
         "channels": [
           "telegram"
         ],
-        "processes": 6
+        "processes": 6,
+        "skills": []
       },
       "emoji": "🍽️",
       "i18n": {
@@ -2111,7 +2127,8 @@
         "channels": [
           "telegram"
         ],
-        "processes": 5
+        "processes": 5,
+        "skills": []
       },
       "emoji": "💇",
       "i18n": {
@@ -2318,6 +2335,7 @@
           "telegram"
         ],
         "processes": 3,
+        "skills": [],
         "related": [
           {
             "app": "crm",
@@ -2453,7 +2471,7 @@
       "needs": {
         "agent": {
           "required": true,
-          "why": "Reads photos of paper receipts and scanned PDFs, answering only JSON that a script checks. Text receipts are read by a cheap model, with no agent turn."
+          "why": "Reads photos of paper receipts and scanned PDFs and fills in each one for you to check."
         },
         "channels": [
           {
@@ -2622,6 +2640,7 @@
           "telegram"
         ],
         "processes": 4,
+        "skills": [],
         "related": [
           {
             "app": "invoices",
@@ -2671,7 +2690,7 @@
           ],
           "needs": {
             "agent": {
-              "why": "Lee las fotos de tickets de papel y los PDF escaneados, respondiendo solo JSON que comprueba un script. Los recibos con texto los lee un modelo barato, sin turno de agente."
+              "why": "Lee las fotos de tickets de papel y los PDF escaneados y rellena cada uno para que lo revises."
             },
             "integrations": {
               "resend": "Resend o Gmail, para enviar a tu gestor el enlace al PDF y al CSV del mes, solo cuando pulsas Enviar. Sin ninguno, los descargas de Files y los envías tú.",
@@ -2748,7 +2767,7 @@
       "needs": {
         "agent": {
           "required": true,
-          "why": "Writes the posts in your voice, as JSON a script checks; it never publishes. Publishing, numbers and feeds are scripts."
+          "why": "Writes your week of posts in your voice and suggests ideas. It never publishes: you approve every post."
         },
         "integrations": [
           {
@@ -2803,6 +2822,12 @@
                 "check": "accounts"
               }
             ]
+          },
+          {
+            "slug": "facebook",
+            "group": "networks",
+            "optional": true,
+            "why": "Your Facebook pages: publish, reactions and first comments."
           }
         ],
         "groups": {
@@ -2821,9 +2846,22 @@
         "Reads the reactions of what it published, the numbers of your LinkedIn pages, and the feeds you follow."
       ],
       "outwardVia": [
-        "linkedin",
-        "linkedin",
-        "linkedin"
+        [
+          "linkedin",
+          "facebook",
+          "twitter"
+        ],
+        [
+          "linkedin",
+          "facebook",
+          "twitter"
+        ],
+        [
+          "linkedin",
+          "facebook",
+          "twitter",
+          "web"
+        ]
       ],
       "by": "Orchestra",
       "price": {
@@ -2922,7 +2960,15 @@
         "channels": [
           "telegram"
         ],
-        "processes": 6
+        "processes": 6,
+        "skills": [
+          {
+            "id": "twitter",
+            "for": "writer",
+            "optional": true,
+            "why": "Your X account, with your own X API keys (Composio cannot connect X). X charges about US$0.015 a post, US$0.20 with a link."
+          }
+        ]
       },
       "emoji": "📣",
       "i18n": {
@@ -2963,11 +3009,12 @@
           ],
           "needs": {
             "agent": {
-              "why": "Escribe los posts con tu voz, como JSON que revisa un script; nunca publica. Publicar, los números y los feeds son scripts."
+              "why": "Escribe los posts de la semana con tu voz y te propone ideas. Nunca publica: tú apruebas cada post."
             },
             "integrations": {
               "linkedin": "Tu perfil de LinkedIn y las páginas de empresa que administras: publicar, reacciones, primeros comentarios y reposts, y los números de cada página.",
-              "twitter": "Tu cuenta de X, con el skill twitter y tus propias claves de la API de X (Composio no conecta X); el agente corre cada comando de X, uno por vez. X cobra unos US$0,015 por post, US$0,20 con link, y cada lectura de los números."
+              "twitter": "Tu cuenta de X, con el skill twitter y tus propias claves de la API de X (Composio no conecta X); el agente corre cada comando de X, uno por vez. X cobra unos US$0,015 por post, US$0,20 con link, y cada lectura de los números.",
+              "facebook": "Tus páginas de Facebook: publicar, reacciones y primeros comentarios."
             }
           },
           "outward": [
