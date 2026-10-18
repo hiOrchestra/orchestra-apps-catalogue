@@ -57,12 +57,6 @@
         "model": "free"
       },
       "icon": "crm",
-      "onboarding": [
-        {
-          "id": "sync",
-          "title": "Bring your conversations in"
-        }
-      ],
       "screenshots": [
         {
           "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/crm/screens/1-today.png",
@@ -83,7 +77,7 @@
           "device": "desktop"
         }
       ],
-      "version": "0.2.3",
+      "version": "0.3.0",
       "tables": [
         "crm_settings",
         "crm_companies",
@@ -93,30 +87,51 @@
         "crm_tasks",
         "crm_drafts"
       ],
-      "skill": {
-        "name": "app-crm"
-      },
       "package": {
-        "path": "apps/crm/crm-0.2.3.tgz",
-        "sha256": "991165c794c11b5bbd32e1d319d285a346ba44f8ad8ef4c31fceda8e56fdb86e",
-        "size": 71229,
-        "installer": "install.js"
+        "path": "apps/crm/crm-0.3.0.tgz",
+        "sha256": "6e258024df8dc708fb6c2758ef628b288df857005041cc320621890faed83b1c",
+        "size": 69285,
+        "installer": "install.js",
+        "manifest": "app.json",
+        "roles": [
+          {
+            "id": "assistant",
+            "name": "Sales assistant",
+            "required": true,
+            "why": "Looks each new company up on the web and fills in what it finds, with its sources; once a day suggests the next step on open deals and, when it fits, an email. It answers only JSON a script checks; emails wait for a person to approve them, and it never sends on its own."
+          }
+        ],
+        "connections": [
+          {
+            "id": "gmail",
+            "integration": "gmail",
+            "optional": true,
+            "why": "Reads mail with your contacts onto their timeline, and sends the emails you approve.",
+            "from": {
+              "table": "crm_settings",
+              "column": "gmail_account"
+            }
+          },
+          {
+            "id": "googlecalendar",
+            "integration": "googlecalendar",
+            "optional": true,
+            "why": "Reads meetings with your contacts onto their timeline (read only).",
+            "from": {
+              "table": "crm_settings",
+              "column": "gmail_account"
+            }
+          },
+          {
+            "id": "hubspot",
+            "integration": "hubspot",
+            "optional": true,
+            "why": "A one-time copy of your HubSpot companies, contacts and deals (read only)."
+          }
+        ],
+        "variables": []
       },
       "emoji": "🤝",
-      "coordinator": {
-        "objective": "Keep every deal moving: the right next step for each one, nothing forgotten, and every email reviewed before it goes out.",
-        "instructions": [
-          "Each morning, list who the team has to talk to today and why.",
-          "When a deal has had no activity for a week, propose its next step with a draft email.",
-          "Enrich new companies and link new contacts to their company.",
-          "Never mark a deal won or lost yourself: suggest it."
-        ],
-        "level": "keep",
-        "alwaysAsk": [
-          "sending any email to a contact",
-          "changing the stage of a deal"
-        ]
-      },
       "i18n": {
         "es": {
           "name": "CRM",
@@ -147,27 +162,11 @@
             "Envía correos desde tu Gmail, solo los borradores que apruebas.",
             "Lee tu Gmail y tu Google Calendar cuando activas la sincronización (solo lectura)."
           ],
-          "onboarding": [
-            "Trae tus conversaciones"
-          ],
           "captions": [
             "Hoy: con quién hablar, los pasos que sugiere el agente y los correos que esperan tu OK",
             "El embudo por etapas, con lo que vale cada una",
             "Una oportunidad: su siguiente paso, la sugerencia del agente y todo el historial"
-          ],
-          "coordinator": {
-            "objective": "Que cada oportunidad avance: el siguiente paso correcto para cada una, nada olvidado, y cada correo revisado antes de salir.",
-            "instructions": [
-              "Cada mañana, lista con quién tiene que hablar el equipo hoy y por qué.",
-              "Cuando una oportunidad lleve una semana sin actividad, propone su siguiente paso con un borrador de correo.",
-              "Completa las empresas nuevas y vincula los contactos nuevos a su empresa.",
-              "Nunca marques una oportunidad como ganada o perdida tú: sugiérelo."
-            ],
-            "alwaysAsk": [
-              "enviar cualquier correo a un contacto",
-              "cambiar la etapa de una oportunidad"
-            ]
-          }
+          ]
         }
       }
     },
@@ -243,7 +242,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.3.0",
+      "version": "0.3.1",
       "tables": [
         "hd_settings",
         "hd_tickets",
@@ -253,9 +252,9 @@
         "hd_requests"
       ],
       "package": {
-        "path": "apps/helpdesk/helpdesk-0.3.0.tgz",
-        "sha256": "2868579a412990918ca2a072f212c89abda218e006a59c3533c29a506005f0ec",
-        "size": 48709,
+        "path": "apps/helpdesk/helpdesk-0.3.1.tgz",
+        "sha256": "1183b1087d5ff894dd73cfdc889988b6ba5ab1888f42da19a34241d509daad5a",
+        "size": 48866,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
@@ -389,54 +388,38 @@
           "device": "mobile"
         }
       ],
-      "onboarding": [
-        {
-          "id": "profile",
-          "title": "Your name and time zone"
-        },
-        {
-          "id": "calendar",
-          "title": "Connect Google Calendar"
-        },
-        {
-          "id": "hours",
-          "title": "Your available hours"
-        },
-        {
-          "id": "share",
-          "title": "Share your link"
-        }
-      ],
-      "version": "0.2.5",
+      "version": "0.3.0",
       "tables": [
         "bk_settings",
         "bk_types",
         "bk_slots",
         "bk_bookings"
       ],
-      "skill": {
-        "name": "app-booking"
-      },
       "package": {
-        "path": "apps/booking/booking-0.2.5.tgz",
-        "sha256": "9fcc9177bc02243a7b602f1779776a066c4de2d535943d01f729a1a30a099833",
-        "size": 59360,
-        "installer": "install.js"
+        "path": "apps/booking/booking-0.3.0.tgz",
+        "sha256": "253790f353aa223247fc71217ced5d90f511f50350d0ec7e904195b5c9db637e",
+        "size": 56884,
+        "installer": "install.js",
+        "manifest": "app.json",
+        "roles": [
+          {
+            "id": "preparer",
+            "name": "Meeting preparer",
+            "required": true,
+            "why": "Before each confirmed meeting, looks the person and their company up on the web (and in the CRM when it is installed) and writes a short brief, answering only the JSON a script checks. It contacts nobody."
+          }
+        ],
+        "connections": [
+          {
+            "id": "calendar",
+            "integration": "googlecalendar",
+            "optional": false,
+            "why": "Reads when you are busy (only that a time is taken, never what is in it) and creates the confirmed events; Google sends the invitations."
+          }
+        ],
+        "variables": []
       },
       "emoji": "📅",
-      "coordinator": {
-        "objective": "People book meetings easily, every booking is confirmed in time, and each meeting starts with a brief on the person.",
-        "instructions": [
-          "Prepare a brief on each person before their meeting.",
-          "Flag bookings that wait for confirmation more than a few hours.",
-          "Keep the available hours in line with what the person says."
-        ],
-        "level": "keep",
-        "alwaysAsk": [
-          "confirming or declining a booking",
-          "changing the available hours"
-        ]
-      },
       "i18n": {
         "es": {
           "name": "Reservas",
@@ -465,29 +448,11 @@
             "Crea eventos en tu Google Calendar e invita a la persona, solo cuando confirmas (o si activas la confirmación automática).",
             "Publica una página de reservas que puede usar cualquiera con el enlace."
           ],
-          "onboarding": [
-            "Tu nombre y zona horaria",
-            "Conecta Google Calendar",
-            "Tus horas disponibles",
-            "Comparte tu enlace"
-          ],
           "captions": [
             "Próximas reuniones, cada una con el resumen del agente",
             "Peticiones que esperan tu OK",
             "La página de reservas, en un móvil, con tus huecos reales"
-          ],
-          "coordinator": {
-            "objective": "Que reservar sea fácil, cada reserva se confirme a tiempo y cada reunión empiece con un resumen de la persona.",
-            "instructions": [
-              "Prepara un resumen de cada persona antes de su reunión.",
-              "Avisa de las reservas que lleven más de unas horas esperando confirmación.",
-              "Mantén las horas disponibles como diga la persona."
-            ],
-            "alwaysAsk": [
-              "confirmar o rechazar una reserva",
-              "cambiar las horas disponibles"
-            ]
-          }
+          ]
         }
       }
     },
@@ -556,7 +521,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.3.7",
+      "version": "0.3.8",
       "tables": [
         "forms_settings",
         "forms_templates",
@@ -566,9 +531,9 @@
         "forms_answers"
       ],
       "package": {
-        "path": "apps/forms/forms-0.3.7.tgz",
-        "sha256": "5001cc9d6596804078ee5814957001f6565597b3148f2f8783823c23163e29da",
-        "size": 118302,
+        "path": "apps/forms/forms-0.3.8.tgz",
+        "sha256": "6686191ef8d84f2f8b5e9adc352c14d0cbceec128eea85ef4d3967ec529a647f",
+        "size": 118327,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
@@ -825,17 +790,7 @@
           "device": "mobile"
         }
       ],
-      "onboarding": [
-        {
-          "id": "company",
-          "title": "Your company"
-        },
-        {
-          "id": "first-role",
-          "title": "Your first role"
-        }
-      ],
-      "version": "0.3.6",
+      "version": "0.4.0",
       "tables": [
         "hr_company",
         "hr_settings",
@@ -843,29 +798,24 @@
         "hr_applications",
         "hr_imports"
       ],
-      "skill": {
-        "name": "app-recruiter"
-      },
       "package": {
-        "path": "apps/recruiter/recruiter-0.3.6.tgz",
-        "sha256": "05124d267b04791f556fcdea6652a739f53ad2f0643abaaf80d7872515072d06",
-        "size": 47578,
-        "installer": "install.js"
+        "path": "apps/recruiter/recruiter-0.4.0.tgz",
+        "sha256": "560a9732b6da513d7c69ad74d0a17b794ae3772a3e6decfde67e676abab01bdc",
+        "size": 44770,
+        "installer": "install.js",
+        "manifest": "app.json",
+        "roles": [
+          {
+            "id": "screener",
+            "name": "Screener",
+            "required": true,
+            "why": "Reads each new applicant's CV and message against the role and suggests a verdict (shortlist, maybe, no) with a score and reasons; reads a careers page you point it to and turns its jobs into roles. It answers only JSON a script checks, never moves anyone's stage and never contacts anyone: a person decides."
+          }
+        ],
+        "connections": [],
+        "variables": []
       },
       "emoji": "🧑‍💼",
-      "coordinator": {
-        "objective": "Every applicant read and scored fairly, and the right people moved on quickly.",
-        "instructions": [
-          "Read each new application and score it against the role, saying why.",
-          "Keep a shortlist per open role.",
-          "Flag candidates waiting for an answer more than a week."
-        ],
-        "level": "keep",
-        "alwaysAsk": [
-          "moving a candidate on or rejecting them",
-          "publishing or closing a role"
-        ]
-      },
       "i18n": {
         "es": {
           "name": "Selección",
@@ -891,26 +841,10 @@
           "outward": [
             "Publica una página de empleo y un formulario de candidatura que puede usar cualquiera con el enlace."
           ],
-          "onboarding": [
-            "Tu empresa",
-            "Tu primera vacante"
-          ],
           "captions": [
             "La página de empleo pública con las vacantes",
             "La página de empleo en un móvil"
-          ],
-          "coordinator": {
-            "objective": "Cada candidatura leída y puntuada con justicia, y las personas adecuadas avanzando rápido.",
-            "instructions": [
-              "Lee cada candidatura nueva y puntúala frente al puesto, diciendo por qué.",
-              "Mantén una lista corta por vacante.",
-              "Avisa de candidatos que lleven más de una semana esperando respuesta."
-            ],
-            "alwaysAsk": [
-              "hacer avanzar o descartar a un candidato",
-              "publicar o cerrar una vacante"
-            ]
-          }
+          ]
         }
       }
     },
@@ -1029,16 +963,6 @@
         "model": "free"
       },
       "icon": "outreach",
-      "onboarding": [
-        {
-          "id": "mail",
-          "title": "Connect Resend or Gmail"
-        },
-        {
-          "id": "sender",
-          "title": "Your sender"
-        }
-      ],
       "screenshots": [
         {
           "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/outreach/screens/1-report.png",
@@ -1059,7 +983,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.4.2",
+      "version": "0.5.0",
       "tables": [
         "outreach_settings",
         "outreach_fields",
@@ -1071,29 +995,37 @@
         "outreach_suppressions",
         "outreach_imports"
       ],
-      "skill": {
-        "name": "app-outreach"
-      },
       "package": {
-        "path": "apps/outreach/outreach-0.4.2.tgz",
-        "sha256": "004063de03640b189a3d598abb994ad6d615246aa460e1d3d44b54d8965c75c2",
-        "size": 123559,
-        "installer": "install.js"
+        "path": "apps/outreach/outreach-0.5.0.tgz",
+        "sha256": "a3b9795afad30705125cf2a56247a08022fc4c95a3e0519ffcbf10a691c4bb46",
+        "size": 121043,
+        "installer": "install.js",
+        "manifest": "app.json",
+        "roles": [
+          {
+            "id": "researcher",
+            "name": "Researcher",
+            "required": true,
+            "why": "Looks up on the web the public business email of contacts that have none, in the stages chosen in Settings, and answers only the JSON a script checks (each address with the page it was read on). It never writes, sends or contacts anyone."
+          }
+        ],
+        "connections": [
+          {
+            "id": "resend",
+            "integration": "resend",
+            "optional": true,
+            "why": "Sends broadcasts and sequences from your own domain, in batches, and reports bounces and opens."
+          },
+          {
+            "id": "gmail",
+            "integration": "gmail",
+            "optional": true,
+            "why": "Sends a campaign from the connected account instead, one email at a time; replies land in that inbox."
+          }
+        ],
+        "variables": []
       },
       "emoji": "📣",
-      "coordinator": {
-        "objective": "Campaigns that reach the right people, with clean lists and every send reviewed.",
-        "instructions": [
-          "Look up the public email of contacts who have none, saying where you found it.",
-          "Report on each campaign a day after it goes out.",
-          "Keep lists clean: unsubscribes and bounces out."
-        ],
-        "level": "keep",
-        "alwaysAsk": [
-          "sending or scheduling any campaign",
-          "adding contacts to a list"
-        ]
-      },
       "i18n": {
         "es": {
           "name": "Campañas",
@@ -1123,27 +1055,11 @@
             "Envía los correos que envías, programas o inicias, desde tu cuenta de Resend o tu Gmail, según elija cada campaña; nada sale solo.",
             "Publica una página de baja que puede usar cualquiera con un enlace de uno de tus correos."
           ],
-          "onboarding": [
-            "Conecta Resend o Gmail",
-            "Tu remitente"
-          ],
           "captions": [
             "El informe de una newsletter: cada número abre a las personas que hay detrás",
             "Contactos con sus listas, estado y último correo",
             "La página de baja a la que llega un lector, en un móvil"
-          ],
-          "coordinator": {
-            "objective": "Campañas que llegan a quien deben, con listas limpias y cada envío revisado.",
-            "instructions": [
-              "Busca el correo público de los contactos que no lo tienen, diciendo dónde lo encontraste.",
-              "Informa de cada campaña un día después de salir.",
-              "Mantén las listas limpias: fuera bajas y rebotes."
-            ],
-            "alwaysAsk": [
-              "enviar o programar cualquier campaña",
-              "añadir contactos a una lista"
-            ]
-          }
+          ]
         }
       }
     },
@@ -1225,17 +1141,7 @@
           "device": "mobile"
         }
       ],
-      "onboarding": [
-        {
-          "id": "company",
-          "title": "Your company"
-        },
-        {
-          "id": "pay",
-          "title": "How you get paid"
-        }
-      ],
-      "version": "0.1.4",
+      "version": "0.2.0",
       "tables": [
         "inv_settings",
         "inv_series",
@@ -1245,29 +1151,41 @@
         "inv_links",
         "inv_responses"
       ],
-      "skill": {
-        "name": "app-invoices"
-      },
       "package": {
-        "path": "apps/invoices/invoices-0.1.4.tgz",
-        "sha256": "daceb8e3c63e3f3007fe84d36e6de14585e24ff0c05421b73fd6c759af5e918c",
-        "size": 90060,
-        "installer": "install.js"
+        "path": "apps/invoices/invoices-0.2.0.tgz",
+        "sha256": "e942af1a421982b286947e3fe0b7cb119d31966f537f76ed03d85e57f8b7f874",
+        "size": 87419,
+        "installer": "install.js",
+        "manifest": "app.json",
+        "roles": [
+          {
+            "id": "drafter",
+            "name": "Drafter",
+            "required": true,
+            "why": "Writes the lines of a quote from a sentence a person wrote, and drafts payment reminders for overdue invoices, answering only the JSON a script checks. Reminders wait for a person's OK; it never sends or issues anything on its own."
+          }
+        ],
+        "connections": [
+          {
+            "id": "gmail",
+            "integration": "gmail",
+            "optional": true,
+            "why": "Quotes, invoices and approved reminders are emailed from it.",
+            "from": {
+              "table": "inv_settings",
+              "column": "gmail_account"
+            }
+          },
+          {
+            "id": "stripe",
+            "integration": "stripe",
+            "optional": true,
+            "why": "Card payments: a Pay button on each invoice, marked paid when the client pays (only with card payments on in Ajustes)."
+          }
+        ],
+        "variables": []
       },
       "emoji": "🧾",
-      "coordinator": {
-        "objective": "Get paid on time: quotes answered, invoices sent, and late ones followed up politely.",
-        "instructions": [
-          "Draft a quote from the sentence the person gives.",
-          "Each week, list who is late and draft a polite reminder.",
-          "Never change an issued invoice: propose a correction instead."
-        ],
-        "level": "keep",
-        "alwaysAsk": [
-          "sending any quote, invoice or reminder",
-          "issuing an invoice"
-        ]
-      },
       "i18n": {
         "es": {
           "name": "Facturas",
@@ -1298,27 +1216,11 @@
             "Crea un enlace de pago de Stripe para cada factura, cuando activas Stripe.",
             "Publica una página por documento que solo puede abrir quien tenga su enlace."
           ],
-          "onboarding": [
-            "Tu empresa",
-            "Cómo te pagan"
-          ],
           "captions": [
             "Lo que te deben, quién va tarde y los presupuestos que esperan respuesta",
             "Una factura tal como la ve el cliente, con su enlace, correo y pago al lado",
             "La página del cliente en un móvil: pagar con tarjeta o transferencia, o guardarla en PDF"
-          ],
-          "coordinator": {
-            "objective": "Cobrar a tiempo: presupuestos respondidos, facturas enviadas y las vencidas reclamadas con educación.",
-            "instructions": [
-              "Redacta un presupuesto desde la frase que te den.",
-              "Cada semana, lista quién va tarde y redacta un recordatorio educado.",
-              "Nunca cambies una factura emitida: propón una rectificación."
-            ],
-            "alwaysAsk": [
-              "enviar cualquier presupuesto, factura o recordatorio",
-              "emitir una factura"
-            ]
-          }
+          ]
         }
       }
     },
@@ -1400,21 +1302,7 @@
           "device": "mobile"
         }
       ],
-      "onboarding": [
-        {
-          "id": "hours",
-          "title": "Your restaurant and its hours"
-        },
-        {
-          "id": "tables",
-          "title": "Your tables"
-        },
-        {
-          "id": "emails",
-          "title": "Emails to guests, through Gmail or Resend (optional)"
-        }
-      ],
-      "version": "0.1.3",
+      "version": "0.2.0",
       "tables": [
         "tb_settings",
         "tb_services",
@@ -1431,29 +1319,37 @@
         "tb_briefs",
         "tb_imports"
       ],
-      "skill": {
-        "name": "app-tables"
-      },
       "package": {
-        "path": "apps/tables/tables-0.1.3.tgz",
-        "sha256": "0535a076f2e7637a117528e6def7463492d2f383e7b01a88e4cf9e1f07c04fe1",
-        "size": 126016,
-        "installer": "install.js"
+        "path": "apps/tables/tables-0.2.0.tgz",
+        "sha256": "12cd48eec4c51f2c190a4f1610705952add45998f74c16447bf1d491038f59a3",
+        "size": 125001,
+        "installer": "install.js",
+        "manifest": "app.json",
+        "roles": [
+          {
+            "id": "assistant",
+            "name": "Assistant",
+            "required": true,
+            "why": "Only while those extras are on: reads booking emails in the Gmail inbox and writes a short brief before each service, answering only the JSON a script checks. Inside your rules the script books; anything else waits as a draft reply for a person. It contacts nobody and writes nothing itself."
+          }
+        ],
+        "connections": [
+          {
+            "id": "gmail",
+            "integration": "gmail",
+            "optional": true,
+            "why": "One of Gmail or Resend, to email guests (confirmations, reminders, change notices) from your own address; also the inbox booking emails are read from. Bookings work without it."
+          },
+          {
+            "id": "resend",
+            "integration": "resend",
+            "optional": true,
+            "why": "One of Gmail or Resend: the same emails to guests, from an address on your own domain verified in Resend. Bookings work without it."
+          }
+        ],
+        "variables": []
       },
       "emoji": "🍽️",
-      "coordinator": {
-        "objective": "Every table booked directly, every service prepared, and fewer no-shows.",
-        "instructions": [
-          "Before each service, summarise who comes, special notes and allergies.",
-          "Flag repeated no-shows and VIP guests.",
-          "When booking emails are on, book only inside the rules; anything else waits."
-        ],
-        "level": "keep",
-        "alwaysAsk": [
-          "answering a booking email outside the rules",
-          "changing tables or opening hours"
-        ]
-      },
       "i18n": {
         "es": {
           "name": "Mesas",
@@ -1484,28 +1380,11 @@
             "Cuando activas los correos: envía a cada cliente su confirmación, un recordatorio un día antes y un aviso cuando la reserva cambia, con el remitente que elijas (tu Gmail o tu Resend).",
             "Cuando activas los correos de reserva: responde los correos de reserva dentro de tus reglas desde tu Gmail; cualquier otra respuesta espera tu OK."
           ],
-          "onboarding": [
-            "Tu restaurante y su horario",
-            "Tus mesas",
-            "Correos a los clientes, por Gmail o Resend (opcional)"
-          ],
           "captions": [
             "La hoja de servicio de hoy: quién viene, cuándo, cuántos, qué mesa, notas y alergias",
             "De dónde vienen las reservas, y la comisión que te ahorra reservar directo (estimada)",
             "La página de reservas en un móvil: día, personas, hora, listo"
-          ],
-          "coordinator": {
-            "objective": "Cada mesa reservada directamente, cada servicio preparado, y menos no-shows.",
-            "instructions": [
-              "Antes de cada servicio, resume quién viene, notas especiales y alergias.",
-              "Avisa de no-shows repetidos y de clientes VIP.",
-              "Cuando los correos de reserva estén activos, reserva solo dentro de las reglas; lo demás espera."
-            ],
-            "alwaysAsk": [
-              "responder un correo de reserva fuera de las reglas",
-              "cambiar mesas u horario"
-            ]
-          }
+          ]
         }
       }
     },
@@ -1587,25 +1466,7 @@
           "device": "mobile"
         }
       ],
-      "onboarding": [
-        {
-          "id": "business",
-          "title": "Your business"
-        },
-        {
-          "id": "services",
-          "title": "Your services"
-        },
-        {
-          "id": "team",
-          "title": "Your team and their hours"
-        },
-        {
-          "id": "gmail",
-          "title": "Emails to clients, through Gmail or Resend (optional)"
-        }
-      ],
-      "version": "0.1.3",
+      "version": "0.2.0",
       "tables": [
         "ap_settings",
         "ap_services",
@@ -1620,29 +1481,37 @@
         "ap_emails",
         "ap_inbox"
       ],
-      "skill": {
-        "name": "app-appointments"
-      },
       "package": {
-        "path": "apps/appointments/appointments-0.1.3.tgz",
-        "sha256": "94fbac5cf7599e2fa7eeaff88252a4f72b413603924a67be95efb307b879457f",
-        "size": 131883,
-        "installer": "install.js"
+        "path": "apps/appointments/appointments-0.2.0.tgz",
+        "sha256": "b5020dcd5cbb8c871d11d856bb4303d9a3712e2a6c6175b000296d12e31415ce",
+        "size": 131760,
+        "installer": "install.js",
+        "manifest": "app.json",
+        "roles": [
+          {
+            "id": "assistant",
+            "name": "Assistant",
+            "required": true,
+            "why": "Only while those switches are on: reads booking emails that arrive at your Gmail and drafts short invitations for clients due back, answering only the JSON a script checks. Inside your rules the script books; anything else waits in Messages for your Approve. It contacts nobody and sends nothing itself."
+          }
+        ],
+        "connections": [
+          {
+            "id": "gmail",
+            "integration": "gmail",
+            "optional": true,
+            "why": "One of Gmail or Resend, to email clients (confirmations, reminders, change notices) from your own address; also the inbox booking emails are read from. Bookings work without it."
+          },
+          {
+            "id": "resend",
+            "integration": "resend",
+            "optional": true,
+            "why": "One of Gmail or Resend: the same emails to clients, from an address on your own domain verified in Resend. Bookings work without it."
+          }
+        ],
+        "variables": []
       },
       "emoji": "💇",
-      "coordinator": {
-        "objective": "A full, well-kept agenda: clients booked directly, fewer no-shows, and the ones due back invited.",
-        "instructions": [
-          "Each morning, summarise the day per person and any gaps.",
-          "Draft invitations for clients due back for their next visit.",
-          "When booking emails are on, book only inside the rules; anything else waits."
-        ],
-        "level": "keep",
-        "alwaysAsk": [
-          "sending invitations or anything outside the rules to a client",
-          "changing services, prices or team hours"
-        ]
-      },
       "i18n": {
         "es": {
           "name": "Citas",
@@ -1673,29 +1542,11 @@
             "Envía a cada cliente su confirmación, cualquier cambio o cancelación y recordatorios con el remitente que elijas (tu Gmail o tu Resend), solo si activas los correos.",
             "Todo lo que el agente escriba fuera de tus reglas espera tu Aprobar."
           ],
-          "onboarding": [
-            "Tu negocio",
-            "Tus servicios",
-            "Tu equipo y su horario",
-            "Correos a los clientes, por Gmail o Resend (opcional)"
-          ],
           "captions": [
             "La agenda de hoy, una columna por persona: llegadas, no-shows, tiempo bloqueado",
             "Servicios con su duración, precio, márgenes y cuándo les toca volver",
             "La página de reservas en un móvil, en el idioma de tus clientes"
-          ],
-          "coordinator": {
-            "objective": "Una agenda llena y bien llevada: clientes que reservan directo, menos no-shows, y los que les toca volver, invitados.",
-            "instructions": [
-              "Cada mañana, resume el día por persona y los huecos.",
-              "Redacta invitaciones para los clientes a los que les toca su próxima visita.",
-              "Cuando los correos de reserva estén activos, reserva solo dentro de las reglas; lo demás espera."
-            ],
-            "alwaysAsk": [
-              "enviar invitaciones o cualquier cosa fuera de las reglas a un cliente",
-              "cambiar servicios, precios u horario del equipo"
-            ]
-          }
+          ]
         }
       }
     },
@@ -1730,10 +1581,6 @@
         }
       ],
       "needs": {
-        "agent": {
-          "required": false,
-          "why": "Optional: it can prepare a draft from a file and the people who sign (\"send the NDA to Ana for signature\"). Only a person sends it. The scripts run as the project's coordinator."
-        },
         "integrations": [
           {
             "slug": "gmail",
@@ -1777,17 +1624,7 @@
           "device": "mobile"
         }
       ],
-      "onboarding": [
-        {
-          "id": "company",
-          "title": "Your company"
-        },
-        {
-          "id": "sender",
-          "title": "Who sends the emails: Gmail or Resend"
-        }
-      ],
-      "version": "0.1.0",
+      "version": "0.2.0",
       "tables": [
         "es_settings",
         "es_sources",
@@ -1800,29 +1637,30 @@
         "es_events",
         "es_emails"
       ],
-      "skill": {
-        "name": "app-esign"
-      },
       "package": {
-        "path": "apps/esign/esign-0.1.0.tgz",
-        "sha256": "3d1e69b756d5fc07a1574a9784e25865b01e087b59f8bc90270485ee5b71656b",
-        "size": 391269,
-        "installer": "install.js"
+        "path": "apps/esign/esign-0.2.0.tgz",
+        "sha256": "9fb51273856462c8f320921104ffebc70e72c182d8c2fe604fadefd300ea9a63",
+        "size": 390919,
+        "installer": "install.js",
+        "manifest": "app.json",
+        "roles": [],
+        "connections": [
+          {
+            "id": "gmail",
+            "integration": "gmail",
+            "optional": true,
+            "why": "Sends the invitations, codes, reminders and the signed copy, when Settings says Gmail."
+          },
+          {
+            "id": "resend",
+            "integration": "resend",
+            "optional": true,
+            "why": "Sends them from your own domain instead, when Settings says Resend."
+          }
+        ],
+        "variables": []
       },
       "emoji": "✍️",
-      "coordinator": {
-        "objective": "Get agreements signed: every envelope out on time, nobody forgotten, every signed PDF filed.",
-        "instructions": [
-          "Prepare a draft from the file and the people the person names; never send it.",
-          "Each week, list the envelopes still waiting and who has not signed.",
-          "Never change a document once it was sent: propose voiding it and sending a new one."
-        ],
-        "level": "keep",
-        "alwaysAsk": [
-          "sending an envelope or a reminder",
-          "voiding an envelope"
-        ]
-      },
       "i18n": {
         "es": {
           "name": "Firma",
@@ -1840,9 +1678,6 @@
             "primaryAction": "Enviar un documento de Files a firmar"
           },
           "needs": {
-            "agent": {
-              "why": "Opcional: prepara un borrador desde un archivo y las personas que firman (\"mándale el NDA a Ana para que lo firme\"). Solo una persona lo envía."
-            },
             "integrations": {
               "gmail": "Gmail o Resend, para enviar a los firmantes su enlace, un código al firmar, los recordatorios que pidas y la copia firmada, desde tu dirección.",
               "resend": "Gmail o Resend, para enviar los mismos correos desde una dirección de tu dominio verificado en Resend."
@@ -1853,27 +1688,11 @@
             "Envía a cada firmante su enlace cuando pulsas Enviar, un código al firmar, los recordatorios que pidas y la copia firmada, por tu Gmail o Resend.",
             "Guarda cada PDF firmado en Files, en el proyecto."
           ],
-          "onboarding": [
-            "Tu empresa",
-            "Quién envía los correos: Gmail o Resend"
-          ],
           "captions": [
             "Lo que espera firma y de quién, los borradores y lo firmado",
             "Un sobre: el documento con cada firma en su lugar, quién firmó, el PDF firmado y la evidencia",
             "La página del firmante en un móvil: leer, confirmar el email con un código, escribir o dibujar la firma"
-          ],
-          "coordinator": {
-            "objective": "Conseguir los acuerdos firmados: cada sobre enviado a tiempo, nadie olvidado y cada PDF firmado archivado.",
-            "instructions": [
-              "Prepara un borrador desde el archivo y las personas que te indiquen; nunca lo envíes.",
-              "Cada semana, lista los sobres que siguen esperando y quién no ha firmado.",
-              "Nunca cambies un documento ya enviado: propón anularlo y enviar uno nuevo."
-            ],
-            "alwaysAsk": [
-              "enviar un sobre o un recordatorio",
-              "anular un sobre"
-            ]
-          }
+          ]
         }
       }
     },
@@ -2032,17 +1851,7 @@
           "device": "phone"
         }
       ],
-      "onboarding": [
-        {
-          "id": "company",
-          "title": "Your company"
-        },
-        {
-          "id": "in",
-          "title": "How receipts get in"
-        }
-      ],
-      "version": "0.1.1",
+      "version": "0.2.0",
       "tables": [
         "ex_settings",
         "ex_receipts",
@@ -2051,29 +1860,37 @@
         "ex_emails",
         "ex_links"
       ],
-      "skill": {
-        "name": "app-expenses"
-      },
       "package": {
-        "path": "apps/expenses/expenses-0.1.1.tgz",
-        "sha256": "bcd7106974304c312ca77d0e43f5847cd748a228f4816a8765de8f7307aabf2c",
-        "size": 82036,
-        "installer": "install.js"
+        "path": "apps/expenses/expenses-0.2.0.tgz",
+        "sha256": "dd3c2137f63e45ec640b40700f477cd9bfcaf6cdf76d1c6ed9331beb335e5ea3",
+        "size": 82482,
+        "installer": "install.js",
+        "manifest": "app.json",
+        "roles": [
+          {
+            "id": "reader",
+            "name": "Receipt reader",
+            "required": true,
+            "why": "Looks at receipt photos a script could not read as text and answers only the JSON a script checks (vendor, date, totals, VAT, category). A person reviews every expense; it never writes or sends anything itself."
+          }
+        ],
+        "connections": [
+          {
+            "id": "gmail",
+            "integration": "gmail",
+            "optional": true,
+            "why": "Sends the closed month to your accountant, when Ajustes says Gmail."
+          },
+          {
+            "id": "resend",
+            "integration": "resend",
+            "optional": true,
+            "why": "Sends the closed month to your accountant from an address on your own domain, when Ajustes says Resend."
+          }
+        ],
+        "variables": []
       },
       "emoji": "🧾",
-      "coordinator": {
-        "objective": "Every receipt read and approved within the week, and the month closed and sent to the accountant in its first days.",
-        "instructions": [
-          "When someone sends you a receipt, tell them to forward it to the workspace address or put it in the Files folder; never enter it yourself unless asked.",
-          "Each Monday, say how many expenses wait for review and what could not be read.",
-          "In the first days of a month, remind the person to close the last one and send it."
-        ],
-        "level": "keep",
-        "alwaysAsk": [
-          "sending anything to the accountant",
-          "closing or reopening a month"
-        ]
-      },
       "i18n": {
         "es": {
           "name": "Gastos",
@@ -2104,28 +1921,12 @@
             "Envía a tu gestor un enlace privado al PDF y al CSV del mes, por Resend o tu Gmail, solo cuando pulsas Enviar. La página del enlace no abre nada sin él.",
             "Escribe reglas de correo en el email del espacio para los remitentes que indicas."
           ],
-          "onboarding": [
-            "Tu empresa",
-            "Cómo entran los recibos"
-          ],
           "captions": [
             "Los recibos leídos, esperando que los mires",
             "Un recibo junto a lo que se leyó: comprueba, corrige, aprueba",
             "El mes: totales, IVA por tipo, lo que se debe y el cierre para tu gestor",
             "Lo que abre tu gestor desde el correo del mes: los totales, el PDF y el CSV"
-          ],
-          "coordinator": {
-            "objective": "Cada recibo leído y aprobado en la semana, y el mes cerrado y enviado al gestor en sus primeros días.",
-            "instructions": [
-              "Cuando alguien te mande un recibo, dile que lo reenvíe a la dirección del espacio o lo deje en la carpeta de Files; no lo cargues tú salvo que te lo pidan.",
-              "Cada lunes, di cuántos gastos esperan revisión y qué no se pudo leer.",
-              "En los primeros días de cada mes, recuerda cerrar el anterior y enviarlo."
-            ],
-            "alwaysAsk": [
-              "enviar cualquier cosa al gestor",
-              "cerrar o reabrir un mes"
-            ]
-          }
+          ]
         }
       }
     },
@@ -2267,7 +2068,7 @@
           "title": "The first week"
         }
       ],
-      "version": "0.3.7",
+      "version": "0.3.8",
       "tables": [
         "po_settings",
         "po_accounts",
@@ -2280,9 +2081,9 @@
         "po_pillars"
       ],
       "package": {
-        "path": "apps/posts/posts-0.3.7.tgz",
-        "sha256": "e57b0f0e09a5f5045bd21d41c6a43c7a7845ce565c3d8e6d14a5a6742ead62ac",
-        "size": 96293,
+        "path": "apps/posts/posts-0.3.8.tgz",
+        "sha256": "54d626575e13a653ad1fbd3a64978610bc68cf233fa0a46756db25553dc61dc5",
+        "size": 96876,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
