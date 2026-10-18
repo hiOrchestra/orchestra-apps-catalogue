@@ -5,7 +5,9 @@
       "id": "crm",
       "name": "CRM",
       "category": "Sales",
-      "summary": "Contacts, companies and deals, with the agent doing the follow-up. Like HubSpot.",
+      "summary": "Contacts, companies and deals, with the agent doing the follow-up.",
+      "promise": "Every deal has its next step proposed and its email drafted. You approve it and it goes out from your Gmail.",
+      "like": "HubSpot",
       "description": "A pipeline of deals, the people and companies behind them, and a timeline of every email and meeting. The agent enriches companies, proposes the next step for each deal and drafts the email; nothing is sent until you approve it.",
       "brief": {
         "user": "Founders and the sales team of a small company",
@@ -15,8 +17,38 @@
           "At what stage is each deal, and which one is stuck?",
           "What happened with this person or company?"
         ],
-        "primaryAction": "Do or approve the next step of a deal"
+        "primaryAction": "Do or approve the next step of a deal",
+        "answers": [
+          "Each day the agent proposes the next step for your deals, and says why.",
+          "The pipeline shows every deal by stage and marks the ones that have stopped moving.",
+          "Each person and company keeps a timeline of every email and meeting."
+        ]
       },
+      "how": [
+        {
+          "actor": "arrives",
+          "title": "Mail, meetings and leads come in",
+          "text": "With sync on, your Gmail and Calendar fill each contact's timeline; leads from Forms come in too.",
+          "via": [
+            "gmail",
+            "googlecalendar"
+          ]
+        },
+        {
+          "actor": "agent",
+          "role": "assistant",
+          "title": "The agent fills in and proposes",
+          "text": "It looks each new company up on the web, then suggests the next step for each deal and drafts the email."
+        },
+        {
+          "actor": "person",
+          "title": "You approve it, and it goes out",
+          "text": "Approved drafts go out from your Gmail. Nothing is sent without you.",
+          "via": [
+            "gmail"
+          ]
+        }
+      ],
       "surfaces": [
         {
           "id": "crm",
@@ -51,6 +83,10 @@
       "outward": [
         "Sends emails from your Gmail, only the drafts you approve.",
         "Reads your Gmail and Google Calendar when you turn sync on (read only)."
+      ],
+      "outwardVia": [
+        "gmail",
+        "gmail"
       ],
       "by": "Orchestra",
       "price": {
@@ -130,6 +166,8 @@
           }
         ],
         "variables": [],
+        "channels": [],
+        "processes": 7,
         "related": [
           {
             "app": "helpdesk",
@@ -180,7 +218,8 @@
         "es": {
           "name": "CRM",
           "category": "Ventas",
-          "summary": "Contactos, empresas y oportunidades, con el agente haciendo el seguimiento. Como HubSpot.",
+          "summary": "Contactos, empresas y oportunidades, con el agente haciendo el seguimiento.",
+          "promise": "Cada oportunidad tiene su siguiente paso propuesto y su correo redactado. Tú lo apruebas y sale desde tu Gmail.",
           "description": "Un embudo de oportunidades, las personas y empresas que hay detrás y una línea de tiempo de cada correo y reunión. El agente completa las empresas, propone el siguiente paso de cada oportunidad y redacta el correo; no se envía nada hasta que lo apruebas.",
           "brief": {
             "user": "Fundadores y el equipo comercial de una empresa pequeña",
@@ -190,8 +229,27 @@
               "¿En qué etapa está cada oportunidad, y cuál está parada?",
               "¿Qué pasó con esta persona o empresa?"
             ],
-            "primaryAction": "Hacer o aprobar el siguiente paso de una oportunidad"
+            "primaryAction": "Hacer o aprobar el siguiente paso de una oportunidad",
+            "answers": [
+              "Cada día el agente propone el siguiente paso de tus oportunidades, y te dice por qué.",
+              "El embudo muestra cada oportunidad por etapa y marca las que llevan tiempo paradas.",
+              "Cada persona y empresa guarda una línea de tiempo con cada correo y reunión."
+            ]
           },
+          "how": [
+            {
+              "title": "Entran correos, reuniones y leads",
+              "text": "Con la sincronización activa, tu Gmail y tu Calendar llenan la línea de tiempo de cada contacto; los leads de Formularios también entran."
+            },
+            {
+              "title": "El agente completa y propone",
+              "text": "Busca cada empresa nueva en la web y después sugiere el siguiente paso de cada oportunidad y redacta el correo."
+            },
+            {
+              "title": "Tú lo apruebas y sale",
+              "text": "Los borradores aprobados salen desde tu Gmail. Nada se envía sin ti."
+            }
+          ],
           "needs": {
             "agent": {
               "why": "Completa las empresas y propone los siguientes pasos con un borrador de correo."
@@ -218,7 +276,9 @@
       "id": "helpdesk",
       "name": "Helpdesk",
       "category": "Support",
-      "summary": "Customer requests by email and a contact page, with drafted replies. Like Zendesk.",
+      "summary": "Customer requests by email and a contact page, with drafted replies.",
+      "promise": "Every customer request arrives with its reply already drafted. You read it, adjust it if needed, and send it.",
+      "like": "Zendesk",
       "description": "Every request becomes a ticket. The agent classifies it and drafts the answer from your knowledge base; a person reads it, edits it if needed and sends it. Includes a public contact page.",
       "brief": {
         "user": "Whoever answers customers in a small company",
@@ -228,8 +288,35 @@
           "What happened with this customer, and what do we answer?",
           "What do they ask most, and how fast do we answer?"
         ],
-        "primaryAction": "Review the agent's reply and send it"
+        "primaryAction": "Review the agent's reply and send it",
+        "answers": [
+          "The inbox puts the most urgent first and flags whatever has been waiting too long.",
+          "Every ticket keeps the whole conversation and comes with a reply ready to review.",
+          "Reports count by category and measure the time to the first reply."
+        ]
       },
+      "how": [
+        {
+          "actor": "arrives",
+          "title": "A request becomes a ticket",
+          "text": "By email to the workspace address, or from the contact page the app publishes.",
+          "via": [
+            "email",
+            "web"
+          ]
+        },
+        {
+          "actor": "agent",
+          "role": "responder",
+          "title": "The agent sorts it and drafts the reply",
+          "text": "Category, priority and a draft written from your knowledge base."
+        },
+        {
+          "actor": "person",
+          "title": "You review it and send it",
+          "text": "Edit whatever you want and press Send. No reply goes out on its own."
+        }
+      ],
       "surfaces": [
         {
           "id": "helpdesk",
@@ -260,6 +347,10 @@
       "outward": [
         "Sends the replies you approve: from the workspace address for email tickets, from your Gmail for contact-page tickets.",
         "Publishes a contact page that anyone with the link can use."
+      ],
+      "outwardVia": [
+        "gmail",
+        "web"
       ],
       "by": "Orchestra",
       "price": {
@@ -322,6 +413,10 @@
           }
         ],
         "variables": [],
+        "channels": [
+          "telegram"
+        ],
+        "processes": 4,
         "related": [
           {
             "app": "crm",
@@ -337,7 +432,8 @@
         "es": {
           "name": "Helpdesk",
           "category": "Soporte",
-          "summary": "Peticiones de clientes por correo y una página de contacto, con respuestas redactadas. Como Zendesk.",
+          "summary": "Peticiones de clientes por correo y una página de contacto, con respuestas redactadas.",
+          "promise": "Cada petición de un cliente llega con la respuesta ya redactada. Tú la lees, la ajustas si hace falta y la envías.",
           "description": "Cada petición se convierte en un ticket. El agente la clasifica y redacta la respuesta desde tu base de conocimiento; una persona la lee, la edita si hace falta y la envía. Incluye una página de contacto pública.",
           "brief": {
             "user": "Quien atiende a los clientes en una empresa pequeña",
@@ -347,8 +443,27 @@
               "¿Qué pasó con este cliente, y qué le respondemos?",
               "¿Qué preguntan más, y lo rápido que respondemos?"
             ],
-            "primaryAction": "Revisar la respuesta del agente y enviarla"
+            "primaryAction": "Revisar la respuesta del agente y enviarla",
+            "answers": [
+              "La bandeja pone lo urgente primero y marca lo que lleva demasiado tiempo esperando.",
+              "Cada ticket guarda la conversación entera y trae una respuesta lista para revisar.",
+              "Los informes cuentan por categoría y miden el tiempo hasta la primera respuesta."
+            ]
           },
+          "how": [
+            {
+              "title": "Una petición se convierte en ticket",
+              "text": "Por correo a la dirección del espacio, o desde la página de contacto que publica la app."
+            },
+            {
+              "title": "El agente la clasifica y redacta la respuesta",
+              "text": "Categoría, prioridad y un borrador escrito desde tu base de conocimiento."
+            },
+            {
+              "title": "Tú la revisas y la envías",
+              "text": "Editas lo que quieras y pulsas Enviar. Ninguna respuesta sale sola."
+            }
+          ],
           "needs": {
             "agent": {
               "why": "Clasifica cada petición y redacta la respuesta."
@@ -373,7 +488,9 @@
       "id": "booking",
       "name": "Booking",
       "category": "Sales",
-      "summary": "A booking page with your real availability, and a brief on each person. Like Calendly.",
+      "summary": "A booking page with your real availability, and a brief on each person.",
+      "promise": "People book a time from your real availability, and you arrive at each meeting knowing who they are.",
+      "like": "Calendly",
       "description": "People pick a time on your public page, computed from your Google Calendar without showing anything in it. You confirm each request, which creates the event and sends the invitation; the agent prepares a brief on the person.",
       "brief": {
         "user": "Whoever takes meetings: sales, demos, interviews, consultations",
@@ -383,8 +500,38 @@
           "Which bookings wait for my OK?",
           "What times do I offer, for which kind of meeting?"
         ],
-        "primaryAction": "Confirm a booking"
+        "primaryAction": "Confirm a booking",
+        "answers": [
+          "The desk lists your upcoming meetings, each with its person and their brief.",
+          "Requests wait in their own list until you confirm them, unless you turn on auto-confirm.",
+          "Each kind of meeting has its own times, computed from your Google Calendar."
+        ]
       },
+      "how": [
+        {
+          "actor": "arrives",
+          "title": "Someone picks a time",
+          "text": "On your public booking page, from times computed from your Google Calendar without showing anything in it.",
+          "via": [
+            "web",
+            "googlecalendar"
+          ]
+        },
+        {
+          "actor": "person",
+          "title": "You confirm it",
+          "text": "Confirming creates the event in your calendar and sends the invitation.",
+          "via": [
+            "googlecalendar"
+          ]
+        },
+        {
+          "actor": "agent",
+          "role": "preparer",
+          "title": "The agent prepares a brief",
+          "text": "Before the meeting it looks the person and their company up and writes you a short brief."
+        }
+      ],
       "surfaces": [
         {
           "id": "scheduling",
@@ -415,6 +562,10 @@
       "outward": [
         "Creates events in your Google Calendar and invites the person, only when you confirm (or if you turn on auto-confirm).",
         "Publishes a booking page that anyone with the link can use."
+      ],
+      "outwardVia": [
+        "googlecalendar",
+        "web"
       ],
       "by": "Orchestra",
       "price": {
@@ -471,6 +622,10 @@
           }
         ],
         "variables": [],
+        "channels": [
+          "telegram"
+        ],
+        "processes": 4,
         "related": [
           {
             "app": "crm",
@@ -486,7 +641,8 @@
         "es": {
           "name": "Reservas",
           "category": "Ventas",
-          "summary": "Una página de reservas con tu disponibilidad real, y un resumen de cada persona. Como Calendly.",
+          "summary": "Una página de reservas con tu disponibilidad real, y un resumen de cada persona.",
+          "promise": "La gente reserva una hora con tu disponibilidad real, y llegas a cada reunión sabiendo quién es.",
           "description": "La gente elige una hora en tu página pública, calculada desde tu Google Calendar sin mostrar nada de él. Confirmas cada petición, lo que crea el evento y envía la invitación; el agente prepara un resumen de la persona.",
           "brief": {
             "user": "Quien tiene reuniones: ventas, demos, entrevistas, consultas",
@@ -496,8 +652,27 @@
               "¿Qué reservas esperan mi OK?",
               "¿Qué horas ofrezco, y para qué tipo de reunión?"
             ],
-            "primaryAction": "Confirmar una reserva"
+            "primaryAction": "Confirmar una reserva",
+            "answers": [
+              "El panel lista tus próximas reuniones, cada una con su persona y su resumen.",
+              "Las solicitudes esperan en su propia lista hasta que las confirmas, salvo que actives la confirmación automática.",
+              "Cada tipo de reunión tiene sus horas, calculadas a partir de tu Google Calendar."
+            ]
           },
+          "how": [
+            {
+              "title": "Alguien elige una hora",
+              "text": "En tu página pública de reservas, con horas calculadas a partir de tu Google Calendar sin mostrar nada de lo que hay en él."
+            },
+            {
+              "title": "Tú la confirmas",
+              "text": "Al confirmar se crea el evento en tu calendario y se envía la invitación."
+            },
+            {
+              "title": "El agente prepara un resumen",
+              "text": "Antes de la reunión busca a la persona y su empresa y te escribe un resumen breve."
+            }
+          ],
           "needs": {
             "agent": {
               "why": "Prepara un resumen de cada persona antes de la reunión."
@@ -522,7 +697,9 @@
       "id": "forms",
       "name": "Forms",
       "category": "Operations",
-      "summary": "Forms and surveys one question at a time, like Typeform.",
+      "summary": "Forms and surveys one question at a time.",
+      "promise": "Build a form from a template or a sentence, share it as a link, and read every answer in one place.",
+      "like": "Typeform",
       "description": "Build forms from a template or a description, publish them as a link, and read every response in your workspace. Responses can feed the CRM as leads.",
       "brief": {
         "user": "Anyone who collects answers: sign-ups, surveys, requests",
@@ -532,8 +709,37 @@
           "Who answered, and what did they say?",
           "How many finish the form?"
         ],
-        "primaryAction": "Publish a form and read its responses"
+        "primaryAction": "Publish a form and read its responses",
+        "answers": [
+          "The list shows every form and whether it is published.",
+          "Each response opens with its answers, as the person gave them.",
+          "Each form counts who started it and who finished it."
+        ]
       },
+      "how": [
+        {
+          "actor": "agent",
+          "role": "drafter",
+          "title": "Describe it, the agent drafts it",
+          "text": "Start from a template, build it yourself, or write what you need and the agent drafts the questions for you to review."
+        },
+        {
+          "actor": "person",
+          "title": "You publish it as a link",
+          "text": "One question at a time, as a public page anyone with the link can answer.",
+          "via": [
+            "web"
+          ]
+        },
+        {
+          "actor": "arrives",
+          "title": "Responses arrive in your workspace",
+          "text": "Every answer is saved and announced; you can also bring your Typeform forms and responses.",
+          "via": [
+            "typeform"
+          ]
+        }
+      ],
       "surfaces": [
         {
           "id": "forms",
@@ -557,6 +763,9 @@
       },
       "outward": [
         "Publishes forms as public pages that anyone with the link can answer."
+      ],
+      "outwardVia": [
+        "web"
       ],
       "by": "Orchestra",
       "price": {
@@ -615,6 +824,10 @@
           }
         ],
         "variables": [],
+        "channels": [
+          "telegram"
+        ],
+        "processes": 5,
         "related": [
           {
             "app": "crm",
@@ -630,7 +843,8 @@
         "es": {
           "name": "Formularios",
           "category": "Operaciones",
-          "summary": "Formularios y encuestas de una pregunta a la vez, como Typeform.",
+          "summary": "Formularios y encuestas de una pregunta a la vez.",
+          "promise": "Crea un formulario desde una plantilla o una frase, compártelo con un enlace y lee todas las respuestas en un solo sitio.",
           "description": "Crea formularios desde una plantilla o una descripción, publícalos como un enlace y lee cada respuesta en tu espacio de trabajo. Las respuestas pueden entrar en el CRM como contactos.",
           "brief": {
             "user": "Cualquiera que recoge respuestas: inscripciones, encuestas, solicitudes",
@@ -640,8 +854,27 @@
               "¿Quién respondió, y qué dijo?",
               "¿Cuántos terminan el formulario?"
             ],
-            "primaryAction": "Publicar un formulario y leer sus respuestas"
+            "primaryAction": "Publicar un formulario y leer sus respuestas",
+            "answers": [
+              "La lista muestra cada formulario y si está publicado.",
+              "Cada respuesta se abre con lo que contestó la persona.",
+              "Cada formulario cuenta quién lo empezó y quién lo terminó."
+            ]
           },
+          "how": [
+            {
+              "title": "Lo describes y el agente lo redacta",
+              "text": "Parte de una plantilla, créalo tú o escribe lo que necesitas y el agente redacta las preguntas para que las revises."
+            },
+            {
+              "title": "Lo publicas como un enlace",
+              "text": "Una pregunta a la vez, en una página pública que puede responder cualquiera con el enlace."
+            },
+            {
+              "title": "Las respuestas llegan a tu espacio",
+              "text": "Cada respuesta se guarda y se avisa; también puedes traer tus formularios y respuestas de Typeform."
+            }
+          ],
           "needs": {
             "agent": {
               "why": "Redacta un formulario desde una descripción que escribes."
@@ -807,6 +1040,7 @@
       "name": "Recruiter",
       "category": "Hiring",
       "summary": "A careers page and a hiring desk, with every applicant read and scored.",
+      "promise": "Publish your open roles, and every application arrives read and scored, with the reason.",
       "description": "Publish open roles on a careers page; applications land in a hiring desk where the agent reads each CV, scores it against the role and writes why. You decide who moves on.",
       "brief": {
         "user": "Founders and whoever hires in a small company",
@@ -816,8 +1050,34 @@
           "Why does the agent rate them so?",
           "Which roles are open, and how are they going?"
         ],
-        "primaryAction": "Read the shortlist and move a candidate on"
+        "primaryAction": "Read the shortlist and move a candidate on",
+        "answers": [
+          "The desk ranks applicants by the agent's score: shortlist, maybe or no.",
+          "Each score comes with the agent's written reasons, from the CV and message against the role.",
+          "Each role shows its applicants and where each one stands."
+        ]
       },
+      "how": [
+        {
+          "actor": "arrives",
+          "title": "Someone applies",
+          "text": "From the careers page, with their CV and a message.",
+          "via": [
+            "web"
+          ]
+        },
+        {
+          "actor": "agent",
+          "role": "screener",
+          "title": "The agent reads and scores",
+          "text": "Each CV against the role: a score, a verdict and why."
+        },
+        {
+          "actor": "person",
+          "title": "You decide who moves on",
+          "text": "Read the shortlist and move candidates through the stages."
+        }
+      ],
       "surfaces": [
         {
           "id": "recruiter",
@@ -841,6 +1101,9 @@
       },
       "outward": [
         "Publishes a careers page and an application form that anyone with the link can use."
+      ],
+      "outwardVia": [
+        "web"
       ],
       "by": "Orchestra",
       "price": {
@@ -884,7 +1147,11 @@
           }
         ],
         "connections": [],
-        "variables": []
+        "variables": [],
+        "channels": [
+          "telegram"
+        ],
+        "processes": 2
       },
       "emoji": "🧑‍💼",
       "i18n": {
@@ -892,6 +1159,7 @@
           "name": "Selección",
           "category": "Contratación",
           "summary": "Una página de empleo y un panel de selección, con cada candidatura leída y puntuada.",
+          "promise": "Publica tus vacantes, y cada candidatura llega leída y puntuada, con el motivo.",
           "description": "Publica las vacantes en una página de empleo; las candidaturas llegan a un panel donde el agente lee cada CV, lo puntúa frente al puesto y explica por qué. Tú decides quién sigue.",
           "brief": {
             "user": "Fundadores y quien contrata en una empresa pequeña",
@@ -901,8 +1169,27 @@
               "¿Por qué lo puntúa así el agente?",
               "¿Qué vacantes hay, y cómo van?"
             ],
-            "primaryAction": "Leer la lista corta y hacer avanzar a un candidato"
+            "primaryAction": "Leer la lista corta y hacer avanzar a un candidato",
+            "answers": [
+              "El panel ordena a los candidatos por la puntuación del agente: preseleccionado, quizá o no.",
+              "Cada puntuación lleva los motivos del agente por escrito, a partir del CV y el mensaje frente a la vacante.",
+              "Cada vacante muestra sus candidatos y en qué punto está cada uno."
+            ]
           },
+          "how": [
+            {
+              "title": "Alguien se presenta",
+              "text": "Desde la página de empleo, con su CV y un mensaje."
+            },
+            {
+              "title": "El agente lee y puntúa",
+              "text": "Cada CV frente a la vacante: una puntuación, un veredicto y el porqué."
+            },
+            {
+              "title": "Tú decides quién sigue",
+              "text": "Lee la preselección y mueve a los candidatos por las etapas."
+            }
+          ],
           "needs": {
             "agent": {
               "why": "Lee y puntúa cada candidatura."
@@ -923,7 +1210,9 @@
       "id": "outreach",
       "name": "Outreach",
       "category": "Marketing",
-      "summary": "Newsletters and email campaigns to your lists, with the agent finding missing emails. Like Mailchimp.",
+      "summary": "Newsletters and email campaigns to your lists, with the agent finding missing emails.",
+      "promise": "Write a campaign once, see exactly who gets it, and send it to your lists now or at a set time.",
+      "like": "Mailchimp",
       "description": "Keep contacts and lists, write a newsletter or an announcement, see exactly who gets it and send it through your Resend account, now or at a set time. Every campaign has a report where each number opens the people behind it. Sequences write to people one at a time, reviewed first if you want, and the agent looks up the public email of contacts who have none. Unsubscribes, bounces and spam complaints are handled for you.",
       "brief": {
         "user": "Whoever sends the company's newsletters, announcements and outreach",
@@ -933,8 +1222,35 @@
           "What went out, and who opened, replied, unsubscribed or bounced?",
           "What is going out next?"
         ],
-        "primaryAction": "Write an email, pick its lists, send yourself a test, then send or schedule it"
+        "primaryAction": "Write an email, pick its lists, send yourself a test, then send or schedule it",
+        "answers": [
+          "Before sending, it shows who gets the email and who is left out, with the reason.",
+          "Each campaign has a report where every number opens the people behind it.",
+          "Scheduled campaigns and sequences show what goes out next, and when."
+        ]
       },
+      "how": [
+        {
+          "actor": "person",
+          "title": "You write it and pick the lists",
+          "text": "A newsletter or an announcement, the lists it goes to, and a test sent to yourself first."
+        },
+        {
+          "actor": "agent",
+          "role": "researcher",
+          "title": "The agent finds missing emails",
+          "text": "For contacts with none, it looks up their public business email on the web."
+        },
+        {
+          "actor": "app",
+          "title": "It sends and keeps count",
+          "text": "Through your Resend account or your Gmail, now or at a set time; opens, replies, unsubscribes and bounces come back to the report.",
+          "via": [
+            "resend",
+            "gmail"
+          ]
+        }
+      ],
       "surfaces": [
         {
           "id": "outreach",
@@ -1029,6 +1345,10 @@
         "Sends the emails you send, schedule or start, from your Resend account or your Gmail, as each campaign chooses; nothing leaves on its own.",
         "Publishes an unsubscribe page that anyone with a link from one of your emails can use."
       ],
+      "outwardVia": [
+        "resend",
+        "web"
+      ],
       "by": "Orchestra",
       "price": {
         "model": "free"
@@ -1095,6 +1415,10 @@
           }
         ],
         "variables": [],
+        "channels": [
+          "telegram"
+        ],
+        "processes": 13,
         "related": [
           {
             "app": "crm",
@@ -1110,7 +1434,8 @@
         "es": {
           "name": "Campañas",
           "category": "Marketing",
-          "summary": "Newsletters y campañas de correo a tus listas, con el agente encontrando los correos que faltan. Como Mailchimp.",
+          "summary": "Newsletters y campañas de correo a tus listas, con el agente encontrando los correos que faltan.",
+          "promise": "Escribe una campaña una vez, mira exactamente quién la recibe y envíala a tus listas ahora o a la hora que elijas.",
           "description": "Guarda contactos y listas, escribe una newsletter o un anuncio, ve exactamente quién lo recibe y envíalo con tu cuenta de Resend, ahora o a una hora. Cada campaña tiene un informe donde cada número abre a las personas que hay detrás. Las secuencias escriben a la gente de una en una, revisadas antes si quieres, y el agente busca el correo público de los contactos que no lo tienen. Las bajas, rebotes y quejas de spam se gestionan solas.",
           "brief": {
             "user": "Quien envía las newsletters, anuncios y campañas de la empresa",
@@ -1120,8 +1445,27 @@
               "¿Qué salió, y quién lo abrió, respondió, se dio de baja o rebotó?",
               "¿Qué sale a continuación?"
             ],
-            "primaryAction": "Escribir un correo, elegir sus listas, enviarte una prueba y enviarlo o programarlo"
+            "primaryAction": "Escribir un correo, elegir sus listas, enviarte una prueba y enviarlo o programarlo",
+            "answers": [
+              "Antes de enviar, muestra quién recibe el correo y quién se queda fuera, con el motivo.",
+              "Cada campaña tiene un informe donde cada número abre las personas que hay detrás.",
+              "Las campañas programadas y las secuencias muestran qué sale a continuación, y cuándo."
+            ]
           },
+          "how": [
+            {
+              "title": "Tú la escribes y eliges las listas",
+              "text": "Una newsletter o un anuncio, las listas a las que va y una prueba enviada primero a ti."
+            },
+            {
+              "title": "El agente encuentra los correos que faltan",
+              "text": "Para los contactos que no tienen, busca en la web su correo profesional público."
+            },
+            {
+              "title": "Se envía y lleva la cuenta",
+              "text": "Desde tu cuenta de Resend o tu Gmail, ahora o a la hora fijada; aperturas, respuestas, bajas y rebotes vuelven al informe."
+            }
+          ],
           "needs": {
             "agent": {
               "why": "Busca el correo público de los contactos que no lo tienen, con la página donde lo leyó."
@@ -1147,7 +1491,9 @@
       "id": "invoices",
       "name": "Invoices",
       "category": "Finance",
-      "summary": "Quotes and invoices your clients accept and pay online. Like Holded.",
+      "summary": "Quotes and invoices your clients accept and pay online.",
+      "promise": "Quotes and invoices your clients accept and pay from a link, with reminders drafted for whoever is late.",
+      "like": "Holded",
       "description": "Write a quote (or let the agent draft it from one sentence), issue it with the next number, and send the client a link where they accept it or pay the invoice by bank transfer or card. The agent drafts payment reminders for overdue invoices; nothing is sent until you approve it. Not certified fiscal software: it does not submit anything to a tax authority (no Verifactu, SII or e-invoicing).",
       "brief": {
         "user": "The owner, or whoever keeps the books, of a small company or a freelancer",
@@ -1157,8 +1503,38 @@
           "Which quotes are waiting for an answer?",
           "What did I invoice this client?"
         ],
-        "primaryAction": "Issue an invoice or a quote, and send it to the client"
+        "primaryAction": "Issue an invoice or a quote, and send it to the client",
+        "answers": [
+          "What is owed and what is overdue, client by client, with a reminder drafted for each late invoice.",
+          "Quotes sent and not yet answered, with the client accepting or declining from their link.",
+          "Every quote and invoice of a client, with its number, status and link."
+        ]
       },
+      "how": [
+        {
+          "actor": "agent",
+          "role": "drafter",
+          "title": "The agent drafts a quote from one sentence",
+          "text": "You write what it is for; it writes the lines. Or you write the quote yourself."
+        },
+        {
+          "actor": "person",
+          "title": "You issue it and send it",
+          "text": "It takes the next number and goes out with a link, from your Gmail.",
+          "via": [
+            "gmail"
+          ]
+        },
+        {
+          "actor": "arrives",
+          "title": "The client accepts or pays from the link",
+          "text": "By bank transfer, or by card when Stripe is on; it is marked paid by itself.",
+          "via": [
+            "web",
+            "stripe"
+          ]
+        }
+      ],
       "surfaces": [
         {
           "id": "invoices",
@@ -1195,6 +1571,11 @@
         "Sends emails from your Gmail, only the ones you send or approve.",
         "Creates a Stripe payment link for each invoice, when you turn Stripe on.",
         "Publishes a page per document that only someone with its link can open."
+      ],
+      "outwardVia": [
+        "gmail",
+        "stripe",
+        "web"
       ],
       "by": "Orchestra",
       "price": {
@@ -1264,6 +1645,10 @@
           }
         ],
         "variables": [],
+        "channels": [
+          "telegram"
+        ],
+        "processes": 6,
         "related": [
           {
             "app": "crm",
@@ -1286,7 +1671,8 @@
         "es": {
           "name": "Facturas",
           "category": "Finanzas",
-          "summary": "Presupuestos y facturas que tus clientes aceptan y pagan online. Como Holded.",
+          "summary": "Presupuestos y facturas que tus clientes aceptan y pagan online.",
+          "promise": "Presupuestos y facturas que tus clientes aceptan y pagan desde un enlace, con recordatorios redactados para quien va tarde.",
           "description": "Escribe un presupuesto (o deja que el agente lo redacte desde una frase), emítelo con el siguiente número y envía al cliente un enlace donde lo acepta o paga la factura por transferencia o tarjeta. El agente redacta recordatorios de pago para las facturas vencidas; no se envía nada hasta que lo apruebas. No es software fiscal certificado: no envía nada a ninguna agencia tributaria (ni Verifactu, ni SII, ni factura electrónica).",
           "brief": {
             "user": "El dueño, o quien lleva las cuentas, de una empresa pequeña o un autónomo",
@@ -1296,8 +1682,27 @@
               "¿Qué presupuestos esperan respuesta?",
               "¿Qué le facturé a este cliente?"
             ],
-            "primaryAction": "Emitir una factura o un presupuesto y enviarlo al cliente"
+            "primaryAction": "Emitir una factura o un presupuesto y enviarlo al cliente",
+            "answers": [
+              "Lo que te deben y lo vencido, cliente a cliente, con un recordatorio redactado para cada factura atrasada.",
+              "Los presupuestos enviados que aún no tienen respuesta; el cliente los acepta o rechaza desde su enlace.",
+              "Cada presupuesto y factura de un cliente, con su número, estado y enlace."
+            ]
           },
+          "how": [
+            {
+              "title": "El agente redacta un presupuesto con una frase",
+              "text": "Escribes para qué es y él escribe las líneas. O lo escribes tú."
+            },
+            {
+              "title": "Lo emites y lo envías",
+              "text": "Toma el siguiente número y sale con un enlace, desde tu Gmail."
+            },
+            {
+              "title": "El cliente acepta o paga desde el enlace",
+              "text": "Por transferencia, o con tarjeta si activas Stripe; se marca pagada sola."
+            }
+          ],
           "needs": {
             "agent": {
               "why": "Redacta presupuestos desde una frase y escribe recordatorios de pago para que los apruebes."
@@ -1324,7 +1729,9 @@
       "id": "tables",
       "name": "Tables",
       "category": "Hospitality",
-      "summary": "Restaurant bookings without per-cover fees: your own booking page and a service sheet for the door. Like CoverManager or TheFork Manager.",
+      "summary": "Restaurant bookings without per-cover fees: your own booking page and a service sheet for the door.",
+      "promise": "Guests book on your own page with no per-cover fee, and the door has the whole service on one sheet.",
+      "like": "CoverManager, TheFork Manager",
       "description": "Guests book a table on your own page (from Instagram, Google Maps or your website): they pick a day, how many they are and a time, and inside your rules the table is theirs at once, with the smallest free table that fits. Each guest gets a link to confirm, change or cancel. At the door, Today is the service sheet: who comes, at what time, how many, at which table, with notes and allergies, and Arrived or No-show on each row; a walk-in or a phone booking is one button. Guests build up by themselves (visits, no-shows, VIPs), or import them from TheFork, CoverManager or Quandoo. Sources shows where bookings come from and estimates the commission you avoided. Optional: confirmations and reminders through your Gmail or your Resend, and an agent that reads booking emails in Gmail and books them for you.",
       "brief": {
         "user": "A restaurant: the host at the door, the manager, the owner",
@@ -1334,8 +1741,37 @@
           "Which bookings wait for my OK?",
           "Who are my guests, and where do bookings come from?"
         ],
-        "primaryAction": "Seat a guest: mark Arrived, or add a walk-in or a phone booking"
+        "primaryAction": "Seat a guest: mark Arrived, or add a walk-in or a phone booking",
+        "answers": [
+          "Today is the service sheet: who comes, at what time, how many, at which table, with notes and allergies.",
+          "Bookings outside your rules wait for your OK; inside them, the table is theirs at once.",
+          "Guests build up by themselves with visits and no-shows, and Sources shows where bookings come from."
+        ]
       },
+      "how": [
+        {
+          "actor": "arrives",
+          "title": "A guest books on your page",
+          "text": "From Instagram, Google Maps or your website: day, people and time, and the smallest free table that fits.",
+          "via": [
+            "web"
+          ]
+        },
+        {
+          "actor": "app",
+          "title": "It is confirmed and reminded",
+          "text": "Inside your rules at once, with a link to change or cancel, and a reminder the day before when emails are on.",
+          "via": [
+            "gmail",
+            "resend"
+          ]
+        },
+        {
+          "actor": "person",
+          "title": "You seat them at the door",
+          "text": "Arrived or No-show on each row; a walk-in or a phone booking is one button."
+        }
+      ],
       "surfaces": [
         {
           "id": "tables",
@@ -1372,6 +1808,11 @@
         "Publishes a booking page that anyone with the link can use; inside your rules a booking is confirmed at once.",
         "When you turn emails on: sends each guest their confirmation, a reminder about a day before and a note when the booking changes, through the sender you choose (your Gmail or your Resend).",
         "When you turn booking emails on: answers booking emails inside your rules from your Gmail; every other reply waits for your OK."
+      ],
+      "outwardVia": [
+        "web",
+        "gmail",
+        "gmail"
       ],
       "by": "Orchestra",
       "price": {
@@ -1443,14 +1884,19 @@
             "why": "One of Gmail or Resend: the same emails to guests, from an address on your own domain verified in Resend. Bookings work without it."
           }
         ],
-        "variables": []
+        "variables": [],
+        "channels": [
+          "telegram"
+        ],
+        "processes": 6
       },
       "emoji": "🍽️",
       "i18n": {
         "es": {
           "name": "Mesas",
           "category": "Hostelería",
-          "summary": "Reservas de restaurante sin comisión por cubierto: tu propia página de reservas y una hoja de servicio para la puerta. Como CoverManager o TheFork Manager.",
+          "summary": "Reservas de restaurante sin comisión por cubierto: tu propia página de reservas y una hoja de servicio para la puerta.",
+          "promise": "Tus clientes reservan en tu propia página sin comisión por cubierto, y en la puerta tienes todo el servicio en una hoja.",
           "description": "Los clientes reservan mesa en tu propia página (desde Instagram, Google Maps o tu web): eligen día, cuántos son y una hora, y dentro de tus reglas la mesa es suya al momento, con la mesa libre más pequeña que encaje. Cada cliente recibe un enlace para confirmar, cambiar o cancelar. En la puerta, Hoy es la hoja de servicio: quién viene, a qué hora, cuántos, en qué mesa, con notas y alergias, y Llegó o No vino en cada fila; un cliente sin reserva o una reserva por teléfono es un botón. Los clientes se van formando solos (visitas, no-shows, VIP), o los importas de TheFork, CoverManager o Quandoo. Orígenes muestra de dónde vienen las reservas y estima la comisión que te ahorras. Opcional: confirmaciones y recordatorios por tu Gmail o tu Resend, y un agente que lee los correos de reserva en Gmail y reserva por ti.",
           "brief": {
             "user": "Un restaurante: quien recibe en la puerta, el encargado, el dueño",
@@ -1460,8 +1906,27 @@
               "¿Qué reservas esperan mi OK?",
               "¿Quiénes son mis clientes, y de dónde vienen las reservas?"
             ],
-            "primaryAction": "Sentar a un cliente: marcar Llegó, o añadir uno sin reserva o una reserva por teléfono"
+            "primaryAction": "Sentar a un cliente: marcar Llegó, o añadir uno sin reserva o una reserva por teléfono",
+            "answers": [
+              "Hoy es la hoja de servicio: quién viene, a qué hora, cuántos, en qué mesa, con notas y alergias.",
+              "Las reservas fuera de tus reglas esperan tu OK; dentro de ellas, la mesa es suya al momento.",
+              "Los clientes se van guardando solos con visitas y no-shows, y Orígenes muestra de dónde vienen las reservas."
+            ]
           },
+          "how": [
+            {
+              "title": "Un cliente reserva en tu página",
+              "text": "Desde Instagram, Google Maps o tu web: día, personas y hora, y la mesa libre más pequeña que encaje."
+            },
+            {
+              "title": "Se confirma y se recuerda",
+              "text": "Dentro de tus reglas al momento, con un enlace para cambiar o cancelar, y un recordatorio el día antes si activas los correos."
+            },
+            {
+              "title": "Los sientas en la puerta",
+              "text": "Llegó o No vino en cada fila; uno sin reserva o una reserva por teléfono es un botón."
+            }
+          ],
           "needs": {
             "agent": {
               "why": "Opcional: lee los correos de reserva en tu Gmail y escribe un resumen antes de cada servicio. Apagado hasta que lo enciendes."
@@ -1488,7 +1953,9 @@
       "id": "appointments",
       "name": "Appointments",
       "category": "Services",
-      "summary": "Appointments for salons and clinics with no commission on new clients: a booking page, the day's agenda per person, and where every client came from. Like Fresha or Booksy.",
+      "summary": "Appointments for salons and clinics with no commission on new clients: a booking page, the day's agenda per person, and where every client came from.",
+      "promise": "Clients book online without paying a commission, and the day's agenda is ready for each person on your team.",
+      "like": "Fresha or Booksy",
       "description": "Clients book online from your page (from Instagram, Google Maps or your website: a link for each), picking the service, the person or whoever is free, a day and a time, and get a private link to change or cancel before your deadline. The desk shows today's agenda with a column per person: book a phone call in two clicks, mark arrived or no-show, block time; the week, clients with their history and notes, services with buffers, your team's hours with breaks and days off. Sources shows where appointments come from and what booking direct saved against a marketplace's new-client fee. Confirmations and reminders go through your Gmail or your Resend, whichever you choose; optionally, the agent books from booking emails in Gmail too.",
       "brief": {
         "user": "The owner and the front desk of a hair or beauty salon, barber, aesthetics or physio clinic",
@@ -1498,8 +1965,38 @@
           "When is someone free for this service?",
           "Who is this client, and where do my clients come from?"
         ],
-        "primaryAction": "Book an appointment from a phone call in two clicks"
+        "primaryAction": "Book an appointment from a phone call in two clicks",
+        "answers": [
+          "The agenda shows today with a column per person, so you see who comes, with whom and when.",
+          "It shows who is free for each service, counting buffers, breaks and days off.",
+          "Each client keeps their history and notes, and Sources shows where appointments come from."
+        ]
       },
+      "how": [
+        {
+          "actor": "arrives",
+          "title": "A client books",
+          "text": "From your booking page, with a link for Instagram, Google Maps or your website, or you book a phone call in two clicks.",
+          "via": [
+            "web"
+          ]
+        },
+        {
+          "actor": "app",
+          "title": "Confirmations and reminders go out",
+          "text": "Each client gets their confirmation, changes and reminders through the sender you choose.",
+          "via": [
+            "gmail",
+            "resend"
+          ]
+        },
+        {
+          "actor": "agent",
+          "role": "assistant",
+          "title": "The agent helps when you turn it on",
+          "text": "It books from booking emails in Gmail and invites clients who are due back; what falls outside your rules waits for you."
+        }
+      ],
       "surfaces": [
         {
           "id": "appointments",
@@ -1536,6 +2033,11 @@
         "Publishes a booking page that anyone with the link can use, and a private page for each client to change or cancel their appointment.",
         "Sends each client their confirmation, any change or cancellation and reminders through the sender you choose (your Gmail or your Resend), only if you turn emails on.",
         "Anything the agent writes outside your rules waits for your Approve."
+      ],
+      "outwardVia": [
+        "web",
+        "gmail",
+        "email"
       ],
       "by": "Orchestra",
       "price": {
@@ -1605,14 +2107,19 @@
             "why": "One of Gmail or Resend: the same emails to clients, from an address on your own domain verified in Resend. Bookings work without it."
           }
         ],
-        "variables": []
+        "variables": [],
+        "channels": [
+          "telegram"
+        ],
+        "processes": 5
       },
       "emoji": "💇",
       "i18n": {
         "es": {
           "name": "Citas",
           "category": "Servicios",
-          "summary": "Citas para peluquerías y clínicas sin comisión por cliente nuevo: una página de reservas, la agenda del día por persona y de dónde vino cada cliente. Como Fresha o Booksy.",
+          "summary": "Citas para peluquerías y clínicas sin comisión por cliente nuevo: una página de reservas, la agenda del día por persona y de dónde vino cada cliente.",
+          "promise": "Tus clientes reservan online sin comisión, y la agenda del día está lista para cada persona de tu equipo.",
           "description": "Los clientes reservan online desde tu página (desde Instagram, Google Maps o tu web: un enlace para cada uno), eligiendo el servicio, la persona o quien esté libre, un día y una hora, y reciben un enlace privado para cambiar o cancelar antes de tu límite. El panel muestra la agenda de hoy con una columna por persona: reserva una llamada en dos clics, marca llegó o no vino, bloquea tiempo; la semana, los clientes con su historial y notas, los servicios con sus márgenes, el horario de tu equipo con descansos y días libres. Orígenes muestra de dónde vienen las citas y lo que te ahorró reservar directo frente a la comisión por cliente nuevo de un marketplace. Las confirmaciones y recordatorios van por tu Gmail o tu Resend, el que elijas; opcionalmente, el agente también reserva desde los correos de reserva en Gmail.",
           "brief": {
             "user": "El dueño y la recepción de una peluquería, barbería, centro de estética o fisioterapia",
@@ -1622,8 +2129,27 @@
               "¿Cuándo hay alguien libre para este servicio?",
               "¿Quién es este cliente, y de dónde vienen mis clientes?"
             ],
-            "primaryAction": "Dar una cita desde una llamada en dos clics"
+            "primaryAction": "Dar una cita desde una llamada en dos clics",
+            "answers": [
+              "La agenda muestra el día con una columna por persona: quién viene, con quién y a qué hora.",
+              "Te muestra quién está libre para cada servicio, contando márgenes, descansos y días libres.",
+              "Cada cliente guarda su historial y notas, y Orígenes muestra de dónde vienen las citas."
+            ]
           },
+          "how": [
+            {
+              "title": "Un cliente reserva",
+              "text": "Desde tu página de reservas, con un enlace para Instagram, Google Maps o tu web, o le das cita desde una llamada en dos clics."
+            },
+            {
+              "title": "Salen confirmaciones y recordatorios",
+              "text": "Cada cliente recibe su confirmación, los cambios y los recordatorios con el remitente que elijas."
+            },
+            {
+              "title": "El agente ayuda si lo activas",
+              "text": "Da citas desde los correos de reserva de Gmail e invita a volver a quien le toca; lo que se sale de tus reglas te espera."
+            }
+          ],
           "needs": {
             "agent": {
               "why": "Opcional: lee los correos de reserva y reserva dentro de tus reglas, y redacta invitaciones para los clientes a los que les toca volver. Funciona del todo sin él."
@@ -1650,7 +2176,9 @@
       "id": "esign",
       "name": "Sign",
       "category": "Legal",
-      "summary": "Send a contract from Files for signature and get back a sealed, signed PDF. Like DocuSign.",
+      "summary": "Send a contract from Files for signature and get back a sealed, signed PDF.",
+      "promise": "Send a contract for signature and get it back signed and sealed, without chasing anyone.",
+      "like": "DocuSign",
       "description": "Pick a document in Files (Word, Markdown or HTML) and mark where each person signs with a marker in the text, like {{sign:Client}} or {{firma:Cliente}}; without markers a signature block goes at the end. Say who signs, all at once or in order, and press Send. Each signer gets their own link: they read the document, confirm their email with a code, type or draw their signature and agree to sign, or decline. When everyone has signed, the signed PDF (every signature in its place and a certificate page with the evidence) is sealed with your workspace's certificate, saved in Files and sent to each signer. A simple electronic signature under eIDAS and ESIGN, not an advanced or qualified one.",
       "brief": {
         "user": "The owner, or whoever closes agreements, of a small company or a freelancer",
@@ -1660,8 +2188,34 @@
           "What was signed, and where is the signed PDF?",
           "Who signed what, when and how?"
         ],
-        "primaryAction": "Send a document from Files for signature"
+        "primaryAction": "Send a document from Files for signature",
+        "answers": [
+          "Each document shows who has signed, who has not, and who is next.",
+          "The signed PDF, sealed and with every signature in its place, is saved in Files and sent to each signer.",
+          "A certificate page in each signed PDF records who signed, when, and how they confirmed their email."
+        ]
       },
+      "how": [
+        {
+          "actor": "person",
+          "title": "You pick a document and who signs",
+          "text": "A Word, Markdown or HTML file from Files; all at once or in order. Press Send."
+        },
+        {
+          "actor": "arrives",
+          "title": "Each signer opens their own link",
+          "text": "They read it, confirm their email with a code, and type or draw their signature, or decline.",
+          "via": [
+            "email",
+            "web"
+          ]
+        },
+        {
+          "actor": "app",
+          "title": "The signed PDF is sealed and filed",
+          "text": "When everyone has signed, it is sealed with your workspace certificate, saved in Files and sent to each signer."
+        }
+      ],
       "surfaces": [
         {
           "id": "esign",
@@ -1694,6 +2248,11 @@
         "Publishes a page for each signer that only someone with their link can open.",
         "Emails each signer their link when you press Send, a code when they sign, reminders when you ask, and the signed copy, through your Gmail or Resend.",
         "Saves each signed PDF in Files, in the project."
+      ],
+      "outwardVia": [
+        "web",
+        "gmail",
+        "files"
       ],
       "by": "Orchestra",
       "price": {
@@ -1755,6 +2314,10 @@
           }
         ],
         "variables": [],
+        "channels": [
+          "telegram"
+        ],
+        "processes": 3,
         "related": [
           {
             "app": "crm",
@@ -1777,7 +2340,8 @@
         "es": {
           "name": "Firma",
           "category": "Legal",
-          "summary": "Envía un contrato de Files a firmar y recibe un PDF firmado y sellado. Como DocuSign.",
+          "summary": "Envía un contrato de Files a firmar y recibe un PDF firmado y sellado.",
+          "promise": "Envía un contrato a firmar y recíbelo firmado y sellado, sin perseguir a nadie.",
           "description": "Elige un documento de Files (Word, Markdown o HTML) y marca dónde firma cada persona con un marcador en el texto, como {{firma:Cliente}} o {{sign:Client}}; sin marcadores, se añade un bloque de firma al final. Indica quién firma, todos a la vez o en orden, y pulsa Enviar. Cada firmante recibe su propio enlace: lee el documento, confirma su email con un código, escribe o dibuja su firma y acepta firmar, o lo rechaza. Cuando han firmado todos, el PDF firmado (cada firma en su lugar y una hoja de certificado con la evidencia) se sella con el certificado de tu espacio, se guarda en Files y se envía a cada firmante. Es una firma electrónica simple según eIDAS y ESIGN, no avanzada ni cualificada.",
           "brief": {
             "user": "El dueño, o quien cierra acuerdos, de una empresa pequeña o un autónomo",
@@ -1787,8 +2351,27 @@
               "¿Qué se firmó, y dónde está el PDF firmado?",
               "¿Quién firmó qué, cuándo y cómo?"
             ],
-            "primaryAction": "Enviar un documento de Files a firmar"
+            "primaryAction": "Enviar un documento de Files a firmar",
+            "answers": [
+              "Cada documento muestra quién ha firmado, quién no, y a quién le toca.",
+              "El PDF firmado, sellado y con cada firma en su sitio, se guarda en Files y se envía a cada firmante.",
+              "Una página de certificado en cada PDF firmado deja constancia de quién firmó, cuándo y cómo confirmó su correo."
+            ]
           },
+          "how": [
+            {
+              "title": "Eliges un documento y quién firma",
+              "text": "Un Word, Markdown o HTML de Files; todos a la vez o por orden. Pulsas Enviar."
+            },
+            {
+              "title": "Cada firmante abre su propio enlace",
+              "text": "Lo lee, confirma su correo con un código y escribe o dibuja su firma, o la rechaza."
+            },
+            {
+              "title": "El PDF firmado se sella y se guarda",
+              "text": "Cuando todos han firmado, se sella con el certificado de tu espacio, se guarda en Files y se envía a cada firmante."
+            }
+          ],
           "needs": {
             "integrations": {
               "gmail": "Gmail o Resend, para enviar a los firmantes su enlace, un código al firmar, los recordatorios que pidas y la copia firmada, desde tu dirección.",
@@ -1812,7 +2395,9 @@
       "id": "expenses",
       "name": "Expenses",
       "category": "Finance",
-      "summary": "Receipts read on their own, checked by you, and the month sent to your accountant. Like Dext or Expensify.",
+      "summary": "Receipts read on their own, checked by you, and the month sent to your accountant.",
+      "promise": "Receipts read on their own, checked by you, and the month ready for your accountant in one click.",
+      "like": "Dext, Expensify",
       "description": "Forward a receipt to your workspace's address, or drop it in a Files folder: Expenses reads it (a PDF's text with a cheap model, a photo of a paper ticket with your agent) and fills in the vendor, date, total, VAT and category. You check each one beside its picture and approve it. At the end of the month, one click makes a PDF with the summary (per category, VAT per rate, what is owed back to people) and every receipt behind it, plus a CSV, both saved in Files, and another emails your accountant a private link to download them. Not accounting software: it makes no ledger entries and files no tax returns.",
       "brief": {
         "user": "The owner, or whoever keeps the books, of a small company or a freelancer",
@@ -1822,8 +2407,35 @@
           "How much did I spend this month, on what, and how much VAT?",
           "What do I send my accountant?"
         ],
-        "primaryAction": "Approve an expense read from its receipt"
+        "primaryAction": "Approve an expense read from its receipt",
+        "answers": [
+          "The expenses waiting to be checked, each beside the picture of its receipt.",
+          "The month per category, with VAT per rate and what is owed back to people.",
+          "A PDF with the summary and every receipt behind it, plus a CSV, sent through a private link."
+        ]
       },
+      "how": [
+        {
+          "actor": "arrives",
+          "title": "A receipt arrives",
+          "text": "Forwarded to your workspace address, or dropped in a Files folder.",
+          "via": [
+            "email",
+            "files"
+          ]
+        },
+        {
+          "actor": "agent",
+          "role": "reader",
+          "title": "It is read and filled in",
+          "text": "Vendor, date, total, VAT and category: a PDF by a model, a photo of a paper ticket by the agent."
+        },
+        {
+          "actor": "person",
+          "title": "You check it, and close the month",
+          "text": "Approve each one beside its picture; at the end of the month, one click for your accountant."
+        }
+      ],
       "surfaces": [
         {
           "id": "expenses",
@@ -1932,6 +2544,11 @@
         "Emails your accountant a private link to the month's PDF and CSV, through Resend or your Gmail, only when you press Send. The page behind the link opens nothing without it.",
         "Writes mail rules on the workspace email for the senders you list."
       ],
+      "outwardVia": [
+        "files",
+        "gmail",
+        "email"
+      ],
       "by": "Orchestra",
       "price": {
         "model": "free"
@@ -2001,6 +2618,10 @@
           }
         ],
         "variables": [],
+        "channels": [
+          "telegram"
+        ],
+        "processes": 4,
         "related": [
           {
             "app": "invoices",
@@ -2016,7 +2637,8 @@
         "es": {
           "name": "Gastos",
           "category": "Finanzas",
-          "summary": "Recibos que se leen solos, que revisas tú, y el mes enviado a tu gestor. Como Dext o Expensify.",
+          "summary": "Recibos que se leen solos, que revisas tú, y el mes enviado a tu gestor.",
+          "promise": "Recibos que se leen solos, que revisas tú, y el mes listo para tu gestor con un clic.",
           "description": "Reenvía un recibo a la dirección de tu espacio, o déjalo en una carpeta de Files: Gastos lo lee (el texto de un PDF con un modelo barato, la foto de un ticket con tu agente) y rellena proveedor, fecha, total, IVA y categoría. Tú revisas cada uno junto a su imagen y lo apruebas. A fin de mes, un clic hace un PDF con el resumen (por categoría, IVA por tipo, lo que se debe a cada persona) y todos los recibos detrás, más un CSV, ambos guardados en Files, y otro clic le envía a tu gestor un enlace privado para descargarlos. No es software contable: no hace asientos ni presenta impuestos.",
           "brief": {
             "user": "El dueño, o quien lleva las cuentas, de una empresa pequeña o un autónomo",
@@ -2026,8 +2648,27 @@
               "¿Cuánto gasté este mes, en qué, y cuánto IVA?",
               "¿Qué le envío a mi gestor?"
             ],
-            "primaryAction": "Aprobar un gasto leído de su recibo"
+            "primaryAction": "Aprobar un gasto leído de su recibo",
+            "answers": [
+              "Los gastos que esperan revisión, cada uno al lado de la imagen de su recibo.",
+              "El mes por categoría, con el IVA por tipo y lo que se debe devolver a cada persona.",
+              "Un PDF con el resumen y cada recibo detrás, más un CSV, enviados con un enlace privado."
+            ]
           },
+          "how": [
+            {
+              "title": "Llega un recibo",
+              "text": "Reenviado a la dirección del espacio, o dejado en una carpeta de Files."
+            },
+            {
+              "title": "Se lee y se rellena",
+              "text": "Proveedor, fecha, total, IVA y categoría: un PDF con un modelo, la foto de un tique con el agente."
+            },
+            {
+              "title": "Lo revisas, y cierras el mes",
+              "text": "Apruebas cada uno junto a su imagen; a final de mes, un clic para tu gestor."
+            }
+          ],
           "needs": {
             "agent": {
               "why": "Lee las fotos de tickets de papel y los PDF escaneados, respondiendo solo JSON que comprueba un script. Los recibos con texto los lee un modelo barato, sin turno de agente."
@@ -2055,7 +2696,9 @@
       "id": "posts",
       "name": "Posts",
       "category": "Marketing",
-      "summary": "Your social posts on LinkedIn and X: the agent drafts the week in your voice, you approve, they go out on their own. Like Buffer or Postiz.",
+      "summary": "Your social posts on LinkedIn and X: the agent drafts the week in your voice, you approve, they go out on their own.",
+      "promise": "The agent writes your week of posts in your voice; you approve them and they go out on their own.",
+      "like": "Buffer or Postiz",
       "description": "Tell Posts how you write and what you talk about, and turn on the accounts it posts for: your LinkedIn profile, the company pages you run, and your X account. Once a week the agent writes posts for their free times — from your ideas, a link, a file, or a feed you follow — and you review each one as it will look: approve it, ask for another version, or mark a phrase and say what to change. Approved posts go out at their time; reactions come back, and the agent writes the next week with what worked. It can repost a post or add a first comment once it reaches the reactions you set. Rehearsal is on until you turn it off: everything runs, nothing reaches a network.",
       "brief": {
         "user": "The owner, or whoever does marketing, of a small company",
@@ -2065,8 +2708,35 @@
           "What did the agent write that waits for my approval?",
           "What worked?"
         ],
-        "primaryAction": "Approve a draft"
+        "primaryAction": "Approve a draft",
+        "answers": [
+          "The week shows each post with its day, time and network.",
+          "Every draft waits for you as it will look: approve it, ask for another version, or say what to change.",
+          "Reactions come back, and the agent writes the next week with what worked."
+        ]
       },
+      "how": [
+        {
+          "actor": "agent",
+          "role": "writer",
+          "title": "The agent writes the week",
+          "text": "From your ideas, a link, a file or a feed you follow, in the voice you described."
+        },
+        {
+          "actor": "person",
+          "title": "You approve each post",
+          "text": "See it as it will look; approve it, ask for another version, or mark a phrase and say what to change."
+        },
+        {
+          "actor": "app",
+          "title": "It goes out at its time",
+          "text": "Approved posts publish on their own, and their reactions come back. Rehearsal is on until you turn it off.",
+          "via": [
+            "linkedin",
+            "twitter"
+          ]
+        }
+      ],
       "surfaces": [
         {
           "id": "posts",
@@ -2149,6 +2819,11 @@
         "Publishes the posts a person approved, at their time, on the accounts turned on in Settings — never before rehearsal is turned off.",
         "Reposts a post, or adds a first comment under it, once it reaches the number of reactions set in Settings for that account.",
         "Reads the reactions of what it published, the numbers of your LinkedIn pages, and the feeds you follow."
+      ],
+      "outwardVia": [
+        "linkedin",
+        "linkedin",
+        "linkedin"
       ],
       "by": "Orchestra",
       "price": {
@@ -2243,14 +2918,19 @@
             }
           }
         ],
-        "variables": []
+        "variables": [],
+        "channels": [
+          "telegram"
+        ],
+        "processes": 6
       },
       "emoji": "📣",
       "i18n": {
         "es": {
           "name": "Posts",
           "category": "Marketing",
-          "summary": "Tus posts en LinkedIn y X: el agente escribe la semana con tu voz, tú apruebas, salen solos. Como Buffer o Postiz.",
+          "summary": "Tus posts en LinkedIn y X: el agente escribe la semana con tu voz, tú apruebas, salen solos.",
+          "promise": "El agente escribe tus posts de la semana con tu voz; tú los apruebas y salen solos.",
           "description": "Cuéntale a Posts cómo escribes y de qué hablas, y activa las cuentas: tu perfil de LinkedIn, las páginas de empresa que administras, y tu cuenta de X. Una vez por semana el agente escribe posts para sus horarios libres — desde tus ideas, un link, un archivo o un feed que sigues — y tú revisas cada uno tal como se va a ver: lo apruebas, pides otra versión, o marcas una frase y dices qué cambiar. Lo aprobado sale a su hora; vuelven las reacciones, y el agente escribe la semana siguiente con lo que funcionó. Puede repostear o agregar un primer comentario cuando un post llega a las reacciones que fijes. El modo ensayo está activo hasta que lo apagues: todo corre, nada llega a una red.",
           "brief": {
             "user": "El dueño, o quien hace el marketing, de una empresa pequeña",
@@ -2260,8 +2940,27 @@
               "¿Qué escribió el agente que espera mi visto bueno?",
               "¿Qué funcionó?"
             ],
-            "primaryAction": "Aprobar un borrador"
+            "primaryAction": "Aprobar un borrador",
+            "answers": [
+              "La semana muestra cada post con su día, su hora y su red.",
+              "Cada borrador te espera tal como se verá: lo apruebas, pides otra versión o dices qué cambiar.",
+              "Las reacciones vuelven, y el agente escribe la semana siguiente con lo que funcionó."
+            ]
           },
+          "how": [
+            {
+              "title": "El agente escribe la semana",
+              "text": "Desde tus ideas, un enlace, un archivo o un feed que sigues, con la voz que describiste."
+            },
+            {
+              "title": "Tú apruebas cada post",
+              "text": "Lo ves tal como saldrá; lo apruebas, pides otra versión o marcas una frase y dices qué cambiar."
+            },
+            {
+              "title": "Sale a su hora",
+              "text": "Los posts aprobados se publican solos y sus reacciones vuelven. El modo ensayo sigue activo hasta que lo apagas."
+            }
+          ],
           "needs": {
             "agent": {
               "why": "Escribe los posts con tu voz, como JSON que revisa un script; nunca publica. Publicar, los números y los feeds son scripts."
