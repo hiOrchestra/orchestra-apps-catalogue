@@ -388,7 +388,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.3.0",
+      "version": "0.3.1",
       "tables": [
         "bk_settings",
         "bk_types",
@@ -396,9 +396,9 @@
         "bk_bookings"
       ],
       "package": {
-        "path": "apps/booking/booking-0.3.0.tgz",
-        "sha256": "253790f353aa223247fc71217ced5d90f511f50350d0ec7e904195b5c9db637e",
-        "size": 56884,
+        "path": "apps/booking/booking-0.3.1.tgz",
+        "sha256": "68a31b84e6704834ad3997d4463862854eb42c9665e2495d45642ae2e5d6538f",
+        "size": 56891,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
@@ -790,7 +790,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.4.0",
+      "version": "0.4.1",
       "tables": [
         "hr_company",
         "hr_settings",
@@ -799,9 +799,9 @@
         "hr_imports"
       ],
       "package": {
-        "path": "apps/recruiter/recruiter-0.4.0.tgz",
-        "sha256": "560a9732b6da513d7c69ad74d0a17b794ae3772a3e6decfde67e676abab01bdc",
-        "size": 44770,
+        "path": "apps/recruiter/recruiter-0.4.1.tgz",
+        "sha256": "b913dfbcd56ef5249cfff494e3b68ba869aa539fcbc4b3cb3f8184b87061e115",
+        "size": 44791,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
@@ -2068,7 +2068,7 @@
           "title": "The first week"
         }
       ],
-      "version": "0.3.8",
+      "version": "0.3.9",
       "tables": [
         "po_settings",
         "po_accounts",
@@ -2081,9 +2081,9 @@
         "po_pillars"
       ],
       "package": {
-        "path": "apps/posts/posts-0.3.8.tgz",
-        "sha256": "54d626575e13a653ad1fbd3a64978610bc68cf233fa0a46756db25553dc61dc5",
-        "size": 96876,
+        "path": "apps/posts/posts-0.3.9.tgz",
+        "sha256": "b0d6f9446813ae219bc47d7c2b8b173577af92297b7e98b2f7ec1ed0c41527b4",
+        "size": 96878,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
