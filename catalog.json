@@ -77,7 +77,7 @@
           "device": "desktop"
         }
       ],
-      "version": "0.3.0",
+      "version": "0.3.1",
       "tables": [
         "crm_settings",
         "crm_companies",
@@ -88,9 +88,9 @@
         "crm_drafts"
       ],
       "package": {
-        "path": "apps/crm/crm-0.3.0.tgz",
-        "sha256": "6e258024df8dc708fb6c2758ef628b288df857005041cc320621890faed83b1c",
-        "size": 69285,
+        "path": "apps/crm/crm-0.3.1.tgz",
+        "sha256": "aa4493bd673f5dc11d7a78ca5dc35593d7853fed3c4799cf0179c6312eaa97bd",
+        "size": 69697,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
@@ -129,7 +129,51 @@
             "why": "A one-time copy of your HubSpot companies, contacts and deals (read only)."
           }
         ],
-        "variables": []
+        "variables": [],
+        "related": [
+          {
+            "app": "helpdesk",
+            "why": {
+              "es": "Quien escribe al soporte es un contacto: su historial de tickets ayuda a entender la relación.",
+              "en": "Whoever writes to support is a contact: their tickets help understand the relationship."
+            }
+          },
+          {
+            "app": "booking",
+            "why": {
+              "es": "Quien reserva una reunión puede pasar al CRM como contacto, con su oportunidad.",
+              "en": "Whoever books a meeting can become a contact in the CRM, with their opportunity."
+            }
+          },
+          {
+            "app": "invoices",
+            "why": {
+              "es": "Una oportunidad ganada se factura en Facturas, al mismo cliente.",
+              "en": "A won deal is invoiced in Invoices, to the same customer."
+            }
+          },
+          {
+            "app": "esign",
+            "why": {
+              "es": "Los firmantes de un contrato suelen ser contactos del CRM.",
+              "en": "A contract's signers are usually CRM contacts."
+            }
+          },
+          {
+            "app": "forms",
+            "why": {
+              "es": "Las respuestas a un formulario pueden convertirse en contactos.",
+              "en": "Form answers can become contacts."
+            }
+          },
+          {
+            "app": "outreach",
+            "why": {
+              "es": "Las campañas se envían a contactos y listas que vienen del CRM.",
+              "en": "Campaigns go to contacts and lists that come from the CRM."
+            }
+          }
+        ]
       },
       "emoji": "🤝",
       "i18n": {
@@ -242,7 +286,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.3.1",
+      "version": "0.3.2",
       "tables": [
         "hd_settings",
         "hd_tickets",
@@ -252,9 +296,9 @@
         "hd_requests"
       ],
       "package": {
-        "path": "apps/helpdesk/helpdesk-0.3.1.tgz",
-        "sha256": "1183b1087d5ff894dd73cfdc889988b6ba5ab1888f42da19a34241d509daad5a",
-        "size": 48866,
+        "path": "apps/helpdesk/helpdesk-0.3.2.tgz",
+        "sha256": "b643aa1d2de945af15348a7c2d2d72447d1a4c35c5ab0d19f920546dc80423c9",
+        "size": 48969,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
@@ -277,7 +321,16 @@
             }
           }
         ],
-        "variables": []
+        "variables": [],
+        "related": [
+          {
+            "app": "crm",
+            "why": {
+              "es": "Quien escribe puede ser un cliente: añadirlo al CRM guarda la relación.",
+              "en": "Whoever writes may be a customer: adding them to the CRM keeps the relationship."
+            }
+          }
+        ]
       },
       "emoji": "🎧",
       "i18n": {
@@ -388,7 +441,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.3.1",
+      "version": "0.3.2",
       "tables": [
         "bk_settings",
         "bk_types",
@@ -396,9 +449,9 @@
         "bk_bookings"
       ],
       "package": {
-        "path": "apps/booking/booking-0.3.1.tgz",
-        "sha256": "68a31b84e6704834ad3997d4463862854eb42c9665e2495d45642ae2e5d6538f",
-        "size": 56891,
+        "path": "apps/booking/booking-0.3.2.tgz",
+        "sha256": "69cb42fb878cb2f005db4d3b6531b073b4dc180c4a7b5a9038173e0c15c7a2fd",
+        "size": 56981,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
@@ -417,7 +470,16 @@
             "why": "Reads when you are busy (only that a time is taken, never what is in it) and creates the confirmed events; Google sends the invitations."
           }
         ],
-        "variables": []
+        "variables": [],
+        "related": [
+          {
+            "app": "crm",
+            "why": {
+              "es": "Una reunión reservada es una oportunidad: puede abrirse en el CRM.",
+              "en": "A booked meeting is an opportunity: it can be opened in the CRM."
+            }
+          }
+        ]
       },
       "emoji": "📅",
       "i18n": {
@@ -521,7 +583,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.3.8",
+      "version": "0.3.9",
       "tables": [
         "forms_settings",
         "forms_templates",
@@ -531,9 +593,9 @@
         "forms_answers"
       ],
       "package": {
-        "path": "apps/forms/forms-0.3.8.tgz",
-        "sha256": "6686191ef8d84f2f8b5e9adc352c14d0cbceec128eea85ef4d3967ec529a647f",
-        "size": 118327,
+        "path": "apps/forms/forms-0.3.9.tgz",
+        "sha256": "5a4cd98365be0f6f6e8ee4c95c9dda71a951ff84cde62d55ddbc08febc86639c",
+        "size": 118408,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
@@ -552,7 +614,16 @@
             "why": "Import your Typeform forms and their responses."
           }
         ],
-        "variables": []
+        "variables": [],
+        "related": [
+          {
+            "app": "crm",
+            "why": {
+              "es": "Quien responde un formulario puede pasar al CRM como contacto.",
+              "en": "Whoever answers a form can become a contact in the CRM."
+            }
+          }
+        ]
       },
       "emoji": "📝",
       "i18n": {
@@ -983,7 +1054,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.5.0",
+      "version": "0.5.1",
       "tables": [
         "outreach_settings",
         "outreach_fields",
@@ -996,9 +1067,9 @@
         "outreach_imports"
       ],
       "package": {
-        "path": "apps/outreach/outreach-0.5.0.tgz",
-        "sha256": "a3b9795afad30705125cf2a56247a08022fc4c95a3e0519ffcbf10a691c4bb46",
-        "size": 121043,
+        "path": "apps/outreach/outreach-0.5.1.tgz",
+        "sha256": "55c9d45609d60463dab268d560bdbb10cc4d897271c79a055c4c90710608ef1c",
+        "size": 121140,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
@@ -1023,7 +1094,16 @@
             "why": "Sends a campaign from the connected account instead, one email at a time; replies land in that inbox."
           }
         ],
-        "variables": []
+        "variables": [],
+        "related": [
+          {
+            "app": "crm",
+            "why": {
+              "es": "Los contactos de las campañas suelen venir del CRM, y las respuestas vuelven a él.",
+              "en": "Campaign contacts usually come from the CRM, and replies go back to it."
+            }
+          }
+        ]
       },
       "emoji": "📣",
       "i18n": {
@@ -1141,7 +1221,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.2.0",
+      "version": "0.2.1",
       "tables": [
         "inv_settings",
         "inv_series",
@@ -1152,9 +1232,9 @@
         "inv_responses"
       ],
       "package": {
-        "path": "apps/invoices/invoices-0.2.0.tgz",
-        "sha256": "e942af1a421982b286947e3fe0b7cb119d31966f537f76ed03d85e57f8b7f874",
-        "size": 87419,
+        "path": "apps/invoices/invoices-0.2.1.tgz",
+        "sha256": "568a7095ef7bafa757a01e2764972ebd0379a378e3b345fd6c5eccfb09182908",
+        "size": 87583,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
@@ -1183,7 +1263,23 @@
             "why": "Card payments: a Pay button on each invoice, marked paid when the client pays (only with card payments on in Ajustes)."
           }
         ],
-        "variables": []
+        "variables": [],
+        "related": [
+          {
+            "app": "crm",
+            "why": {
+              "es": "Se factura a los clientes que lleva el CRM.",
+              "en": "You invoice the customers the CRM keeps."
+            }
+          },
+          {
+            "app": "expenses",
+            "why": {
+              "es": "Los ingresos (facturas) y los gastos van juntos al gestor.",
+              "en": "Income (invoices) and expenses go together to the accountant."
+            }
+          }
+        ]
       },
       "emoji": "🧾",
       "i18n": {
@@ -1624,7 +1720,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.2.0",
+      "version": "0.2.1",
       "tables": [
         "es_settings",
         "es_sources",
@@ -1638,9 +1734,9 @@
         "es_emails"
       ],
       "package": {
-        "path": "apps/esign/esign-0.2.0.tgz",
-        "sha256": "9fb51273856462c8f320921104ffebc70e72c182d8c2fe604fadefd300ea9a63",
-        "size": 390919,
+        "path": "apps/esign/esign-0.2.1.tgz",
+        "sha256": "62b73c3edf4726bfa151ffaf9c3ce14dca0904dd4fd094947db9f5c698682079",
+        "size": 391058,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -1658,7 +1754,23 @@
             "why": "Sends them from your own domain instead, when Settings says Resend."
           }
         ],
-        "variables": []
+        "variables": [],
+        "related": [
+          {
+            "app": "crm",
+            "why": {
+              "es": "Los firmantes suelen ser contactos del CRM.",
+              "en": "Signers are usually CRM contacts."
+            }
+          },
+          {
+            "app": "invoices",
+            "why": {
+              "es": "Un presupuesto firmado se convierte en factura.",
+              "en": "A signed quote becomes an invoice."
+            }
+          }
+        ]
       },
       "emoji": "✍️",
       "i18n": {
@@ -1851,7 +1963,7 @@
           "device": "phone"
         }
       ],
-      "version": "0.2.0",
+      "version": "0.2.1",
       "tables": [
         "ex_settings",
         "ex_receipts",
@@ -1861,9 +1973,9 @@
         "ex_links"
       ],
       "package": {
-        "path": "apps/expenses/expenses-0.2.0.tgz",
-        "sha256": "dd3c2137f63e45ec640b40700f477cd9bfcaf6cdf76d1c6ed9331beb335e5ea3",
-        "size": 82482,
+        "path": "apps/expenses/expenses-0.2.1.tgz",
+        "sha256": "805dc71d0f3e6dfbccdc3abcf24b5e0c2b3ba21960a803e1ddd5b3cdd1a47e5d",
+        "size": 82573,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
@@ -1888,7 +2000,16 @@
             "why": "Sends the closed month to your accountant from an address on your own domain, when Ajustes says Resend."
           }
         ],
-        "variables": []
+        "variables": [],
+        "related": [
+          {
+            "app": "invoices",
+            "why": {
+              "es": "Los gastos y las facturas emitidas van juntos al gestor cada mes.",
+              "en": "Expenses and issued invoices go together to the accountant each month."
+            }
+          }
+        ]
       },
       "emoji": "🧾",
       "i18n": {
