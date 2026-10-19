@@ -95,19 +95,19 @@
       "icon": "crm",
       "screenshots": [
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/crm/screens/1-today.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/crm/screens/1-today.png",
           "caption": "Today: who to talk to, the steps the agent suggests and the emails waiting for your OK",
           "surface": "desk",
           "device": "desktop"
         },
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/crm/screens/2-pipeline.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/crm/screens/2-pipeline.png",
           "caption": "The pipeline by stage, with what each stage is worth",
           "surface": "desk",
           "device": "desktop"
         },
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/crm/screens/3-deal.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/crm/screens/3-deal.png",
           "caption": "A deal: its next step, the agent's suggestion and the whole history",
           "surface": "desk",
           "device": "desktop"
@@ -412,19 +412,19 @@
       "icon": "helpdesk",
       "screenshots": [
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/helpdesk/screens/1-inbox.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/helpdesk/screens/1-inbox.png",
           "caption": "The inbox: what waits for an answer, the most urgent first",
           "surface": "desk",
           "device": "desktop"
         },
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/helpdesk/screens/2-ticket.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/helpdesk/screens/2-ticket.png",
           "caption": "A ticket with the reply the agent drafted, ready to review and send",
           "surface": "desk",
           "device": "desktop"
         },
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/helpdesk/screens/3-contact.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/helpdesk/screens/3-contact.png",
           "caption": "The public contact page, on a phone",
           "surface": "public",
           "device": "mobile"
@@ -705,19 +705,19 @@
       "icon": "booking",
       "screenshots": [
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/booking/screens/1-upcoming.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/booking/screens/1-upcoming.png",
           "caption": "Upcoming meetings, each with the agent's brief on the person",
           "surface": "desk",
           "device": "desktop"
         },
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/booking/screens/2-requests.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/booking/screens/2-requests.png",
           "caption": "Requests waiting for your OK",
           "surface": "desk",
           "device": "desktop"
         },
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/booking/screens/3-book.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/booking/screens/3-book.png",
           "caption": "The booking page, on a phone, with your real free times",
           "surface": "public",
           "device": "mobile"
@@ -964,19 +964,19 @@
       "icon": "forms",
       "screenshots": [
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/forms/screens/1-build.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/forms/screens/1-build.png",
           "caption": "Build a form question by question, with a live preview beside it",
           "surface": "desk",
           "device": "desktop"
         },
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/forms/screens/2-form.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/forms/screens/2-form.png",
           "caption": "What people answer: one question at a time",
           "surface": "public",
           "device": "desktop"
         },
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/forms/screens/3-form-phone.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/forms/screens/3-form-phone.png",
           "caption": "The same form on a phone",
           "surface": "public",
           "device": "mobile"
@@ -1199,7 +1199,7 @@
       "icon": "analytics",
       "screenshots": [
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/analytics/screens/1-overview.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/analytics/screens/1-overview.png",
           "caption": "Visitors, visits and pages, compared with the period before",
           "surface": "desk",
           "device": "desktop"
@@ -1357,13 +1357,13 @@
       "icon": "recruiter",
       "screenshots": [
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/recruiter/screens/1-careers.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/recruiter/screens/1-careers.png",
           "caption": "The public careers page with the open roles",
           "surface": "public",
           "device": "desktop"
         },
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/recruiter/screens/2-careers-phone.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/recruiter/screens/2-careers-phone.png",
           "caption": "The careers page on a phone",
           "surface": "public",
           "device": "mobile"
@@ -1654,19 +1654,19 @@
       "icon": "outreach",
       "screenshots": [
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/outreach/screens/1-report.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/outreach/screens/1-report.png",
           "caption": "A newsletter's report: every number opens the people behind it",
           "surface": "desk",
           "device": "desktop"
         },
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/outreach/screens/2-contacts.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/outreach/screens/2-contacts.png",
           "caption": "Contacts with their lists, status and last email",
           "surface": "desk",
           "device": "desktop"
         },
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/outreach/screens/3-unsubscribe.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/outreach/screens/3-unsubscribe.png",
           "caption": "The unsubscribe page a reader lands on, on a phone",
           "surface": "public",
           "device": "mobile"
@@ -1935,19 +1935,19 @@
       "icon": "invoices",
       "screenshots": [
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/invoices/screens/1-overview.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/invoices/screens/1-overview.png",
           "caption": "What you are owed, who is late, and the quotes waiting for an answer",
           "surface": "desk",
           "device": "desktop"
         },
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/invoices/screens/2-invoice.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/invoices/screens/2-invoice.png",
           "caption": "An invoice exactly as the client sees it, with its link, email and payment beside it",
           "surface": "desk",
           "device": "desktop"
         },
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/invoices/screens/3-invoice-phone.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/invoices/screens/3-invoice-phone.png",
           "caption": "The client's page on a phone: pay by card or bank transfer, or save it as a PDF",
           "surface": "public",
           "device": "mobile"
@@ -2225,19 +2225,19 @@
       "icon": "tables",
       "screenshots": [
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/tables/screens/1-today.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/tables/screens/1-today.png",
           "caption": "Today's service sheet: who comes, when, how many, which table, notes and allergies",
           "surface": "desk",
           "device": "desktop"
         },
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/tables/screens/2-sources.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/tables/screens/2-sources.png",
           "caption": "Where bookings come from, and the commission booking direct avoids (an estimate)",
           "surface": "desk",
           "device": "desktop"
         },
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/tables/screens/3-book.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/tables/screens/3-book.png",
           "caption": "The booking page on a phone: day, people, time, done",
           "surface": "public",
           "device": "mobile"
@@ -2503,19 +2503,19 @@
       "icon": "appointments",
       "screenshots": [
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/appointments/screens/1-today.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/appointments/screens/1-today.png",
           "caption": "Today's agenda, a column per person: arrived, no-shows, blocked time",
           "surface": "desk",
           "device": "desktop"
         },
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/appointments/screens/2-services.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/appointments/screens/2-services.png",
           "caption": "Services with their length, price, buffers and when clients are due back",
           "surface": "desk",
           "device": "desktop"
         },
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/appointments/screens/3-book.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/appointments/screens/3-book.png",
           "caption": "The booking page on a phone, in your clients' language",
           "surface": "public",
           "device": "mobile"
@@ -2771,19 +2771,19 @@
       "icon": "esign",
       "screenshots": [
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/esign/screens/1-envelopes.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/esign/screens/1-envelopes.png",
           "caption": "What waits for a signature and from whom, the drafts, and what was signed",
           "surface": "desk",
           "device": "desktop"
         },
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/esign/screens/2-envelope.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/esign/screens/2-envelope.png",
           "caption": "An envelope: the document with each signature in its place, who signed, the signed PDF and the evidence",
           "surface": "desk",
           "device": "desktop"
         },
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/esign/screens/3-sign-phone.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/esign/screens/3-sign-phone.png",
           "caption": "The signer's page on a phone: read it, confirm the email with a code, type or draw the signature",
           "surface": "public",
           "device": "mobile"
@@ -3067,25 +3067,25 @@
       "icon": "expenses",
       "screenshots": [
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/expenses/screens/1-review.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/expenses/screens/1-review.png",
           "caption": "The receipts that were read, waiting for your look",
           "surface": "desk",
           "device": "desktop"
         },
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/expenses/screens/2-expense.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/expenses/screens/2-expense.png",
           "caption": "A receipt beside what was read from it: check, correct, approve",
           "surface": "desk",
           "device": "desktop"
         },
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/expenses/screens/3-month.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/expenses/screens/3-month.png",
           "caption": "The month: totals, VAT per rate, what is owed back, and the close for your accountant",
           "surface": "desk",
           "device": "desktop"
         },
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/expenses/screens/4-accountant-phone.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/expenses/screens/4-accountant-phone.png",
           "caption": "What your accountant opens from the month's email: the totals, the PDF and the CSV",
           "surface": "public",
           "device": "phone"
@@ -3415,19 +3415,19 @@
       "icon": "posts",
       "screenshots": [
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/posts/screens/1-week.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/posts/screens/1-week.png",
           "caption": "The week: what goes out, where, the free times, and what waits for you",
           "surface": "desk",
           "device": "desktop"
         },
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/posts/screens/2-post.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/posts/screens/2-post.png",
           "caption": "A draft as it will look, with your notes on it: approve, or ask for another version",
           "surface": "desk",
           "device": "desktop"
         },
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/posts/screens/3-published.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/posts/screens/3-published.png",
           "caption": "What went out and how it did",
           "surface": "desk",
           "device": "desktop"
@@ -3717,19 +3717,19 @@
       "icon": "ventas",
       "screenshots": [
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/ventas/screens/1-hoy.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/ventas/screens/1-hoy.png",
           "caption": "Hoy: the messages waiting for your OK, the replies and the next steps",
           "surface": "desk",
           "device": "desktop"
         },
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/ventas/screens/2-prospectos.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/ventas/screens/2-prospectos.png",
           "caption": "The pipeline by stage, with each business's signals and fit",
           "surface": "desk",
           "device": "desktop"
         },
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/ventas/screens/3-prospecto.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/ventas/screens/3-prospecto.png",
           "caption": "A prospect: why it fits, what its website shows, who to talk to and every message",
           "surface": "desk",
           "device": "desktop"
