@@ -113,7 +113,7 @@
           "device": "desktop"
         }
       ],
-      "version": "0.3.1",
+      "version": "0.3.2",
       "tables": [
         "crm_settings",
         "crm_companies",
@@ -124,9 +124,9 @@
         "crm_drafts"
       ],
       "package": {
-        "path": "apps/crm/crm-0.3.1.tgz",
-        "sha256": "aa4493bd673f5dc11d7a78ca5dc35593d7853fed3c4799cf0179c6312eaa97bd",
-        "size": 69697,
+        "path": "apps/crm/crm-0.3.2.tgz",
+        "sha256": "158bfee96a0052ee1303710a5ff7a806e1642e94967415e71c9cfde6ffaa5fdd",
+        "size": 71477,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
@@ -211,6 +211,58 @@
               "es": "Las campañas se envían a contactos y listas que vienen del CRM.",
               "en": "Campaigns go to contacts and lists that come from the CRM."
             }
+          }
+        ],
+        "suggestedTasks": [
+          {
+            "id": "repaso-del-dia",
+            "title": {
+              "es": "Repaso del día en el CRM",
+              "en": "Today in the CRM"
+            },
+            "why": {
+              "es": "Cada mañana, lo que el equipo comercial tiene que mover hoy: oportunidades paradas o con el paso vencido, tareas del día y emails por aprobar.",
+              "en": "Every morning, what the sales team has to move today: stalled deals or overdue next steps, today's tasks and emails to approve."
+            },
+            "role": "assistant",
+            "schedule": {
+              "cron": "0 9 * * 1-5",
+              "tz": "Europe/Madrid",
+              "label": {
+                "es": "Laborables a las 9:00",
+                "en": "Weekdays at 9:00"
+              }
+            },
+            "prompt": {
+              "es": "Repasa el CRM para hoy.\n1. Oportunidades abiertas (crm_deals, status = 'Open') con el próximo paso vencido (next_step_due antes de hoy), sin próximo paso, o paradas (sin cambio de etapa en más días que crm_settings.stuck_days): nombre, importe, responsable y qué falta.\n2. Tareas abiertas que vencen hoy o están atrasadas (crm_tasks, status = 'Open') y tareas sugeridas sin decidir (status = 'Suggested').\n3. Emails que esperan aprobación (crm_drafts, status = 'Review') y los que fallaron (status = 'Failed').\n4. Contactos sugeridos por el correo sin decidir (crm_contacts, status = 'Suggested'): cuántos y, de los cinco más prometedores, por qué.\nSi ves en una oportunidad algo que el equipo debe saber (un correo reciente, un cambio en la empresa), déjalo como nota con `add_note`.\n\nTrabaja solo con `orch-app crm read \"<SELECT …>\"` y `orch-app crm do <acción> --json '{…}'` (si dudas de una tabla o una acción, `orch-app crm guide`). Nunca apruebas ni envías un email, y no cierras ni mueves oportunidades: eso lo decide una persona. Termina con un resumen breve para el canal del equipo: como mucho 8 líneas, con cifras y lo que espera a una persona. Si no hay nada que contar, dilo en una línea.",
+              "en": "Go over the CRM for today.\n1. Open deals (crm_deals, status = 'Open') whose next step is overdue (next_step_due before today), with no next step, or stalled (no stage change in more days than crm_settings.stuck_days): name, amount, owner and what is missing.\n2. Open tasks due today or overdue (crm_tasks, status = 'Open') and suggested tasks nobody decided (status = 'Suggested').\n3. Emails waiting for approval (crm_drafts, status = 'Review') and the ones that failed (status = 'Failed').\n4. Contacts suggested from mail and not decided (crm_contacts, status = 'Suggested'): how many and, for the five most promising, why.\nWhen a deal has something the team should know (a recent email, a change at the company), leave it as a note with `add_note`.\n\nWork only through `orch-app crm read \"<SELECT …>\"` and `orch-app crm do <action> --json '{…}'` (if unsure of a table or an action, `orch-app crm guide`). You never approve or send an email, and you do not close or move deals: a person decides that. End with a short summary for the team's channel: 8 lines at most, with numbers and what waits on a person. If there is nothing to report, say so in one line."
+            },
+            "deliver": "channel"
+          },
+          {
+            "id": "resumen-semanal",
+            "title": {
+              "es": "Resumen semanal del pipeline",
+              "en": "Weekly pipeline summary"
+            },
+            "why": {
+              "es": "Cada lunes, cómo cambió el pipeline: lo ganado y perdido, lo nuevo, el valor por etapa y dónde se atasca.",
+              "en": "Every Monday, how the pipeline changed: won and lost, what is new, value by stage and where it gets stuck."
+            },
+            "role": "assistant",
+            "schedule": {
+              "cron": "30 8 * * 1",
+              "tz": "Europe/Madrid",
+              "label": {
+                "es": "Los lunes a las 8:30",
+                "en": "Mondays at 8:30"
+              }
+            },
+            "prompt": {
+              "es": "Resume los últimos 7 días del CRM.\n1. Oportunidades ganadas y perdidas (crm_deals.closed_at en la semana) con su importe y, de las perdidas, el motivo (lost_reason).\n2. Oportunidades nuevas, y el valor abierto por etapa (status = 'Open', suma de amount por stage) frente a la semana anterior si se puede deducir.\n3. Dónde se atasca: la etapa con más oportunidades paradas y las tres más grandes sin próximo paso.\n4. Actividad: emails enviados (crm_drafts, status = 'Sent'), reuniones y notas (crm_activities por type).\nCierra con como mucho tres recomendaciones concretas para esta semana.\n\nTrabaja solo con `orch-app crm read \"<SELECT …>\"` y `orch-app crm do <acción> --json '{…}'` (si dudas de una tabla o una acción, `orch-app crm guide`). Solo lees: no cambias nada, ni apruebas ni envías. Termina con un resumen breve para el canal del equipo: como mucho 8 líneas, con cifras y lo que espera a una persona. Si no hay nada que contar, dilo en una línea.",
+              "en": "Summarise the CRM's last 7 days.\n1. Deals won and lost (crm_deals.closed_at in the week) with their amount and, for the lost ones, the reason (lost_reason).\n2. New deals, and the open value by stage (status = 'Open', sum of amount by stage) against the week before when it can be told.\n3. Where it gets stuck: the stage with the most stalled deals, and the three biggest with no next step.\n4. Activity: emails sent (crm_drafts, status = 'Sent'), meetings and notes (crm_activities by type).\nClose with at most three concrete recommendations for this week.\n\nWork only through `orch-app crm read \"<SELECT …>\"` and `orch-app crm do <action> --json '{…}'` (if unsure of a table or an action, `orch-app crm guide`). You only read: you change nothing, approve nothing, send nothing. End with a short summary for the team's channel: 8 lines at most, with numbers and what waits on a person. If there is nothing to report, say so in one line."
+            },
+            "deliver": "channel"
           }
         ]
       },
@@ -378,7 +430,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.3.2",
+      "version": "0.3.3",
       "tables": [
         "hd_settings",
         "hd_tickets",
@@ -388,9 +440,9 @@
         "hd_requests"
       ],
       "package": {
-        "path": "apps/helpdesk/helpdesk-0.3.2.tgz",
-        "sha256": "b643aa1d2de945af15348a7c2d2d72447d1a4c35c5ab0d19f920546dc80423c9",
-        "size": 48969,
+        "path": "apps/helpdesk/helpdesk-0.3.3.tgz",
+        "sha256": "8043b0f62a2090127aba157bc205ae581bf91b0e48bf535c69312dbdaa4942af",
+        "size": 51204,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
@@ -426,6 +478,83 @@
               "es": "Quien escribe puede ser un cliente: añadirlo al CRM guarda la relación.",
               "en": "Whoever writes may be a customer: adding them to the CRM keeps the relationship."
             }
+          }
+        ],
+        "suggestedTasks": [
+          {
+            "id": "tickets-del-dia",
+            "title": {
+              "es": "Tickets del día",
+              "en": "Today's tickets"
+            },
+            "why": {
+              "es": "Cada mañana, qué clientes esperan, cuáles pasan del plazo y qué respuestas están listas para enviar.",
+              "en": "Every morning, which customers wait, which are past the deadline and which replies are ready to send."
+            },
+            "role": "responder",
+            "schedule": {
+              "cron": "0 9 * * 1-5",
+              "tz": "Europe/Madrid",
+              "label": {
+                "es": "Laborables a las 9:00",
+                "en": "Weekdays at 9:00"
+              }
+            },
+            "prompt": {
+              "es": "Repasa la bandeja de Helpdesk.\n1. Tickets abiertos (hd_tickets, status distinto de 'Solved' y 'Spam') por prioridad, y los que pasan del plazo (más horas sin primera respuesta que hd_settings.sla_hours): asunto, cliente y cuánto llevan esperando.\n2. Respuestas en borrador que esperan revisión (hd_messages, status = 'Draft') y envíos fallidos (status = 'Failed').\n3. Tickets sin asignar con más de un día.\nSi un ticket abierto no tiene borrador y la base de conocimiento (hd_articles) lo responde, pide el borrador con `redraft` ({\"id\"}) y dilo.\n\nTrabaja solo con `orch-app helpdesk read \"<SELECT …>\"` y `orch-app helpdesk do <acción> --json '{…}'` (si dudas de una tabla o una acción, `orch-app helpdesk guide`). Nunca apruebas ni envías una respuesta: el borrador lo revisa una persona y pulsa Enviar. Termina con un resumen breve para el canal del equipo: como mucho 8 líneas, con cifras y lo que espera a una persona. Si no hay nada que contar, dilo en una línea.",
+              "en": "Go over the Helpdesk inbox.\n1. Open tickets (hd_tickets, status other than 'Solved' and 'Spam') by priority, and the ones past the deadline (more hours without a first response than hd_settings.sla_hours): subject, customer and how long they have waited.\n2. Reply drafts waiting for review (hd_messages, status = 'Draft') and failed sends (status = 'Failed').\n3. Tickets unassigned for more than a day.\nWhen an open ticket has no draft and the knowledge base (hd_articles) answers it, ask for the draft with `redraft` ({\"id\"}) and say so.\n\nWork only through `orch-app helpdesk read \"<SELECT …>\"` and `orch-app helpdesk do <action> --json '{…}'` (if unsure of a table or an action, `orch-app helpdesk guide`). You never approve or send a reply: a person reviews the draft and presses Send. End with a short summary for the team's channel: 8 lines at most, with numbers and what waits on a person. If there is nothing to report, say so in one line."
+            },
+            "deliver": "channel"
+          },
+          {
+            "id": "huecos-base-conocimiento",
+            "title": {
+              "es": "Huecos en la base de conocimiento",
+              "en": "Gaps in the knowledge base"
+            },
+            "why": {
+              "es": "Cada viernes, las preguntas que se repiten y la base de conocimiento no responde, con el artículo propuesto sin publicar.",
+              "en": "Every Friday, the questions that keep coming and the knowledge base does not answer, with the article drafted unpublished."
+            },
+            "role": "responder",
+            "schedule": {
+              "cron": "0 12 * * 5",
+              "tz": "Europe/Madrid",
+              "label": {
+                "es": "Los viernes a las 12:00",
+                "en": "Fridays at 12:00"
+              }
+            },
+            "prompt": {
+              "es": "Busca huecos en la base de conocimiento de Helpdesk.\n1. Lee los tickets de los últimos 7 días (hd_tickets: subject, category, summary) y agrupa las preguntas que se repiten.\n2. Compara con los artículos (hd_articles: title, body, published). Para cada pregunta repetida sin respuesta, como mucho tres, redacta el artículo con `add_article` ({\"title\", \"body\", \"tags\", \"published\": \"no\"}): claro, corto, solo con lo que dicen las respuestas que el equipo envió; nada inventado.\nNunca publiques un artículo (published siempre \"no\"): lo publica una persona. En el resumen: las preguntas repetidas, cuántas veces y los artículos que dejaste sin publicar.\n\nTrabaja solo con `orch-app helpdesk read \"<SELECT …>\"` y `orch-app helpdesk do <acción> --json '{…}'` (si dudas de una tabla o una acción, `orch-app helpdesk guide`). Nunca apruebas ni envías una respuesta: el borrador lo revisa una persona y pulsa Enviar. Termina con un resumen breve para el canal del equipo: como mucho 8 líneas, con cifras y lo que espera a una persona. Si no hay nada que contar, dilo en una línea.",
+              "en": "Look for gaps in Helpdesk's knowledge base.\n1. Read the last 7 days' tickets (hd_tickets: subject, category, summary) and group the questions that repeat.\n2. Compare with the articles (hd_articles: title, body, published). For each repeated question with no answer, three at most, draft the article with `add_article` ({\"title\", \"body\", \"tags\", \"published\": \"no\"}): clear, short, only with what the replies the team sent say; nothing invented.\nNever publish an article (published is always \"no\"): a person publishes it. In the summary: the repeated questions, how often, and the articles you left unpublished.\n\nWork only through `orch-app helpdesk read \"<SELECT …>\"` and `orch-app helpdesk do <action> --json '{…}'` (if unsure of a table or an action, `orch-app helpdesk guide`). You never approve or send a reply: a person reviews the draft and presses Send. End with a short summary for the team's channel: 8 lines at most, with numbers and what waits on a person. If there is nothing to report, say so in one line."
+            },
+            "deliver": "channel"
+          },
+          {
+            "id": "resumen-semanal",
+            "title": {
+              "es": "Resumen semanal del soporte",
+              "en": "Weekly support summary"
+            },
+            "why": {
+              "es": "Cada lunes, cuánto entró, cuánto se resolvió, cuánto tardamos en contestar y de qué se quejan los clientes.",
+              "en": "Every Monday, how much came in, how much was solved, how fast we answered and what customers complain about."
+            },
+            "role": "responder",
+            "schedule": {
+              "cron": "30 8 * * 1",
+              "tz": "Europe/Madrid",
+              "label": {
+                "es": "Los lunes a las 8:30",
+                "en": "Mondays at 8:30"
+              }
+            },
+            "prompt": {
+              "es": "Resume los últimos 7 días de Helpdesk.\n1. Tickets nuevos (opened_at) y resueltos (solved_at), y los que siguen abiertos.\n2. Tiempo hasta la primera respuesta (first_response_at - opened_at): mediana y los que pasaron del plazo (hd_settings.sla_hours).\n3. Por categoría y por canal: dónde crece el volumen.\n4. Los tres temas que más se repiten y, para cada uno, una idea para que deje de llegar (un artículo, un cambio en el producto o en la web).\n\nTrabaja solo con `orch-app helpdesk read \"<SELECT …>\"` y `orch-app helpdesk do <acción> --json '{…}'` (si dudas de una tabla o una acción, `orch-app helpdesk guide`). Solo lees: no cambias nada, ni apruebas ni envías. Termina con un resumen breve para el canal del equipo: como mucho 8 líneas, con cifras y lo que espera a una persona. Si no hay nada que contar, dilo en una línea.",
+              "en": "Summarise Helpdesk's last 7 days.\n1. New tickets (opened_at) and solved ones (solved_at), and those still open.\n2. Time to first response (first_response_at - opened_at): median, and those past the deadline (hd_settings.sla_hours).\n3. By category and by channel: where volume grows.\n4. The three topics that repeat most and, for each, one idea to make it stop coming (an article, a change in the product or the website).\n\nWork only through `orch-app helpdesk read \"<SELECT …>\"` and `orch-app helpdesk do <action> --json '{…}'` (if unsure of a table or an action, `orch-app helpdesk guide`). You only read: you change nothing, approve nothing, send nothing. End with a short summary for the team's channel: 8 lines at most, with numbers and what waits on a person. If there is nothing to report, say so in one line."
+            },
+            "deliver": "channel"
           }
         ]
       },
@@ -594,7 +723,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.3.2",
+      "version": "0.3.3",
       "tables": [
         "bk_settings",
         "bk_types",
@@ -602,9 +731,9 @@
         "bk_bookings"
       ],
       "package": {
-        "path": "apps/booking/booking-0.3.2.tgz",
-        "sha256": "69cb42fb878cb2f005db4d3b6531b073b4dc180c4a7b5a9038173e0c15c7a2fd",
-        "size": 56981,
+        "path": "apps/booking/booking-0.3.3.tgz",
+        "sha256": "55bf128d159d6ff06a956cd328e1d2187aa0cd721c4271644bf6553e56fa53ae",
+        "size": 58377,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
@@ -636,6 +765,58 @@
               "es": "Una reunión reservada es una oportunidad: puede abrirse en el CRM.",
               "en": "A booked meeting is an opportunity: it can be opened in the CRM."
             }
+          }
+        ],
+        "suggestedTasks": [
+          {
+            "id": "reuniones-de-hoy",
+            "title": {
+              "es": "Reuniones de hoy",
+              "en": "Today's meetings"
+            },
+            "why": {
+              "es": "Cada mañana, las reuniones del día con lo esencial de cada persona, y las solicitudes que esperan tu respuesta.",
+              "en": "Every morning, the day's meetings with what matters about each person, and the requests waiting for your answer."
+            },
+            "role": "preparer",
+            "schedule": {
+              "cron": "0 8 * * 1-5",
+              "tz": "Europe/Madrid",
+              "label": {
+                "es": "Laborables a las 8:00",
+                "en": "Weekdays at 8:00"
+              }
+            },
+            "prompt": {
+              "es": "Prepara el día en Booking.\n1. Reuniones confirmadas de hoy (bk_bookings, status = 'Confirmed', start_at hoy en la zona de bk_settings.timezone): hora, tipo, persona y, de su brief (prep), las dos o tres líneas que importan. Si a una le falta el brief (prep_status 'Failed' o vacío), pídelo con `prepare_again` ({\"id\"}).\n2. Solicitudes que esperan una decisión (status = 'Requested'), la más antigua primero, y las que fallaron (status = 'Failed') con su motivo.\n\nTrabaja solo con `orch-app booking read \"<SELECT …>\"` y `orch-app booking do <acción> --json '{…}'` (si dudas de una tabla o una acción, `orch-app booking guide`). Nunca confirmas, rechazas ni cancelas una reunión y no contactas a nadie: eso lo hace una persona. Termina con un resumen breve para el canal del equipo: como mucho 8 líneas, con cifras y lo que espera a una persona. Si no hay nada que contar, dilo en una línea.",
+              "en": "Prepare the day in Booking.\n1. Today's confirmed meetings (bk_bookings, status = 'Confirmed', start_at today in bk_settings.timezone): time, type, person and, from their brief (prep), the two or three lines that matter. When one has no brief (prep_status 'Failed' or empty), ask for it with `prepare_again` ({\"id\"}).\n2. Requests waiting for a decision (status = 'Requested'), oldest first, and the ones that failed (status = 'Failed') with the reason.\n\nWork only through `orch-app booking read \"<SELECT …>\"` and `orch-app booking do <action> --json '{…}'` (if unsure of a table or an action, `orch-app booking guide`). You never confirm, decline or cancel a meeting and you contact nobody: a person does. End with a short summary for the team's channel: 8 lines at most, with numbers and what waits on a person. If there is nothing to report, say so in one line."
+            },
+            "deliver": "channel"
+          },
+          {
+            "id": "semana-de-reuniones",
+            "title": {
+              "es": "La semana de reuniones",
+              "en": "The week's meetings"
+            },
+            "why": {
+              "es": "Cada lunes, cuántas reuniones hay esta semana y de qué tipo, y qué pasó la anterior.",
+              "en": "Every Monday, how many meetings this week and of what kind, and what happened the week before."
+            },
+            "role": "preparer",
+            "schedule": {
+              "cron": "30 8 * * 1",
+              "tz": "Europe/Madrid",
+              "label": {
+                "es": "Los lunes a las 8:30",
+                "en": "Mondays at 8:30"
+              }
+            },
+            "prompt": {
+              "es": "Resume la agenda de Booking.\n1. Esta semana: reuniones confirmadas por día y por tipo (bk_bookings, status = 'Confirmed'), y solicitudes sin decidir.\n2. La semana pasada: solicitudes recibidas, confirmadas, rechazadas y canceladas (status y decided_at), y cuánto tardó de media la decisión.\n3. Los tipos de reunión activos (bk_types) sin ninguna reserva en 30 días.\n\nTrabaja solo con `orch-app booking read \"<SELECT …>\"` y `orch-app booking do <acción> --json '{…}'` (si dudas de una tabla o una acción, `orch-app booking guide`). Solo lees: no cambias nada ni contactas a nadie. Termina con un resumen breve para el canal del equipo: como mucho 8 líneas, con cifras y lo que espera a una persona. Si no hay nada que contar, dilo en una línea.",
+              "en": "Summarise Booking's calendar.\n1. This week: confirmed meetings by day and type (bk_bookings, status = 'Confirmed'), and requests not decided.\n2. Last week: requests received, confirmed, declined and cancelled (status and decided_at), and how long a decision took on average.\n3. Active meeting types (bk_types) with no booking in 30 days.\n\nWork only through `orch-app booking read \"<SELECT …>\"` and `orch-app booking do <action> --json '{…}'` (if unsure of a table or an action, `orch-app booking guide`). You only read: you change nothing and contact nobody. End with a short summary for the team's channel: 8 lines at most, with numbers and what waits on a person. If there is nothing to report, say so in one line."
+            },
+            "deliver": "channel"
           }
         ]
       },
@@ -801,7 +982,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.3.9",
+      "version": "0.3.10",
       "tables": [
         "forms_settings",
         "forms_templates",
@@ -811,9 +992,9 @@
         "forms_answers"
       ],
       "package": {
-        "path": "apps/forms/forms-0.3.9.tgz",
-        "sha256": "5a4cd98365be0f6f6e8ee4c95c9dda71a951ff84cde62d55ddbc08febc86639c",
-        "size": 118408,
+        "path": "apps/forms/forms-0.3.10.tgz",
+        "sha256": "a2d839f37fe4b7f8861ff6c87281346e03ac0113d62d6e943ecc102fd5f18697",
+        "size": 119803,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
@@ -845,6 +1026,58 @@
               "es": "Quien responde un formulario puede pasar al CRM como contacto.",
               "en": "Whoever answers a form can become a contact in the CRM."
             }
+          }
+        ],
+        "suggestedTasks": [
+          {
+            "id": "respuestas-nuevas",
+            "title": {
+              "es": "Respuestas nuevas",
+              "en": "New responses"
+            },
+            "why": {
+              "es": "Cada mañana, lo que llegó por cada formulario desde ayer, resumido, con lo que pide atención.",
+              "en": "Every morning, what came in through each form since yesterday, summarised, with what needs attention."
+            },
+            "role": "drafter",
+            "schedule": {
+              "cron": "0 9 * * 1-5",
+              "tz": "Europe/Madrid",
+              "label": {
+                "es": "Laborables a las 9:00",
+                "en": "Weekdays at 9:00"
+              }
+            },
+            "prompt": {
+              "es": "Resume las respuestas nuevas de Forms.\n1. Por formulario publicado (forms_forms, status = 'Live'), las respuestas desde ayer (forms_responses, _created_at; sin status 'Spam' ni 'Deleted'): cuántas y, de cada una, en una línea quién es y lo que pide (forms_answers).\n2. Las que piden atención: una pregunta, una queja, una petición urgente o un contacto que espera respuesta.\n3. Respuestas con problema (problem) o marcadas como spam que quizá no lo son.\n\nTrabaja solo con `orch-app forms read \"<SELECT …>\"` y `orch-app forms do <acción> --json '{…}'` (si dudas de una tabla o una acción, `orch-app forms guide`). Nunca publicas, cierras ni borras un formulario o sus respuestas, y no contactas a nadie: eso lo hace una persona. Termina con un resumen breve para el canal del equipo: como mucho 8 líneas, con cifras y lo que espera a una persona. Si no hay nada que contar, dilo en una línea.",
+              "en": "Summarise Forms' new responses.\n1. For each live form (forms_forms, status = 'Live'), the responses since yesterday (forms_responses, _created_at; not 'Spam' or 'Deleted'): how many and, for each, one line on who it is and what they ask (forms_answers).\n2. The ones that need attention: a question, a complaint, an urgent request or a contact waiting for an answer.\n3. Responses with a problem (problem), or marked as spam that may not be.\n\nWork only through `orch-app forms read \"<SELECT …>\"` and `orch-app forms do <action> --json '{…}'` (if unsure of a table or an action, `orch-app forms guide`). You never publish, close or delete a form or its responses, and you contact nobody: a person does. End with a short summary for the team's channel: 8 lines at most, with numbers and what waits on a person. If there is nothing to report, say so in one line."
+            },
+            "deliver": "channel"
+          },
+          {
+            "id": "resumen-semanal",
+            "title": {
+              "es": "Resumen semanal de formularios",
+              "en": "Weekly forms summary"
+            },
+            "why": {
+              "es": "Cada lunes, cuántas respuestas trajo cada formulario, qué contestó la gente y cuáles están a punto de cerrarse.",
+              "en": "Every Monday, how many responses each form brought, what people answered and which forms are about to close."
+            },
+            "role": "drafter",
+            "schedule": {
+              "cron": "30 8 * * 1",
+              "tz": "Europe/Madrid",
+              "label": {
+                "es": "Los lunes a las 8:30",
+                "en": "Mondays at 8:30"
+              }
+            },
+            "prompt": {
+              "es": "Resume los últimos 7 días de Forms.\n1. Respuestas por formulario frente a la semana anterior, y el spam filtrado.\n2. En las preguntas de opción (forms_answers.choice), las respuestas más frecuentes; en las numéricas (number), la media.\n3. Formularios que se cierran pronto: closes_at en los próximos 7 días, o cerca de max_responses.\n4. Formularios publicados sin ninguna respuesta en 14 días.\n\nTrabaja solo con `orch-app forms read \"<SELECT …>\"` y `orch-app forms do <acción> --json '{…}'` (si dudas de una tabla o una acción, `orch-app forms guide`). Solo lees: no cambias nada ni contactas a nadie. Termina con un resumen breve para el canal del equipo: como mucho 8 líneas, con cifras y lo que espera a una persona. Si no hay nada que contar, dilo en una línea.",
+              "en": "Summarise Forms' last 7 days.\n1. Responses per form against the week before, and the spam filtered.\n2. In choice questions (forms_answers.choice), the most frequent answers; in number questions (number), the average.\n3. Forms closing soon: closes_at in the next 7 days, or near max_responses.\n4. Live forms with no response in 14 days.\n\nWork only through `orch-app forms read \"<SELECT …>\"` and `orch-app forms do <action> --json '{…}'` (if unsure of a table or an action, `orch-app forms guide`). You only read: you change nothing and contact nobody. End with a short summary for the team's channel: 8 lines at most, with numbers and what waits on a person. If there is nothing to report, say so in one line."
+            },
+            "deliver": "channel"
           }
         ]
       },
@@ -1136,7 +1369,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.4.1",
+      "version": "0.4.2",
       "tables": [
         "hr_company",
         "hr_settings",
@@ -1145,9 +1378,9 @@
         "hr_imports"
       ],
       "package": {
-        "path": "apps/recruiter/recruiter-0.4.1.tgz",
-        "sha256": "b913dfbcd56ef5249cfff494e3b68ba869aa539fcbc4b3cb3f8184b87061e115",
-        "size": 44791,
+        "path": "apps/recruiter/recruiter-0.4.2.tgz",
+        "sha256": "7b09e47095e84a3d9654ebe6d50a4ffb59339f67fe23cd5393c6a8dd099cfde4",
+        "size": 46493,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
@@ -1164,7 +1397,59 @@
           "telegram"
         ],
         "processes": 2,
-        "skills": []
+        "skills": [],
+        "suggestedTasks": [
+          {
+            "id": "candidatos-del-dia",
+            "title": {
+              "es": "Candidatos nuevos del día",
+              "en": "Today's new applicants"
+            },
+            "why": {
+              "es": "Cada mañana, quién se presentó a cada puesto y a quién merece la pena mirar primero, con sus razones.",
+              "en": "Every morning, who applied to each role and whom to look at first, with the reasons."
+            },
+            "role": "screener",
+            "schedule": {
+              "cron": "0 9 * * 1-5",
+              "tz": "Europe/Madrid",
+              "label": {
+                "es": "Laborables a las 9:00",
+                "en": "Weekdays at 9:00"
+              }
+            },
+            "prompt": {
+              "es": "Repasa los candidatos de Recruiter.\n1. Por cada puesto abierto (hr_roles, status = 'Open'), los candidatos que llegaron desde ayer (hr_applications, _created_at) con su veredicto sugerido (verdict), su puntuación (score) y sus razones (reasons), los mejores primero.\n2. Los que esperan en 'New' con veredicto shortlist: que una persona los mire hoy.\n3. Los que no se pudieron leer (screen_status = 'Failed', o sin CV): si un CV ya se puede leer, pide la lectura otra vez con `screen_again` ({\"ids\": [...]}).\nSi algo de un candidato importa para decidir y no está en sus razones, déjalo con `note_applicant`.\n\nTrabaja solo con `orch-app recruiter read \"<SELECT …>\"` y `orch-app recruiter do <acción> --json '{…}'` (si dudas de una tabla o una acción, `orch-app recruiter guide`). Nunca mueves a nadie de etapa ni contactas a nadie: el veredicto es una sugerencia y decide una persona. Termina con un resumen breve para el canal del equipo: como mucho 8 líneas, con cifras y lo que espera a una persona. Si no hay nada que contar, dilo en una línea.",
+              "en": "Go over Recruiter's applicants.\n1. For each open role (hr_roles, status = 'Open'), the applicants who came in since yesterday (hr_applications, _created_at) with their suggested verdict (verdict), score and reasons, best first.\n2. Those waiting in 'New' with a shortlist verdict: a person should look at them today.\n3. Those that could not be read (screen_status = 'Failed', or no CV): when a CV can be read now, ask for it again with `screen_again` ({\"ids\": [...]}).\nWhen something about an applicant matters to the decision and is not in the reasons, leave it with `note_applicant`.\n\nWork only through `orch-app recruiter read \"<SELECT …>\"` and `orch-app recruiter do <action> --json '{…}'` (if unsure of a table or an action, `orch-app recruiter guide`). You never move anyone's stage and never contact anyone: the verdict is a suggestion and a person decides. End with a short summary for the team's channel: 8 lines at most, with numbers and what waits on a person. If there is nothing to report, say so in one line."
+            },
+            "deliver": "channel"
+          },
+          {
+            "id": "puestos-abiertos",
+            "title": {
+              "es": "Estado de los puestos abiertos",
+              "en": "Open roles status"
+            },
+            "why": {
+              "es": "Cada lunes, cómo va cada puesto: candidatos por etapa, quién lleva días sin respuesta y si el anuncio atrae a quien buscas.",
+              "en": "Every Monday, how each role is going: applicants by stage, who has waited days without an answer, and whether the posting attracts whom you want."
+            },
+            "role": "screener",
+            "schedule": {
+              "cron": "0 9 * * 1",
+              "tz": "Europe/Madrid",
+              "label": {
+                "es": "Los lunes a las 9:00",
+                "en": "Mondays at 9:00"
+              }
+            },
+            "prompt": {
+              "es": "Resume los puestos abiertos de Recruiter.\n1. Por puesto (hr_roles, status = 'Open'): días abierto (opened_at), candidatos por etapa (New, Shortlist, Interview, Offer, Hired, Rejected) y cuántos llegaron la última semana.\n2. Candidatos parados: en Shortlist o Interview sin cambios en más de 7 días (_updated_at). Recuerda que nadie debería quedarse sin respuesta.\n3. Si en un puesto casi todos los veredictos son \"no\", di qué falla según sus razones y propón un cambio en el anuncio o en las notas de selección (screening_notes). Propón; el puesto lo cambia una persona.\n\nTrabaja solo con `orch-app recruiter read \"<SELECT …>\"` y `orch-app recruiter do <acción> --json '{…}'` (si dudas de una tabla o una acción, `orch-app recruiter guide`). Solo lees: no cambias nada ni contactas a nadie. Termina con un resumen breve para el canal del equipo: como mucho 8 líneas, con cifras y lo que espera a una persona. Si no hay nada que contar, dilo en una línea.",
+              "en": "Summarise Recruiter's open roles.\n1. Per role (hr_roles, status = 'Open'): days open (opened_at), applicants by stage (New, Shortlist, Interview, Offer, Hired, Rejected) and how many came in last week.\n2. Stalled applicants: in Shortlist or Interview with no change for more than 7 days (_updated_at). Remind that nobody should be left without an answer.\n3. When almost every verdict for a role is \"no\", say what is off according to the reasons and propose a change to the posting or the screening notes (screening_notes). Propose; a person changes the role.\n\nWork only through `orch-app recruiter read \"<SELECT …>\"` and `orch-app recruiter do <action> --json '{…}'` (if unsure of a table or an action, `orch-app recruiter guide`). You only read: you change nothing and contact nobody. End with a short summary for the team's channel: 8 lines at most, with numbers and what waits on a person. If there is nothing to report, say so in one line."
+            },
+            "deliver": "channel"
+          }
+        ]
       },
       "emoji": "🧑‍💼",
       "i18n": {
@@ -1387,7 +1672,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.5.1",
+      "version": "0.5.2",
       "tables": [
         "outreach_settings",
         "outreach_fields",
@@ -1400,9 +1685,9 @@
         "outreach_imports"
       ],
       "package": {
-        "path": "apps/outreach/outreach-0.5.1.tgz",
-        "sha256": "55c9d45609d60463dab268d560bdbb10cc4d897271c79a055c4c90710608ef1c",
-        "size": 121140,
+        "path": "apps/outreach/outreach-0.5.2.tgz",
+        "sha256": "d4a5624e155c1e211d3976ff7fa240fd77c51c0818a6c2d981b6a8aa9bf2c8f5",
+        "size": 122590,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
@@ -1440,6 +1725,58 @@
               "es": "Los contactos de las campañas suelen venir del CRM, y las respuestas vuelven a él.",
               "en": "Campaign contacts usually come from the CRM, and replies go back to it."
             }
+          }
+        ],
+        "suggestedTasks": [
+          {
+            "id": "respuestas-y-borradores",
+            "title": {
+              "es": "Respuestas y borradores del día",
+              "en": "Today's replies and drafts"
+            },
+            "why": {
+              "es": "Cada mañana, quién respondió, qué emails esperan tu revisión antes de salir y qué rebotó.",
+              "en": "Every morning, who replied, which emails wait for your review before going out and what bounced."
+            },
+            "role": "researcher",
+            "schedule": {
+              "cron": "0 9 * * 1-5",
+              "tz": "Europe/Madrid",
+              "label": {
+                "es": "Laborables a las 9:00",
+                "en": "Weekdays at 9:00"
+              }
+            },
+            "prompt": {
+              "es": "Repasa Outreach.\n1. Respuestas desde ayer (outreach_sends, status = 'Replied', replied_at): contacto, organización y campaña.\n2. Emails en revisión antes de salir (status = 'In review'), por campaña, y los fallidos (status = 'Failed') con su error.\n3. Rebotes y quejas desde ayer (status 'Bounced' o 'Complained'): si una dirección rebota, dilo para que una persona decida.\n4. Contactos de las etapas elegidas sin email (outreach_contacts, email vacío): cuántos esperan búsqueda.\n\nTrabaja solo con `orch-app outreach read \"<SELECT …>\"` y `orch-app outreach do <acción> --json '{…}'` (si dudas de una tabla o una acción, `orch-app outreach guide`). Nunca apruebas, envías ni programas un email o una campaña, y no contactas a nadie: eso lo hace una persona. Termina con un resumen breve para el canal del equipo: como mucho 8 líneas, con cifras y lo que espera a una persona. Si no hay nada que contar, dilo en una línea.",
+              "en": "Go over Outreach.\n1. Replies since yesterday (outreach_sends, status = 'Replied', replied_at): contact, organisation and campaign.\n2. Emails in review before going out (status = 'In review'), by campaign, and the failed ones (status = 'Failed') with their error.\n3. Bounces and complaints since yesterday (status 'Bounced' or 'Complained'): when an address bounces, say so for a person to decide.\n4. Contacts in the chosen stages with no email (outreach_contacts, email empty): how many wait to be looked up.\n\nWork only through `orch-app outreach read \"<SELECT …>\"` and `orch-app outreach do <action> --json '{…}'` (if unsure of a table or an action, `orch-app outreach guide`). You never approve, send or schedule an email or a campaign, and you contact nobody: a person does. End with a short summary for the team's channel: 8 lines at most, with numbers and what waits on a person. If there is nothing to report, say so in one line."
+            },
+            "deliver": "channel"
+          },
+          {
+            "id": "resumen-semanal",
+            "title": {
+              "es": "Resumen semanal de campañas",
+              "en": "Weekly campaigns summary"
+            },
+            "why": {
+              "es": "Cada lunes, cómo fue cada campaña: enviados, rebotes, respuestas y bajas, y qué mejorar.",
+              "en": "Every Monday, how each campaign did: sent, bounces, replies and unsubscribes, and what to improve."
+            },
+            "role": "researcher",
+            "schedule": {
+              "cron": "30 8 * * 1",
+              "tz": "Europe/Madrid",
+              "label": {
+                "es": "Los lunes a las 8:30",
+                "en": "Mondays at 8:30"
+              }
+            },
+            "prompt": {
+              "es": "Resume los últimos 7 días de Outreach.\n1. Por campaña (outreach_campaigns): enviados (outreach_sends.sent_at), rebotados, respondidos y bajas (unsubscribed_at), con la tasa de respuesta y de rebote.\n2. Las campañas activas que no enviaron nada y por qué (problem, pausa, ventana de envío).\n3. Qué asunto o plantilla funcionó mejor, y como mucho dos propuestas concretas (un asunto, una lista, un horario). Propón; las campañas las cambia una persona.\n\nTrabaja solo con `orch-app outreach read \"<SELECT …>\"` y `orch-app outreach do <acción> --json '{…}'` (si dudas de una tabla o una acción, `orch-app outreach guide`). Solo lees: no cambias nada ni contactas a nadie. Termina con un resumen breve para el canal del equipo: como mucho 8 líneas, con cifras y lo que espera a una persona. Si no hay nada que contar, dilo en una línea.",
+              "en": "Summarise Outreach's last 7 days.\n1. Per campaign (outreach_campaigns): sent (outreach_sends.sent_at), bounced, replied and unsubscribed (unsubscribed_at), with reply and bounce rates.\n2. Active campaigns that sent nothing, and why (problem, a pause, the sending window).\n3. Which subject or template did best, and at most two concrete proposals (a subject, a list, a time). Propose; a person changes the campaigns.\n\nWork only through `orch-app outreach read \"<SELECT …>\"` and `orch-app outreach do <action> --json '{…}'` (if unsure of a table or an action, `orch-app outreach guide`). You only read: you change nothing and contact nobody. End with a short summary for the team's channel: 8 lines at most, with numbers and what waits on a person. If there is nothing to report, say so in one line."
+            },
+            "deliver": "channel"
           }
         ]
       },
@@ -1616,7 +1953,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.2.1",
+      "version": "0.2.2",
       "tables": [
         "inv_settings",
         "inv_series",
@@ -1627,9 +1964,9 @@
         "inv_responses"
       ],
       "package": {
-        "path": "apps/invoices/invoices-0.2.1.tgz",
-        "sha256": "568a7095ef7bafa757a01e2764972ebd0379a378e3b345fd6c5eccfb09182908",
-        "size": 87583,
+        "path": "apps/invoices/invoices-0.2.2.tgz",
+        "sha256": "b057b0363def3971974e3e2165b1697533d44868bd75e15e45bd69e70c1991b9",
+        "size": 89061,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
@@ -1678,6 +2015,58 @@
               "es": "Los ingresos (facturas) y los gastos van juntos al gestor.",
               "en": "Income (invoices) and expenses go together to the accountant."
             }
+          }
+        ],
+        "suggestedTasks": [
+          {
+            "id": "cobros-pendientes",
+            "title": {
+              "es": "Cobros pendientes",
+              "en": "Money owed"
+            },
+            "why": {
+              "es": "Cada lunes, quién te debe, desde cuándo, qué recordatorios esperan tu visto bueno y qué presupuestos siguen sin respuesta.",
+              "en": "Every Monday, who owes you, since when, which reminders wait for your OK and which quotes still have no answer."
+            },
+            "role": "drafter",
+            "schedule": {
+              "cron": "0 9 * * 1",
+              "tz": "Europe/Madrid",
+              "label": {
+                "es": "Los lunes a las 9:00",
+                "en": "Mondays at 9:00"
+              }
+            },
+            "prompt": {
+              "es": "Repasa los cobros de Invoices.\n1. Facturas emitidas sin cobrar (inv_documents, kind = 'invoice', status = 'Issued'): cliente, número, importe (total), vencimiento (due_date), días de retraso y recordatorios ya enviados (reminders, last_reminder_at). Suma lo pendiente y lo vencido.\n2. Recordatorios que esperan aprobación (inv_emails, status = 'Review') y envíos fallidos (status = 'Failed').\n3. Presupuestos enviados sin respuesta (kind = 'quote', status = 'Sent') de más de 7 días, y borradores sin emitir de más de 7 días (status = 'Draft').\n\nTrabaja solo con `orch-app invoices read \"<SELECT …>\"` y `orch-app invoices do <acción> --json '{…}'` (si dudas de una tabla o una acción, `orch-app invoices guide`). Nunca emites, envías, anulas ni marcas como pagado nada, ni apruebas un recordatorio: eso lo hace una persona. Termina con un resumen breve para el canal del equipo: como mucho 8 líneas, con cifras y lo que espera a una persona. Si no hay nada que contar, dilo en una línea.",
+              "en": "Go over Invoices' collections.\n1. Issued invoices not paid (inv_documents, kind = 'invoice', status = 'Issued'): client, number, amount (total), due date (due_date), days late and reminders already sent (reminders, last_reminder_at). Add up what is owed and what is overdue.\n2. Reminders waiting for approval (inv_emails, status = 'Review') and failed sends (status = 'Failed').\n3. Quotes sent with no answer (kind = 'quote', status = 'Sent') for more than 7 days, and drafts not issued for more than 7 days (status = 'Draft').\n\nWork only through `orch-app invoices read \"<SELECT …>\"` and `orch-app invoices do <action> --json '{…}'` (if unsure of a table or an action, `orch-app invoices guide`). You never issue, send, void or mark anything paid, nor approve a reminder: a person does. End with a short summary for the team's channel: 8 lines at most, with numbers and what waits on a person. If there is nothing to report, say so in one line."
+            },
+            "deliver": "channel"
+          },
+          {
+            "id": "resumen-mensual",
+            "title": {
+              "es": "Resumen mensual de facturación",
+              "en": "Monthly billing summary"
+            },
+            "why": {
+              "es": "El día 1 de cada mes, lo facturado y cobrado el mes anterior, lo pendiente y los clientes que más pesan.",
+              "en": "On the 1st of each month, what was billed and collected last month, what is owed and the biggest clients."
+            },
+            "role": "drafter",
+            "schedule": {
+              "cron": "0 9 1 * *",
+              "tz": "Europe/Madrid",
+              "label": {
+                "es": "El día 1 de cada mes a las 9:00",
+                "en": "The 1st of each month at 9:00"
+              }
+            },
+            "prompt": {
+              "es": "Resume el mes anterior en Invoices.\n1. Facturado (facturas emitidas en el mes, issue_date; subtotal, impuestos y total) y cobrado (paid_at en el mes), frente al mes anterior.\n2. Pendiente de cobro a final de mes y lo vencido, por cliente.\n3. Presupuestos: enviados, aceptados y rechazados en el mes, con la tasa de aceptación.\n4. Los cinco clientes con más facturación y cuánto del total suponen.\n\nTrabaja solo con `orch-app invoices read \"<SELECT …>\"` y `orch-app invoices do <acción> --json '{…}'` (si dudas de una tabla o una acción, `orch-app invoices guide`). Solo lees: no cambias nada, ni emites ni envías. Termina con un resumen breve para el canal del equipo: como mucho 8 líneas, con cifras y lo que espera a una persona. Si no hay nada que contar, dilo en una línea.",
+              "en": "Summarise last month in Invoices.\n1. Billed (invoices issued in the month, issue_date; subtotal, taxes and total) and collected (paid_at in the month), against the month before.\n2. What is owed at month end and what is overdue, by client.\n3. Quotes: sent, accepted and declined in the month, with the acceptance rate.\n4. The five clients with the most billing and their share of the total.\n\nWork only through `orch-app invoices read \"<SELECT …>\"` and `orch-app invoices do <action> --json '{…}'` (if unsure of a table or an action, `orch-app invoices guide`). You only read: you change nothing, issue nothing, send nothing. End with a short summary for the team's channel: 8 lines at most, with numbers and what waits on a person. If there is nothing to report, say so in one line."
+            },
+            "deliver": "channel"
           }
         ]
       },
@@ -1854,7 +2243,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.2.0",
+      "version": "0.2.1",
       "tables": [
         "tb_settings",
         "tb_services",
@@ -1872,9 +2261,9 @@
         "tb_imports"
       ],
       "package": {
-        "path": "apps/tables/tables-0.2.0.tgz",
-        "sha256": "12cd48eec4c51f2c190a4f1610705952add45998f74c16447bf1d491038f59a3",
-        "size": 125001,
+        "path": "apps/tables/tables-0.2.1.tgz",
+        "sha256": "f2ee029103750318740e96a7d104b5bc0f492fa3a017e08f272b03443fb28cb4",
+        "size": 126464,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
@@ -1904,7 +2293,59 @@
           "telegram"
         ],
         "processes": 6,
-        "skills": []
+        "skills": [],
+        "suggestedTasks": [
+          {
+            "id": "reservas-de-hoy",
+            "title": {
+              "es": "Las reservas de hoy",
+              "en": "Today's bookings"
+            },
+            "why": {
+              "es": "Antes de abrir, los cubiertos de cada servicio, quién viene (VIP, alergias, peticiones) y lo que espera tu decisión.",
+              "en": "Before opening, the covers for each service, who is coming (VIPs, allergies, requests) and what waits for your decision."
+            },
+            "role": "assistant",
+            "schedule": {
+              "cron": "0 11 * * *",
+              "tz": "Europe/Madrid",
+              "label": {
+                "es": "Cada día a las 11:00",
+                "en": "Every day at 11:00"
+              }
+            },
+            "prompt": {
+              "es": "Prepara el día en Tables.\n1. Reservas confirmadas de hoy (tb_bookings, status = 'Confirmed', day = hoy) por servicio: reservas y cubiertos (party), las mesas grandes, los VIP (tb_guests.vip), las alergias y las peticiones (allergies, note, special). Si ya hay un brief de hoy (tb_briefs), parte de él en vez de repetirlo.\n2. Reservas que esperan aprobación (status = 'Requested'), la más antigua primero.\n3. Emails por aprobar (tb_emails, status = 'Review'), envíos fallidos (status = 'Failed') y correos que no se pudieron leer (tb_mail, status = 'Failed').\n\nTrabaja solo con `orch-app tables read \"<SELECT …>\"` y `orch-app tables do <acción> --json '{…}'` (si dudas de una tabla o una acción, `orch-app tables guide`). Nunca apruebas ni rechazas una reserva, ni apruebas o envías un email: eso lo hace una persona. Termina con un resumen breve para el canal del equipo: como mucho 8 líneas, con cifras y lo que espera a una persona. Si no hay nada que contar, dilo en una línea.",
+              "en": "Prepare the day in Tables.\n1. Today's confirmed bookings (tb_bookings, status = 'Confirmed', day = today) by service: bookings and covers (party), large tables, VIPs (tb_guests.vip), allergies and requests (allergies, note, special). When today's brief exists (tb_briefs), start from it instead of repeating it.\n2. Bookings waiting for approval (status = 'Requested'), oldest first.\n3. Emails to approve (tb_emails, status = 'Review'), failed sends (status = 'Failed') and emails that could not be read (tb_mail, status = 'Failed').\n\nWork only through `orch-app tables read \"<SELECT …>\"` and `orch-app tables do <action> --json '{…}'` (if unsure of a table or an action, `orch-app tables guide`). You never approve or decline a booking, nor approve or send an email: a person does. End with a short summary for the team's channel: 8 lines at most, with numbers and what waits on a person. If there is nothing to report, say so in one line."
+            },
+            "deliver": "channel"
+          },
+          {
+            "id": "resumen-semanal",
+            "title": {
+              "es": "Resumen semanal de reservas",
+              "en": "Weekly bookings summary"
+            },
+            "why": {
+              "es": "Cada lunes, los cubiertos de la semana, las ausencias y cancelaciones, y de dónde llegan las reservas.",
+              "en": "Every Monday, the week's covers, no-shows and cancellations, and where bookings come from."
+            },
+            "role": "assistant",
+            "schedule": {
+              "cron": "0 10 * * 1",
+              "tz": "Europe/Madrid",
+              "label": {
+                "es": "Los lunes a las 10:00",
+                "en": "Mondays at 10:00"
+              }
+            },
+            "prompt": {
+              "es": "Resume los últimos 7 días de Tables.\n1. Cubiertos por día y servicio (tb_bookings, status 'Arrived' o 'Confirmed', suma de party), frente a la semana anterior.\n2. Ausencias ('NoShow') y cancelaciones ('Cancelled'), con su tasa, y los clientes que faltaron más de una vez.\n3. De dónde llegan (source, src, channel) y, si hay marketplaces, cuánto cuestan (tb_settings.market_fee).\n4. Esta semana: los servicios que van más vacíos y más llenos.\n\nTrabaja solo con `orch-app tables read \"<SELECT …>\"` y `orch-app tables do <acción> --json '{…}'` (si dudas de una tabla o una acción, `orch-app tables guide`). Solo lees: no cambias nada ni contactas a nadie. Termina con un resumen breve para el canal del equipo: como mucho 8 líneas, con cifras y lo que espera a una persona. Si no hay nada que contar, dilo en una línea.",
+              "en": "Summarise Tables' last 7 days.\n1. Covers by day and service (tb_bookings, status 'Arrived' or 'Confirmed', sum of party), against the week before.\n2. No-shows ('NoShow') and cancellations ('Cancelled'), with their rate, and guests who missed more than once.\n3. Where bookings come from (source, src, channel) and, with marketplaces, what they cost (tb_settings.market_fee).\n4. This week: the emptiest and fullest services.\n\nWork only through `orch-app tables read \"<SELECT …>\"` and `orch-app tables do <action> --json '{…}'` (if unsure of a table or an action, `orch-app tables guide`). You only read: you change nothing and contact nobody. End with a short summary for the team's channel: 8 lines at most, with numbers and what waits on a person. If there is nothing to report, say so in one line."
+            },
+            "deliver": "channel"
+          }
+        ]
       },
       "emoji": "🍽️",
       "i18n": {
@@ -2080,7 +2521,7 @@
           "device": "mobile"
         }
       ],
-      "version": "0.2.0",
+      "version": "0.2.1",
       "tables": [
         "ap_settings",
         "ap_services",
@@ -2096,9 +2537,9 @@
         "ap_inbox"
       ],
       "package": {
-        "path": "apps/appointments/appointments-0.2.0.tgz",
-        "sha256": "b5020dcd5cbb8c871d11d856bb4303d9a3712e2a6c6175b000296d12e31415ce",
-        "size": 131760,
+        "path": "apps/appointments/appointments-0.2.1.tgz",
+        "sha256": "1828e799e37e7f54d7862f8ac8e68f79964fa8c57a1e299054f03654ad619b5e",
+        "size": 133226,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
@@ -2128,7 +2569,59 @@
           "telegram"
         ],
         "processes": 5,
-        "skills": []
+        "skills": [],
+        "suggestedTasks": [
+          {
+            "id": "agenda-del-dia",
+            "title": {
+              "es": "La agenda del día",
+              "en": "Today's schedule"
+            },
+            "why": {
+              "es": "Cada mañana, las citas del día por profesional, los huecos libres y lo que espera tu visto bueno.",
+              "en": "Every morning, the day's appointments by staff member, the free gaps and what waits for your OK."
+            },
+            "role": "assistant",
+            "schedule": {
+              "cron": "0 8 * * 1-6",
+              "tz": "Europe/Madrid",
+              "label": {
+                "es": "De lunes a sábado a las 8:00",
+                "en": "Monday to Saturday at 8:00"
+              }
+            },
+            "prompt": {
+              "es": "Prepara el día en Appointments.\n1. Citas de hoy (ap_bookings, status = 'Booked', start_at hoy en la zona de ap_settings.timezone) por profesional (staff_name): hora, servicio y cliente; y los huecos de más de una hora sin citas.\n2. Emails que esperan aprobación (ap_emails, status = 'Review') y los que fallaron (status = 'Failed').\n3. Solicitudes con conflicto (ap_requests, status = 'Conflict') y correos que no se pudieron leer (ap_inbox, status = 'Failed').\n\nTrabaja solo con `orch-app appointments read \"<SELECT …>\"` y `orch-app appointments do <acción> --json '{…}'` (si dudas de una tabla o una acción, `orch-app appointments guide`). Nunca apruebas ni envías un email, y no reservas, mueves ni cancelas citas: eso lo hace una persona (o el script, dentro de tus reglas). Termina con un resumen breve para el canal del equipo: como mucho 8 líneas, con cifras y lo que espera a una persona. Si no hay nada que contar, dilo en una línea.",
+              "en": "Prepare the day in Appointments.\n1. Today's appointments (ap_bookings, status = 'Booked', start_at today in ap_settings.timezone) by staff member (staff_name): time, service and client; and gaps of more than an hour with nothing booked.\n2. Emails waiting for approval (ap_emails, status = 'Review') and those that failed (status = 'Failed').\n3. Requests with a conflict (ap_requests, status = 'Conflict') and emails that could not be read (ap_inbox, status = 'Failed').\n\nWork only through `orch-app appointments read \"<SELECT …>\"` and `orch-app appointments do <action> --json '{…}'` (if unsure of a table or an action, `orch-app appointments guide`). You never approve or send an email, and you do not book, move or cancel appointments: a person does (or the script, inside your rules). End with a short summary for the team's channel: 8 lines at most, with numbers and what waits on a person. If there is nothing to report, say so in one line."
+            },
+            "deliver": "channel"
+          },
+          {
+            "id": "resumen-semanal",
+            "title": {
+              "es": "Resumen semanal de citas",
+              "en": "Weekly appointments summary"
+            },
+            "why": {
+              "es": "Cada lunes, cómo fue la semana: citas, ausencias, cancelaciones e ingresos por servicio y profesional.",
+              "en": "Every Monday, how the week went: appointments, no-shows, cancellations and revenue by service and staff member."
+            },
+            "role": "assistant",
+            "schedule": {
+              "cron": "30 8 * * 1",
+              "tz": "Europe/Madrid",
+              "label": {
+                "es": "Los lunes a las 8:30",
+                "en": "Mondays at 8:30"
+              }
+            },
+            "prompt": {
+              "es": "Resume los últimos 7 días de Appointments.\n1. Citas atendidas (status = 'Arrived'), ausencias ('NoShow') y canceladas ('Cancelled'), por servicio y por profesional, con la tasa de ausencias.\n2. Ingresos de las atendidas (price_minor, en céntimos, en la moneda de ap_settings.currency) por servicio.\n3. De dónde llegaron las citas (source, channel) y, si hay marketplaces, cuánto se llevaron (ap_settings.marketplace_fee_pct).\n4. La ocupación de esta semana: qué días van más vacíos.\n\nTrabaja solo con `orch-app appointments read \"<SELECT …>\"` y `orch-app appointments do <acción> --json '{…}'` (si dudas de una tabla o una acción, `orch-app appointments guide`). Solo lees: no cambias nada ni contactas a nadie. Termina con un resumen breve para el canal del equipo: como mucho 8 líneas, con cifras y lo que espera a una persona. Si no hay nada que contar, dilo en una línea.",
+              "en": "Summarise Appointments' last 7 days.\n1. Appointments attended (status = 'Arrived'), no-shows ('NoShow') and cancelled ('Cancelled'), by service and staff member, with the no-show rate.\n2. Revenue from the attended ones (price_minor, in cents, in ap_settings.currency) by service.\n3. Where appointments came from (source, channel) and, with marketplaces, how much they took (ap_settings.marketplace_fee_pct).\n4. This week's occupancy: which days are emptiest.\n\nWork only through `orch-app appointments read \"<SELECT …>\"` and `orch-app appointments do <action> --json '{…}'` (if unsure of a table or an action, `orch-app appointments guide`). You only read: you change nothing and contact nobody. End with a short summary for the team's channel: 8 lines at most, with numbers and what waits on a person. If there is nothing to report, say so in one line."
+            },
+            "deliver": "channel"
+          }
+        ]
       },
       "emoji": "💇",
       "i18n": {
@@ -2598,7 +3091,7 @@
           "device": "phone"
         }
       ],
-      "version": "0.2.1",
+      "version": "0.2.2",
       "tables": [
         "ex_settings",
         "ex_receipts",
@@ -2608,9 +3101,9 @@
         "ex_links"
       ],
       "package": {
-        "path": "apps/expenses/expenses-0.2.1.tgz",
-        "sha256": "805dc71d0f3e6dfbccdc3abcf24b5e0c2b3ba21960a803e1ddd5b3cdd1a47e5d",
-        "size": 82573,
+        "path": "apps/expenses/expenses-0.2.2.tgz",
+        "sha256": "27ce8aea2a58f52f54ab6aa4bd15c2e2b56869f39e831102e2f64bb4f9d704b0",
+        "size": 84199,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
@@ -2648,6 +3141,58 @@
               "es": "Los gastos y las facturas emitidas van juntos al gestor cada mes.",
               "en": "Expenses and issued invoices go together to the accountant each month."
             }
+          }
+        ],
+        "suggestedTasks": [
+          {
+            "id": "gastos-por-revisar",
+            "title": {
+              "es": "Gastos por revisar",
+              "en": "Expenses to review"
+            },
+            "why": {
+              "es": "Cada viernes, los gastos que esperan tu revisión, los posibles duplicados y los tickets que no se pudieron leer.",
+              "en": "Every Friday, the expenses waiting for your review, possible duplicates and the receipts that could not be read."
+            },
+            "role": "reader",
+            "schedule": {
+              "cron": "0 10 * * 5",
+              "tz": "Europe/Madrid",
+              "label": {
+                "es": "Los viernes a las 10:00",
+                "en": "Fridays at 10:00"
+              }
+            },
+            "prompt": {
+              "es": "Repasa Expenses.\n1. Gastos en revisión (ex_expenses, status = 'Review'): cuántos y el importe total, por mes; señala los que tienen baja confianza (confidence), les falta el IVA (tax) o el NIF del proveedor (vendor_tax_id).\n2. Posibles duplicados (duplicate_of, o mismo proveedor, fecha y total).\n3. Tickets que no se pudieron leer (ex_receipts, status = 'Failed') con su motivo (note).\nSi un gasto tiene un error claro (categoría que no encaja, fecha mal leída) y el ticket lo deja claro, corrígelo con `save_expense` y dilo; sigue en revisión para una persona.\n\nTrabaja solo con `orch-app expenses read \"<SELECT …>\"` y `orch-app expenses do <acción> --json '{…}'` (si dudas de una tabla o una acción, `orch-app expenses guide`). Nunca apruebas ni rechazas un gasto, ni cierras o envías un mes: eso lo hace una persona. Termina con un resumen breve para el canal del equipo: como mucho 8 líneas, con cifras y lo que espera a una persona. Si no hay nada que contar, dilo en una línea.",
+              "en": "Go over Expenses.\n1. Expenses in review (ex_expenses, status = 'Review'): how many and their total, by month; point out those with low confidence (confidence), no VAT (tax) or no vendor tax id (vendor_tax_id).\n2. Possible duplicates (duplicate_of, or same vendor, date and total).\n3. Receipts that could not be read (ex_receipts, status = 'Failed') with the reason (note).\nWhen an expense has a clear mistake (a category that does not fit, a misread date) and the receipt makes it plain, fix it with `save_expense` and say so; it stays in review for a person.\n\nWork only through `orch-app expenses read \"<SELECT …>\"` and `orch-app expenses do <action> --json '{…}'` (if unsure of a table or an action, `orch-app expenses guide`). You never approve or reject an expense, nor close or send a month: a person does. End with a short summary for the team's channel: 8 lines at most, with numbers and what waits on a person. If there is nothing to report, say so in one line."
+            },
+            "deliver": "channel"
+          },
+          {
+            "id": "cierre-del-mes",
+            "title": {
+              "es": "Preparar el cierre del mes",
+              "en": "Get the month ready to close"
+            },
+            "why": {
+              "es": "El día 2 de cada mes, qué falta para cerrar el mes anterior y enviarlo a tu gestoría, y el gasto por categoría.",
+              "en": "On the 2nd of each month, what is left before last month can be closed and sent to your accountant, and spending by category."
+            },
+            "role": "reader",
+            "schedule": {
+              "cron": "0 9 2 * *",
+              "tz": "Europe/Madrid",
+              "label": {
+                "es": "El día 2 de cada mes a las 9:00",
+                "en": "The 2nd of each month at 9:00"
+              }
+            },
+            "prompt": {
+              "es": "Prepara el cierre del mes anterior en Expenses.\n1. Gastos del mes (ex_expenses.month): aprobados, en revisión y rechazados; total, base e IVA de los aprobados, por categoría, frente al mes anterior.\n2. Lo que falta para cerrar: gastos aún en revisión y tickets sin leer de ese mes.\n3. Si el mes está abierto (ex_months), recuerda a quién lo cierra que puede hacerlo desde Expenses cuando no quede nada en revisión, y a quién se enviará (ex_settings.accountant_name).\n4. Gastos a reembolsar (paid_by una persona, sin reimbursed_at).\n\nTrabaja solo con `orch-app expenses read \"<SELECT …>\"` y `orch-app expenses do <acción> --json '{…}'` (si dudas de una tabla o una acción, `orch-app expenses guide`). Solo lees: no cambias nada, ni cierras ni envías. Termina con un resumen breve para el canal del equipo: como mucho 8 líneas, con cifras y lo que espera a una persona. Si no hay nada que contar, dilo en una línea.",
+              "en": "Get last month ready to close in Expenses.\n1. The month's expenses (ex_expenses.month): approved, in review and rejected; total, net and VAT of the approved ones, by category, against the month before.\n2. What is left before closing: expenses still in review and unread receipts for that month.\n3. If the month is open (ex_months), remind whoever closes it that they can do it in Expenses once nothing is in review, and who it goes to (ex_settings.accountant_name).\n4. Expenses to reimburse (paid_by a person, no reimbursed_at).\n\nWork only through `orch-app expenses read \"<SELECT …>\"` and `orch-app expenses do <action> --json '{…}'` (if unsure of a table or an action, `orch-app expenses guide`). You only read: you change nothing, close nothing, send nothing. End with a short summary for the team's channel: 8 lines at most, with numbers and what waits on a person. If there is nothing to report, say so in one line."
+            },
+            "deliver": "channel"
           }
         ]
       },
@@ -2902,7 +3447,7 @@
           "title": "The first week"
         }
       ],
-      "version": "0.3.9",
+      "version": "0.3.10",
       "tables": [
         "po_settings",
         "po_accounts",
@@ -2915,9 +3460,9 @@
         "po_pillars"
       ],
       "package": {
-        "path": "apps/posts/posts-0.3.9.tgz",
-        "sha256": "b0d6f9446813ae219bc47d7c2b8b173577af92297b7e98b2f7ec1ed0c41527b4",
-        "size": 96878,
+        "path": "apps/posts/posts-0.3.10.tgz",
+        "sha256": "34c8af08e6fc69e2599e767a85ce159806ddb8264fec526d88dfac9f27f1d667",
+        "size": 98530,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
@@ -2967,6 +3512,58 @@
             "for": "writer",
             "optional": true,
             "why": "Your X account, with your own X API keys (Composio cannot connect X). X charges about US$0.015 a post, US$0.20 with a link."
+          }
+        ],
+        "suggestedTasks": [
+          {
+            "id": "semana-de-posts",
+            "title": {
+              "es": "La semana de publicaciones",
+              "en": "The week's posts"
+            },
+            "why": {
+              "es": "Cada lunes, qué sale esta semana, qué espera tu aprobación y qué días o cuentas quedan vacíos.",
+              "en": "Every Monday, what goes out this week, what waits for your approval and which days or accounts are empty."
+            },
+            "role": "writer",
+            "schedule": {
+              "cron": "0 9 * * 1",
+              "tz": "Europe/Madrid",
+              "label": {
+                "es": "Los lunes a las 9:00",
+                "en": "Mondays at 9:00"
+              }
+            },
+            "prompt": {
+              "es": "Repasa la semana de Posts.\n1. Programados para los próximos 7 días (po_posts, status = 'Scheduled', publish_at): día, cuenta (po_accounts) y la primera línea de cada uno.\n2. Borradores que esperan aprobación (status = 'Draft') y los que fallaron (status = 'Failed'), con su motivo (error).\n3. Huecos: días laborables sin nada programado en cada cuenta activa, e ideas nuevas sin post (po_ideas, status = 'New') que podrían llenarlos.\n4. Si Posts está en ensayo (po_settings.rehearsal = 'yes'), recuérdalo: nada se publica de verdad.\nSi un hueco tiene una idea clara, puedes pedir el borrador con `write_post` (lo escribe Posts y queda en borrador para aprobar); di cuáles pediste.\n\nTrabaja solo con `orch-app posts read \"<SELECT …>\"` y `orch-app posts do <acción> --json '{…}'` (si dudas de una tabla o una acción, `orch-app posts guide`). Nunca apruebas, programas ni publicas un post: eso lo hace una persona. Termina con un resumen breve para el canal del equipo: como mucho 8 líneas, con cifras y lo que espera a una persona. Si no hay nada que contar, dilo en una línea.",
+              "en": "Go over the week in Posts.\n1. Scheduled for the next 7 days (po_posts, status = 'Scheduled', publish_at): day, account (po_accounts) and each one's first line.\n2. Drafts waiting for approval (status = 'Draft') and the ones that failed (status = 'Failed'), with the reason (error).\n3. Gaps: working days with nothing scheduled on each active account, and new ideas with no post (po_ideas, status = 'New') that could fill them.\n4. If Posts is in rehearsal (po_settings.rehearsal = 'yes'), say so: nothing is really published.\nWhen a gap has a clear idea, you may ask for the draft with `write_post` (Posts writes it and it waits as a draft for approval); say which ones you asked for.\n\nWork only through `orch-app posts read \"<SELECT …>\"` and `orch-app posts do <action> --json '{…}'` (if unsure of a table or an action, `orch-app posts guide`). You never approve, schedule or publish a post: a person does. End with a short summary for the team's channel: 8 lines at most, with numbers and what waits on a person. If there is nothing to report, say so in one line."
+            },
+            "deliver": "channel"
+          },
+          {
+            "id": "que-funciono",
+            "title": {
+              "es": "Qué funcionó esta semana",
+              "en": "What worked this week"
+            },
+            "why": {
+              "es": "Cada viernes, los posts que mejor y peor funcionaron, por qué, y una idea para la semana que viene.",
+              "en": "Every Friday, the posts that did best and worst, why, and one idea for next week."
+            },
+            "role": "writer",
+            "schedule": {
+              "cron": "0 16 * * 5",
+              "tz": "Europe/Madrid",
+              "label": {
+                "es": "Los viernes a las 16:00",
+                "en": "Fridays at 16:00"
+              }
+            },
+            "prompt": {
+              "es": "Mira los resultados de los últimos 7 días en Posts.\n1. Publicados en la semana (po_posts, status = 'Published', published_at; sin contar los de ensayo, rehearsed = 'yes') con sus reacciones y comentarios, y las cifras por cuenta y día (po_stats: impressions, clicks, reactions, comments, shares).\n2. Los tres que mejor funcionaron y el que peor, y lo que tienen en común (pilar, formato, tema, hora).\n3. Una propuesta concreta para la semana que viene (un tema, un pilar, un formato), dicha como propuesta: la voz y los pilares los cambia una persona.\n\nTrabaja solo con `orch-app posts read \"<SELECT …>\"` y `orch-app posts do <acción> --json '{…}'` (si dudas de una tabla o una acción, `orch-app posts guide`). Solo lees: no cambias nada, ni apruebas ni publicas. Termina con un resumen breve para el canal del equipo: como mucho 8 líneas, con cifras y lo que espera a una persona. Si no hay nada que contar, dilo en una línea.",
+              "en": "Look at the last 7 days' results in Posts.\n1. Published in the week (po_posts, status = 'Published', published_at; leaving out rehearsals, rehearsed = 'yes') with their reactions and comments, and the numbers by account and day (po_stats: impressions, clicks, reactions, comments, shares).\n2. The three that did best and the one that did worst, and what they share (pillar, format, topic, time).\n3. One concrete proposal for next week (a topic, a pillar, a format), said as a proposal: a person changes the voice and the pillars.\n\nWork only through `orch-app posts read \"<SELECT …>\"` and `orch-app posts do <action> --json '{…}'` (if unsure of a table or an action, `orch-app posts guide`). You only read: you change nothing, approve nothing, publish nothing. End with a short summary for the team's channel: 8 lines at most, with numbers and what waits on a person. If there is nothing to report, say so in one line."
+            },
+            "deliver": "channel"
           }
         ]
       },
@@ -3031,6 +3628,351 @@
             "La semana: qué sale, dónde, los horarios libres y lo que te espera",
             "Un borrador tal como se va a ver, con tus notas: apruébalo, o pide otra versión",
             "Lo que salió y cómo le fue"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ventas",
+      "name": "Sales",
+      "category": "Sales",
+      "summary": "Prospecting: the businesses that need you, their signals, and a first message you approve.",
+      "promise": "Find the businesses that need you, read their signals, and start the conversation — you approve every message.",
+      "like": "Apollo or Clay",
+      "description": "Say who you sell to (a vertical, the signals that show they need you) and where. Ventas finds those businesses on OpenStreetMap, or on Google Places with your key, and reads each one's website: Meta's pixel, Google Ads, GoHighLevel, lead forms, WhatsApp. The agent decides which ones fit and why, finds who to talk to, and drafts the first message from your pitch. You approve each one; it goes out from your Gmail, at most the messages a day you set. Rehearsal is on until you switch it off.",
+      "brief": {
+        "user": "The founder or salesperson of a small company that sells to other businesses",
+        "frequency": "Every day, a few minutes to approve",
+        "questions": [
+          "Which businesses need what I sell, and how do I know?",
+          "What does the agent want to send, and to whom?",
+          "Who replied, and who do I call?"
+        ],
+        "answers": [
+          "Each prospect shows the signals its website gives and why the agent thinks it fits.",
+          "Every draft waits on Hoy with its reason: approve, edit or reject it.",
+          "Replies and calls booked are on Hoy and in the pipeline; once a call is booked, the team hands it to the CRM."
+        ],
+        "primaryAction": "Approve a first message"
+      },
+      "how": [
+        {
+          "actor": "app",
+          "title": "The searches find the businesses",
+          "text": "Each active search looks for a vertical in an area once a day, and each website is read for its signals.",
+          "via": [
+            "web"
+          ]
+        },
+        {
+          "actor": "agent",
+          "role": "comercial",
+          "title": "The agent qualifies and drafts",
+          "text": "It decides who fits and why, finds who to talk to on the website, and drafts the first message from your pitch."
+        },
+        {
+          "actor": "person",
+          "title": "You approve, and it goes out",
+          "text": "Approved messages go out from your Gmail, at most the daily limit. In rehearsal nothing goes out.",
+          "via": [
+            "gmail"
+          ]
+        }
+      ],
+      "surfaces": [
+        {
+          "id": "ventas",
+          "title": "Ventas",
+          "audience": "members",
+          "role": "desk"
+        }
+      ],
+      "needs": {
+        "agent": {
+          "required": true,
+          "why": "Decides which prospects fit and why, finds who to talk to, and drafts the first message and the follow-ups. It never sends: you approve every message."
+        },
+        "integrations": [
+          {
+            "slug": "gmail",
+            "optional": true,
+            "why": "Sends the messages you approve, from the account you choose for Ventas, once rehearsal is off."
+          }
+        ]
+      },
+      "outward": [
+        "Sends the messages a person approved, from the Gmail account chosen for Ventas, at most the daily limit — never while rehearsal is on.",
+        "Asks OpenStreetMap (and Google Places, when its key is set) for the businesses of a vertical in the areas you search.",
+        "Reads the home page of each prospect's website, and asks the Meta Ad Library about its active ads when its token is set."
+      ],
+      "outwardVia": [
+        "gmail",
+        "web",
+        "web"
+      ],
+      "by": "Orchestra",
+      "price": {
+        "model": "free"
+      },
+      "icon": "ventas",
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/ventas/screens/1-hoy.png",
+          "caption": "Hoy: the messages waiting for your OK, the replies and the next steps",
+          "surface": "desk",
+          "device": "desktop"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/ventas/screens/2-prospectos.png",
+          "caption": "The pipeline by stage, with each business's signals and fit",
+          "surface": "desk",
+          "device": "desktop"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/main/apps/ventas/screens/3-prospecto.png",
+          "caption": "A prospect: why it fits, what its website shows, who to talk to and every message",
+          "surface": "desk",
+          "device": "desktop"
+        }
+      ],
+      "version": "0.1.1",
+      "tables": [
+        "ve_settings",
+        "ve_verticals",
+        "ve_use_cases",
+        "ve_pitches",
+        "ve_searches",
+        "ve_prospects",
+        "ve_messages",
+        "ve_activity"
+      ],
+      "package": {
+        "path": "apps/ventas/ventas-0.1.1.tgz",
+        "sha256": "24e5a222082478a727cba8447f9b5af8a7202df7f476f83db388ff705bc07648",
+        "size": 53313,
+        "installer": "install.js",
+        "manifest": "app.json",
+        "roles": [
+          {
+            "id": "comercial",
+            "name": "Comercial",
+            "required": true,
+            "why": "Works the prospects the searches bring in, only through Ventas' actions (orch-app ventas do …). For each Nuevo prospect: reads its vertical (buyer, signals, pains) and the signals found on its website, and decides fit with set_fit_yes or set_fit_no, always with a one-line reason naming what it saw. For a fit: finds the decision maker on the website (team, about and contact pages) and records name, role and email with set_contact, never a guessed address. Then drafts the first message with draft_message from the pitch of the prospect's vertical: short, specific to what it saw, the pitch's opening and offer in its own words, no placeholders, no signature (the sign-off is added); what is marked (hipótesis) is never cited as fact. After a reply (mark_replied), it drafts the follow-up with draft_follow_up. It never approves and never sends: a person approves every message, and an approval made by an agent is refused. When a call is booked (mark_call_booked), the team hands the prospect to the CRM through the CRM's own actions (team work, not this app's), and then marks it with mark_handed_to_crm."
+          }
+        ],
+        "connections": [
+          {
+            "id": "gmail",
+            "integration": "gmail",
+            "optional": true,
+            "why": "Sends the messages a person approved, from the account chosen for Ventas, once rehearsal is turned off.",
+            "from": {
+              "table": "ve_settings",
+              "column": "sender_account"
+            }
+          }
+        ],
+        "variables": [],
+        "channels": [],
+        "processes": 3,
+        "skills": [],
+        "related": [
+          {
+            "app": "crm",
+            "why": {
+              "es": "Cuando se agenda una llamada, el equipo pasa el prospecto al CRM como contacto y oportunidad.",
+              "en": "Once a call is booked, the team hands the prospect to the CRM as a contact and a deal."
+            }
+          },
+          {
+            "app": "booking",
+            "why": {
+              "es": "La llamada que propone un mensaje se puede reservar en Reservas.",
+              "en": "The call a message proposes can be booked in Booking."
+            }
+          },
+          {
+            "app": "forms",
+            "why": {
+              "es": "Quien llega por un formulario puede ser un prospecto más.",
+              "en": "Whoever comes in through a form can be one more prospect."
+            }
+          }
+        ],
+        "keys": [
+          {
+            "name": "GOOGLE_PLACES_KEY",
+            "kind": "secret",
+            "label": {
+              "es": "Clave de Google Places",
+              "en": "Google Places key"
+            },
+            "optional": true,
+            "why": {
+              "es": "Para buscar negocios en Google Maps además de en OpenStreetMap: más resultados, con web y teléfono. Sin ella, Ventas busca solo en OpenStreetMap.",
+              "en": "To search businesses on Google Maps as well as OpenStreetMap: more results, with website and phone. Without it, Ventas searches OpenStreetMap only."
+            },
+            "where": {
+              "es": "Google Cloud console → APIs y servicios → activa Places API (New) → Credenciales → Crear clave de API. Incluye un crédito mensual gratuito.",
+              "en": "Google Cloud console → APIs & Services → enable Places API (New) → Credentials → Create API key. It comes with a free monthly credit."
+            },
+            "hosts": [
+              "places.googleapis.com"
+            ]
+          },
+          {
+            "name": "META_AD_LIBRARY_TOKEN",
+            "kind": "secret",
+            "label": {
+              "es": "Token de la Biblioteca de anuncios de Meta",
+              "en": "Meta Ad Library token"
+            },
+            "optional": true,
+            "why": {
+              "es": "Para ver si un prospecto tiene anuncios activos en Facebook o Instagram, una de las señales más claras de que capta clientes con anuncios.",
+              "en": "To see whether a prospect runs active ads on Facebook or Instagram, one of the clearest signals that it buys leads with ads."
+            },
+            "where": {
+              "es": "developers.facebook.com: confirma tu identidad para la Biblioteca de anuncios (facebook.com/ID), crea una app y, en Herramientas → Explorador de la API Graph, genera un token de acceso.",
+              "en": "developers.facebook.com: confirm your identity for the Ad Library (facebook.com/ID), create an app and, in Tools → Graph API Explorer, generate an access token."
+            },
+            "hosts": [
+              "graph.facebook.com"
+            ]
+          }
+        ],
+        "suggestedTasks": [
+          {
+            "id": "revisar-prospectos",
+            "title": {
+              "es": "Revisar prospectos nuevos",
+              "en": "Review new prospects"
+            },
+            "why": {
+              "es": "Cada mañana, los prospectos que trajeron las búsquedas quedan decididos (encaja o no, con su razón), con quien decide y con el primer mensaje listo para que lo apruebes.",
+              "en": "Every morning, the prospects the searches brought in are decided (fit or not, with the reason), with the decision maker found and the first message ready for you to approve."
+            },
+            "role": "comercial",
+            "schedule": {
+              "cron": "0 9 * * 1-5",
+              "tz": "Europe/Madrid",
+              "label": {
+                "es": "Laborables a las 9:00",
+                "en": "Weekdays at 9:00"
+              }
+            },
+            "prompt": {
+              "es": "Trabaja los prospectos nuevos de Ventas.\n1. Lee los que esperan: `orch-app ventas read \"SELECT _id, name, website, city, signals, vertical_id FROM ve_prospects WHERE stage = 'nuevo' AND fit = 'pending' ORDER BY _id LIMIT 20\"`, y de su vertical (ve_verticals) el comprador, las señales y los dolores.\n2. Decide si encaja con `set_fit_yes` o `set_fit_no` ({\"id\", \"fit_reason\"}), siempre con una razón de una línea que nombre lo que viste en su web o en sus señales.\n3. Para cada uno que encaja, busca en su web (equipo, quiénes somos, contacto) a la persona que decide y guárdala con `set_contact` (contact_name, contact_role, contact_email). Nunca un email adivinado: si no lo encuentras, déjalo vacío y dilo.\n4. Redacta el primer mensaje con `draft_message` ({\"prospect_id\", \"pitch_id\", \"to_email\", \"subject\", \"body\"}) desde el pitch de su vertical (ve_pitches): corto, concreto sobre lo que viste, la apertura y la oferta del pitch con tus palabras, sin marcadores y sin firma (se añade al enviar). Lo marcado (hipótesis) nunca se cita como un hecho.\nEn el resumen: cuántos revisaste, cuántos encajan (y el motivo más común), cuántos mensajes esperan aprobación en Hoy.\n\nTrabaja solo con `orch-app ventas read \"<SELECT …>\"` y `orch-app ventas do <acción> --json '{…}'` (si dudas de una tabla o una acción, `orch-app ventas guide`). Nunca apruebas ni envías un mensaje: los dejas en borrador, en Hoy, para que una persona los apruebe (una aprobación de un agente se rechaza). Termina con un resumen breve para el canal del equipo: como mucho 8 líneas, con cifras y lo que espera a una persona. Si no hay nada que contar, dilo en una línea.",
+              "en": "Work Ventas' new prospects.\n1. Read the ones waiting: `orch-app ventas read \"SELECT _id, name, website, city, signals, vertical_id FROM ve_prospects WHERE stage = 'nuevo' AND fit = 'pending' ORDER BY _id LIMIT 20\"`, and from their vertical (ve_verticals) the buyer, the signals and the pains.\n2. Decide fit with `set_fit_yes` or `set_fit_no` ({\"id\", \"fit_reason\"}), always with a one-line reason naming what you saw on their website or in their signals.\n3. For each fit, find the decision maker on their website (team, about, contact pages) and save them with `set_contact` (contact_name, contact_role, contact_email). Never a guessed address: if you cannot find it, leave it empty and say so.\n4. Draft the first message with `draft_message` ({\"prospect_id\", \"pitch_id\", \"to_email\", \"subject\", \"body\"}) from their vertical's pitch (ve_pitches): short, specific to what you saw, the pitch's opening and offer in your own words, no placeholders and no signature (it is added when sent). What is marked (hipótesis) is never cited as fact.\nIn the summary: how many you reviewed, how many fit (and the most common reason), how many messages wait for approval in Hoy.\n\nWork only through `orch-app ventas read \"<SELECT …>\"` and `orch-app ventas do <action> --json '{…}'` (if unsure of a table or an action, `orch-app ventas guide`). You never approve or send a message: you leave them as drafts, in Hoy, for a person to approve (an approval by an agent is refused). End with a short summary for the team's channel: 8 lines at most, with numbers and what waits on a person. If there is nothing to report, say so in one line."
+            },
+            "deliver": "channel"
+          },
+          {
+            "id": "seguimientos",
+            "title": {
+              "es": "Seguimientos",
+              "en": "Follow-ups"
+            },
+            "why": {
+              "es": "Nadie que respondió se queda sin contestar y nadie que calló se olvida: el seguimiento queda redactado y los próximos pasos de hoy, a la vista.",
+              "en": "Nobody who replied goes unanswered and nobody who went quiet is forgotten: the follow-up is drafted and today's next steps are in view."
+            },
+            "role": "comercial",
+            "schedule": {
+              "cron": "0 11 * * 1-5",
+              "tz": "Europe/Madrid",
+              "label": {
+                "es": "Laborables a las 11:00",
+                "en": "Weekdays at 11:00"
+              }
+            },
+            "prompt": {
+              "es": "Prepara los seguimientos de Ventas.\n1. Prospectos que respondieron (stage = 'respondio') sin un seguimiento en borrador: lee su actividad (ve_activity) y sus mensajes (ve_messages) y redacta la respuesta con `draft_follow_up` ({\"prospect_id\", \"pitch_id\", \"to_email\", \"subject\", \"body\"}), contestando a lo que dijeron y proponiendo el siguiente paso.\n2. Prospectos con el primer mensaje enviado hace más de 5 días, sin respuesta (stage = 'enviado') y con menos de dos seguimientos: redacta un seguimiento breve que aporte algo nuevo, nunca un \"¿lo viste?\".\n3. Próximos pasos de hoy o atrasados (next_step_at hasta hoy): lístalos; los que puedas hacer tú (buscar un dato, preparar algo) hazlos y actualiza el paso con `set_next_step`.\nEn el resumen: seguimientos redactados, quién respondió y qué pide, y los pasos que tocan hoy y de quién son.\n\nTrabaja solo con `orch-app ventas read \"<SELECT …>\"` y `orch-app ventas do <acción> --json '{…}'` (si dudas de una tabla o una acción, `orch-app ventas guide`). Nunca apruebas ni envías un mensaje: los dejas en borrador, en Hoy, para que una persona los apruebe (una aprobación de un agente se rechaza). Termina con un resumen breve para el canal del equipo: como mucho 8 líneas, con cifras y lo que espera a una persona. Si no hay nada que contar, dilo en una línea.",
+              "en": "Prepare Ventas' follow-ups.\n1. Prospects who replied (stage = 'respondio') with no follow-up in draft: read their activity (ve_activity) and messages (ve_messages) and draft the answer with `draft_follow_up` ({\"prospect_id\", \"pitch_id\", \"to_email\", \"subject\", \"body\"}), answering what they said and proposing the next step.\n2. Prospects whose first message went out more than 5 days ago, with no reply (stage = 'enviado') and fewer than two follow-ups: draft a short follow-up that adds something new, never a \"did you see this?\".\n3. Next steps due today or overdue (next_step_at up to today): list them; do the ones you can (look something up, prepare something) and update the step with `set_next_step`.\nIn the summary: follow-ups drafted, who replied and what they ask, and the steps due today and whose they are.\n\nWork only through `orch-app ventas read \"<SELECT …>\"` and `orch-app ventas do <action> --json '{…}'` (if unsure of a table or an action, `orch-app ventas guide`). You never approve or send a message: you leave them as drafts, in Hoy, for a person to approve (an approval by an agent is refused). End with a short summary for the team's channel: 8 lines at most, with numbers and what waits on a person. If there is nothing to report, say so in one line."
+            },
+            "deliver": "channel"
+          },
+          {
+            "id": "resumen-semanal",
+            "title": {
+              "es": "Resumen semanal de Ventas",
+              "en": "Weekly Ventas summary"
+            },
+            "why": {
+              "es": "Cada lunes, las cifras de la semana por vertical y caso de uso, qué funcionó y qué cambiar en el playbook.",
+              "en": "Every Monday, the week's numbers by vertical and use case, what worked and what to change in the playbook."
+            },
+            "role": "comercial",
+            "schedule": {
+              "cron": "30 8 * * 1",
+              "tz": "Europe/Madrid",
+              "label": {
+                "es": "Los lunes a las 8:30",
+                "en": "Mondays at 8:30"
+              }
+            },
+            "prompt": {
+              "es": "Haz el resumen de los últimos 7 días de Ventas.\n1. Cifras por vertical × caso de uso (ve_prospects.vertical_id; ve_messages.pitch_id → ve_pitches.use_case_id): prospectos nuevos, encajan / no encajan, mensajes aprobados, enviados (ve_messages.sent_at), respuestas y llamadas (ve_activity, kind 'respuesta' y 'llamada').\n2. Qué funcionó: los pitches y las señales detrás de las respuestas; qué no: dónde se envía y nadie responde, o dónde casi nada encaja.\n3. Qué cambiar en el playbook: como mucho tres propuestas concretas (un vertical, una señal, la apertura de un pitch), cada una con la cifra que la justifica. Propón; no edites el playbook tú solo: lo decide una persona.\nEste resumen puede ocupar hasta 15 líneas.\n\nTrabaja solo con `orch-app ventas read \"<SELECT …>\"` y `orch-app ventas do <acción> --json '{…}'` (si dudas de una tabla o una acción, `orch-app ventas guide`). Solo lees: no cambias nada, ni apruebas ni envías. Termina con un resumen breve para el canal del equipo: como mucho 8 líneas, con cifras y lo que espera a una persona. Si no hay nada que contar, dilo en una línea.",
+              "en": "Summarise Ventas' last 7 days.\n1. Numbers by vertical × use case (ve_prospects.vertical_id; ve_messages.pitch_id → ve_pitches.use_case_id): new prospects, fit / not fit, messages approved, sent (ve_messages.sent_at), replies and calls (ve_activity, kind 'respuesta' and 'llamada').\n2. What worked: the pitches and signals behind the replies; what did not: where messages go out and nobody replies, or where almost nothing fits.\n3. What to change in the playbook: at most three concrete proposals (a vertical, a signal, a pitch's opening), each with the number behind it. Propose; do not edit the playbook on your own: a person decides.\nThis summary may run to 15 lines.\n\nWork only through `orch-app ventas read \"<SELECT …>\"` and `orch-app ventas do <action> --json '{…}'` (if unsure of a table or an action, `orch-app ventas guide`). You only read: you change nothing, approve nothing, send nothing. End with a short summary for the team's channel: 8 lines at most, with numbers and what waits on a person. If there is nothing to report, say so in one line."
+            },
+            "deliver": "channel"
+          }
+        ]
+      },
+      "emoji": "🎯",
+      "i18n": {
+        "es": {
+          "name": "Ventas",
+          "category": "Ventas",
+          "summary": "Prospección: los negocios que te necesitan, sus señales y un primer mensaje que tú apruebas.",
+          "promise": "Encuentra los negocios que te necesitan, lee sus señales y empieza la conversación: tú apruebas cada mensaje.",
+          "description": "Di a quién vendes (una vertical, las señales que dicen que te necesita) y dónde. Ventas encuentra esos negocios en OpenStreetMap, o en Google Places con tu clave, y lee la web de cada uno: el píxel de Meta, Google Ads, GoHighLevel, formularios de contacto, WhatsApp. El agente decide cuáles encajan y por qué, encuentra con quién hablar y redacta el primer mensaje a partir de tu pitch. Tú apruebas cada uno; sale desde tu Gmail, como mucho los mensajes al día que fijes. El modo ensayo está activo hasta que lo apagues.",
+          "brief": {
+            "user": "Quien funda o vende en una empresa pequeña que vende a otras empresas",
+            "frequency": "Cada día, unos minutos para aprobar",
+            "questions": [
+              "¿Qué negocios necesitan lo que vendo, y cómo lo sé?",
+              "¿Qué quiere enviar el agente, y a quién?",
+              "¿Quién ha respondido, y a quién llamo?"
+            ],
+            "answers": [
+              "Cada prospecto muestra las señales de su web y por qué el agente cree que encaja.",
+              "Cada borrador te espera en Hoy con su motivo: lo apruebas, lo editas o lo rechazas.",
+              "Las respuestas y las llamadas agendadas están en Hoy y en el pipeline; con la llamada agendada, el equipo lo pasa al CRM."
+            ],
+            "primaryAction": "Aprobar un primer mensaje"
+          },
+          "how": [
+            {
+              "title": "Las búsquedas encuentran los negocios",
+              "text": "Cada búsqueda activa busca una vertical en una zona una vez al día, y se lee la web de cada uno para ver sus señales."
+            },
+            {
+              "title": "El agente cualifica y redacta",
+              "text": "Decide quién encaja y por qué, busca con quién hablar en su web y redacta el primer mensaje a partir de tu pitch."
+            },
+            {
+              "title": "Tú apruebas, y sale",
+              "text": "Los mensajes aprobados salen desde tu Gmail, como mucho el límite diario. En ensayo no sale nada."
+            }
+          ],
+          "needs": {
+            "agent": {
+              "why": "Decide qué prospectos encajan y por qué, encuentra con quién hablar y redacta el primer mensaje y los seguimientos. Nunca envía: tú apruebas cada mensaje."
+            },
+            "integrations": {
+              "gmail": "Envía los mensajes que apruebas, desde la cuenta que elijas para Ventas, cuando el ensayo está apagado."
+            }
+          },
+          "outward": [
+            "Envía los mensajes que una persona aprobó, desde la cuenta de Gmail elegida para Ventas, como mucho el límite diario — nunca con el ensayo activo.",
+            "Pregunta a OpenStreetMap (y a Google Places, si tiene su clave) por los negocios de una vertical en las zonas que buscas.",
+            "Lee la portada de la web de cada prospecto y, con su token, pregunta a la Biblioteca de anuncios de Meta por sus anuncios activos."
+          ],
+          "captions": [
+            "Hoy: los mensajes que esperan tu visto bueno, las respuestas y los próximos pasos",
+            "El pipeline por etapa, con las señales de cada negocio y si encaja",
+            "Un prospecto: por qué encaja, qué muestra su web, con quién hablar y cada mensaje"
           ]
         }
       }
