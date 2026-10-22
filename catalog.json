@@ -3447,7 +3447,7 @@
           "title": "The first week"
         }
       ],
-      "version": "0.3.10",
+      "version": "0.3.11",
       "tables": [
         "po_settings",
         "po_accounts",
@@ -3460,9 +3460,9 @@
         "po_pillars"
       ],
       "package": {
-        "path": "apps/posts/posts-0.3.10.tgz",
-        "sha256": "34c8af08e6fc69e2599e767a85ce159806ddb8264fec526d88dfac9f27f1d667",
-        "size": 98530,
+        "path": "apps/posts/posts-0.3.11.tgz",
+        "sha256": "9dc38252a8a948f738865f01514ca67f3790eb1d20ec7aad570402b5e9e53f4a",
+        "size": 100386,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
