@@ -3718,7 +3718,7 @@
       "screenshots": [
         {
           "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/ventas/screens/1-hoy.png",
-          "caption": "Hoy: the messages waiting for your OK, the replies and the next steps",
+          "caption": "Resumen: how prospecting is going, what needs you, and a box to ask the team",
           "surface": "desk",
           "device": "desktop"
         },
@@ -3733,9 +3733,15 @@
           "caption": "A prospect: why it fits, what its website shows, who to talk to and every message",
           "surface": "desk",
           "device": "desktop"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/ventas/screens/4-configuracion.png",
+          "caption": "How it is set up, in words: change any line here or ask the team",
+          "surface": "desk",
+          "device": "desktop"
         }
       ],
-      "version": "0.3.0",
+      "version": "0.3.1",
       "tables": [
         "ve_settings",
         "ve_verticals",
@@ -3747,9 +3753,9 @@
         "ve_activity"
       ],
       "package": {
-        "path": "apps/ventas/ventas-0.3.0.tgz",
-        "sha256": "330bc432069337798a39ab506fc8285663c205f73a463c27120db1e4e7907b58",
-        "size": 223186,
+        "path": "apps/ventas/ventas-0.3.1.tgz",
+        "sha256": "b10fd748fe41bf4765a4a76ced798e318f7887047e39c3549dff8f44a89eb6a3",
+        "size": 235270,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
@@ -3970,9 +3976,10 @@
             "Lee la portada de la web de cada prospecto y, con su token, pregunta a la Biblioteca de anuncios de Meta por sus anuncios activos."
           ],
           "captions": [
-            "Hoy: los mensajes que esperan tu visto bueno, las respuestas y los próximos pasos",
+            "Resumen: cómo va la prospección, lo que necesita tu decisión y una caja para pedirle cosas al equipo",
             "El pipeline por etapa, con las señales de cada negocio y si encaja",
-            "Un prospecto: por qué encaja, qué muestra su web, con quién hablar y cada mensaje"
+            "Un prospecto: por qué encaja, qué muestra su web, con quién hablar y cada mensaje",
+            "Cómo está montada, en palabras: cambia cualquier línea aquí mismo o pídeselo al equipo"
           ]
         }
       }
