@@ -3639,7 +3639,7 @@
       "summary": "Prospecting: the businesses that need you, their signals, and a first message you approve.",
       "promise": "Find the businesses that need you, read their signals, and start the conversation — you approve every message.",
       "like": "Apollo or Clay",
-      "description": "Say who you sell to (a vertical, the signals that show they need you) and where. Ventas finds those businesses on OpenStreetMap, or on Google Places with your key, and reads each one's website: Meta's pixel, Google Ads, GoHighLevel, lead forms, WhatsApp. The agent decides which ones fit and why, finds who to talk to, and drafts the first message from your pitch. You approve each one; it goes out from your Gmail, at most the messages a day you set. Rehearsal is on until you switch it off.",
+      "description": "Say who you sell to (a vertical, the signals that show they need you) and where. Ventas finds those businesses on OpenStreetMap, or on Google Places with your key, and reads each one's website: Meta's pixel, Google Ads, GoHighLevel, lead forms, WhatsApp. The agent decides which ones fit and why, finds who to talk to, and drafts the first message from your pitch. You approve each one; it goes out from your Gmail, at most the messages a day you set. Rehearsal is on until you switch it off. It sends from the Gmail connection you choose for Ventas in its Conexiones.",
       "brief": {
         "user": "The founder or salesperson of a small company that sells to other businesses",
         "frequency": "Every day, a few minutes to approve",
@@ -3735,7 +3735,7 @@
           "device": "desktop"
         }
       ],
-      "version": "0.1.5",
+      "version": "0.1.6",
       "tables": [
         "ve_settings",
         "ve_verticals",
@@ -3747,9 +3747,9 @@
         "ve_activity"
       ],
       "package": {
-        "path": "apps/ventas/ventas-0.1.5.tgz",
-        "sha256": "70a305613dc3eb73176d171c3dba4f9e50d72fb5d20ab5c1a7992bd0c0864902",
-        "size": 58463,
+        "path": "apps/ventas/ventas-0.1.6.tgz",
+        "sha256": "f7c83904fd8b9866088e54fec36c905d65f37a0245688e5e870fcb9621b87649",
+        "size": 59365,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
@@ -3757,7 +3757,7 @@
             "id": "comercial",
             "name": "Comercial",
             "required": true,
-            "why": "Works the prospects the searches bring in, recording everything through Ventas' actions (orch-app ventas do …) and reading the prospects' websites with web_fetch. For each Nuevo prospect: reads its vertical (buyer, signals, pains) and the signals found on its website, and decides fit with set_fit_yes or set_fit_no, always with a one-line reason naming what it saw. For a fit: finds the decision maker on the website (team, about and contact pages) and records name, role and email with set_contact, never a guessed address. Then drafts the first message with draft_message from the pitch of the prospect's vertical: short, specific to what it saw, the pitch's opening and offer in its own words, no placeholders, no signature (the sign-off is added); what is marked (hipótesis) is never cited as fact. After a reply (mark_replied), it drafts the follow-up with draft_follow_up. It never approves and never sends: a person approves every message, and an approval made by an agent is refused. When a call is booked (mark_call_booked), the team hands the prospect to the CRM through the CRM's own actions (team work, not this app's), and then marks it with mark_handed_to_crm."
+            "why": "Works the prospects the searches bring in, recording everything through Ventas' actions (orch-app ventas do …) and reading the prospects' websites with web_fetch. For each Nuevo prospect: reads its vertical (buyer, signals, pains) and the signals found on its website, and decides fit with set_fit_yes or set_fit_no, always with a one-line reason naming what it saw. For a fit: finds the decision maker on the website (team, about and contact pages) and records name, role and email with set_contact, never a guessed address. Then drafts the first message with draft_message from the pitch of the prospect's vertical: short, specific to what it saw, the pitch's opening and offer in its own words, no placeholders, no signature (the sign-off is added); what is marked (hipótesis) is never cited as fact. After a reply (mark_replied), it drafts the follow-up with draft_follow_up. It never approves and never sends: a person approves every message, and an approval made by an agent is refused. When a call is booked (mark_call_booked), the team hands the prospect to the CRM through the CRM's own actions (team work, not this app's), and then marks it with mark_handed_to_crm. Who Ventas sends from is the Gmail connection chosen for it in Orchestra (Apps → Ventas → Resumen → Conexiones), never a setting; ve_settings.sender_account is only where an older team install kept it and is normally empty, which is not a fault."
           }
         ],
         "connections": [
@@ -3765,7 +3765,7 @@
             "id": "gmail",
             "integration": "gmail",
             "optional": true,
-            "why": "Sends the messages a person approved, from the account chosen for Ventas, once rehearsal is turned off.",
+            "why": "Sends the messages a person approved once rehearsal is turned off. This connection IS the sender: the Gmail account chosen here (Apps → Ventas → Resumen → Conexiones) is the one Ventas sends from. ve_settings.sender_account is only where an older team install kept it, and is normally empty.",
             "from": {
               "table": "ve_settings",
               "column": "sender_account"
@@ -3926,7 +3926,7 @@
           "category": "Ventas",
           "summary": "Prospección: los negocios que te necesitan, sus señales y un primer mensaje que tú apruebas.",
           "promise": "Encuentra los negocios que te necesitan, lee sus señales y empieza la conversación: tú apruebas cada mensaje.",
-          "description": "Di a quién vendes (una vertical, las señales que dicen que te necesita) y dónde. Ventas encuentra esos negocios en OpenStreetMap, o en Google Places con tu clave, y lee la web de cada uno: el píxel de Meta, Google Ads, GoHighLevel, formularios de contacto, WhatsApp. El agente decide cuáles encajan y por qué, encuentra con quién hablar y redacta el primer mensaje a partir de tu pitch. Tú apruebas cada uno; sale desde tu Gmail, como mucho los mensajes al día que fijes. El modo ensayo está activo hasta que lo apagues.",
+          "description": "Di a quién vendes (una vertical, las señales que dicen que te necesita) y dónde. Ventas encuentra esos negocios en OpenStreetMap, o en Google Places con tu clave, y lee la web de cada uno: el píxel de Meta, Google Ads, GoHighLevel, formularios de contacto, WhatsApp. El agente decide cuáles encajan y por qué, encuentra con quién hablar y redacta el primer mensaje a partir de tu pitch. Tú apruebas cada uno; sale desde tu Gmail, como mucho los mensajes al día que fijes. El modo ensayo está activo hasta que lo apagues. Envía desde la conexión de Gmail que eliges para Ventas en sus Conexiones.",
           "brief": {
             "user": "Quien funda o vende en una empresa pequeña que vende a otras empresas",
             "frequency": "Cada día, unos minutos para aprobar",
