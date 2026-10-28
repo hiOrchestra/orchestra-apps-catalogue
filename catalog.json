@@ -3741,7 +3741,7 @@
           "device": "desktop"
         }
       ],
-      "version": "0.5.4",
+      "version": "0.5.5",
       "tables": [
         "ve_settings",
         "ve_verticals",
@@ -3753,9 +3753,9 @@
         "ve_activity"
       ],
       "package": {
-        "path": "apps/ventas/ventas-0.5.4.tgz",
-        "sha256": "3c5b64ea5094ce1c244d6041bdbd207c1b7429356589a37e47c5ea5ad81c3a95",
-        "size": 221015,
+        "path": "apps/ventas/ventas-0.5.5.tgz",
+        "sha256": "ea000241e3f37f26072526d3bd69c0a1741f4d00cc28b991806b92666dcb9893",
+        "size": 220367,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [
