@@ -4024,7 +4024,14 @@
           "text": "Every article is checked against the rules your company set. You decide what goes out."
         }
       ],
-      "surfaces": [],
+      "surfaces": [
+        {
+          "id": "articles",
+          "title": "Artículos",
+          "audience": "members",
+          "role": "desk"
+        }
+      ],
       "needs": {
         "agent": {
           "required": false,
@@ -4044,7 +4051,7 @@
           "device": "desktop"
         }
       ],
-      "version": "0.1.0",
+      "version": "0.1.1",
       "tables": [
         "articles_settings",
         "articles_articles",
@@ -4057,9 +4064,9 @@
         "articles_rules"
       ],
       "package": {
-        "path": "apps/articles/articles-0.1.0.tgz",
-        "sha256": "dd16d1e62e195a451104f1c546045ad4de36391456cc9f7ca9c65429e8de4b15",
-        "size": 13330,
+        "path": "apps/articles/articles-0.1.1.tgz",
+        "sha256": "917856e149a783af8e4f6adf26f7551eaafee3698769171be114a3b0995f3fb3",
+        "size": 14122,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
