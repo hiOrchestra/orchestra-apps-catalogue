@@ -4051,7 +4051,7 @@
           "device": "desktop"
         }
       ],
-      "version": "0.2.0",
+      "version": "0.3.0",
       "tables": [
         "articles_settings",
         "articles_articles",
@@ -4065,16 +4065,16 @@
         "articles_kinds"
       ],
       "package": {
-        "path": "apps/articles/articles-0.2.0.tgz",
-        "sha256": "f56ba473ce101c1c24e4054402f6bee083f5f1722c544fee3aeb567ea4b6be1b",
-        "size": 47255,
+        "path": "apps/articles/articles-0.3.0.tgz",
+        "sha256": "65ab6153f1537ab4d7dff6f722454892ad48429c1beaa3db0806f9d32bf4a295",
+        "size": 380775,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
         "connections": [],
         "variables": [],
         "channels": [],
-        "processes": 4,
+        "processes": 1,
         "skills": []
       },
       "emoji": "📝",
