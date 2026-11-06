@@ -2,6 +2,142 @@
   "version": 1,
   "apps": [
     {
+      "id": "articles",
+      "name": "Artículos",
+      "category": "Marketing",
+      "summary": "Articles written with your agent, checked against your own rules.",
+      "promise": "Write, correct and review articles in a live editor with the agent of your team. Your corrections become rules every future article passes.",
+      "like": "Google Docs plus an editor who remembers",
+      "description": "Articles in a live editor. Your agent writes and corrects them with you, and every article is checked against the rules your company set.",
+      "brief": {
+        "user": "Whoever publishes articles",
+        "frequency": "Weekly",
+        "questions": [
+          "What is being written?",
+          "What is still failing?",
+          "What is ready to publish?"
+        ],
+        "primaryAction": "Write and review an article",
+        "answers": [
+          "The list shows each article and its state.",
+          "Each article lists what fails, where, and how to fix it.",
+          "Approved articles wait to be published."
+        ]
+      },
+      "how": [
+        {
+          "actor": "person",
+          "title": "You ask for an article",
+          "text": "Give the agent of your team a topic, by text or by voice."
+        },
+        {
+          "actor": "person",
+          "title": "You work on it with the agent",
+          "text": "You see each change in the editor, and can correct it as it goes."
+        },
+        {
+          "actor": "person",
+          "title": "Your rules check it, you approve it",
+          "text": "Every article is checked against the rules your company set. You decide what goes out."
+        }
+      ],
+      "surfaces": [
+        {
+          "id": "articles",
+          "title": "Artículos",
+          "audience": "members",
+          "role": "desk"
+        }
+      ],
+      "needs": {
+        "agent": {
+          "required": false,
+          "why": "The agent of the team that uses it does the work."
+        }
+      },
+      "outward": [],
+      "outwardVia": [],
+      "by": "Orchestra",
+      "price": "included",
+      "icon": "file-text",
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/articles/screens/1-editor.png",
+          "caption": "The article, with the agent beside it and what the review still flags",
+          "surface": "desk",
+          "device": "desktop"
+        }
+      ],
+      "version": "0.4.0",
+      "tables": [
+        "articles_settings",
+        "articles_articles",
+        "articles_blocks",
+        "articles_notes",
+        "articles_checks",
+        "articles_versions",
+        "articles_site_pages",
+        "articles_links",
+        "articles_rules",
+        "articles_kinds"
+      ],
+      "package": {
+        "path": "apps/articles/articles-0.4.0.tgz",
+        "sha256": "0045a2bffba235c2decdcd4c88d6a62a75357e0fce785fc397c3407ad7338de5",
+        "size": 376975,
+        "installer": "install.js",
+        "manifest": "app.json",
+        "roles": [],
+        "connections": [],
+        "variables": [],
+        "channels": [],
+        "processes": 1,
+        "skills": []
+      },
+      "emoji": "📝",
+      "i18n": {
+        "es": {
+          "name": "Artículos",
+          "category": "Marketing",
+          "summary": "Artículos escritos con el agente de tu equipo y revisados con tus propias reglas.",
+          "promise": "Escribe, corrige y revisa artículos en un editor en vivo con el agente de tu equipo. Tus correcciones se vuelven reglas que todo artículo futuro cumple.",
+          "description": "Artículos en un editor en vivo. Tu agente los escribe y los corrige contigo, y cada artículo se revisa con las reglas que fijó tu empresa.",
+          "brief": {
+            "user": "Quien publica artículos",
+            "frequency": "Cada semana",
+            "questions": [
+              "¿Qué se está escribiendo?",
+              "¿Qué sigue sin cumplirse?",
+              "¿Qué está listo para publicar?"
+            ],
+            "primaryAction": "Escribir y revisar un artículo",
+            "answers": [
+              "La lista muestra cada artículo y su estado.",
+              "Cada artículo dice qué falla, dónde y cómo arreglarlo.",
+              "Los aprobados esperan a publicarse."
+            ]
+          },
+          "how": [
+            {
+              "title": "Pides un artículo",
+              "text": "Dale un tema al agente de tu equipo, por escrito o por voz."
+            },
+            {
+              "title": "El agente lo escribe delante de ti",
+              "text": "Ves cada cambio en el editor y puedes corregirlo sobre la marcha."
+            },
+            {
+              "title": "Tus reglas lo revisan y tú lo apruebas",
+              "text": "Cada artículo se revisa con las reglas de tu empresa. Tú decides qué sale."
+            }
+          ],
+          "captions": [
+            "El artículo, con el agente al lado y lo que la revisión aún señala"
+          ]
+        }
+      }
+    },
+    {
       "id": "crm",
       "name": "CRM",
       "category": "Sales",
@@ -3980,142 +4116,6 @@
             "El pipeline por etapa, con las señales de cada negocio y si encaja",
             "Un prospecto: por qué encaja, qué muestra su web, con quién hablar y cada mensaje",
             "Cómo está montada, en palabras: cambia cualquier línea aquí mismo o pídeselo al equipo"
-          ]
-        }
-      }
-    },
-    {
-      "id": "articles",
-      "name": "Artículos",
-      "category": "Marketing",
-      "summary": "Articles written with your agent, checked against your own rules.",
-      "promise": "Write, correct and review articles in a live editor with the agent of your team. Your corrections become rules every future article passes.",
-      "like": "Google Docs plus an editor who remembers",
-      "description": "Articles in a live editor. Your agent writes and corrects them with you, and every article is checked against the rules your company set.",
-      "brief": {
-        "user": "Whoever publishes articles",
-        "frequency": "Weekly",
-        "questions": [
-          "What is being written?",
-          "What is still failing?",
-          "What is ready to publish?"
-        ],
-        "primaryAction": "Write and review an article",
-        "answers": [
-          "The list shows each article and its state.",
-          "Each article lists what fails, where, and how to fix it.",
-          "Approved articles wait to be published."
-        ]
-      },
-      "how": [
-        {
-          "actor": "person",
-          "title": "You ask for an article",
-          "text": "Give the agent of your team a topic, by text or by voice."
-        },
-        {
-          "actor": "person",
-          "title": "You work on it with the agent",
-          "text": "You see each change in the editor, and can correct it as it goes."
-        },
-        {
-          "actor": "person",
-          "title": "Your rules check it, you approve it",
-          "text": "Every article is checked against the rules your company set. You decide what goes out."
-        }
-      ],
-      "surfaces": [
-        {
-          "id": "articles",
-          "title": "Artículos",
-          "audience": "members",
-          "role": "desk"
-        }
-      ],
-      "needs": {
-        "agent": {
-          "required": false,
-          "why": "The agent of the team that uses it does the work."
-        }
-      },
-      "outward": [],
-      "outwardVia": [],
-      "by": "Orchestra",
-      "price": "included",
-      "icon": "file-text",
-      "screenshots": [
-        {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/articles/screens/1-editor.png",
-          "caption": "The article, with the agent beside it and what the review still flags",
-          "surface": "desk",
-          "device": "desktop"
-        }
-      ],
-      "version": "0.3.0",
-      "tables": [
-        "articles_settings",
-        "articles_articles",
-        "articles_blocks",
-        "articles_notes",
-        "articles_checks",
-        "articles_versions",
-        "articles_site_pages",
-        "articles_links",
-        "articles_rules",
-        "articles_kinds"
-      ],
-      "package": {
-        "path": "apps/articles/articles-0.3.0.tgz",
-        "sha256": "65ab6153f1537ab4d7dff6f722454892ad48429c1beaa3db0806f9d32bf4a295",
-        "size": 380775,
-        "installer": "install.js",
-        "manifest": "app.json",
-        "roles": [],
-        "connections": [],
-        "variables": [],
-        "channels": [],
-        "processes": 1,
-        "skills": []
-      },
-      "emoji": "📝",
-      "i18n": {
-        "es": {
-          "name": "Artículos",
-          "category": "Marketing",
-          "summary": "Artículos escritos con el agente de tu equipo y revisados con tus propias reglas.",
-          "promise": "Escribe, corrige y revisa artículos en un editor en vivo con el agente de tu equipo. Tus correcciones se vuelven reglas que todo artículo futuro cumple.",
-          "description": "Artículos en un editor en vivo. Tu agente los escribe y los corrige contigo, y cada artículo se revisa con las reglas que fijó tu empresa.",
-          "brief": {
-            "user": "Quien publica artículos",
-            "frequency": "Cada semana",
-            "questions": [
-              "¿Qué se está escribiendo?",
-              "¿Qué sigue sin cumplirse?",
-              "¿Qué está listo para publicar?"
-            ],
-            "primaryAction": "Escribir y revisar un artículo",
-            "answers": [
-              "La lista muestra cada artículo y su estado.",
-              "Cada artículo dice qué falla, dónde y cómo arreglarlo.",
-              "Los aprobados esperan a publicarse."
-            ]
-          },
-          "how": [
-            {
-              "title": "Pides un artículo",
-              "text": "Dale un tema al agente de tu equipo, por escrito o por voz."
-            },
-            {
-              "title": "El agente lo escribe delante de ti",
-              "text": "Ves cada cambio en el editor y puedes corregirlo sobre la marcha."
-            },
-            {
-              "title": "Tus reglas lo revisan y tú lo apruebas",
-              "text": "Cada artículo se revisa con las reglas de tu empresa. Tú decides qué sale."
-            }
-          ],
-          "captions": [
-            "El artículo, con el agente al lado y lo que la revisión aún señala"
           ]
         }
       }
