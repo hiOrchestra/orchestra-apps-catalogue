@@ -68,7 +68,7 @@
           "device": "desktop"
         }
       ],
-      "version": "0.5.1",
+      "version": "0.5.2",
       "tables": [
         "articles_articles",
         "articles_rules",
@@ -82,9 +82,9 @@
         "articles_links"
       ],
       "package": {
-        "path": "apps/articles/articles-0.5.1.tgz",
-        "sha256": "0ad1206f3d2e976f5ab5a82745c192b0f770e984a9b03e5eebf7938ec12d5fd4",
-        "size": 367361,
+        "path": "apps/articles/articles-0.5.2.tgz",
+        "sha256": "0d6b27761f72f872c50822e7261f5ccc56b8dc94f7736b5be66380d26f11fb7e",
+        "size": 367404,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
