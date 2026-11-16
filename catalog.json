@@ -68,12 +68,13 @@
           "device": "desktop"
         }
       ],
-      "version": "0.6.0",
+      "version": "0.7.0",
       "tables": [
         "articles_articles",
         "articles_rules",
         "articles_kinds",
         "articles_settings",
+        "articles_publishing",
         "articles_blocks",
         "articles_notes",
         "articles_checks",
@@ -82,9 +83,9 @@
         "articles_links"
       ],
       "package": {
-        "path": "apps/articles/articles-0.6.0.tgz",
-        "sha256": "43c1b2a9ec3cc3786d3c57dc40f8938e70daf955ed7a247d4d63704d051f2612",
-        "size": 505521,
+        "path": "apps/articles/articles-0.7.0.tgz",
+        "sha256": "f0605aa27164c9074e1e3d30279e648c58db368fe17cbd96e6327fdc3417c256",
+        "size": 632481,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -92,7 +93,29 @@
         "variables": [],
         "channels": [],
         "processes": 0,
-        "skills": []
+        "skills": [],
+        "keys": [
+          {
+            "name": "GITHUB_TOKEN",
+            "kind": "secret",
+            "label": {
+              "es": "Token de GitHub (solo contenido del repo de la web)",
+              "en": "GitHub token (contents of the website's repository only)"
+            },
+            "optional": true,
+            "why": {
+              "es": "Para publicar los artículos aprobados en el repositorio del que se construye la web. Solo hace falta si la web se publica desde GitHub.",
+              "en": "To publish approved articles into the repository the website is built from. Only needed when the site is published from GitHub."
+            },
+            "where": {
+              "es": "GitHub › Settings › Developer settings › Fine-grained tokens: acceso solo al repositorio de la web, permiso «Contents: Read and write».",
+              "en": "GitHub › Settings › Developer settings › Fine-grained tokens: access to the website's repository only, permission \"Contents: Read and write\"."
+            },
+            "hosts": [
+              "api.github.com"
+            ]
+          }
+        ]
       },
       "emoji": "📝",
       "i18n": {
