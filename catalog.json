@@ -4285,6 +4285,12 @@
         }
       ],
       "changelog": {
+        "1.2.2": [
+          {
+            "es": "Trae tus búsquedas de Search Console él solo cada lunes, antes de revisar la posición de tus objetivos. Cada cuánto se cambia en los ajustes del módulo, en «Automatizaciones».",
+            "en": "It brings your Search Console searches by itself every Monday, before checking your goals' positions. How often is changed in the module's settings, under Automations."
+          }
+        ],
         "1.2.1": [
           {
             "es": "Search Console solo lo lee el propio módulo, con el permiso de un administrador; tu agente ya no trae las búsquedas.",
@@ -4358,11 +4364,11 @@
       },
       "whatsNew": [
         {
-          "es": "Search Console solo lo lee el propio módulo, con el permiso de un administrador; tu agente ya no trae las búsquedas.",
-          "en": "Search Console is read only by the module itself, with an admin's yes; your agent no longer brings the searches."
+          "es": "Trae tus búsquedas de Search Console él solo cada lunes, antes de revisar la posición de tus objetivos. Cada cuánto se cambia en los ajustes del módulo, en «Automatizaciones».",
+          "en": "It brings your Search Console searches by itself every Monday, before checking your goals' positions. How often is changed in the module's settings, under Automations."
         }
       ],
-      "version": "1.2.1",
+      "version": "1.2.2",
       "tables": [
         "oportunidadesseo_oportunidades",
         "oportunidadesseo_acciones",
@@ -4383,9 +4389,9 @@
         "oportunidadesseo_cache"
       ],
       "package": {
-        "path": "apps/oportunidadesseo/oportunidadesseo-1.2.1.tgz",
-        "sha256": "9ebd0b9d7d1b2514766264f699c6351a2a967312725d2fc8946746f9fcfef1ec",
-        "size": 544617,
+        "path": "apps/oportunidadesseo/oportunidadesseo-1.2.2.tgz",
+        "sha256": "c423e766321089df984bca6bd184a3a3daf521156a24ac94fe7d236e6ef54e75",
+        "size": 544689,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
