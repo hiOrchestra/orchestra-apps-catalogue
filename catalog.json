@@ -4285,6 +4285,12 @@
         }
       ],
       "changelog": {
+        "1.4.1": [
+          {
+            "es": "En «Resumen», el diagnóstico en una frase lleva a su detalle («Ver el diagnóstico») y se puede repetir desde ahí cuando quieras.",
+            "en": "In the summary, the one-line diagnosis opens its detail and can be run again from there any time."
+          }
+        ],
         "1.4.0": [
           {
             "es": "Seis pestañas, cada una responde a una pregunta: Resumen, Objetivos, Descubrir, Tu web, Competencia y la nueva «Búsqueda con IA».",
@@ -4404,19 +4410,11 @@
       },
       "whatsNew": [
         {
-          "es": "Seis pestañas, cada una responde a una pregunta: Resumen, Objetivos, Descubrir, Tu web, Competencia y la nueva «Búsqueda con IA».",
-          "en": "Six tabs, each answering one question: Summary, Goals, Discover, Your site, Competition and the new «Búsqueda con IA»."
-        },
-        {
-          "es": "Descubrir es una sola lista de lo que podrías ganar, de todas las fuentes y sin repetir, con «Convertir en objetivo» o «Descartar» en cada una.",
-          "en": "Discover is one list of what you could win, from every source and without repeats, with «Convertir en objetivo» or «Descartar» on each."
-        },
-        {
-          "es": "El diagnóstico (por qué no apareces y tus cifras) pasa a «Tu web»; sus páginas ganables, a la lista de Descubrir.",
-          "en": "The diagnosis (why you do not show and your figures) moves to «Tu web»; its winnable pages, to Discover's list."
+          "es": "En «Resumen», el diagnóstico en una frase lleva a su detalle («Ver el diagnóstico») y se puede repetir desde ahí cuando quieras.",
+          "en": "In the summary, the one-line diagnosis opens its detail and can be run again from there any time."
         }
       ],
-      "version": "1.4.0",
+      "version": "1.4.1",
       "tables": [
         "oportunidadesseo_oportunidades",
         "oportunidadesseo_acciones",
@@ -4437,9 +4435,9 @@
         "oportunidadesseo_cache"
       ],
       "package": {
-        "path": "apps/oportunidadesseo/oportunidadesseo-1.4.0.tgz",
-        "sha256": "31fbe5b87dbe7075d2bca4f7b477a8454daa2683dac6317ce548dc6c3f1711dc",
-        "size": 549990,
+        "path": "apps/oportunidadesseo/oportunidadesseo-1.4.1.tgz",
+        "sha256": "e6320ac8901eb5590bd61d5e25b6c8cf11f6d4729b84c346b0a6042ae1a3f577",
+        "size": 549307,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
