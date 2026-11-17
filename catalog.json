@@ -4290,7 +4290,7 @@
           "device": "desktop"
         }
       ],
-      "version": "1.1.1",
+      "version": "1.1.2",
       "tables": [
         "oportunidadesseo_oportunidades",
         "oportunidadesseo_acciones",
@@ -4311,9 +4311,9 @@
         "oportunidadesseo_cache"
       ],
       "package": {
-        "path": "apps/oportunidadesseo/oportunidadesseo-1.1.1.tgz",
-        "sha256": "864181dbd8f5f670ea491f2d0d1ba1ad32a87dbc418374370c427de0b64d5084",
-        "size": 543286,
+        "path": "apps/oportunidadesseo/oportunidadesseo-1.1.2.tgz",
+        "sha256": "4c9605429c4ff49aef6ec4517cabf42ac69dd674f947ec57cbf8acd1f216c369",
+        "size": 543633,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
