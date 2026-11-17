@@ -4309,6 +4309,12 @@
         }
       ],
       "changelog": {
+        "1.7.2": [
+          {
+            "es": "La clave de Open PageRank explica que hace falta un plan de pago: las gratuitas solo valen desde una dirección IP, y Orchestra comparte la suya.",
+            "en": "The Open PageRank key explains that a paid plan is needed: free keys only work from one IP address, and Orchestra shares its own."
+          }
+        ],
         "1.7.1": [
           {
             "es": "Cuando publicas en Artículos, Oportunidades lo ve al momento: la acción queda hecha y el objetivo empieza a medirse.",
@@ -4470,11 +4476,11 @@
       },
       "whatsNew": [
         {
-          "es": "Cuando publicas en Artículos, Oportunidades lo ve al momento: la acción queda hecha y el objetivo empieza a medirse.",
-          "en": "When you publish in Artículos, Oportunidades sees it at once: the action is done and the goal starts being measured."
+          "es": "La clave de Open PageRank explica que hace falta un plan de pago: las gratuitas solo valen desde una dirección IP, y Orchestra comparte la suya.",
+          "en": "The Open PageRank key explains that a paid plan is needed: free keys only work from one IP address, and Orchestra shares its own."
         }
       ],
-      "version": "1.7.1",
+      "version": "1.7.2",
       "tables": [
         "oportunidadesseo_oportunidades",
         "oportunidadesseo_acciones",
@@ -4495,9 +4501,9 @@
         "oportunidadesseo_cache"
       ],
       "package": {
-        "path": "apps/oportunidadesseo/oportunidadesseo-1.7.1.tgz",
-        "sha256": "51d9bc77cc63e78ddbdfd690fabccbd3d1750aa7139336d4d11d736f7ef28759",
-        "size": 637850,
+        "path": "apps/oportunidadesseo/oportunidadesseo-1.7.2.tgz",
+        "sha256": "dd48580cbc6f0a8041f3446520841122110dfd67199b6c845fe8bf5526e7823f",
+        "size": 638000,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -4563,12 +4569,12 @@
             },
             "optional": true,
             "why": {
-              "es": "Opcional y gratis: la autoridad (de 0 a 10) de cada web del top 10, para decir mejor si una página se puede ganar. Sin ella el módulo funciona igual, midiendo solo el tráfico.",
-              "en": "Optional and free: the authority (0 to 10) of each site in the top 10, to say better whether a page can be won. Without it the module works the same, measuring traffic only."
+              "es": "Opcional: la autoridad (de 0 a 10) de cada web del top 10, para decir mejor si una página se puede ganar. Sin ella el módulo funciona igual, midiendo solo el tráfico.",
+              "en": "Optional: the authority (0 to 10) of each site in the top 10, to say better whether a page can be won. Without it the module works the same, measuring traffic only."
             },
             "where": {
-              "es": "keywordseverywhere.com/account/openpagerank › pestaña Open Page Rank › crear clave (empieza por opr_live_). Las claves gratuitas solo valen desde una dirección IP.",
-              "en": "keywordseverywhere.com/account/openpagerank › Open Page Rank tab › create a key (it starts with opr_live_). Free keys only work from one IP address."
+              "es": "keywordseverywhere.com/account/openpagerank › pestaña Open Page Rank › crear clave (empieza por opr_live_). Usa una clave de un plan de pago: las gratuitas solo valen desde una dirección IP y cada dirección solo admite una cuenta gratuita, y tu Orchestra comparte la suya con otras empresas, así que una gratuita puede no funcionar.",
+              "en": "keywordseverywhere.com/account/openpagerank › Open Page Rank tab › create a key (it starts with opr_live_). Use a key from a paid plan: free keys only work from one IP address and each address allows one free account, and your Orchestra shares its address with other companies, so a free key may not work."
             },
             "hosts": [
               "openpagerank.keywordseverywhere.com"
