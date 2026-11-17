@@ -4285,6 +4285,20 @@
         }
       ],
       "changelog": {
+        "1.4.0": [
+          {
+            "es": "Seis pestañas, cada una responde a una pregunta: Resumen, Objetivos, Descubrir, Tu web, Competencia y la nueva «Búsqueda con IA».",
+            "en": "Six tabs, each answering one question: Summary, Goals, Discover, Your site, Competition and the new «Búsqueda con IA»."
+          },
+          {
+            "es": "Descubrir es una sola lista de lo que podrías ganar, de todas las fuentes y sin repetir, con «Convertir en objetivo» o «Descartar» en cada una.",
+            "en": "Discover is one list of what you could win, from every source and without repeats, with «Convertir en objetivo» or «Descartar» on each."
+          },
+          {
+            "es": "El diagnóstico (por qué no apareces y tus cifras) pasa a «Tu web»; sus páginas ganables, a la lista de Descubrir.",
+            "en": "The diagnosis (why you do not show and your figures) moves to «Tu web»; its winnable pages, to Discover's list."
+          }
+        ],
         "1.3.0": [
           {
             "es": "Novedades de la competencia: «Convertir en objetivo» lo que ha publicado un competidor y tú no tienes.",
@@ -4390,19 +4404,19 @@
       },
       "whatsNew": [
         {
-          "es": "Novedades de la competencia: «Convertir en objetivo» lo que ha publicado un competidor y tú no tienes.",
-          "en": "Competitors' news: «Convertir en objetivo» turns what a competitor published, and you lack, into a goal."
+          "es": "Seis pestañas, cada una responde a una pregunta: Resumen, Objetivos, Descubrir, Tu web, Competencia y la nueva «Búsqueda con IA».",
+          "en": "Six tabs, each answering one question: Summary, Goals, Discover, Your site, Competition and the new «Búsqueda con IA»."
         },
         {
-          "es": "En las respuestas de IA: «Quiero aparecer aquí» convierte la pregunta en un objetivo, con lo que suele hacer que una IA te cite.",
-          "en": "In AI answers: «Quiero aparecer aquí» turns the question into a goal, with what tends to get a page cited."
+          "es": "Descubrir es una sola lista de lo que podrías ganar, de todas las fuentes y sin repetir, con «Convertir en objetivo» o «Descartar» en cada una.",
+          "en": "Discover is one list of what you could win, from every source and without repeats, with «Convertir en objetivo» or «Descartar» on each."
         },
         {
-          "es": "Competidores propuestos: «Adoptar» y «Descartar» se ven sin desplazar la tabla, y arriba se dice cuántos esperan tu sí.",
-          "en": "Proposed competitors: «Adoptar» and «Descartar» are visible without scrolling, and how many wait for your yes is said above."
+          "es": "El diagnóstico (por qué no apareces y tus cifras) pasa a «Tu web»; sus páginas ganables, a la lista de Descubrir.",
+          "en": "The diagnosis (why you do not show and your figures) moves to «Tu web»; its winnable pages, to Discover's list."
         }
       ],
-      "version": "1.3.0",
+      "version": "1.4.0",
       "tables": [
         "oportunidadesseo_oportunidades",
         "oportunidadesseo_acciones",
@@ -4423,9 +4437,9 @@
         "oportunidadesseo_cache"
       ],
       "package": {
-        "path": "apps/oportunidadesseo/oportunidadesseo-1.3.0.tgz",
-        "sha256": "3439cba0ce6add66977724c7ed1a41e49083e22f1cbce26d41ea98e973f09e47",
-        "size": 546775,
+        "path": "apps/oportunidadesseo/oportunidadesseo-1.4.0.tgz",
+        "sha256": "31fbe5b87dbe7075d2bca4f7b477a8454daa2683dac6317ce548dc6c3f1711dc",
+        "size": 549990,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
