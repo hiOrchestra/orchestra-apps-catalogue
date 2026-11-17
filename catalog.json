@@ -69,6 +69,12 @@
         }
       ],
       "changelog": {
+        "0.10.0": [
+          {
+            "es": "«Cómo funciona»: una guía paso a paso del módulo, de la idea al artículo publicado, con los ajustes y lo que hace solo.",
+            "en": "«Cómo funciona»: a step-by-step guide to the module, from idea to published article, with the settings and what it does by itself."
+          }
+        ],
         "0.9.0": [
           {
             "es": "Otros módulos de la empresa pueden leer tus tipos de artículo (solo leer). Oportunidades SEO los usa para proponer el tipo de cada objetivo.",
@@ -102,11 +108,11 @@
       },
       "whatsNew": [
         {
-          "es": "Otros módulos de la empresa pueden leer tus tipos de artículo (solo leer). Oportunidades SEO los usa para proponer el tipo de cada objetivo.",
-          "en": "Other company modules may read your article kinds (read only). Oportunidades SEO uses them to propose each goal's kind."
+          "es": "«Cómo funciona»: una guía paso a paso del módulo, de la idea al artículo publicado, con los ajustes y lo que hace solo.",
+          "en": "«Cómo funciona»: a step-by-step guide to the module, from idea to published article, with the settings and what it does by itself."
         }
       ],
-      "version": "0.9.0",
+      "version": "0.10.0",
       "tables": [
         "articles_articles",
         "articles_rules",
@@ -121,9 +127,9 @@
         "articles_links"
       ],
       "package": {
-        "path": "apps/articles/articles-0.9.0.tgz",
-        "sha256": "2e905375f84bf8936c457746e93fe11cff135c69ee3a0e4e2747c9bdcb4ca58c",
-        "size": 637719,
+        "path": "apps/articles/articles-0.10.0.tgz",
+        "sha256": "1c4ff162889df9b5cf2a2fbc35c1660726eaf6cbbc51797134cd5bdd37f9587f",
+        "size": 639494,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -4285,6 +4291,12 @@
         }
       ],
       "changelog": {
+        "1.5.0": [
+          {
+            "es": "«Cómo funciona»: una guía paso a paso del módulo, que te enseña cada pestaña, los ajustes y lo que hace solo cada lunes. Las explicaciones de cada pestaña quedan plegadas.",
+            "en": "«Cómo funciona»: a step-by-step guide to the module, showing each tab, the settings and what it does by itself every Monday. Each tab's explanation is folded."
+          }
+        ],
         "1.4.1": [
           {
             "es": "En «Resumen», el diagnóstico en una frase lleva a su detalle («Ver el diagnóstico») y se puede repetir desde ahí cuando quieras.",
@@ -4410,11 +4422,11 @@
       },
       "whatsNew": [
         {
-          "es": "En «Resumen», el diagnóstico en una frase lleva a su detalle («Ver el diagnóstico») y se puede repetir desde ahí cuando quieras.",
-          "en": "In the summary, the one-line diagnosis opens its detail and can be run again from there any time."
+          "es": "«Cómo funciona»: una guía paso a paso del módulo, que te enseña cada pestaña, los ajustes y lo que hace solo cada lunes. Las explicaciones de cada pestaña quedan plegadas.",
+          "en": "«Cómo funciona»: a step-by-step guide to the module, showing each tab, the settings and what it does by itself every Monday. Each tab's explanation is folded."
         }
       ],
-      "version": "1.4.1",
+      "version": "1.5.0",
       "tables": [
         "oportunidadesseo_oportunidades",
         "oportunidadesseo_acciones",
@@ -4435,9 +4447,9 @@
         "oportunidadesseo_cache"
       ],
       "package": {
-        "path": "apps/oportunidadesseo/oportunidadesseo-1.4.1.tgz",
-        "sha256": "e6320ac8901eb5590bd61d5e25b6c8cf11f6d4729b84c346b0a6042ae1a3f577",
-        "size": 549307,
+        "path": "apps/oportunidadesseo/oportunidadesseo-1.5.0.tgz",
+        "sha256": "9863464328e6075ba5b01008add6e0d8030c0741cd9bb144812ae32922de6518",
+        "size": 553061,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
