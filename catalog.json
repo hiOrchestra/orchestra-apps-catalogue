@@ -19,7 +19,7 @@
         ],
         "primaryAction": "Write and review an article",
         "answers": [
-          "The list shows each article and its state.",
+          "The list shows each article and its state, from idea to published.",
           "Each article lists what fails, where, and how to fix it.",
           "Approved articles wait to be published."
         ]
@@ -57,6 +57,28 @@
       },
       "outward": [],
       "outwardVia": [],
+      "whatsNew": [
+        {
+          "es": "Estados nuevos: Idea → Borrador → En revisión → Lista → Publicada, y Archivada. Un artículo sin texto es una «Idea» y pasa solo a «Borrador» con su primer texto.",
+          "en": "New states: Idea → Draft → In review → Ready → Published, and Archived. An article with no text is an idea and becomes a draft with its first text."
+        },
+        {
+          "es": "«Pasar a revisión» no se puede pulsar hasta que el artículo tiene texto, y dice por qué.",
+          "en": "«Pasar a revisión» cannot be pressed until the article has text, and says why."
+        },
+        {
+          "es": "Un artículo sin texto ya no dice «El texto cumple»: dice «Aún no hay texto que revisar» y solo cuenta lo que falta del SEO.",
+          "en": "An article with no text no longer says the text passes: it says there is nothing to review yet and counts only what the SEO package lacks."
+        },
+        {
+          "es": "Cada pestaña de la Mesa de redacción dice qué es y qué hacer, y cada fila enseña su siguiente paso como botón («Escribir», «Revisar», «Publicar en la web»).",
+          "en": "Every tab of the newsroom says what it is and what to do, and each row shows its next step as a button."
+        },
+        {
+          "es": "Las archivadas se ven con el filtro «Estado: Archivada» y se recuperan desde ahí.",
+          "en": "Archived articles show with the state filter and are brought back from there."
+        }
+      ],
       "by": "Orchestra",
       "price": "included",
       "icon": "file-text",
@@ -68,7 +90,7 @@
           "device": "desktop"
         }
       ],
-      "version": "0.7.0",
+      "version": "0.8.0",
       "tables": [
         "articles_articles",
         "articles_rules",
@@ -83,9 +105,9 @@
         "articles_links"
       ],
       "package": {
-        "path": "apps/articles/articles-0.7.0.tgz",
-        "sha256": "f0605aa27164c9074e1e3d30279e648c58db368fe17cbd96e6327fdc3417c256",
-        "size": 632481,
+        "path": "apps/articles/articles-0.8.0.tgz",
+        "sha256": "823fc929da6b2b063c387584773a2302f44e930af164acb2b5b188bbabd6ed73",
+        "size": 635196,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -135,7 +157,7 @@
             ],
             "primaryAction": "Escribir y revisar un artículo",
             "answers": [
-              "La lista muestra cada artículo y su estado.",
+              "La lista muestra cada artículo y su estado, de idea a publicada.",
               "Cada artículo dice qué falla, dónde y cómo arreglarlo.",
               "Los aprobados esperan a publicarse."
             ]
