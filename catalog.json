@@ -57,24 +57,6 @@
       },
       "outward": [],
       "outwardVia": [],
-      "whatsNew": [
-        {
-          "es": "Nuevo destino de publicación «API de la web» (recomendado): tu web recibe el artículo y lo publica ella. Orchestra ya no necesita acceso al código de tu web.",
-          "en": "New publishing destination, the website's API (recommended): your site receives the article and publishes it itself. Orchestra no longer needs access to your site's code."
-        },
-        {
-          "es": "La clave de publicación se guarda solo para la dirección de tu web.",
-          "en": "The publishing key is saved for your website's address only."
-        },
-        {
-          "es": "Publicar por GitHub sigue ahí, marcado como «Acceso al repositorio (no recomendado)».",
-          "en": "Publishing through GitHub is still there, marked as repository access (not recommended)."
-        },
-        {
-          "es": "Otros módulos pueden leer qué artículos están publicados (Oportunidades SEO lo usa para decir qué objetivo cubre cada uno).",
-          "en": "Other modules can read which articles are published (Oportunidades SEO uses it to say which goal each one covers)."
-        }
-      ],
       "by": "Orchestra",
       "price": "included",
       "icon": "file-text",
@@ -84,6 +66,44 @@
           "caption": "The article, with the agent beside it and what the review still flags",
           "surface": "desk",
           "device": "desktop"
+        }
+      ],
+      "changelog": {
+        "0.9.0": [
+          {
+            "es": "Otros módulos de la empresa pueden leer tus tipos de artículo (solo leer). Oportunidades SEO los usa para proponer el tipo de cada objetivo.",
+            "en": "Other company modules may read your article kinds (read only). Oportunidades SEO uses them to propose each goal's kind."
+          }
+        ],
+        "0.8.2": [
+          {
+            "es": "Ajustes › Publicación dice dónde escribe un administrador la clave de publicación: De la empresa › Módulos › Artículos › Claves.",
+            "en": "Settings › Publishing says where an admin enters the publishing key: De la empresa › Módulos › Artículos › Claves."
+          }
+        ],
+        "0.8.1": [
+          {
+            "es": "Nuevo destino de publicación «API de la web» (recomendado): tu web recibe el artículo y lo publica ella. Orchestra ya no necesita acceso al código de tu web.",
+            "en": "New publishing destination, the website's API (recommended): your site receives the article and publishes it itself. Orchestra no longer needs access to your site's code."
+          },
+          {
+            "es": "La clave de publicación se guarda solo para la dirección de tu web.",
+            "en": "The publishing key is saved for your website's address only."
+          },
+          {
+            "es": "Publicar por GitHub sigue ahí, marcado como «Acceso al repositorio (no recomendado)».",
+            "en": "Publishing through GitHub is still there, marked as repository access (not recommended)."
+          },
+          {
+            "es": "Otros módulos pueden leer qué artículos están publicados (Oportunidades SEO lo usa para decir qué objetivo cubre cada uno).",
+            "en": "Other modules can read which articles are published (Oportunidades SEO uses it to say which goal each one covers)."
+          }
+        ]
+      },
+      "whatsNew": [
+        {
+          "es": "Otros módulos de la empresa pueden leer tus tipos de artículo (solo leer). Oportunidades SEO los usa para proponer el tipo de cada objetivo.",
+          "en": "Other company modules may read your article kinds (read only). Oportunidades SEO uses them to propose each goal's kind."
         }
       ],
       "version": "0.9.0",
@@ -4247,32 +4267,6 @@
       "outwardVia": [
         "web"
       ],
-      "whatsNew": [
-        {
-          "es": "Una oportunidad es ahora un OBJETIVO: se trabaja hasta ganarlo. Su estado (En marcha, Subiendo, Ganado, Estancado) se lee de su posición cada semana, no se pone a mano.",
-          "en": "An opportunity is now a GOAL, worked on until it is won. Its state (under way, climbing, won, stalled) is read from its weekly position, never set by hand."
-        },
-        {
-          "es": "Cada objetivo tiene acciones (artículo, página de servicio, caso real, refresco, enlaces internos), su evolución con gráfico y línea de tiempo, y su «Siguiente paso».",
-          "en": "Each goal has actions (article, service page, real case, refresh, internal links), its evolution with a chart and a timeline, and its next step."
-        },
-        {
-          "es": "Navegación nueva, como una app: Resumen, Objetivos, Descubrir, Tu web y Competencia.",
-          "en": "New navigation, like an app: Resumen, Objetivos, Descubrir, Tu web and Competencia."
-        },
-        {
-          "es": "«Actualizar Search Console»: el módulo trae tus búsquedas él mismo, sin gastar un turno del agente (un administrador lo permite una vez en Módulos).",
-          "en": "«Actualizar Search Console»: the module brings your searches itself, with no agent turn (an admin allows it once in Módulos)."
-        },
-        {
-          "es": "Con Artículos instalado, tu agente escribe el artículo de un objetivo y aquí se ve cómo va y cuándo se publica; «Tu web» dice qué objetivo cubre cada página. Sin Artículos, te dice qué instalar.",
-          "en": "With Artículos installed your agent writes a goal's article and you see where it stands and when it is published; «Tu web» says which goal covers each page. Without it, it says what to install."
-        },
-        {
-          "es": "Tus oportunidades de antes siguen ahí: las aprobadas y las que ya tenían artículo pasan a «En marcha» con su artículo como acción.",
-          "en": "Your earlier opportunities are kept: approved ones and those with an article become «En marcha», with the article as an action."
-        }
-      ],
       "by": "Orchestra",
       "price": "included",
       "icon": "radar",
@@ -4288,6 +4282,84 @@
           "caption": "A goal: its position, its next step, its actions and its evolution",
           "surface": "desk",
           "device": "desktop"
+        }
+      ],
+      "changelog": {
+        "1.2.1": [
+          {
+            "es": "Search Console solo lo lee el propio módulo, con el permiso de un administrador; tu agente ya no trae las búsquedas.",
+            "en": "Search Console is read only by the module itself, with an admin's yes; your agent no longer brings the searches."
+          }
+        ],
+        "1.2.0": [
+          {
+            "es": "Lee él mismo los tipos de artículo y los artículos publicados de Artículos: tu agente ya no los copia de un módulo a otro.",
+            "en": "It reads Artículos' article kinds and published articles itself: your agent no longer copies them between modules."
+          },
+          {
+            "es": "Necesita Artículos 0.9.0 o posterior para leer los tipos.",
+            "en": "Needs Artículos 0.9.0 or later to read the kinds."
+          }
+        ],
+        "1.1.4": [
+          {
+            "es": "«Tu web» vuelve a leer el sitemap de tu web cada lunes y cuando se publica el artículo de un objetivo (gratis).",
+            "en": "«Tu web» re-reads your site's sitemap every Monday and when a goal's article is published (free)."
+          }
+        ],
+        "1.1.3": [
+          {
+            "es": "Lo que publica un objetivo aparece en «Lo que tu web ya tiene» desde el primer día.",
+            "en": "What a goal publishes shows in «Lo que tu web ya tiene» from day one."
+          },
+          {
+            "es": "Si Search Console ya se ha leído y no hay nada para un objetivo, lo dice, en vez de pedir que se lea.",
+            "en": "When Search Console was read and has nothing for a goal, it says so instead of asking for a read."
+          }
+        ],
+        "1.1.2": [
+          {
+            "es": "Las fuentes de un objetivo enseñan la página real, no un enlace de redirección de Google, y los enlaces largos ya no se salen de su tarjeta.",
+            "en": "A goal's sources show the real page, not a Google redirect link, and long links stay inside their card."
+          }
+        ],
+        "1.1.1": [
+          {
+            "es": "Una acción vinculada dos veces al mismo objetivo ya no se cuenta dos veces.",
+            "en": "An action linked twice to the same goal no longer counts twice."
+          }
+        ],
+        "1.1.0": [
+          {
+            "es": "Una oportunidad es ahora un OBJETIVO: se trabaja hasta ganarlo. Su estado (En marcha, Subiendo, Ganado, Estancado) se lee de su posición cada semana, no se pone a mano.",
+            "en": "An opportunity is now a GOAL, worked on until it is won. Its state (under way, climbing, won, stalled) is read from its weekly position, never set by hand."
+          },
+          {
+            "es": "Cada objetivo tiene acciones (artículo, página de servicio, caso real, refresco, enlaces internos), su evolución con gráfico y línea de tiempo, y su «Siguiente paso».",
+            "en": "Each goal has actions (article, service page, real case, refresh, internal links), its evolution with a chart and a timeline, and its next step."
+          },
+          {
+            "es": "Navegación nueva, como una app: Resumen, Objetivos, Descubrir, Tu web y Competencia.",
+            "en": "New navigation, like an app: Resumen, Objetivos, Descubrir, Tu web and Competencia."
+          },
+          {
+            "es": "«Actualizar Search Console»: el módulo trae tus búsquedas él mismo, sin gastar un turno del agente (un administrador lo permite una vez en Módulos).",
+            "en": "«Actualizar Search Console»: the module brings your searches itself, with no agent turn (an admin allows it once in Módulos)."
+          },
+          {
+            "es": "Con Artículos instalado, tu agente escribe el artículo de un objetivo y aquí se ve cómo va y cuándo se publica; «Tu web» dice qué objetivo cubre cada página. Sin Artículos, te dice qué instalar.",
+            "en": "With Artículos installed your agent writes a goal's article and you see where it stands and when it is published; «Tu web» says which goal covers each page. Without it, it says what to install."
+          },
+          {
+            "es": "Tus oportunidades de antes siguen ahí: las aprobadas y las que ya tenían artículo pasan a «En marcha» con su artículo como acción.",
+            "en": "Your earlier opportunities are kept: approved ones and those with an article become «En marcha», with the article as an action."
+          }
+        ]
+      },
+      "whatsNew": [
+        {
+          "es": "Search Console solo lo lee el propio módulo, con el permiso de un administrador; tu agente ya no trae las búsquedas.",
+          "en": "Search Console is read only by the module itself, with an admin's yes; your agent no longer brings the searches."
         }
       ],
       "version": "1.2.1",
