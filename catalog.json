@@ -4212,6 +4212,32 @@
       "outwardVia": [
         "web"
       ],
+      "whatsNew": [
+        {
+          "es": "Cada pestaña dice qué es, de dónde salen los datos, qué cuesta actualizarla y qué hacer.",
+          "en": "Every tab says what it is, where its data comes from, what refreshing costs and what to do."
+        },
+        {
+          "es": "El paso principal de cada fila es un botón a la vista («Pasar a \"Por decidir\"», «Abrir», «Adoptar»).",
+          "en": "Each row's main step is a visible button."
+        },
+        {
+          "es": "Nueva pestaña «Oportunidades»: todas, por estado, con su siguiente paso.",
+          "en": "New «Oportunidades» tab: all of them, by state, with the next step."
+        },
+        {
+          "es": "Nueva pestaña «Tu web»: lo que ya tiene tu sitio, sus búsquedas y la oportunidad que lo cubre.",
+          "en": "New «Tu web» tab: what your site already has, its searches and the opportunity covering it."
+        },
+        {
+          "es": "El tipo de artículo ya no hay que elegirlo: lo elige el agente al redactar.",
+          "en": "The kind of article no longer has to be chosen: the drafting agent picks it."
+        },
+        {
+          "es": "Las webs oficiales y los subdominios de grandes marcas cuentan como resultados fuertes.",
+          "en": "Official sites and big brands' subdomains count as strong results."
+        }
+      ],
       "by": "Orchestra",
       "price": "included",
       "icon": "radar",
@@ -4223,7 +4249,7 @@
           "device": "desktop"
         }
       ],
-      "version": "1.0.0",
+      "version": "1.0.1",
       "tables": [
         "oportunidadesseo_oportunidades",
         "oportunidadesseo_casi",
@@ -4242,9 +4268,9 @@
         "oportunidadesseo_cache"
       ],
       "package": {
-        "path": "apps/oportunidadesseo/oportunidadesseo-1.0.0.tgz",
-        "sha256": "67fa1105db8bc290c7c3d21438c74c92ef7c8a4f50a189ccc13062838fc62086",
-        "size": 514863,
+        "path": "apps/oportunidadesseo/oportunidadesseo-1.0.1.tgz",
+        "sha256": "86bd3b2c9702a2261e9ff4b19b9d4881bcb41db675991bf0df79a3ba326e41d4",
+        "size": 522915,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
