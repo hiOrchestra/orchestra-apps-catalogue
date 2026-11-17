@@ -86,7 +86,7 @@
           "device": "desktop"
         }
       ],
-      "version": "0.8.1",
+      "version": "0.8.2",
       "tables": [
         "articles_articles",
         "articles_rules",
@@ -101,9 +101,9 @@
         "articles_links"
       ],
       "package": {
-        "path": "apps/articles/articles-0.8.1.tgz",
-        "sha256": "c66e5bb7125b8dcb51b66c86e3d8840c69957651452a857f357b9409cbdaa653",
-        "size": 637581,
+        "path": "apps/articles/articles-0.8.2.tgz",
+        "sha256": "1abd010338724b52a4e008383ec3de52ce5ba9a504d4c2c9be8e3905518c5239",
+        "size": 637631,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -4290,7 +4290,7 @@
           "device": "desktop"
         }
       ],
-      "version": "1.1.0",
+      "version": "1.1.1",
       "tables": [
         "oportunidadesseo_oportunidades",
         "oportunidadesseo_acciones",
@@ -4311,9 +4311,9 @@
         "oportunidadesseo_cache"
       ],
       "package": {
-        "path": "apps/oportunidadesseo/oportunidadesseo-1.1.0.tgz",
-        "sha256": "cccd497b6b45f6ee6db9eecd768de7e005ca6f55cbf78f36cd6dc038675d4551",
-        "size": 542998,
+        "path": "apps/oportunidadesseo/oportunidadesseo-1.1.1.tgz",
+        "sha256": "864181dbd8f5f670ea491f2d0d1ba1ad32a87dbc418374370c427de0b64d5084",
+        "size": 543286,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
