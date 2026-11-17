@@ -4142,6 +4142,237 @@
           ]
         }
       }
+    },
+    {
+      "id": "oportunidadesseo",
+      "name": "Oportunidades SEO",
+      "category": "Marketing",
+      "summary": "Why your website does not show up in Google, and the pages worth writing next.",
+      "promise": "See why your site does not appear in Google and which pages you can win, with real search data. Approve one and your agent drafts it.",
+      "like": "Ahrefs with an analyst",
+      "description": "A diagnosis of your website in Google, the searches your competitors win and you do not, what your audience searches for, and a short list of pages you can win. Each one becomes a brief your agent writes from.",
+      "brief": {
+        "user": "Whoever decides what the website publishes",
+        "frequency": "Weekly",
+        "questions": [
+          "Why does my website not show up?",
+          "Which pages can I win?",
+          "What do I write next?"
+        ],
+        "primaryAction": "Approve an opportunity",
+        "answers": [
+          "The diagnosis says what Google sees today and what is missing, in one paragraph.",
+          "Each page says why it is winnable: who is in the top 10 today and how strong they are.",
+          "Approved opportunities go to Artículos with their brief, questions and outline material."
+        ]
+      },
+      "how": [
+        {
+          "actor": "person",
+          "title": "You say who you are",
+          "text": "Your domain, your market, your audience and what you sell, in Ajustes."
+        },
+        {
+          "actor": "app",
+          "title": "It reads Google for you",
+          "text": "It asks DataForSEO what you rank for, what your competitors win and what your audience searches.",
+          "via": [
+            "web"
+          ]
+        },
+        {
+          "actor": "person",
+          "title": "You decide what gets written",
+          "text": "Approve an opportunity and the agent of your team drafts it in Artículos from its brief."
+        }
+      ],
+      "surfaces": [
+        {
+          "id": "oportunidadesseo",
+          "title": "Oportunidades SEO",
+          "audience": "members",
+          "role": "desk"
+        }
+      ],
+      "needs": {
+        "agent": {
+          "required": false,
+          "why": "The agent of the team that uses it does the work."
+        },
+        "integrations": [
+          {
+            "slug": "google_search_console",
+            "why": "Your site's real queries: the agent of your team brings them every week and stores them here."
+          }
+        ]
+      },
+      "outward": [
+        "Your domain, your competitors' domains and the keywords it looks up are sent to DataForSEO."
+      ],
+      "outwardVia": [
+        "web"
+      ],
+      "by": "Orchestra",
+      "price": "included",
+      "icon": "radar",
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/oportunidadesseo/screens/1-radar.png",
+          "caption": "The diagnosis: why the site does not show up, and the pages it can win",
+          "surface": "desk",
+          "device": "desktop"
+        }
+      ],
+      "version": "1.0.0",
+      "tables": [
+        "oportunidadesseo_oportunidades",
+        "oportunidadesseo_casi",
+        "oportunidadesseo_tipos",
+        "oportunidadesseo_paginas",
+        "oportunidadesseo_ajustes",
+        "oportunidadesseo_huecos",
+        "oportunidadesseo_ideas",
+        "oportunidadesseo_consultas",
+        "oportunidadesseo_descartes",
+        "oportunidadesseo_competidores",
+        "oportunidadesseo_novedades",
+        "oportunidadesseo_ia",
+        "oportunidadesseo_diagnosticos",
+        "oportunidadesseo_costes",
+        "oportunidadesseo_cache"
+      ],
+      "package": {
+        "path": "apps/oportunidadesseo/oportunidadesseo-1.0.0.tgz",
+        "sha256": "67fa1105db8bc290c7c3d21438c74c92ef7c8a4f50a189ccc13062838fc62086",
+        "size": 514863,
+        "installer": "install.js",
+        "manifest": "app.json",
+        "roles": [],
+        "connections": [
+          {
+            "id": "searchconsole",
+            "integration": "google_search_console",
+            "optional": true,
+            "why": "Las consultas reales del dominio de Ajustes: el agente del equipo las trae con su integración de Search Console y las guarda aquí."
+          }
+        ],
+        "variables": [],
+        "channels": [],
+        "processes": 0,
+        "skills": [],
+        "keys": [
+          {
+            "name": "DATAFORSEO_LOGIN",
+            "kind": "secret",
+            "label": {
+              "es": "Usuario de DataForSEO",
+              "en": "DataForSEO login"
+            },
+            "optional": false,
+            "why": {
+              "es": "Los datos de búsqueda (volumen, top 10 de Google, competidores) salen de DataForSEO; cada consulta se paga a DataForSEO y el módulo guarda lo que costó.",
+              "en": "Search data (volume, Google's top 10, competitors) comes from DataForSEO; each query is paid to DataForSEO and the module records what it cost."
+            },
+            "where": {
+              "es": "DataForSEO › API Access (app.dataforseo.com/api-access): el usuario y la contraseña de la API, no los de entrar en la web.",
+              "en": "DataForSEO › API Access (app.dataforseo.com/api-access): the API login and password, not the ones you sign in to the website with."
+            },
+            "hosts": [
+              "api.dataforseo.com"
+            ]
+          },
+          {
+            "name": "DATAFORSEO_PASSWORD",
+            "kind": "secret",
+            "label": {
+              "es": "Contraseña de DataForSEO",
+              "en": "DataForSEO password"
+            },
+            "optional": false,
+            "why": {
+              "es": "Los datos de búsqueda (volumen, top 10 de Google, competidores) salen de DataForSEO; cada consulta se paga a DataForSEO y el módulo guarda lo que costó.",
+              "en": "Search data (volume, Google's top 10, competitors) comes from DataForSEO; each query is paid to DataForSEO and the module records what it cost."
+            },
+            "where": {
+              "es": "DataForSEO › API Access (app.dataforseo.com/api-access): el usuario y la contraseña de la API, no los de entrar en la web.",
+              "en": "DataForSEO › API Access (app.dataforseo.com/api-access): the API login and password, not the ones you sign in to the website with."
+            },
+            "hosts": [
+              "api.dataforseo.com"
+            ]
+          },
+          {
+            "name": "OPENPAGERANK_KEY",
+            "kind": "secret",
+            "label": {
+              "es": "Clave de Open PageRank",
+              "en": "Open PageRank key"
+            },
+            "optional": true,
+            "why": {
+              "es": "Opcional y gratis: la autoridad (de 0 a 10) de cada web del top 10, para decir mejor si una página se puede ganar. Sin ella el módulo funciona igual, midiendo solo el tráfico.",
+              "en": "Optional and free: the authority (0 to 10) of each site in the top 10, to say better whether a page can be won. Without it the module works the same, measuring traffic only."
+            },
+            "where": {
+              "es": "keywordseverywhere.com/account/openpagerank › pestaña Open Page Rank › crear clave (empieza por opr_live_). Las claves gratuitas solo valen desde una dirección IP.",
+              "en": "keywordseverywhere.com/account/openpagerank › Open Page Rank tab › create a key (it starts with opr_live_). Free keys only work from one IP address."
+            },
+            "hosts": [
+              "openpagerank.keywordseverywhere.com"
+            ]
+          }
+        ]
+      },
+      "emoji": "🎯",
+      "i18n": {
+        "es": {
+          "name": "Oportunidades SEO",
+          "category": "Marketing",
+          "summary": "Por qué tu web no aparece en Google y qué páginas conviene escribir.",
+          "promise": "Mira por qué tu web no aparece en Google y qué páginas puedes ganar, con datos reales de búsqueda. Aprueba una y tu agente la redacta.",
+          "description": "Un diagnóstico de tu web en Google, las búsquedas que ganan tus competidores y tú no, lo que busca tu público y una lista corta de páginas que puedes ganar. Cada una se convierte en un brief del que escribe tu agente.",
+          "brief": {
+            "user": "Quien decide qué publica la web",
+            "frequency": "Cada semana",
+            "questions": [
+              "¿Por qué no aparece mi web?",
+              "¿Qué páginas puedo ganar?",
+              "¿Qué escribo ahora?"
+            ],
+            "primaryAction": "Aprobar una oportunidad",
+            "answers": [
+              "El diagnóstico dice en un párrafo qué ve Google hoy y qué falta.",
+              "Cada página dice por qué se puede ganar: quién está hoy en el top 10 y cuánta fuerza tiene.",
+              "Las aprobadas pasan a Artículos con su brief, sus preguntas y el material del esquema."
+            ]
+          },
+          "how": [
+            {
+              "title": "Dices quién eres",
+              "text": "Tu dominio, tu mercado, tu público y lo que vendes, en Ajustes."
+            },
+            {
+              "title": "Lee Google por ti",
+              "text": "Pregunta a DataForSEO por qué búsquedas sales, cuáles ganan tus competidores y qué busca tu público."
+            },
+            {
+              "title": "Tú decides qué se escribe",
+              "text": "Aprueba una oportunidad y el agente de tu equipo la redacta en Artículos con su brief."
+            }
+          ],
+          "outward": [
+            "Tu dominio, los de tus competidores y las keywords que consulta se envían a DataForSEO."
+          ],
+          "needs": {
+            "integrations": {
+              "google_search_console": "Las consultas reales de tu web: el agente de tu equipo las trae cada semana y las guarda aquí."
+            }
+          },
+          "captions": [
+            "El diagnóstico: por qué la web no aparece y qué páginas puede ganar"
+          ]
+        }
+      }
     }
   ]
 }
