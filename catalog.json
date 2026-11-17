@@ -4285,6 +4285,12 @@
         }
       ],
       "changelog": {
+        "1.2.3": [
+          {
+            "es": "En «Automatizaciones» cada tarea programada dice en una frase qué hace y cuánto cuesta.",
+            "en": "In Automations, each scheduled job says in one sentence what it does and what it costs."
+          }
+        ],
         "1.2.2": [
           {
             "es": "Trae tus búsquedas de Search Console él solo cada lunes, antes de revisar la posición de tus objetivos. Cada cuánto se cambia en los ajustes del módulo, en «Automatizaciones».",
@@ -4364,11 +4370,11 @@
       },
       "whatsNew": [
         {
-          "es": "Trae tus búsquedas de Search Console él solo cada lunes, antes de revisar la posición de tus objetivos. Cada cuánto se cambia en los ajustes del módulo, en «Automatizaciones».",
-          "en": "It brings your Search Console searches by itself every Monday, before checking your goals' positions. How often is changed in the module's settings, under Automations."
+          "es": "En «Automatizaciones» cada tarea programada dice en una frase qué hace y cuánto cuesta.",
+          "en": "In Automations, each scheduled job says in one sentence what it does and what it costs."
         }
       ],
-      "version": "1.2.2",
+      "version": "1.2.3",
       "tables": [
         "oportunidadesseo_oportunidades",
         "oportunidadesseo_acciones",
@@ -4389,9 +4395,9 @@
         "oportunidadesseo_cache"
       ],
       "package": {
-        "path": "apps/oportunidadesseo/oportunidadesseo-1.2.2.tgz",
-        "sha256": "c423e766321089df984bca6bd184a3a3daf521156a24ac94fe7d236e6ef54e75",
-        "size": 544689,
+        "path": "apps/oportunidadesseo/oportunidadesseo-1.2.3.tgz",
+        "sha256": "bb5a344c5373ba36d97f9dd787eae18d28f2100620e015b7de4d7cbdb286c370",
+        "size": 544981,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
