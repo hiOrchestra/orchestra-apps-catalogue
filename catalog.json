@@ -4285,6 +4285,12 @@
         }
       ],
       "changelog": {
+        "1.2.4": [
+          {
+            "es": "Tu agente entiende mejor el módulo: puede explicarte cómo funciona (descubrir, decidir, actuar, publicar, seguir) y cómo va cada objetivo.",
+            "en": "Your agent understands the module better: it can explain how it works (discover, decide, act, publish, track) and how each goal is going."
+          }
+        ],
         "1.2.3": [
           {
             "es": "En «Automatizaciones» cada tarea programada dice en una frase qué hace y cuánto cuesta.",
@@ -4370,11 +4376,11 @@
       },
       "whatsNew": [
         {
-          "es": "En «Automatizaciones» cada tarea programada dice en una frase qué hace y cuánto cuesta.",
-          "en": "In Automations, each scheduled job says in one sentence what it does and what it costs."
+          "es": "Tu agente entiende mejor el módulo: puede explicarte cómo funciona (descubrir, decidir, actuar, publicar, seguir) y cómo va cada objetivo.",
+          "en": "Your agent understands the module better: it can explain how it works (discover, decide, act, publish, track) and how each goal is going."
         }
       ],
-      "version": "1.2.3",
+      "version": "1.2.4",
       "tables": [
         "oportunidadesseo_oportunidades",
         "oportunidadesseo_acciones",
@@ -4395,9 +4401,9 @@
         "oportunidadesseo_cache"
       ],
       "package": {
-        "path": "apps/oportunidadesseo/oportunidadesseo-1.2.3.tgz",
-        "sha256": "bb5a344c5373ba36d97f9dd787eae18d28f2100620e015b7de4d7cbdb286c370",
-        "size": 544981,
+        "path": "apps/oportunidadesseo/oportunidadesseo-1.2.4.tgz",
+        "sha256": "6be3a6ee5cd9c2ee351ece300ac99bb68edc4dbcb800b19c17356b75e6edbb6f",
+        "size": 545440,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
