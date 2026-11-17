@@ -4303,6 +4303,12 @@
         }
       ],
       "changelog": {
+        "1.6.0": [
+          {
+            "es": "Avisa al momento: cuando añades una acción que se hace en Artículos, el agente de tu equipo se pone con ella enseguida, sin esperar a la próxima comprobación.",
+            "en": "It tells right away: when you add an action done in Artículos, your team's agent starts on it at once, without waiting for the next check."
+          }
+        ],
         "1.5.2": [
           {
             "es": "Pantallas más claras y ordenadas: pestañas, filtros, listas y cifras con mejor jerarquía, y una guía «Cómo funciona» más cuidada.",
@@ -4446,11 +4452,11 @@
       },
       "whatsNew": [
         {
-          "es": "Pantallas más claras y ordenadas: pestañas, filtros, listas y cifras con mejor jerarquía, y una guía «Cómo funciona» más cuidada.",
-          "en": "Clearer, tidier screens: tabs, filters, lists and figures with better hierarchy, and a more polished «Cómo funciona» guide."
+          "es": "Avisa al momento: cuando añades una acción que se hace en Artículos, el agente de tu equipo se pone con ella enseguida, sin esperar a la próxima comprobación.",
+          "en": "It tells right away: when you add an action done in Artículos, your team's agent starts on it at once, without waiting for the next check."
         }
       ],
-      "version": "1.5.2",
+      "version": "1.6.0",
       "tables": [
         "oportunidadesseo_oportunidades",
         "oportunidadesseo_acciones",
@@ -4471,9 +4477,9 @@
         "oportunidadesseo_cache"
       ],
       "package": {
-        "path": "apps/oportunidadesseo/oportunidadesseo-1.5.2.tgz",
-        "sha256": "02affe77a370bdc300de2e5eb52b2690cef14bbf6a9f8e6f47395aabc5b78269",
-        "size": 555718,
+        "path": "apps/oportunidadesseo/oportunidadesseo-1.6.0.tgz",
+        "sha256": "fbdd6cae64a319beafb6a9a9fe7369db669dd1b6ebdcfa816e98f1ab276b30c3",
+        "size": 556913,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
