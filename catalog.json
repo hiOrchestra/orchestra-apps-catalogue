@@ -4309,6 +4309,12 @@
         }
       ],
       "changelog": {
+        "1.7.1": [
+          {
+            "es": "Cuando publicas en Artículos, Oportunidades lo ve al momento: la acción queda hecha y el objetivo empieza a medirse.",
+            "en": "When you publish in Artículos, Oportunidades sees it at once: the action is done and the goal starts being measured."
+          }
+        ],
         "1.7.0": [
           {
             "es": "Nuevo diseño: un resumen visual (tu diagnóstico, dónde están tus objetivos en Google, en qué punto está cada uno y lo que te toca), una barra lateral para moverte, la subida de cada objetivo por páginas de Google y un buzón para decidir en Descubrir.",
@@ -4464,11 +4470,11 @@
       },
       "whatsNew": [
         {
-          "es": "Nuevo diseño: un resumen visual (tu diagnóstico, dónde están tus objetivos en Google, en qué punto está cada uno y lo que te toca), una barra lateral para moverte, la subida de cada objetivo por páginas de Google y un buzón para decidir en Descubrir.",
-          "en": "New design: a visual summary (your diagnosis, where your goals are in Google, where each one stands and what is yours to do), a sidebar to move around, each goal's climb through Google's pages and an inbox to decide in Discover."
+          "es": "Cuando publicas en Artículos, Oportunidades lo ve al momento: la acción queda hecha y el objetivo empieza a medirse.",
+          "en": "When you publish in Artículos, Oportunidades sees it at once: the action is done and the goal starts being measured."
         }
       ],
-      "version": "1.7.0",
+      "version": "1.7.1",
       "tables": [
         "oportunidadesseo_oportunidades",
         "oportunidadesseo_acciones",
@@ -4489,9 +4495,9 @@
         "oportunidadesseo_cache"
       ],
       "package": {
-        "path": "apps/oportunidadesseo/oportunidadesseo-1.7.0.tgz",
-        "sha256": "faa64b8ab05fa43b5ff814d6db85357dc6ac91025ff453f5cc13a5f4fdef0335",
-        "size": 637734,
+        "path": "apps/oportunidadesseo/oportunidadesseo-1.7.1.tgz",
+        "sha256": "51d9bc77cc63e78ddbdfd690fabccbd3d1750aa7139336d4d11d736f7ef28759",
+        "size": 637850,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
