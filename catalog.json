@@ -69,6 +69,12 @@
         }
       ],
       "changelog": {
+        "0.10.1": [
+          {
+            "es": "Cabeceras más limpias: dos botones y el resto en «Más».",
+            "en": "Tidier headers: two buttons, the rest under «Más»."
+          }
+        ],
         "0.10.0": [
           {
             "es": "«Cómo funciona»: una guía paso a paso del módulo, de la idea al artículo publicado, con los ajustes y lo que hace solo.",
@@ -108,11 +114,11 @@
       },
       "whatsNew": [
         {
-          "es": "«Cómo funciona»: una guía paso a paso del módulo, de la idea al artículo publicado, con los ajustes y lo que hace solo.",
-          "en": "«Cómo funciona»: a step-by-step guide to the module, from idea to published article, with the settings and what it does by itself."
+          "es": "Cabeceras más limpias: dos botones y el resto en «Más».",
+          "en": "Tidier headers: two buttons, the rest under «Más»."
         }
       ],
-      "version": "0.10.0",
+      "version": "0.10.1",
       "tables": [
         "articles_articles",
         "articles_rules",
@@ -127,9 +133,9 @@
         "articles_links"
       ],
       "package": {
-        "path": "apps/articles/articles-0.10.0.tgz",
-        "sha256": "1c4ff162889df9b5cf2a2fbc35c1660726eaf6cbbc51797134cd5bdd37f9587f",
-        "size": 639494,
+        "path": "apps/articles/articles-0.10.1.tgz",
+        "sha256": "d296308e48ce3949377df1d59f5c2e1aabda94048216f659284abf728427e361",
+        "size": 639555,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -4291,6 +4297,12 @@
         }
       ],
       "changelog": {
+        "1.5.1": [
+          {
+            "es": "Cabeceras más limpias: una línea bajo el título y dos botones; el resto, en «Más».",
+            "en": "Tidier headers: one line under the title and two buttons; the rest under «Más»."
+          }
+        ],
         "1.5.0": [
           {
             "es": "«Cómo funciona»: una guía paso a paso del módulo, que te enseña cada pestaña, los ajustes y lo que hace solo cada lunes. Las explicaciones de cada pestaña quedan plegadas.",
@@ -4422,11 +4434,11 @@
       },
       "whatsNew": [
         {
-          "es": "«Cómo funciona»: una guía paso a paso del módulo, que te enseña cada pestaña, los ajustes y lo que hace solo cada lunes. Las explicaciones de cada pestaña quedan plegadas.",
-          "en": "«Cómo funciona»: a step-by-step guide to the module, showing each tab, the settings and what it does by itself every Monday. Each tab's explanation is folded."
+          "es": "Cabeceras más limpias: una línea bajo el título y dos botones; el resto, en «Más».",
+          "en": "Tidier headers: one line under the title and two buttons; the rest under «Más»."
         }
       ],
-      "version": "1.5.0",
+      "version": "1.5.1",
       "tables": [
         "oportunidadesseo_oportunidades",
         "oportunidadesseo_acciones",
@@ -4447,9 +4459,9 @@
         "oportunidadesseo_cache"
       ],
       "package": {
-        "path": "apps/oportunidadesseo/oportunidadesseo-1.5.0.tgz",
-        "sha256": "9863464328e6075ba5b01008add6e0d8030c0741cd9bb144812ae32922de6518",
-        "size": 553061,
+        "path": "apps/oportunidadesseo/oportunidadesseo-1.5.1.tgz",
+        "sha256": "cf83c8c14b60d241da811934ce1c7d9d2f69a73d48c64a15943d79acfa261643",
+        "size": 552975,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
