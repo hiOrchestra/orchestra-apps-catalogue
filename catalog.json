@@ -59,24 +59,20 @@
       "outwardVia": [],
       "whatsNew": [
         {
-          "es": "Estados nuevos: Idea → Borrador → En revisión → Lista → Publicada, y Archivada. Un artículo sin texto es una «Idea» y pasa solo a «Borrador» con su primer texto.",
-          "en": "New states: Idea → Draft → In review → Ready → Published, and Archived. An article with no text is an idea and becomes a draft with its first text."
+          "es": "Nuevo destino de publicación «API de la web» (recomendado): tu web recibe el artículo y lo publica ella. Orchestra ya no necesita acceso al código de tu web.",
+          "en": "New publishing destination, the website's API (recommended): your site receives the article and publishes it itself. Orchestra no longer needs access to your site's code."
         },
         {
-          "es": "«Pasar a revisión» no se puede pulsar hasta que el artículo tiene texto, y dice por qué.",
-          "en": "«Pasar a revisión» cannot be pressed until the article has text, and says why."
+          "es": "La clave de publicación se guarda solo para la dirección de tu web.",
+          "en": "The publishing key is saved for your website's address only."
         },
         {
-          "es": "Un artículo sin texto ya no dice «El texto cumple»: dice «Aún no hay texto que revisar» y solo cuenta lo que falta del SEO.",
-          "en": "An article with no text no longer says the text passes: it says there is nothing to review yet and counts only what the SEO package lacks."
+          "es": "Publicar por GitHub sigue ahí, marcado como «Acceso al repositorio (no recomendado)».",
+          "en": "Publishing through GitHub is still there, marked as repository access (not recommended)."
         },
         {
-          "es": "Cada pestaña de la Mesa de redacción dice qué es y qué hacer, y cada fila enseña su siguiente paso como botón («Escribir», «Revisar», «Publicar en la web»).",
-          "en": "Every tab of the newsroom says what it is and what to do, and each row shows its next step as a button."
-        },
-        {
-          "es": "Las archivadas se ven con el filtro «Estado: Archivada» y se recuperan desde ahí.",
-          "en": "Archived articles show with the state filter and are brought back from there."
+          "es": "Otros módulos pueden leer qué artículos están publicados (Oportunidades SEO lo usa para decir qué objetivo cubre cada uno).",
+          "en": "Other modules can read which articles are published (Oportunidades SEO uses it to say which goal each one covers)."
         }
       ],
       "by": "Orchestra",
@@ -90,7 +86,7 @@
           "device": "desktop"
         }
       ],
-      "version": "0.8.0",
+      "version": "0.8.1",
       "tables": [
         "articles_articles",
         "articles_rules",
@@ -105,9 +101,9 @@
         "articles_links"
       ],
       "package": {
-        "path": "apps/articles/articles-0.8.0.tgz",
-        "sha256": "823fc929da6b2b063c387584773a2302f44e930af164acb2b5b188bbabd6ed73",
-        "size": 635196,
+        "path": "apps/articles/articles-0.8.1.tgz",
+        "sha256": "c66e5bb7125b8dcb51b66c86e3d8840c69957651452a857f357b9409cbdaa653",
+        "size": 637581,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -117,6 +113,23 @@
         "processes": 0,
         "skills": [],
         "keys": [
+          {
+            "name": "SITE_PUBLISH_KEY",
+            "kind": "secret",
+            "label": {
+              "es": "Clave de publicación de la web",
+              "en": "The website's publishing key"
+            },
+            "optional": true,
+            "why": {
+              "es": "Para publicar los artículos aprobados con la API de la web. Solo hace falta si se publica con «API de la web». Solo se envía a la dirección de la web de Ajustes › Publicación.",
+              "en": "To publish approved articles through the website's API. Only needed when publishing with the website's API. It is only ever sent to the website address in Settings › Publishing."
+            },
+            "where": {
+              "es": "La da quien lleva la web: es el valor de ORCHESTRA_PUBLISH_KEY en la configuración de la web. Escribe antes la dirección de la web en Ajustes › Publicación.",
+              "en": "Whoever runs the site gives it: it is the value of ORCHESTRA_PUBLISH_KEY in the site's configuration. Write the website address in Settings › Publishing first."
+            }
+          },
           {
             "name": "GITHUB_TOKEN",
             "kind": "secret",
@@ -4169,23 +4182,23 @@
       "id": "oportunidadesseo",
       "name": "Oportunidades SEO",
       "category": "Marketing",
-      "summary": "Why your website does not show up in Google, and the pages worth writing next.",
-      "promise": "See why your site does not appear in Google and which pages you can win, with real search data. Approve one and your agent drafts it.",
+      "summary": "Why your website does not show up in Google, the searches worth winning, and how each one is going.",
+      "promise": "See which Google searches your site can win, with real data. Approve one as a goal: your agent works on it and you watch it climb week by week.",
       "like": "Ahrefs with an analyst",
-      "description": "A diagnosis of your website in Google, the searches your competitors win and you do not, what your audience searches for, and a short list of pages you can win. Each one becomes a brief your agent writes from.",
+      "description": "A diagnosis of your website in Google, the searches your competitors win and you do not, what your audience searches for, and a short list of pages you can win. Each one becomes a goal: actions your agent carries out, its position measured every week, and the next step when it stalls.",
       "brief": {
         "user": "Whoever decides what the website publishes",
         "frequency": "Weekly",
         "questions": [
           "Why does my website not show up?",
-          "Which pages can I win?",
-          "What do I write next?"
+          "Which searches can I win?",
+          "How is each goal going, and what is next?"
         ],
-        "primaryAction": "Approve an opportunity",
+        "primaryAction": "Approve a goal",
         "answers": [
           "The diagnosis says what Google sees today and what is missing, in one paragraph.",
-          "Each page says why it is winnable: who is in the top 10 today and how strong they are.",
-          "Approved opportunities go to Artículos with their brief, questions and outline material."
+          "Each goal says why it is winnable: who is in the top 10 today and how strong they are.",
+          "Each goal shows its position week by week, what was done for it and its next step; Resumen is Monday's brief on screen."
         ]
       },
       "how": [
@@ -4236,28 +4249,28 @@
       ],
       "whatsNew": [
         {
-          "es": "Cada pestaña dice qué es, de dónde salen los datos, qué cuesta actualizarla y qué hacer.",
-          "en": "Every tab says what it is, where its data comes from, what refreshing costs and what to do."
+          "es": "Una oportunidad es ahora un OBJETIVO: se trabaja hasta ganarlo. Su estado (En marcha, Subiendo, Ganado, Estancado) se lee de su posición cada semana, no se pone a mano.",
+          "en": "An opportunity is now a GOAL, worked on until it is won. Its state (under way, climbing, won, stalled) is read from its weekly position, never set by hand."
         },
         {
-          "es": "El paso principal de cada fila es un botón a la vista («Pasar a \"Por decidir\"», «Abrir», «Adoptar»).",
-          "en": "Each row's main step is a visible button."
+          "es": "Cada objetivo tiene acciones (artículo, página de servicio, caso real, refresco, enlaces internos), su evolución con gráfico y línea de tiempo, y su «Siguiente paso».",
+          "en": "Each goal has actions (article, service page, real case, refresh, internal links), its evolution with a chart and a timeline, and its next step."
         },
         {
-          "es": "Nueva pestaña «Oportunidades»: todas, por estado, con su siguiente paso.",
-          "en": "New «Oportunidades» tab: all of them, by state, with the next step."
+          "es": "Navegación nueva, como una app: Resumen, Objetivos, Descubrir, Tu web y Competencia.",
+          "en": "New navigation, like an app: Resumen, Objetivos, Descubrir, Tu web and Competencia."
         },
         {
-          "es": "Nueva pestaña «Tu web»: lo que ya tiene tu sitio, sus búsquedas y la oportunidad que lo cubre.",
-          "en": "New «Tu web» tab: what your site already has, its searches and the opportunity covering it."
+          "es": "«Actualizar Search Console»: el módulo trae tus búsquedas él mismo, sin gastar un turno del agente (un administrador lo permite una vez en Módulos).",
+          "en": "«Actualizar Search Console»: the module brings your searches itself, with no agent turn (an admin allows it once in Módulos)."
         },
         {
-          "es": "El tipo de artículo ya no hay que elegirlo: lo elige el agente al redactar.",
-          "en": "The kind of article no longer has to be chosen: the drafting agent picks it."
+          "es": "Con Artículos instalado, tu agente escribe el artículo de un objetivo y aquí se ve cómo va y cuándo se publica; «Tu web» dice qué objetivo cubre cada página. Sin Artículos, te dice qué instalar.",
+          "en": "With Artículos installed your agent writes a goal's article and you see where it stands and when it is published; «Tu web» says which goal covers each page. Without it, it says what to install."
         },
         {
-          "es": "Las webs oficiales y los subdominios de grandes marcas cuentan como resultados fuertes.",
-          "en": "Official sites and big brands' subdomains count as strong results."
+          "es": "Tus oportunidades de antes siguen ahí: las aprobadas y las que ya tenían artículo pasan a «En marcha» con su artículo como acción.",
+          "en": "Your earlier opportunities are kept: approved ones and those with an article become «En marcha», with the article as an action."
         }
       ],
       "by": "Orchestra",
@@ -4265,15 +4278,23 @@
       "icon": "radar",
       "screenshots": [
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/oportunidadesseo/screens/1-radar.png",
-          "caption": "The diagnosis: why the site does not show up, and the pages it can win",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/oportunidadesseo/screens/1-resumen.png",
+          "caption": "Resumen: the diagnosis in one line, your goals at a glance and what happened this week",
+          "surface": "desk",
+          "device": "desktop"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/oportunidadesseo/screens/2-objetivo.png",
+          "caption": "A goal: its position, its next step, its actions and its evolution",
           "surface": "desk",
           "device": "desktop"
         }
       ],
-      "version": "1.0.1",
+      "version": "1.1.0",
       "tables": [
         "oportunidadesseo_oportunidades",
+        "oportunidadesseo_acciones",
+        "oportunidadesseo_evolucion",
         "oportunidadesseo_casi",
         "oportunidadesseo_tipos",
         "oportunidadesseo_paginas",
@@ -4290,9 +4311,9 @@
         "oportunidadesseo_cache"
       ],
       "package": {
-        "path": "apps/oportunidadesseo/oportunidadesseo-1.0.1.tgz",
-        "sha256": "86bd3b2c9702a2261e9ff4b19b9d4881bcb41db675991bf0df79a3ba326e41d4",
-        "size": 522915,
+        "path": "apps/oportunidadesseo/oportunidadesseo-1.1.0.tgz",
+        "sha256": "cccd497b6b45f6ee6db9eecd768de7e005ca6f55cbf78f36cd6dc038675d4551",
+        "size": 542998,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -4301,7 +4322,7 @@
             "id": "searchconsole",
             "integration": "google_search_console",
             "optional": true,
-            "why": "Las consultas reales del dominio de Ajustes: el agente del equipo las trae con su integración de Search Console y las guarda aquí."
+            "why": "Las consultas reales del dominio de Ajustes: el módulo las lee él mismo con la conexión de Search Console del agente del equipo (un administrador lo permite en Módulos), o las trae el agente."
           }
         ],
         "variables": [],
@@ -4376,22 +4397,22 @@
         "es": {
           "name": "Oportunidades SEO",
           "category": "Marketing",
-          "summary": "Por qué tu web no aparece en Google y qué páginas conviene escribir.",
-          "promise": "Mira por qué tu web no aparece en Google y qué páginas puedes ganar, con datos reales de búsqueda. Aprueba una y tu agente la redacta.",
-          "description": "Un diagnóstico de tu web en Google, las búsquedas que ganan tus competidores y tú no, lo que busca tu público y una lista corta de páginas que puedes ganar. Cada una se convierte en un brief del que escribe tu agente.",
+          "summary": "Por qué tu web no aparece en Google, qué búsquedas conviene ganar y cómo va cada una.",
+          "promise": "Mira qué búsquedas de Google puede ganar tu web, con datos reales. Apruébala como objetivo: tu agente la trabaja y ves cómo sube cada semana.",
+          "description": "Un diagnóstico de tu web en Google, las búsquedas que gana tu competencia y tú no, lo que busca tu público y una lista corta de páginas que puedes ganar. Cada una se convierte en un objetivo: acciones que hace tu agente, su posición medida cada semana y el siguiente paso cuando se para.",
           "brief": {
             "user": "Quien decide qué publica la web",
             "frequency": "Cada semana",
             "questions": [
               "¿Por qué no aparece mi web?",
-              "¿Qué páginas puedo ganar?",
-              "¿Qué escribo ahora?"
+              "¿Qué búsquedas puedo ganar?",
+              "¿Cómo va cada objetivo y qué toca ahora?"
             ],
-            "primaryAction": "Aprobar una oportunidad",
+            "primaryAction": "Aprobar un objetivo",
             "answers": [
-              "El diagnóstico dice en un párrafo qué ve Google hoy y qué falta.",
-              "Cada página dice por qué se puede ganar: quién está hoy en el top 10 y cuánta fuerza tiene.",
-              "Las aprobadas pasan a Artículos con su brief, sus preguntas y el material del esquema."
+              "El diagnóstico dice qué ve Google hoy y qué falta, en un párrafo.",
+              "Cada objetivo dice por qué se puede ganar: quién está hoy en el top 10 y qué fuerza tiene.",
+              "Cada objetivo enseña su posición semana a semana, lo que se ha hecho y su siguiente paso; el Resumen es el informe del lunes en pantalla."
             ]
           },
           "how": [
@@ -4417,7 +4438,8 @@
             }
           },
           "captions": [
-            "El diagnóstico: por qué la web no aparece y qué páginas puede ganar"
+            "Resumen: el diagnóstico en una frase, tus objetivos de un vistazo y lo que ha pasado esta semana",
+            "Un objetivo: su posición, su siguiente paso, sus acciones y su evolución"
           ]
         }
       }
