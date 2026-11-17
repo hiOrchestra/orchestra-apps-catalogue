@@ -69,6 +69,12 @@
         }
       ],
       "changelog": {
+        "0.10.2": [
+          {
+            "es": "Pantallas más claras y ordenadas: pestañas, filtros, listas y cifras con mejor jerarquía, y una guía «Cómo funciona» más cuidada.",
+            "en": "Clearer, tidier screens: tabs, filters, lists and figures with better hierarchy, and a more polished «Cómo funciona» guide."
+          }
+        ],
         "0.10.1": [
           {
             "es": "Cabeceras más limpias: dos botones y el resto en «Más».",
@@ -114,11 +120,11 @@
       },
       "whatsNew": [
         {
-          "es": "Cabeceras más limpias: dos botones y el resto en «Más».",
-          "en": "Tidier headers: two buttons, the rest under «Más»."
+          "es": "Pantallas más claras y ordenadas: pestañas, filtros, listas y cifras con mejor jerarquía, y una guía «Cómo funciona» más cuidada.",
+          "en": "Clearer, tidier screens: tabs, filters, lists and figures with better hierarchy, and a more polished «Cómo funciona» guide."
         }
       ],
-      "version": "0.10.1",
+      "version": "0.10.2",
       "tables": [
         "articles_articles",
         "articles_rules",
@@ -133,9 +139,9 @@
         "articles_links"
       ],
       "package": {
-        "path": "apps/articles/articles-0.10.1.tgz",
-        "sha256": "d296308e48ce3949377df1d59f5c2e1aabda94048216f659284abf728427e361",
-        "size": 639555,
+        "path": "apps/articles/articles-0.10.2.tgz",
+        "sha256": "998a28f6a40e6a007a787342b01ebd704e6a679bc4b59bf488ceb4fd34733b2e",
+        "size": 642241,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -4297,6 +4303,12 @@
         }
       ],
       "changelog": {
+        "1.5.2": [
+          {
+            "es": "Pantallas más claras y ordenadas: pestañas, filtros, listas y cifras con mejor jerarquía, y una guía «Cómo funciona» más cuidada.",
+            "en": "Clearer, tidier screens: tabs, filters, lists and figures with better hierarchy, and a more polished «Cómo funciona» guide."
+          }
+        ],
         "1.5.1": [
           {
             "es": "Cabeceras más limpias: una línea bajo el título y dos botones; el resto, en «Más».",
@@ -4434,11 +4446,11 @@
       },
       "whatsNew": [
         {
-          "es": "Cabeceras más limpias: una línea bajo el título y dos botones; el resto, en «Más».",
-          "en": "Tidier headers: one line under the title and two buttons; the rest under «Más»."
+          "es": "Pantallas más claras y ordenadas: pestañas, filtros, listas y cifras con mejor jerarquía, y una guía «Cómo funciona» más cuidada.",
+          "en": "Clearer, tidier screens: tabs, filters, lists and figures with better hierarchy, and a more polished «Cómo funciona» guide."
         }
       ],
-      "version": "1.5.1",
+      "version": "1.5.2",
       "tables": [
         "oportunidadesseo_oportunidades",
         "oportunidadesseo_acciones",
@@ -4459,9 +4471,9 @@
         "oportunidadesseo_cache"
       ],
       "package": {
-        "path": "apps/oportunidadesseo/oportunidadesseo-1.5.1.tgz",
-        "sha256": "cf83c8c14b60d241da811934ce1c7d9d2f69a73d48c64a15943d79acfa261643",
-        "size": 552975,
+        "path": "apps/oportunidadesseo/oportunidadesseo-1.5.2.tgz",
+        "sha256": "02affe77a370bdc300de2e5eb52b2690cef14bbf6a9f8e6f47395aabc5b78269",
+        "size": 555718,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
