@@ -69,6 +69,16 @@
         }
       ],
       "changelog": {
+        "0.11.1": [
+          {
+            "es": "Nuevo aspecto, más sobrio y como el resto de tu oficina: paneles blancos sobre un fondo neutro, y el color solo donde significa algo.",
+            "en": "A new, quieter look, like the rest of your office: white panels on a neutral ground, and colour only where it means something."
+          },
+          {
+            "es": "«Datos» ya no está en la barra de arriba: es un botón pequeño junto a los ajustes (en el móvil, dentro del menú).",
+            "en": "«Datos» is no longer in the top bar: it is a small button beside the settings (on a phone, inside the menu)."
+          }
+        ],
         "0.11.0": [
           {
             "es": "Nuevo diseño: los estados de tus artículos como un camino que filtra la redacción, lo que te toca a ti primero y el estado de cada artículo encima del editor.",
@@ -126,11 +136,15 @@
       },
       "whatsNew": [
         {
-          "es": "Nuevo diseño: los estados de tus artículos como un camino que filtra la redacción, lo que te toca a ti primero y el estado de cada artículo encima del editor.",
-          "en": "New design: your articles' states as a path that filters the newsroom, what is yours to do first, and each article's state above the editor."
+          "es": "Nuevo aspecto, más sobrio y como el resto de tu oficina: paneles blancos sobre un fondo neutro, y el color solo donde significa algo.",
+          "en": "A new, quieter look, like the rest of your office: white panels on a neutral ground, and colour only where it means something."
+        },
+        {
+          "es": "«Datos» ya no está en la barra de arriba: es un botón pequeño junto a los ajustes (en el móvil, dentro del menú).",
+          "en": "«Datos» is no longer in the top bar: it is a small button beside the settings (on a phone, inside the menu)."
         }
       ],
-      "version": "0.11.0",
+      "version": "0.11.1",
       "tables": [
         "articles_articles",
         "articles_rules",
@@ -145,9 +159,9 @@
         "articles_links"
       ],
       "package": {
-        "path": "apps/articles/articles-0.11.0.tgz",
-        "sha256": "9b79981303adf92b3ca9fe443ba20eadc03c36c811132a6d90990dd71e94be58",
-        "size": 716257,
+        "path": "apps/articles/articles-0.11.1.tgz",
+        "sha256": "ea5c88f324875068f4db806166b80750f694e7396e433482474689c77239d497",
+        "size": 649713,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -4309,6 +4323,24 @@
         }
       ],
       "changelog": {
+        "1.8.0": [
+          {
+            "es": "Nuevo aspecto, más sobrio y como el resto de tu oficina: paneles blancos sobre un fondo neutro, y el color solo donde significa algo (verde si sube o está ganado, teja si está estancado o te toca a ti).",
+            "en": "A new, quieter look, like the rest of your office: white panels on a neutral ground, and colour only where it means something (green when it is rising or won, clay when it is stalled or your turn)."
+          },
+          {
+            "es": "«Datos» ya no está en la barra de arriba: es la última entrada de la lista de la izquierda, una más.",
+            "en": "«Datos» is no longer in the top bar: it is the last entry of the list on the left, one more place."
+          },
+          {
+            "es": "En el móvil: una barra de una línea con un menú, y una fila que dice dónde estás y abre la lista de lugares.",
+            "en": "On a phone: a one-line bar with a menu, and one row that says where you are and opens the list of places."
+          },
+          {
+            "es": "Ajustes más claros: los campos agrupados por tema, con un nombre corto y una línea que los explica.",
+            "en": "Clearer settings: fields grouped by subject, each with a short name and a line that explains it."
+          }
+        ],
         "1.7.2": [
           {
             "es": "La clave de Open PageRank explica que hace falta un plan de pago: las gratuitas solo valen desde una dirección IP, y Orchestra comparte la suya.",
@@ -4476,11 +4508,23 @@
       },
       "whatsNew": [
         {
-          "es": "La clave de Open PageRank explica que hace falta un plan de pago: las gratuitas solo valen desde una dirección IP, y Orchestra comparte la suya.",
-          "en": "The Open PageRank key explains that a paid plan is needed: free keys only work from one IP address, and Orchestra shares its own."
+          "es": "Nuevo aspecto, más sobrio y como el resto de tu oficina: paneles blancos sobre un fondo neutro, y el color solo donde significa algo (verde si sube o está ganado, teja si está estancado o te toca a ti).",
+          "en": "A new, quieter look, like the rest of your office: white panels on a neutral ground, and colour only where it means something (green when it is rising or won, clay when it is stalled or your turn)."
+        },
+        {
+          "es": "«Datos» ya no está en la barra de arriba: es la última entrada de la lista de la izquierda, una más.",
+          "en": "«Datos» is no longer in the top bar: it is the last entry of the list on the left, one more place."
+        },
+        {
+          "es": "En el móvil: una barra de una línea con un menú, y una fila que dice dónde estás y abre la lista de lugares.",
+          "en": "On a phone: a one-line bar with a menu, and one row that says where you are and opens the list of places."
+        },
+        {
+          "es": "Ajustes más claros: los campos agrupados por tema, con un nombre corto y una línea que los explica.",
+          "en": "Clearer settings: fields grouped by subject, each with a short name and a line that explains it."
         }
       ],
-      "version": "1.7.2",
+      "version": "1.8.0",
       "tables": [
         "oportunidadesseo_oportunidades",
         "oportunidadesseo_acciones",
@@ -4501,9 +4545,9 @@
         "oportunidadesseo_cache"
       ],
       "package": {
-        "path": "apps/oportunidadesseo/oportunidadesseo-1.7.2.tgz",
-        "sha256": "dd48580cbc6f0a8041f3446520841122110dfd67199b6c845fe8bf5526e7823f",
-        "size": 638000,
+        "path": "apps/oportunidadesseo/oportunidadesseo-1.8.0.tgz",
+        "sha256": "0434d0640812a134602687164cf475e486962b92bb1166f2223a4b02544060bc",
+        "size": 584140,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
