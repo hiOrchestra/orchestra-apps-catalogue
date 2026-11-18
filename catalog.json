@@ -69,6 +69,30 @@
         }
       ],
       "changelog": {
+        "0.12.1": [
+          {
+            "es": "Si algo no se puede guardar, revisar o crear, te lo dice un aviso de la oficina, y donde ocurrió queda una línea discreta con «Reintentar».",
+            "en": "If something cannot be saved, reviewed or created, an office notice tells you, and where it happened there is a quiet line with «Reintentar»."
+          },
+          {
+            "es": "«Artículo nuevo»: un solo botón principal y «Cancelar» discreto.",
+            "en": "«Artículo nuevo»: one main button and a quiet «Cancelar»."
+          }
+        ],
+        "0.12.0": [
+          {
+            "es": "Ves a tu agente trabajar desde el primer momento: la mesa de redacción dice «Marta está escribiendo un artículo…» y el artículo aparece en cuanto empieza, antes de tener texto.",
+            "en": "You see your agent at work from the first moment: the newsroom says «Marta is writing an article…» and the article appears as soon as it starts, before it has any text."
+          },
+          {
+            "es": "Dentro del artículo, los pasos en vivo: el plan, la estructura, qué sección está escribiendo y la comprobación de tus reglas. Si se para, dice dónde se quedó y desde cuándo.",
+            "en": "Inside the article, the steps live: the plan, the structure, which section is being written and the check of your rules. If it stops, it says where it stopped and since when."
+          },
+          {
+            "es": "Tu agente escribe cada artículo en muchos menos pasos: más rápido y más barato.",
+            "en": "Your agent writes each article in far fewer steps: faster and cheaper."
+          }
+        ],
         "0.11.2": [
           {
             "es": "Artículos tiene ahora la misma lista a la izquierda que el resto de módulos: «Mesa de redacción» y, debajo, «Datos». El botón de datos de la barra de arriba desaparece.",
@@ -142,11 +166,15 @@
       },
       "whatsNew": [
         {
-          "es": "Artículos tiene ahora la misma lista a la izquierda que el resto de módulos: «Mesa de redacción» y, debajo, «Datos». El botón de datos de la barra de arriba desaparece.",
-          "en": "Artículos now has the same list on the left as every other module: «Newsroom» and, under it, «Datos». The data button in the top bar is gone."
+          "es": "Si algo no se puede guardar, revisar o crear, te lo dice un aviso de la oficina, y donde ocurrió queda una línea discreta con «Reintentar».",
+          "en": "If something cannot be saved, reviewed or created, an office notice tells you, and where it happened there is a quiet line with «Reintentar»."
+        },
+        {
+          "es": "«Artículo nuevo»: un solo botón principal y «Cancelar» discreto.",
+          "en": "«Artículo nuevo»: one main button and a quiet «Cancelar»."
         }
       ],
-      "version": "0.11.2",
+      "version": "0.12.1",
       "tables": [
         "articles_articles",
         "articles_rules",
@@ -161,9 +189,9 @@
         "articles_links"
       ],
       "package": {
-        "path": "apps/articles/articles-0.11.2.tgz",
-        "sha256": "1fbc0586b964b96568f7b31dff57071344a9fb4ab117d1ac3ff803dc80c8e572",
-        "size": 647862,
+        "path": "apps/articles/articles-0.12.1.tgz",
+        "sha256": "804e32f6f0f30a47db9a740555f7ecbb1fb2ec01f42e1cd8f6859f43a9e1757e",
+        "size": 659796,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -4298,6 +4326,10 @@
           {
             "slug": "google_search_console",
             "why": "Your site's real queries: the agent of your team brings them every week and stores them here."
+          },
+          {
+            "slug": "ahrefs",
+            "why": "Optional: if your company has Ahrefs, the module checks how many units are left before using any, and will add difficulty and backlinks to «Can it be won?»."
           }
         ]
       },
@@ -4325,6 +4357,62 @@
         }
       ],
       "changelog": {
+        "1.9.1": [
+          {
+            "es": "«Añadir acción» se lee mejor: cada tipo es una fila con su nombre y una línea que dice quién la hace; eliges una y el botón dice qué vas a añadir.",
+            "en": "«Añadir acción» reads better: each kind is a row with its name and a line saying who does it; you choose one and the button says what you are adding."
+          },
+          {
+            "es": "En todos los diálogos hay un solo botón principal y «Cancelar» es discreto.",
+            "en": "Every dialog has one main button and a quiet «Cancelar»."
+          },
+          {
+            "es": "Si algo falla te lo dice un aviso de la oficina, estés donde estés; y cuando una búsqueda termina mientras miras otra cosa, también. Si sigues en su sitio, basta la línea que ya ves.",
+            "en": "If something fails an office notice tells you wherever you are; and when a search ends while you are looking at something else, too. If you are still there, the line you already see is enough."
+          }
+        ],
+        "1.9.0": [
+          {
+            "es": "Cada búsqueda dice que está buscando y, al acabar, qué encontró: «85 búsquedas encontradas (12 nuevas)», «nada nuevo», o por qué falló y qué hacer.",
+            "en": "Every search says that it is searching and, when it ends, what it found: «85 searches found (12 new)», «nothing new», or why it failed and what to do."
+          },
+          {
+            "es": "«Convertir en objetivo» te lo confirma ahí mismo, con un botón «Abrir el objetivo».",
+            "en": "«Convertir en objetivo» is confirmed right there, with an «Abrir el objetivo» button."
+          },
+          {
+            "es": "En Descubrir, «Quién sale hoy en Google»: las diez páginas que salen para una búsqueda y para quién son, antes de convertirla en objetivo.",
+            "en": "In Descubrir, «Quién sale hoy en Google»: the ten pages that rank for a search and who they are for, before making it a goal."
+          },
+          {
+            "es": "Nuevo ajuste «A quién quieres atraer» (quien contrata o compra, quien busca trabajo o formarse, o ambos): las búsquedas de quien quiere el empleo, no contratarte, quedan señaladas y aparte.",
+            "en": "New setting «A quién quieres atraer» (those who hire or buy, those who look for work or training, or both): searches made by people who want the job, not to hire you, are flagged and set apart."
+          },
+          {
+            "es": "Competencia: pega tu lista de competidores o sube un CSV o Excel, y apunta los que nunca son competidores para que no se vuelvan a proponer.",
+            "en": "Competition: paste your list of competitors or upload a CSV or Excel, and note those that are never competitors so they are not proposed again."
+          },
+          {
+            "es": "«Buscar huecos» y «Buscar ideas para tu público» ya no fallan con empresas de Estados Unidos, y lo que una búsqueda ya había encontrado no se pierde si un paso posterior falla.",
+            "en": "«Buscar huecos» and «Buscar ideas para tu público» no longer fail for companies in the United States, and what a search had already found is not lost if a later step fails."
+          },
+          {
+            "es": "«Tu web» lee los sitemaps que están dentro de otros sitemaps: aparecen los artículos del blog, no los archivos .xml.",
+            "en": "«Tu web» reads sitemaps inside other sitemaps: the blog's posts appear, not the .xml files."
+          },
+          {
+            "es": "En un objetivo, la acción que espera dice si tu agente ya está con ella.",
+            "en": "On a goal, the waiting action says whether your agent is already on it."
+          },
+          {
+            "es": "Tu agente lee el módulo con respuestas más cortas: trabaja más rápido y gasta menos.",
+            "en": "Your agent reads the module with shorter answers: it works faster and spends less."
+          },
+          {
+            "es": "Si trabajas con Ahrefs, el módulo puede leer cuántas unidades te quedan (un administrador lo permite en Módulos). Es el primer paso para usar sus datos.",
+            "en": "If you work with Ahrefs, the module can read how many units you have left (an admin allows it in Módulos). It is the first step towards using its data."
+          }
+        ],
         "1.8.1": [
           {
             "es": "Las tablas caben junto a la barra lateral: los textos largos se recortan (verlos entero al pasar el ratón) y los botones de cada fila siempre se ven.",
@@ -4516,11 +4604,19 @@
       },
       "whatsNew": [
         {
-          "es": "Las tablas caben junto a la barra lateral: los textos largos se recortan (verlos entero al pasar el ratón) y los botones de cada fila siempre se ven.",
-          "en": "Tables fit beside the sidebar: long texts are cut (hover to see them whole) and each row's buttons are always visible."
+          "es": "«Añadir acción» se lee mejor: cada tipo es una fila con su nombre y una línea que dice quién la hace; eliges una y el botón dice qué vas a añadir.",
+          "en": "«Añadir acción» reads better: each kind is a row with its name and a line saying who does it; you choose one and the button says what you are adding."
+        },
+        {
+          "es": "En todos los diálogos hay un solo botón principal y «Cancelar» es discreto.",
+          "en": "Every dialog has one main button and a quiet «Cancelar»."
+        },
+        {
+          "es": "Si algo falla te lo dice un aviso de la oficina, estés donde estés; y cuando una búsqueda termina mientras miras otra cosa, también. Si sigues en su sitio, basta la línea que ya ves.",
+          "en": "If something fails an office notice tells you wherever you are; and when a search ends while you are looking at something else, too. If you are still there, the line you already see is enough."
         }
       ],
-      "version": "1.8.1",
+      "version": "1.9.1",
       "tables": [
         "oportunidadesseo_oportunidades",
         "oportunidadesseo_acciones",
@@ -4541,9 +4637,9 @@
         "oportunidadesseo_cache"
       ],
       "package": {
-        "path": "apps/oportunidadesseo/oportunidadesseo-1.8.1.tgz",
-        "sha256": "0fc3740116337b33e2e6639ca604ef6448249c43b4548aba3232bd4d932bc74f",
-        "size": 585202,
+        "path": "apps/oportunidadesseo/oportunidadesseo-1.9.1.tgz",
+        "sha256": "b7b9276243923c2b90bb02781155be5ff077217f07e786aa97de0d5a9583068f",
+        "size": 607661,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -4553,6 +4649,12 @@
             "integration": "google_search_console",
             "optional": true,
             "why": "Las consultas reales del dominio de Ajustes: el módulo las lee él mismo con la conexión de Search Console del agente del equipo (un administrador lo permite en Módulos), o las trae el agente."
+          },
+          {
+            "id": "ahrefs",
+            "integration": "ahrefs",
+            "optional": true,
+            "why": "Opcional: si la empresa trabaja con Ahrefs, el módulo lee con la conexión del agente del equipo cuántas unidades quedan (un administrador lo permite en Módulos)."
           }
         ],
         "variables": [],
@@ -4664,7 +4766,8 @@
           ],
           "needs": {
             "integrations": {
-              "google_search_console": "Las consultas reales de tu web: el agente de tu equipo las trae cada semana y las guarda aquí."
+              "google_search_console": "Las consultas reales de tu web: el agente de tu equipo las trae cada semana y las guarda aquí.",
+              "ahrefs": "Opcional: si tu empresa tiene Ahrefs, el módulo mira cuántas unidades quedan antes de gastar ninguna, y sumará dificultad y enlaces a «¿Se puede ganar?»."
             }
           },
           "captions": [
