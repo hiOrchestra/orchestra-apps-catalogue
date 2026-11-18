@@ -69,6 +69,12 @@
         }
       ],
       "changelog": {
+        "0.11.2": [
+          {
+            "es": "Artículos tiene ahora la misma lista a la izquierda que el resto de módulos: «Mesa de redacción» y, debajo, «Datos». El botón de datos de la barra de arriba desaparece.",
+            "en": "Artículos now has the same list on the left as every other module: «Newsroom» and, under it, «Datos». The data button in the top bar is gone."
+          }
+        ],
         "0.11.1": [
           {
             "es": "Nuevo aspecto, más sobrio y como el resto de tu oficina: paneles blancos sobre un fondo neutro, y el color solo donde significa algo.",
@@ -136,15 +142,11 @@
       },
       "whatsNew": [
         {
-          "es": "Nuevo aspecto, más sobrio y como el resto de tu oficina: paneles blancos sobre un fondo neutro, y el color solo donde significa algo.",
-          "en": "A new, quieter look, like the rest of your office: white panels on a neutral ground, and colour only where it means something."
-        },
-        {
-          "es": "«Datos» ya no está en la barra de arriba: es un botón pequeño junto a los ajustes (en el móvil, dentro del menú).",
-          "en": "«Datos» is no longer in the top bar: it is a small button beside the settings (on a phone, inside the menu)."
+          "es": "Artículos tiene ahora la misma lista a la izquierda que el resto de módulos: «Mesa de redacción» y, debajo, «Datos». El botón de datos de la barra de arriba desaparece.",
+          "en": "Artículos now has the same list on the left as every other module: «Newsroom» and, under it, «Datos». The data button in the top bar is gone."
         }
       ],
-      "version": "0.11.1",
+      "version": "0.11.2",
       "tables": [
         "articles_articles",
         "articles_rules",
@@ -159,9 +161,9 @@
         "articles_links"
       ],
       "package": {
-        "path": "apps/articles/articles-0.11.1.tgz",
-        "sha256": "ea5c88f324875068f4db806166b80750f694e7396e433482474689c77239d497",
-        "size": 649713,
+        "path": "apps/articles/articles-0.11.2.tgz",
+        "sha256": "1fbc0586b964b96568f7b31dff57071344a9fb4ab117d1ac3ff803dc80c8e572",
+        "size": 647862,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -4323,6 +4325,12 @@
         }
       ],
       "changelog": {
+        "1.8.1": [
+          {
+            "es": "Las tablas caben junto a la barra lateral: los textos largos se recortan (verlos entero al pasar el ratón) y los botones de cada fila siempre se ven.",
+            "en": "Tables fit beside the sidebar: long texts are cut (hover to see them whole) and each row's buttons are always visible."
+          }
+        ],
         "1.8.0": [
           {
             "es": "Nuevo aspecto, más sobrio y como el resto de tu oficina: paneles blancos sobre un fondo neutro, y el color solo donde significa algo (verde si sube o está ganado, teja si está estancado o te toca a ti).",
@@ -4508,23 +4516,11 @@
       },
       "whatsNew": [
         {
-          "es": "Nuevo aspecto, más sobrio y como el resto de tu oficina: paneles blancos sobre un fondo neutro, y el color solo donde significa algo (verde si sube o está ganado, teja si está estancado o te toca a ti).",
-          "en": "A new, quieter look, like the rest of your office: white panels on a neutral ground, and colour only where it means something (green when it is rising or won, clay when it is stalled or your turn)."
-        },
-        {
-          "es": "«Datos» ya no está en la barra de arriba: es la última entrada de la lista de la izquierda, una más.",
-          "en": "«Datos» is no longer in the top bar: it is the last entry of the list on the left, one more place."
-        },
-        {
-          "es": "En el móvil: una barra de una línea con un menú, y una fila que dice dónde estás y abre la lista de lugares.",
-          "en": "On a phone: a one-line bar with a menu, and one row that says where you are and opens the list of places."
-        },
-        {
-          "es": "Ajustes más claros: los campos agrupados por tema, con un nombre corto y una línea que los explica.",
-          "en": "Clearer settings: fields grouped by subject, each with a short name and a line that explains it."
+          "es": "Las tablas caben junto a la barra lateral: los textos largos se recortan (verlos entero al pasar el ratón) y los botones de cada fila siempre se ven.",
+          "en": "Tables fit beside the sidebar: long texts are cut (hover to see them whole) and each row's buttons are always visible."
         }
       ],
-      "version": "1.8.0",
+      "version": "1.8.1",
       "tables": [
         "oportunidadesseo_oportunidades",
         "oportunidadesseo_acciones",
@@ -4545,9 +4541,9 @@
         "oportunidadesseo_cache"
       ],
       "package": {
-        "path": "apps/oportunidadesseo/oportunidadesseo-1.8.0.tgz",
-        "sha256": "0434d0640812a134602687164cf475e486962b92bb1166f2223a4b02544060bc",
-        "size": 584140,
+        "path": "apps/oportunidadesseo/oportunidadesseo-1.8.1.tgz",
+        "sha256": "0fc3740116337b33e2e6639ca604ef6448249c43b4548aba3232bd4d932bc74f",
+        "size": 585202,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
