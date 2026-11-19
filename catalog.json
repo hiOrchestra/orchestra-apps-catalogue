@@ -4389,6 +4389,24 @@
         }
       ],
       "changelog": {
+        "1.11.0": [
+          {
+            "es": "«Búsqueda con IA» se lee de un vistazo. Cada pregunta dice si apareces, si la pregunta es tuya o propuesta, y lo esencial de lo que responde la IA en una línea. Debajo, una fila por IA (ChatGPT, Google): a quién nombra, con tus competidores marcados, y qué webs cita, enlazadas.",
+            "en": "«Búsqueda con IA» reads at a glance. Each question says whether you appear, whether the question is yours or proposed, and the gist of the AI's answer in one line. Under it, one row per AI (ChatGPT, Google): whom it names, your competitors marked, and which sites it cites, linked."
+          },
+          {
+            "es": "«Ver la respuesta» abre la respuesta entera bien dibujada: con sus tablas, listas y enlaces, y las páginas que cita con su tipo (tu competencia, una guía, un directorio, un foro). Se acabaron los «-------- --------», los «1\\.» y los títulos de imágenes sueltos.",
+            "en": "«Ver la respuesta» opens the whole answer properly drawn: its tables, lists and links, and the pages it cites with their kind (your competition, a guide, a directory, a forum). No more «-------- --------», «1\\.» or stray image titles."
+          },
+          {
+            "es": "Cada pregunta dice en qué se apoya la IA («Lo que la IA cita: 2 guías y 1 directorio») y qué puedes hacer con eso. «Quiero aparecer aquí» está junto al veredicto, y el objetivo que crea ya lleva esa pista; también la ves en «Descubrir».",
+            "en": "Each question says what the AI leans on («Lo que la IA cita: 2 guías y 1 directorio») and what you can do about it. «Quiero aparecer aquí» sits beside the verdict, and the goal it creates already carries that lead; you also see it in «Descubrir»."
+          },
+          {
+            "es": "Una respuesta que Google «carga aparte» ahora lo explica: Google la enseña después de cargar la página y aún no se ha leído; el botón para leerla está ahí mismo, con lo que cuesta. Las respuestas de ChatGPT que ya tenías se ven bien nada más actualizar, sin volver a pagar; las de Google, con la siguiente revisión.",
+            "en": "An answer Google «loads apart» now says what that means: Google shows it after the page loads and it has not been read yet; the button to read it is right there, with its cost. The ChatGPT answers you already had look right as soon as you update, without paying again; Google's, with the next review."
+          }
+        ],
         "1.10.0": [
           {
             "es": "«Buscar nuevas oportunidades»: una sola forma de buscar, sin ser experto en SEO. Eliges qué buscar con palabras normales (lo que casi tienes, lo que tiene tu competencia, lo que busca tu público, dónde la IA no te nombra, lo que ya tienes y puedes subir, por dónde empezar con una web nueva), el módulo propone tu web, el país, tus competidores, a quién quieres atraer y tus temas, y tú lo confirmas o lo corriges. Cada criterio dice lo que cuesta antes, y mientras busca dice por dónde va.",
@@ -4662,31 +4680,23 @@
       },
       "whatsNew": [
         {
-          "es": "«Buscar nuevas oportunidades»: una sola forma de buscar, sin ser experto en SEO. Eliges qué buscar con palabras normales (lo que casi tienes, lo que tiene tu competencia, lo que busca tu público, dónde la IA no te nombra, lo que ya tienes y puedes subir, por dónde empezar con una web nueva), el módulo propone tu web, el país, tus competidores, a quién quieres atraer y tus temas, y tú lo confirmas o lo corriges. Cada criterio dice lo que cuesta antes, y mientras busca dice por dónde va.",
-          "en": "«Buscar nuevas oportunidades»: one way to search, without being an SEO expert. You choose what to look for in plain words (what you almost have, what competitors have, what your audience searches, where the AI does not name you, what you already have and can push up, where to start with a new site), the module proposes your site, the country, your competitors, who you want to attract and your topics, and you confirm or correct it. Each criterion says what it costs first, and while it runs it says how far it is."
+          "es": "«Búsqueda con IA» se lee de un vistazo. Cada pregunta dice si apareces, si la pregunta es tuya o propuesta, y lo esencial de lo que responde la IA en una línea. Debajo, una fila por IA (ChatGPT, Google): a quién nombra, con tus competidores marcados, y qué webs cita, enlazadas.",
+          "en": "«Búsqueda con IA» reads at a glance. Each question says whether you appear, whether the question is yours or proposed, and the gist of the AI's answer in one line. Under it, one row per AI (ChatGPT, Google): whom it names, your competitors marked, and which sites it cites, linked."
         },
         {
-          "es": "Decides con los datos delante, en «Descubrir»: cada búsqueda enseña cuánto se busca, quién sale hoy en Google, para quién es y «¿Se puede ganar?» con su porqué, antes de convertirla en objetivo. Una difícil lo dice y explica por qué, pero puedes elegirla igual. Lo que se puede ganar va primero.",
-          "en": "You decide with the data in front of you, in «Descubrir»: each search shows how much it is searched, who ranks in Google today, who it is for and «¿Se puede ganar?» with why, before you make it a goal. A hard one says so and why, and you can still choose it. What can be won goes first."
+          "es": "«Ver la respuesta» abre la respuesta entera bien dibujada: con sus tablas, listas y enlaces, y las páginas que cita con su tipo (tu competencia, una guía, un directorio, un foro). Se acabaron los «-------- --------», los «1\\.» y los títulos de imágenes sueltos.",
+          "en": "«Ver la respuesta» opens the whole answer properly drawn: its tables, lists and links, and the pages it cites with their kind (your competition, a guide, a directory, a forum). No more «-------- --------», «1\\.» or stray image titles."
         },
         {
-          "es": "El objetivo nace con sus datos: hereda las cifras, el top 10 y el porqué de lo que se midió en «Descubrir». Ya no se abre lleno de «—»; «Traer datos de DataForSEO» queda para ponerlos al día.",
-          "en": "A goal starts with its data: it inherits the figures, the top 10 and the why of what was measured in «Descubrir». It no longer opens full of «—»; «Traer datos de DataForSEO» is there to refresh them."
+          "es": "Cada pregunta dice en qué se apoya la IA («Lo que la IA cita: 2 guías y 1 directorio») y qué puedes hacer con eso. «Quiero aparecer aquí» está junto al veredicto, y el objetivo que crea ya lleva esa pista; también la ves en «Descubrir».",
+          "en": "Each question says what the AI leans on («Lo que la IA cita: 2 guías y 1 directorio») and what you can do about it. «Quiero aparecer aquí» sits beside the verdict, and the goal it creates already carries that lead; you also see it in «Descubrir»."
         },
         {
-          "es": "Nunca un «no hay nada que hacer»: si tu web ya sale bien, propone defender lo que tienes, subirlo a los tres primeros y el siguiente nivel; si casi no sale, búsquedas largas y concretas que una web nueva sí puede ganar (gratis, de lo que la gente escribe en Google).",
-          "en": "Never a «nothing to do»: if your site already ranks well, it proposes defending what you have, pushing it into the top three and the next level; if it barely ranks, long, specific searches a new site can win (free, from what people type in Google)."
-        },
-        {
-          "es": "«Convertir en objetivo» te lo confirma estés donde estés: si la línea de la lista no está a la vista, llega como aviso de la oficina, arriba a la derecha, con «Abrir el objetivo».",
-          "en": "«Convertir en objetivo» is confirmed wherever you are: if the list's line is not in view, it arrives as an office notice, top right, with «Abrir el objetivo»."
-        },
-        {
-          "es": "Tu agente gasta mucho menos al usar el módulo: lee respuestas cortas y pide el detalle solo cuando lo necesita, y convierte varias búsquedas en objetivos de una vez.",
-          "en": "Your agent spends far less using the module: it reads short answers and asks for the detail only when it needs it, and turns several searches into goals in one go."
+          "es": "Una respuesta que Google «carga aparte» ahora lo explica: Google la enseña después de cargar la página y aún no se ha leído; el botón para leerla está ahí mismo, con lo que cuesta. Las respuestas de ChatGPT que ya tenías se ven bien nada más actualizar, sin volver a pagar; las de Google, con la siguiente revisión.",
+          "en": "An answer Google «loads apart» now says what that means: Google shows it after the page loads and it has not been read yet; the button to read it is right there, with its cost. The ChatGPT answers you already had look right as soon as you update, without paying again; Google's, with the next review."
         }
       ],
-      "version": "1.10.0",
+      "version": "1.11.0",
       "tables": [
         "oportunidadesseo_oportunidades",
         "oportunidadesseo_acciones",
@@ -4707,9 +4717,9 @@
         "oportunidadesseo_cache"
       ],
       "package": {
-        "path": "apps/oportunidadesseo/oportunidadesseo-1.10.0.tgz",
-        "sha256": "891c629996086daa3c291bde8dff8eccca5e1329060b99a801eaecac03bc8fcc",
-        "size": 629092,
+        "path": "apps/oportunidadesseo/oportunidadesseo-1.11.0.tgz",
+        "sha256": "6835bec85d6df53bbb0813cf6927d77313ca190fcc3a0553d2ec5e11f542d2a6",
+        "size": 637498,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
