@@ -69,6 +69,20 @@
         }
       ],
       "changelog": {
+        "0.13.0": [
+          {
+            "es": "El artículo dice en un solo bloque dónde está y qué se está haciendo ahora: el paso (plan, estructura, sección 3 de 6, reglas, tu revisión), cuántas secciones lleva y, si se paró, dónde y desde cuándo.",
+            "en": "An article now says in one block where it stands and what is happening now: the step (plan, structure, section 3 of 6, rules, your review), how many sections are written and, if it stopped, where and since when."
+          },
+          {
+            "es": "Un artículo sin texto ya no enseña contadores a cero: dice qué va a pasar y qué hacer. Y la mesa de redacción nombra el artículo que se está escribiendo y su paso.",
+            "en": "An article with no text no longer shows zero counters: it says what will happen and what to do. And the desk names the article being written and its step."
+          },
+          {
+            "es": "Tu agente gasta menos al escribir: sus instrucciones son la mitad de largas y, si has cambiado un párrafo, sabe exactamente cuál para no pisarlo.",
+            "en": "Your agent spends less when writing: its instructions are half as long and, if you changed a paragraph, it knows exactly which one so it does not write over it."
+          }
+        ],
         "0.12.1": [
           {
             "es": "Si algo no se puede guardar, revisar o crear, te lo dice un aviso de la oficina, y donde ocurrió queda una línea discreta con «Reintentar».",
@@ -166,15 +180,19 @@
       },
       "whatsNew": [
         {
-          "es": "Si algo no se puede guardar, revisar o crear, te lo dice un aviso de la oficina, y donde ocurrió queda una línea discreta con «Reintentar».",
-          "en": "If something cannot be saved, reviewed or created, an office notice tells you, and where it happened there is a quiet line with «Reintentar»."
+          "es": "El artículo dice en un solo bloque dónde está y qué se está haciendo ahora: el paso (plan, estructura, sección 3 de 6, reglas, tu revisión), cuántas secciones lleva y, si se paró, dónde y desde cuándo.",
+          "en": "An article now says in one block where it stands and what is happening now: the step (plan, structure, section 3 of 6, rules, your review), how many sections are written and, if it stopped, where and since when."
         },
         {
-          "es": "«Artículo nuevo»: un solo botón principal y «Cancelar» discreto.",
-          "en": "«Artículo nuevo»: one main button and a quiet «Cancelar»."
+          "es": "Un artículo sin texto ya no enseña contadores a cero: dice qué va a pasar y qué hacer. Y la mesa de redacción nombra el artículo que se está escribiendo y su paso.",
+          "en": "An article with no text no longer shows zero counters: it says what will happen and what to do. And the desk names the article being written and its step."
+        },
+        {
+          "es": "Tu agente gasta menos al escribir: sus instrucciones son la mitad de largas y, si has cambiado un párrafo, sabe exactamente cuál para no pisarlo.",
+          "en": "Your agent spends less when writing: its instructions are half as long and, if you changed a paragraph, it knows exactly which one so it does not write over it."
         }
       ],
-      "version": "0.12.1",
+      "version": "0.13.0",
       "tables": [
         "articles_articles",
         "articles_rules",
@@ -189,9 +207,9 @@
         "articles_links"
       ],
       "package": {
-        "path": "apps/articles/articles-0.12.1.tgz",
-        "sha256": "804e32f6f0f30a47db9a740555f7ecbb1fb2ec01f42e1cd8f6859f43a9e1757e",
-        "size": 659796,
+        "path": "apps/articles/articles-0.13.0.tgz",
+        "sha256": "594ea779b60694600d3a5c3abf929b59868ff6189e863f815dcbaf5430ffa95b",
+        "size": 659845,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -4357,6 +4375,32 @@
         }
       ],
       "changelog": {
+        "1.10.0": [
+          {
+            "es": "«Buscar nuevas oportunidades»: una sola forma de buscar, sin ser experto en SEO. Eliges qué buscar con palabras normales (lo que casi tienes, lo que tiene tu competencia, lo que busca tu público, dónde la IA no te nombra, lo que ya tienes y puedes subir, por dónde empezar con una web nueva), el módulo propone tu web, el país, tus competidores, a quién quieres atraer y tus temas, y tú lo confirmas o lo corriges. Cada criterio dice lo que cuesta antes, y mientras busca dice por dónde va.",
+            "en": "«Buscar nuevas oportunidades»: one way to search, without being an SEO expert. You choose what to look for in plain words (what you almost have, what competitors have, what your audience searches, where the AI does not name you, what you already have and can push up, where to start with a new site), the module proposes your site, the country, your competitors, who you want to attract and your topics, and you confirm or correct it. Each criterion says what it costs first, and while it runs it says how far it is."
+          },
+          {
+            "es": "Decides con los datos delante, en «Descubrir»: cada búsqueda enseña cuánto se busca, quién sale hoy en Google, para quién es y «¿Se puede ganar?» con su porqué, antes de convertirla en objetivo. Una difícil lo dice y explica por qué, pero puedes elegirla igual. Lo que se puede ganar va primero.",
+            "en": "You decide with the data in front of you, in «Descubrir»: each search shows how much it is searched, who ranks in Google today, who it is for and «¿Se puede ganar?» with why, before you make it a goal. A hard one says so and why, and you can still choose it. What can be won goes first."
+          },
+          {
+            "es": "El objetivo nace con sus datos: hereda las cifras, el top 10 y el porqué de lo que se midió en «Descubrir». Ya no se abre lleno de «—»; «Traer datos de DataForSEO» queda para ponerlos al día.",
+            "en": "A goal starts with its data: it inherits the figures, the top 10 and the why of what was measured in «Descubrir». It no longer opens full of «—»; «Traer datos de DataForSEO» is there to refresh them."
+          },
+          {
+            "es": "Nunca un «no hay nada que hacer»: si tu web ya sale bien, propone defender lo que tienes, subirlo a los tres primeros y el siguiente nivel; si casi no sale, búsquedas largas y concretas que una web nueva sí puede ganar (gratis, de lo que la gente escribe en Google).",
+            "en": "Never a «nothing to do»: if your site already ranks well, it proposes defending what you have, pushing it into the top three and the next level; if it barely ranks, long, specific searches a new site can win (free, from what people type in Google)."
+          },
+          {
+            "es": "«Convertir en objetivo» te lo confirma estés donde estés: si la línea de la lista no está a la vista, llega como aviso de la oficina, arriba a la derecha, con «Abrir el objetivo».",
+            "en": "«Convertir en objetivo» is confirmed wherever you are: if the list's line is not in view, it arrives as an office notice, top right, with «Abrir el objetivo»."
+          },
+          {
+            "es": "Tu agente gasta mucho menos al usar el módulo: lee respuestas cortas y pide el detalle solo cuando lo necesita, y convierte varias búsquedas en objetivos de una vez.",
+            "en": "Your agent spends far less using the module: it reads short answers and asks for the detail only when it needs it, and turns several searches into goals in one go."
+          }
+        ],
         "1.9.1": [
           {
             "es": "«Añadir acción» se lee mejor: cada tipo es una fila con su nombre y una línea que dice quién la hace; eliges una y el botón dice qué vas a añadir.",
@@ -4604,19 +4648,31 @@
       },
       "whatsNew": [
         {
-          "es": "«Añadir acción» se lee mejor: cada tipo es una fila con su nombre y una línea que dice quién la hace; eliges una y el botón dice qué vas a añadir.",
-          "en": "«Añadir acción» reads better: each kind is a row with its name and a line saying who does it; you choose one and the button says what you are adding."
+          "es": "«Buscar nuevas oportunidades»: una sola forma de buscar, sin ser experto en SEO. Eliges qué buscar con palabras normales (lo que casi tienes, lo que tiene tu competencia, lo que busca tu público, dónde la IA no te nombra, lo que ya tienes y puedes subir, por dónde empezar con una web nueva), el módulo propone tu web, el país, tus competidores, a quién quieres atraer y tus temas, y tú lo confirmas o lo corriges. Cada criterio dice lo que cuesta antes, y mientras busca dice por dónde va.",
+          "en": "«Buscar nuevas oportunidades»: one way to search, without being an SEO expert. You choose what to look for in plain words (what you almost have, what competitors have, what your audience searches, where the AI does not name you, what you already have and can push up, where to start with a new site), the module proposes your site, the country, your competitors, who you want to attract and your topics, and you confirm or correct it. Each criterion says what it costs first, and while it runs it says how far it is."
         },
         {
-          "es": "En todos los diálogos hay un solo botón principal y «Cancelar» es discreto.",
-          "en": "Every dialog has one main button and a quiet «Cancelar»."
+          "es": "Decides con los datos delante, en «Descubrir»: cada búsqueda enseña cuánto se busca, quién sale hoy en Google, para quién es y «¿Se puede ganar?» con su porqué, antes de convertirla en objetivo. Una difícil lo dice y explica por qué, pero puedes elegirla igual. Lo que se puede ganar va primero.",
+          "en": "You decide with the data in front of you, in «Descubrir»: each search shows how much it is searched, who ranks in Google today, who it is for and «¿Se puede ganar?» with why, before you make it a goal. A hard one says so and why, and you can still choose it. What can be won goes first."
         },
         {
-          "es": "Si algo falla te lo dice un aviso de la oficina, estés donde estés; y cuando una búsqueda termina mientras miras otra cosa, también. Si sigues en su sitio, basta la línea que ya ves.",
-          "en": "If something fails an office notice tells you wherever you are; and when a search ends while you are looking at something else, too. If you are still there, the line you already see is enough."
+          "es": "El objetivo nace con sus datos: hereda las cifras, el top 10 y el porqué de lo que se midió en «Descubrir». Ya no se abre lleno de «—»; «Traer datos de DataForSEO» queda para ponerlos al día.",
+          "en": "A goal starts with its data: it inherits the figures, the top 10 and the why of what was measured in «Descubrir». It no longer opens full of «—»; «Traer datos de DataForSEO» is there to refresh them."
+        },
+        {
+          "es": "Nunca un «no hay nada que hacer»: si tu web ya sale bien, propone defender lo que tienes, subirlo a los tres primeros y el siguiente nivel; si casi no sale, búsquedas largas y concretas que una web nueva sí puede ganar (gratis, de lo que la gente escribe en Google).",
+          "en": "Never a «nothing to do»: if your site already ranks well, it proposes defending what you have, pushing it into the top three and the next level; if it barely ranks, long, specific searches a new site can win (free, from what people type in Google)."
+        },
+        {
+          "es": "«Convertir en objetivo» te lo confirma estés donde estés: si la línea de la lista no está a la vista, llega como aviso de la oficina, arriba a la derecha, con «Abrir el objetivo».",
+          "en": "«Convertir en objetivo» is confirmed wherever you are: if the list's line is not in view, it arrives as an office notice, top right, with «Abrir el objetivo»."
+        },
+        {
+          "es": "Tu agente gasta mucho menos al usar el módulo: lee respuestas cortas y pide el detalle solo cuando lo necesita, y convierte varias búsquedas en objetivos de una vez.",
+          "en": "Your agent spends far less using the module: it reads short answers and asks for the detail only when it needs it, and turns several searches into goals in one go."
         }
       ],
-      "version": "1.9.1",
+      "version": "1.10.0",
       "tables": [
         "oportunidadesseo_oportunidades",
         "oportunidadesseo_acciones",
@@ -4637,9 +4693,9 @@
         "oportunidadesseo_cache"
       ],
       "package": {
-        "path": "apps/oportunidadesseo/oportunidadesseo-1.9.1.tgz",
-        "sha256": "b7b9276243923c2b90bb02781155be5ff077217f07e786aa97de0d5a9583068f",
-        "size": 607661,
+        "path": "apps/oportunidadesseo/oportunidadesseo-1.10.0.tgz",
+        "sha256": "891c629996086daa3c291bde8dff8eccca5e1329060b99a801eaecac03bc8fcc",
+        "size": 629092,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
