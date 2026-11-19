@@ -4389,6 +4389,20 @@
         }
       ],
       "changelog": {
+        "1.12.0": [
+          {
+            "es": "Si tu equipo tiene más de una cuenta de Search Console conectada, ahora eliges cuál lee el módulo en una lista, y después el sitio de esa cuenta en otra: «Tu web» › «Cuenta de Search Console». Se elige una vez y se recuerda. Ya no hay que escribir el nombre de la cuenta en Ajustes.",
+            "en": "If your team has more than one Search Console account connected, you now pick the one the module reads from a list, and then that account's site from another: «Tu web» › «Cuenta de Search Console». Chosen once and remembered. No more typing the account's name in Ajustes."
+          },
+          {
+            "es": "Con una sola cuenta conectada no se pregunta nada: se usa esa. Y si más adelante conectáis otra, el módulo sigue leyendo la de siempre.",
+            "en": "With a single account connected nothing is asked: that one is used. And if you connect another later, the module keeps reading the same one."
+          },
+          {
+            "es": "Cuando hace falta elegir, el aviso lo dice con palabras claras y trae el botón «Elegir cuenta», que abre la lista. Tu agente también puede decir qué cuenta y qué sitio leer.",
+            "en": "When a choice is needed, the notice says so in plain words and carries the «Elegir cuenta» button, which opens the list. Your agent can also say which account and site to read."
+          }
+        ],
         "1.11.0": [
           {
             "es": "«Búsqueda con IA» se lee de un vistazo. Cada pregunta dice si apareces, si la pregunta es tuya o propuesta, y lo esencial de lo que responde la IA en una línea. Debajo, una fila por IA (ChatGPT, Google): a quién nombra, con tus competidores marcados, y qué webs cita, enlazadas.",
@@ -4680,23 +4694,19 @@
       },
       "whatsNew": [
         {
-          "es": "«Búsqueda con IA» se lee de un vistazo. Cada pregunta dice si apareces, si la pregunta es tuya o propuesta, y lo esencial de lo que responde la IA en una línea. Debajo, una fila por IA (ChatGPT, Google): a quién nombra, con tus competidores marcados, y qué webs cita, enlazadas.",
-          "en": "«Búsqueda con IA» reads at a glance. Each question says whether you appear, whether the question is yours or proposed, and the gist of the AI's answer in one line. Under it, one row per AI (ChatGPT, Google): whom it names, your competitors marked, and which sites it cites, linked."
+          "es": "Si tu equipo tiene más de una cuenta de Search Console conectada, ahora eliges cuál lee el módulo en una lista, y después el sitio de esa cuenta en otra: «Tu web» › «Cuenta de Search Console». Se elige una vez y se recuerda. Ya no hay que escribir el nombre de la cuenta en Ajustes.",
+          "en": "If your team has more than one Search Console account connected, you now pick the one the module reads from a list, and then that account's site from another: «Tu web» › «Cuenta de Search Console». Chosen once and remembered. No more typing the account's name in Ajustes."
         },
         {
-          "es": "«Ver la respuesta» abre la respuesta entera bien dibujada: con sus tablas, listas y enlaces, y las páginas que cita con su tipo (tu competencia, una guía, un directorio, un foro). Se acabaron los «-------- --------», los «1\\.» y los títulos de imágenes sueltos.",
-          "en": "«Ver la respuesta» opens the whole answer properly drawn: its tables, lists and links, and the pages it cites with their kind (your competition, a guide, a directory, a forum). No more «-------- --------», «1\\.» or stray image titles."
+          "es": "Con una sola cuenta conectada no se pregunta nada: se usa esa. Y si más adelante conectáis otra, el módulo sigue leyendo la de siempre.",
+          "en": "With a single account connected nothing is asked: that one is used. And if you connect another later, the module keeps reading the same one."
         },
         {
-          "es": "Cada pregunta dice en qué se apoya la IA («Lo que la IA cita: 2 guías y 1 directorio») y qué puedes hacer con eso. «Quiero aparecer aquí» está junto al veredicto, y el objetivo que crea ya lleva esa pista; también la ves en «Descubrir».",
-          "en": "Each question says what the AI leans on («Lo que la IA cita: 2 guías y 1 directorio») and what you can do about it. «Quiero aparecer aquí» sits beside the verdict, and the goal it creates already carries that lead; you also see it in «Descubrir»."
-        },
-        {
-          "es": "Una respuesta que Google «carga aparte» ahora lo explica: Google la enseña después de cargar la página y aún no se ha leído; el botón para leerla está ahí mismo, con lo que cuesta. Las respuestas de ChatGPT que ya tenías se ven bien nada más actualizar, sin volver a pagar; las de Google, con la siguiente revisión.",
-          "en": "An answer Google «loads apart» now says what that means: Google shows it after the page loads and it has not been read yet; the button to read it is right there, with its cost. The ChatGPT answers you already had look right as soon as you update, without paying again; Google's, with the next review."
+          "es": "Cuando hace falta elegir, el aviso lo dice con palabras claras y trae el botón «Elegir cuenta», que abre la lista. Tu agente también puede decir qué cuenta y qué sitio leer.",
+          "en": "When a choice is needed, the notice says so in plain words and carries the «Elegir cuenta» button, which opens the list. Your agent can also say which account and site to read."
         }
       ],
-      "version": "1.11.0",
+      "version": "1.12.0",
       "tables": [
         "oportunidadesseo_oportunidades",
         "oportunidadesseo_acciones",
@@ -4717,9 +4727,9 @@
         "oportunidadesseo_cache"
       ],
       "package": {
-        "path": "apps/oportunidadesseo/oportunidadesseo-1.11.0.tgz",
-        "sha256": "6835bec85d6df53bbb0813cf6927d77313ca190fcc3a0553d2ec5e11f542d2a6",
-        "size": 637498,
+        "path": "apps/oportunidadesseo/oportunidadesseo-1.12.0.tgz",
+        "sha256": "007a7502a3000b7c65c019acf3107080ea491cf7157d73341d08c72b5f31523c",
+        "size": 643421,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -4728,7 +4738,7 @@
             "id": "searchconsole",
             "integration": "google_search_console",
             "optional": true,
-            "why": "Las consultas reales del dominio de Ajustes: el módulo las lee él mismo con la conexión de Search Console del agente del equipo (un administrador lo permite en Módulos), o las trae el agente."
+            "why": "Las consultas reales del dominio de Ajustes: el módulo las lee él mismo con la conexión de Search Console del agente del equipo (un administrador lo permite en Módulos). Si el equipo tiene más de una cuenta conectada, se elige cuál en «Tu web» › «Cuenta de Search Console»."
           },
           {
             "id": "ahrefs",
