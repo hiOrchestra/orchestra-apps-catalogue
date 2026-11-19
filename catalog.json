@@ -4886,6 +4886,180 @@
           ]
         }
       }
+    },
+    {
+      "id": "obras",
+      "name": "Obras",
+      "category": "Operations",
+      "summary": "Your building projects: incidents from site visits, procedures, hours and the monthly report for the client.",
+      "promise": "Tell your agent what you saw on site: it opens the incidents, follows them up and drafts each project's monthly report on the 1st.",
+      "like": "Ticketing for building works",
+      "description": "Projects with their units and chapters, incidents with their card (chapter, location, dates, delay, severity, photos, follow-up and extra cost), site visits, procedures, timesheets and a printable monthly report per project.",
+      "brief": {
+        "user": "Whoever manages building projects",
+        "frequency": "Daily",
+        "questions": [
+          "What is open in each project?",
+          "What is the next step of each procedure?",
+          "What do I send the client this month?"
+        ],
+        "primaryAction": "Record what a site visit found",
+        "answers": [
+          "Open incidents by project and chapter, the severe first, each with its delay.",
+          "Every licence, connection, insurance and deposit with its state and dated next step.",
+          "A monthly report per project, drafted from what the module holds, to review and print."
+        ]
+      },
+      "how": [
+        {
+          "actor": "person",
+          "title": "You tell your agent about the visit",
+          "text": "Photos, a voice note or a list: your agent opens the incidents, each on its chapter."
+        },
+        {
+          "actor": "person",
+          "title": "You follow each one up",
+          "text": "Dated notes, who answers, the delay and its extra cost, until it is closed."
+        },
+        {
+          "actor": "person",
+          "title": "You review the monthly report",
+          "text": "Your agent drafts it on the 1st; you correct it, mark it reviewed and save it as a PDF."
+        }
+      ],
+      "surfaces": [
+        {
+          "id": "obras",
+          "title": "Obras",
+          "audience": "members",
+          "role": "desk"
+        }
+      ],
+      "needs": {
+        "agent": {
+          "required": false,
+          "why": "The agent of the team that uses it does the work."
+        }
+      },
+      "outward": [],
+      "outwardVia": [],
+      "by": "Orchestra",
+      "price": "included",
+      "icon": "hard-hat",
+      "screenshots": [
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/obras/screens/1-incidencias.png",
+          "caption": "What is open, by chapter, the severe first",
+          "surface": "desk",
+          "device": "desktop"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/obras/screens/2-informe.png",
+          "caption": "The monthly report, as the client receives it",
+          "surface": "desk",
+          "device": "desktop"
+        }
+      ],
+      "changelog": {
+        "0.1.0": [
+          {
+            "es": "Primera versión: obras con sus unidades y capítulos, incidencias con su ficha, seguimiento, fotos y sobrecoste, visitas de obra, trámites, partes de horas e informe mensual imprimible (en català o castellano).",
+            "en": "First version: projects with their units and chapters, incidents with their card, follow-up, photos and extra cost, site visits, procedures, timesheets and a printable monthly report (in Catalan or Spanish)."
+          },
+          {
+            "es": "Tu agente apunta todas las incidencias de una visita de una vez y prepara el informe del mes el día 1.",
+            "en": "Your agent records all of a visit's incidents at once and drafts the month's report on the 1st."
+          },
+          {
+            "es": "Se pueden traer las incidencias, las horas y las obras que ya llevabas en otras tablas, con una prueba antes de escribir nada.",
+            "en": "The incidents, hours and projects you already kept in other tables can be brought in, with a trial run before anything is written."
+          }
+        ]
+      },
+      "whatsNew": [
+        {
+          "es": "Primera versión: obras con sus unidades y capítulos, incidencias con su ficha, seguimiento, fotos y sobrecoste, visitas de obra, trámites, partes de horas e informe mensual imprimible (en català o castellano).",
+          "en": "First version: projects with their units and chapters, incidents with their card, follow-up, photos and extra cost, site visits, procedures, timesheets and a printable monthly report (in Catalan or Spanish)."
+        },
+        {
+          "es": "Tu agente apunta todas las incidencias de una visita de una vez y prepara el informe del mes el día 1.",
+          "en": "Your agent records all of a visit's incidents at once and drafts the month's report on the 1st."
+        },
+        {
+          "es": "Se pueden traer las incidencias, las horas y las obras que ya llevabas en otras tablas, con una prueba antes de escribir nada.",
+          "en": "The incidents, hours and projects you already kept in other tables can be brought in, with a trial run before anything is written."
+        }
+      ],
+      "version": "0.1.0",
+      "tables": [
+        "obras_projects",
+        "obras_units",
+        "obras_chapters",
+        "obras_incidents",
+        "obras_notes",
+        "obras_visits",
+        "obras_procedures",
+        "obras_reports",
+        "obras_hours",
+        "obras_attachments",
+        "obras_settings"
+      ],
+      "package": {
+        "path": "apps/obras/obras-0.1.0.tgz",
+        "sha256": "99b006616d730a5da0223a4ba99a28a4f4acb3217ba11195785381806745e872",
+        "size": 383827,
+        "installer": "install.js",
+        "manifest": "app.json",
+        "roles": [],
+        "connections": [],
+        "variables": [],
+        "channels": [],
+        "processes": 0,
+        "skills": []
+      },
+      "emoji": "🏗️",
+      "i18n": {
+        "es": {
+          "name": "Obras",
+          "category": "Operaciones",
+          "summary": "Tus obras: las incidencias de cada visita, los trámites, las horas y el informe mensual para tu cliente.",
+          "promise": "Cuéntale a tu agente lo que viste en la obra: abre las incidencias, las sigue y el día 1 te prepara el informe mensual de cada obra.",
+          "description": "Obras con sus unidades y capítulos, incidencias con su ficha (capítulo, ubicación, fechas, retraso, gravedad, fotos, seguimiento y sobrecoste), visitas de obra, trámites, partes de horas y un informe mensual imprimible por obra.",
+          "brief": {
+            "user": "Quien lleva obras",
+            "frequency": "Cada día",
+            "questions": [
+              "¿Qué hay abierto en cada obra?",
+              "¿Cuál es el siguiente paso de cada trámite?",
+              "¿Qué le mando al cliente este mes?"
+            ],
+            "primaryAction": "Apuntar lo que se vio en una visita de obra",
+            "answers": [
+              "Las incidencias abiertas por obra y capítulo, lo grave primero, cada una con su retraso.",
+              "Cada licencia, acometida, seguro y depósito con su estado y su siguiente paso con fecha.",
+              "Un informe mensual por obra, preparado con lo que hay en el módulo, para revisar e imprimir."
+            ]
+          },
+          "how": [
+            {
+              "title": "Le cuentas la visita a tu agente",
+              "text": "Fotos, una nota de voz o una lista: tu agente abre las incidencias, cada una en su capítulo."
+            },
+            {
+              "title": "Sigues cada una",
+              "text": "Notas con fecha, quién responde, el retraso y su sobrecoste, hasta que se cierra."
+            },
+            {
+              "title": "Revisas el informe mensual",
+              "text": "Tu agente lo prepara el día 1; tú lo corriges, lo das por revisado y lo guardas en PDF."
+            }
+          ],
+          "captions": [
+            "Lo que sigue abierto, por capítulo y con lo grave primero",
+            "El informe mensual, tal como lo recibe el cliente"
+          ]
+        }
+      }
     }
   ]
 }
