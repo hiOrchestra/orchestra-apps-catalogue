@@ -69,6 +69,16 @@
         }
       ],
       "changelog": {
+        "0.15.0": [
+          {
+            "es": "Cuando hay artículos listos para publicar y a la publicación le falta algo (decir dónde publica la empresa, o la clave de la web), sale arriba del todo, en «Para completar esta página», con su botón. Quien no puede resolverlo avisa a un administrador desde ahí.",
+            "en": "When articles are ready to publish and publishing still needs something (saying where the company publishes, or the website's key), it shows at the very top, in «Para completar esta página», with its button. Whoever cannot resolve it asks an admin from there."
+          },
+          {
+            "es": "La cabecera de la Mesa de redacción y de cada artículo tiene una sola línea de contexto y «Cómo funciona» a la derecha, con la explicación de la pestaña en la que estás.",
+            "en": "The header of the newsroom and of each article has one line of context and «Cómo funciona» on the right, explaining the tab you are in."
+          }
+        ],
         "0.14.0": [
           {
             "es": "En «Revisión», cada pendiente del borrador es una línea corta que dice qué falta, con su detalle plegado debajo. Lo que tu agente investigó se guarda aparte, en «Notas de investigación», y ya no aparece como un pendiente enorme.",
@@ -194,19 +204,15 @@
       },
       "whatsNew": [
         {
-          "es": "En «Revisión», cada pendiente del borrador es una línea corta que dice qué falta, con su detalle plegado debajo. Lo que tu agente investigó se guarda aparte, en «Notas de investigación», y ya no aparece como un pendiente enorme.",
-          "en": "In «Revisión», each thing a draft left open is one short line saying what is missing, with its detail folded under it. What your agent researched is kept apart, in «Notas de investigación», and no longer shows as one huge pending item."
+          "es": "Cuando hay artículos listos para publicar y a la publicación le falta algo (decir dónde publica la empresa, o la clave de la web), sale arriba del todo, en «Para completar esta página», con su botón. Quien no puede resolverlo avisa a un administrador desde ahí.",
+          "en": "When articles are ready to publish and publishing still needs something (saying where the company publishes, or the website's key), it shows at the very top, in «Para completar esta página», with its button. Whoever cannot resolve it asks an admin from there."
         },
         {
-          "es": "Los pendientes se cierran solos: cuando el dato que faltaba entra en el texto, el pendiente pasa a resuelto («Resuelto al actualizar el texto»), y tu agente marca los que completa diciendo cómo. El número de pendientes sin resolver es siempre el de las líneas que ves.",
-          "en": "Pending items close by themselves: once the missing data is in the text, the item becomes resolved («Resuelto al actualizar el texto»), and your agent marks the ones it completes, saying how. The count of unresolved items is always the number of lines you see."
-        },
-        {
-          "es": "Las listas largas de la revisión (como «Datos que falta confirmar») se leen en una línea y se abren con un clic.",
-          "en": "Long lists in the review (such as «Datos que falta confirmar») read as one line and open with a click."
+          "es": "La cabecera de la Mesa de redacción y de cada artículo tiene una sola línea de contexto y «Cómo funciona» a la derecha, con la explicación de la pestaña en la que estás.",
+          "en": "The header of the newsroom and of each article has one line of context and «Cómo funciona» on the right, explaining the tab you are in."
         }
       ],
-      "version": "0.14.0",
+      "version": "0.15.0",
       "tables": [
         "articles_articles",
         "articles_rules",
@@ -221,9 +227,9 @@
         "articles_links"
       ],
       "package": {
-        "path": "apps/articles/articles-0.14.0.tgz",
-        "sha256": "2d3fb411deba97853d31e580514df06810d2343ac342f41678b01189bebe7249",
-        "size": 669091,
+        "path": "apps/articles/articles-0.15.0.tgz",
+        "sha256": "92adcc863cfc8dbb03dbdf1b4b82e80a63ebe1c5193184a7454872b99173b12d",
+        "size": 688820,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -4389,6 +4395,20 @@
         }
       ],
       "changelog": {
+        "1.13.0": [
+          {
+            "es": "Lo que a una página le falta para estar completa ya no está escondido en un párrafo: sale arriba del todo, en «Para completar esta página», con para qué sirve y su botón («Elegir cuenta», «Añadir la clave», «Conectar»). Solo lo de esa página; cuando se resuelve, desaparece.",
+            "en": "What a page still needs to be complete is no longer buried in a paragraph: it is at the very top, in «Para completar esta página», with what it is for and its button («Elegir cuenta», «Añadir la clave», «Conectar»). Only what that page needs; once resolved, it is gone."
+          },
+          {
+            "es": "Si no puedes resolverlo tú (las claves del módulo las pone un propietario o administrador), el botón es «Avisar a un administrador»: le deja la petición en su Trabajo con lo que falta y dónde, y la página dice a quién se lo pediste y cuándo.",
+            "en": "If you cannot resolve it yourself (an owner or admin enters the module's keys), the button is «Avisar a un administrador»: it leaves the request in their Trabajo with what is missing and where, and the page says whom you asked and when."
+          },
+          {
+            "es": "La cabecera es la misma en todas las páginas: el título, una sola línea con tu web, el país y lo que se busca (pulsa esta última para cambiarla en Ajustes) y «Cómo funciona» a la derecha, con la explicación del sitio en el que estás.",
+            "en": "The header is the same on every page: the title, one line with your site, the country and what is searched (press that one to change it in Ajustes) and «Cómo funciona» on the right, explaining the place you are in."
+          }
+        ],
         "1.12.0": [
           {
             "es": "Si tu equipo tiene más de una cuenta de Search Console conectada, ahora eliges cuál lee el módulo en una lista, y después el sitio de esa cuenta en otra: «Tu web» › «Cuenta de Search Console». Se elige una vez y se recuerda. Ya no hay que escribir el nombre de la cuenta en Ajustes.",
@@ -4694,19 +4714,19 @@
       },
       "whatsNew": [
         {
-          "es": "Si tu equipo tiene más de una cuenta de Search Console conectada, ahora eliges cuál lee el módulo en una lista, y después el sitio de esa cuenta en otra: «Tu web» › «Cuenta de Search Console». Se elige una vez y se recuerda. Ya no hay que escribir el nombre de la cuenta en Ajustes.",
-          "en": "If your team has more than one Search Console account connected, you now pick the one the module reads from a list, and then that account's site from another: «Tu web» › «Cuenta de Search Console». Chosen once and remembered. No more typing the account's name in Ajustes."
+          "es": "Lo que a una página le falta para estar completa ya no está escondido en un párrafo: sale arriba del todo, en «Para completar esta página», con para qué sirve y su botón («Elegir cuenta», «Añadir la clave», «Conectar»). Solo lo de esa página; cuando se resuelve, desaparece.",
+          "en": "What a page still needs to be complete is no longer buried in a paragraph: it is at the very top, in «Para completar esta página», with what it is for and its button («Elegir cuenta», «Añadir la clave», «Conectar»). Only what that page needs; once resolved, it is gone."
         },
         {
-          "es": "Con una sola cuenta conectada no se pregunta nada: se usa esa. Y si más adelante conectáis otra, el módulo sigue leyendo la de siempre.",
-          "en": "With a single account connected nothing is asked: that one is used. And if you connect another later, the module keeps reading the same one."
+          "es": "Si no puedes resolverlo tú (las claves del módulo las pone un propietario o administrador), el botón es «Avisar a un administrador»: le deja la petición en su Trabajo con lo que falta y dónde, y la página dice a quién se lo pediste y cuándo.",
+          "en": "If you cannot resolve it yourself (an owner or admin enters the module's keys), the button is «Avisar a un administrador»: it leaves the request in their Trabajo with what is missing and where, and the page says whom you asked and when."
         },
         {
-          "es": "Cuando hace falta elegir, el aviso lo dice con palabras claras y trae el botón «Elegir cuenta», que abre la lista. Tu agente también puede decir qué cuenta y qué sitio leer.",
-          "en": "When a choice is needed, the notice says so in plain words and carries the «Elegir cuenta» button, which opens the list. Your agent can also say which account and site to read."
+          "es": "La cabecera es la misma en todas las páginas: el título, una sola línea con tu web, el país y lo que se busca (pulsa esta última para cambiarla en Ajustes) y «Cómo funciona» a la derecha, con la explicación del sitio en el que estás.",
+          "en": "The header is the same on every page: the title, one line with your site, the country and what is searched (press that one to change it in Ajustes) and «Cómo funciona» on the right, explaining the place you are in."
         }
       ],
-      "version": "1.12.0",
+      "version": "1.13.0",
       "tables": [
         "oportunidadesseo_oportunidades",
         "oportunidadesseo_acciones",
@@ -4727,9 +4747,9 @@
         "oportunidadesseo_cache"
       ],
       "package": {
-        "path": "apps/oportunidadesseo/oportunidadesseo-1.12.0.tgz",
-        "sha256": "007a7502a3000b7c65c019acf3107080ea491cf7157d73341d08c72b5f31523c",
-        "size": 643421,
+        "path": "apps/oportunidadesseo/oportunidadesseo-1.13.0.tgz",
+        "sha256": "e7a9988fcd118db9a8f35d28816908fb70b1831b90907c5a1a2a8609a553ff4d",
+        "size": 655900,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
