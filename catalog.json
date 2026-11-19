@@ -4961,6 +4961,24 @@
         }
       ],
       "changelog": {
+        "0.2.0": [
+          {
+            "es": "El parte de horas completo: entrada, salida, pausa, horas ordinarias, extra y de desplazamiento, km, quién valida y si está pagado, con sumas por operario, obra y semana y lo que falta por validar y por pagar.",
+            "en": "The full timesheet: entry, exit, break, ordinary, overtime and travel hours, km, who validates and whether it is paid, summed by worker, project and week, with what is left to validate and pay."
+          },
+          {
+            "es": "Trabajos facturables a clientes, con tarifa e importe (horas × tarifa), y empresas y personas.",
+            "en": "Billable jobs for clients, with rate and total (hours × rate), and companies and people."
+          },
+          {
+            "es": "Las incidencias tienen estado (abierta, en curso, pendiente, cerrada) y observaciones; las obras, código, grupo, tipo, responsable y color.",
+            "en": "Incidents have a state (open, in progress, waiting, closed) and remarks; projects a code, group, kind, responsible and colour."
+          },
+          {
+            "es": "El informe mensual puede incluir «Hores i treballs del mes» (Ajustes), y se pueden traer tal cual las tablas que ya llevabas: incidencias y su historial, horas, trabajos, obras, empresas y personas.",
+            "en": "The monthly report can include \"Hores i treballs del mes\" (Settings), and the tables you already kept come in as they are: incidents and their history, hours, jobs, projects, companies and people."
+          }
+        ],
         "0.1.0": [
           {
             "es": "Primera versión: obras con sus unidades y capítulos, incidencias con su ficha, seguimiento, fotos y sobrecoste, visitas de obra, trámites, partes de horas e informe mensual imprimible (en català o castellano).",
@@ -4978,19 +4996,23 @@
       },
       "whatsNew": [
         {
-          "es": "Primera versión: obras con sus unidades y capítulos, incidencias con su ficha, seguimiento, fotos y sobrecoste, visitas de obra, trámites, partes de horas e informe mensual imprimible (en català o castellano).",
-          "en": "First version: projects with their units and chapters, incidents with their card, follow-up, photos and extra cost, site visits, procedures, timesheets and a printable monthly report (in Catalan or Spanish)."
+          "es": "El parte de horas completo: entrada, salida, pausa, horas ordinarias, extra y de desplazamiento, km, quién valida y si está pagado, con sumas por operario, obra y semana y lo que falta por validar y por pagar.",
+          "en": "The full timesheet: entry, exit, break, ordinary, overtime and travel hours, km, who validates and whether it is paid, summed by worker, project and week, with what is left to validate and pay."
         },
         {
-          "es": "Tu agente apunta todas las incidencias de una visita de una vez y prepara el informe del mes el día 1.",
-          "en": "Your agent records all of a visit's incidents at once and drafts the month's report on the 1st."
+          "es": "Trabajos facturables a clientes, con tarifa e importe (horas × tarifa), y empresas y personas.",
+          "en": "Billable jobs for clients, with rate and total (hours × rate), and companies and people."
         },
         {
-          "es": "Se pueden traer las incidencias, las horas y las obras que ya llevabas en otras tablas, con una prueba antes de escribir nada.",
-          "en": "The incidents, hours and projects you already kept in other tables can be brought in, with a trial run before anything is written."
+          "es": "Las incidencias tienen estado (abierta, en curso, pendiente, cerrada) y observaciones; las obras, código, grupo, tipo, responsable y color.",
+          "en": "Incidents have a state (open, in progress, waiting, closed) and remarks; projects a code, group, kind, responsible and colour."
+        },
+        {
+          "es": "El informe mensual puede incluir «Hores i treballs del mes» (Ajustes), y se pueden traer tal cual las tablas que ya llevabas: incidencias y su historial, horas, trabajos, obras, empresas y personas.",
+          "en": "The monthly report can include \"Hores i treballs del mes\" (Settings), and the tables you already kept come in as they are: incidents and their history, hours, jobs, projects, companies and people."
         }
       ],
-      "version": "0.1.0",
+      "version": "0.2.0",
       "tables": [
         "obras_projects",
         "obras_units",
@@ -5001,13 +5023,16 @@
         "obras_procedures",
         "obras_reports",
         "obras_hours",
+        "obras_jobs",
+        "obras_companies",
+        "obras_people",
         "obras_attachments",
         "obras_settings"
       ],
       "package": {
-        "path": "apps/obras/obras-0.1.0.tgz",
-        "sha256": "99b006616d730a5da0223a4ba99a28a4f4acb3217ba11195785381806745e872",
-        "size": 383827,
+        "path": "apps/obras/obras-0.2.0.tgz",
+        "sha256": "6bb6e74462d9ab41b27a39b05caca056f7df070300926fb53d11f25d8ea26961",
+        "size": 407274,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
