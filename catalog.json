@@ -69,6 +69,12 @@
         }
       ],
       "changelog": {
+        "0.15.2": [
+          {
+            "es": "Los formularios se abren siempre centrados; si son largos, se desplazan por dentro.",
+            "en": "Forms always open centred; long ones scroll inside."
+          }
+        ],
         "0.15.1": [
           {
             "es": "Los diálogos se leen enteros dentro de la oficina: el título y los botones siempre a la vista, nunca bajo la barra ni contra la caja donde escribes a tu agente.",
@@ -210,11 +216,11 @@
       },
       "whatsNew": [
         {
-          "es": "Los diálogos se leen enteros dentro de la oficina: el título y los botones siempre a la vista, nunca bajo la barra ni contra la caja donde escribes a tu agente.",
-          "en": "Dialogs can be read whole inside the office: the title and the buttons always in view, never under the bar or against the box where you write to your agent."
+          "es": "Los formularios se abren siempre centrados; si son largos, se desplazan por dentro.",
+          "en": "Forms always open centred; long ones scroll inside."
         }
       ],
-      "version": "0.15.1",
+      "version": "0.15.2",
       "tables": [
         "articles_articles",
         "articles_rules",
@@ -229,9 +235,9 @@
         "articles_links"
       ],
       "package": {
-        "path": "apps/articles/articles-0.15.1.tgz",
-        "sha256": "86a07ae8dae28018b42c843db38ccedd07c786ba9333917ed7ed50b1340e2c1d",
-        "size": 692007,
+        "path": "apps/articles/articles-0.15.2.tgz",
+        "sha256": "5272ce111d846a5acb8be7f59c14cec6228fce88eb2f71f98ea94a1c5be76569",
+        "size": 692014,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -4397,6 +4403,12 @@
         }
       ],
       "changelog": {
+        "1.13.2": [
+          {
+            "es": "Los formularios se abren siempre centrados; si son largos, se desplazan por dentro.",
+            "en": "Forms always open centred; long ones scroll inside."
+          }
+        ],
         "1.13.1": [
           {
             "es": "Los diálogos se leen enteros dentro de la oficina: el título y los botones siempre a la vista, nunca bajo la barra ni contra la caja donde escribes a tu agente.",
@@ -4722,11 +4734,11 @@
       },
       "whatsNew": [
         {
-          "es": "Los diálogos se leen enteros dentro de la oficina: el título y los botones siempre a la vista, nunca bajo la barra ni contra la caja donde escribes a tu agente.",
-          "en": "Dialogs can be read whole inside the office: the title and the buttons always in view, never under the bar or against the box where you write to your agent."
+          "es": "Los formularios se abren siempre centrados; si son largos, se desplazan por dentro.",
+          "en": "Forms always open centred; long ones scroll inside."
         }
       ],
-      "version": "1.13.1",
+      "version": "1.13.2",
       "tables": [
         "oportunidadesseo_oportunidades",
         "oportunidadesseo_acciones",
@@ -4747,9 +4759,9 @@
         "oportunidadesseo_cache"
       ],
       "package": {
-        "path": "apps/oportunidadesseo/oportunidadesseo-1.13.1.tgz",
-        "sha256": "2a052e8b3f778ab3de70af5adcd380a92462e751e108d7e55370190a22fb3d7f",
-        "size": 655950,
+        "path": "apps/oportunidadesseo/oportunidadesseo-1.13.2.tgz",
+        "sha256": "3a70a942b5ee4b3f17698c9e4307f7056bfb58f25a858d16c455822ab0ba0300",
+        "size": 654318,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -4961,6 +4973,12 @@
         }
       ],
       "changelog": {
+        "0.3.2": [
+          {
+            "es": "Los formularios se abren siempre centrados; si son largos, se desplazan por dentro.",
+            "en": "Forms always open centred; long ones scroll inside."
+          }
+        ],
         "0.3.1": [
           {
             "es": "Los formularios se leen enteros dentro de la oficina: el título y los botones siempre a la vista, nunca bajo la barra ni contra la caja donde escribes a tu agente. Los largos («Editar ficha de la obra», un parte de horas, un trabajo) se abren como un panel a la derecha; en el móvil, desde abajo.",
@@ -5032,15 +5050,11 @@
       },
       "whatsNew": [
         {
-          "es": "Los formularios se leen enteros dentro de la oficina: el título y los botones siempre a la vista, nunca bajo la barra ni contra la caja donde escribes a tu agente. Los largos («Editar ficha de la obra», un parte de horas, un trabajo) se abren como un panel a la derecha; en el móvil, desde abajo.",
-          "en": "Forms can be read whole inside the office: the title and the buttons always in view, never under the bar or against the box where you write to your agent. Long ones («Editar ficha de la obra», a timesheet entry, a job) open as a panel on the right; on a phone, from the bottom."
-        },
-        {
-          "es": "El color de una obra se elige tocando una muestra; el código hexadecimal queda en «Otro color», para quien lo tenga.",
-          "en": "A project's colour is picked by tapping a swatch; the hex code stays under «Otro color», for whoever has one."
+          "es": "Los formularios se abren siempre centrados; si son largos, se desplazan por dentro.",
+          "en": "Forms always open centred; long ones scroll inside."
         }
       ],
-      "version": "0.3.1",
+      "version": "0.3.2",
       "tables": [
         "obras_projects",
         "obras_units",
@@ -5058,9 +5072,9 @@
         "obras_settings"
       ],
       "package": {
-        "path": "apps/obras/obras-0.3.1.tgz",
-        "sha256": "250ff78d1b3cffc09e52a8f8a42fddda44c96a4857f25aa9ff09cc6a35223c2d",
-        "size": 424145,
+        "path": "apps/obras/obras-0.3.2.tgz",
+        "sha256": "30e58410946f75819afb4123b8e24f0fde99737f91bc941d5bce98705eb0874c",
+        "size": 422460,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
