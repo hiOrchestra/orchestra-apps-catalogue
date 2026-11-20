@@ -4973,6 +4973,24 @@
         }
       ],
       "changelog": {
+        "0.4.0": [
+          {
+            "es": "El menú es siempre la gestión de todas tus obras —Resumen, Obras, Visitas de obra, Informes, Horas, Intervinientes— y ya no desaparece: una obra se abre dentro de «Obras», con sus pestañas y «Obras › su nombre» arriba.",
+            "en": "The menu always manages all your projects — Resumen, Obras, Visitas de obra, Informes, Horas, Intervinientes — and no longer goes away: a project opens inside «Obras», with its tabs and «Obras › its name» on top."
+          },
+          {
+            "es": "En las vistas de todas las obras cada fila dice de qué obra es, con su color, y se puede filtrar por obra. Nada se apunta sin obra: la visita dice bien claro en cuál estás («Visita a … · hoy») y cada formulario empieza por su obra.",
+            "en": "In the views across projects every row says which project it belongs to, with its colour, and can be filtered by project. Nothing is recorded without a project: the visit says plainly where you are («Visita a … · hoy») and every form starts with its project."
+          },
+          {
+            "es": "«Intervinientes» sustituye a «Trabajos»: el cliente, la constructora, subcontratas, proveedores, técnicos y operarios, cada uno con sus obras, sus incidencias a cargo, sus horas y sus trabajos facturables. Empresas y personas salen de Ajustes y viven aquí.",
+            "en": "«Intervinientes» replaces «Trabajos»: the client, the builder, subcontractors, suppliers, technicians and workers, each with its projects, the incidents it answers for, its hours and its billable jobs. Companies and people leave Settings and live here."
+          },
+          {
+            "es": "Más visual: el Resumen es tu cartera de obras por cliente, en tarjetas con su salud y su plazo, con los plazos de todas y la evolución de las incidencias; dentro de una obra, gráficos de incidencias por capítulo, sobrecostes previstos y reales, trámites y horas.",
+            "en": "More visual: the Summary is your portfolio of projects by client, on cards with their health and timeline, with every project's dates and the incidents' trend; inside a project, charts of incidents by chapter, estimated and real extra costs, procedures and hours."
+          }
+        ],
         "0.3.2": [
           {
             "es": "Los formularios se abren siempre centrados; si son largos, se desplazan por dentro.",
@@ -5050,11 +5068,23 @@
       },
       "whatsNew": [
         {
-          "es": "Los formularios se abren siempre centrados; si son largos, se desplazan por dentro.",
-          "en": "Forms always open centred; long ones scroll inside."
+          "es": "El menú es siempre la gestión de todas tus obras —Resumen, Obras, Visitas de obra, Informes, Horas, Intervinientes— y ya no desaparece: una obra se abre dentro de «Obras», con sus pestañas y «Obras › su nombre» arriba.",
+          "en": "The menu always manages all your projects — Resumen, Obras, Visitas de obra, Informes, Horas, Intervinientes — and no longer goes away: a project opens inside «Obras», with its tabs and «Obras › its name» on top."
+        },
+        {
+          "es": "En las vistas de todas las obras cada fila dice de qué obra es, con su color, y se puede filtrar por obra. Nada se apunta sin obra: la visita dice bien claro en cuál estás («Visita a … · hoy») y cada formulario empieza por su obra.",
+          "en": "In the views across projects every row says which project it belongs to, with its colour, and can be filtered by project. Nothing is recorded without a project: the visit says plainly where you are («Visita a … · hoy») and every form starts with its project."
+        },
+        {
+          "es": "«Intervinientes» sustituye a «Trabajos»: el cliente, la constructora, subcontratas, proveedores, técnicos y operarios, cada uno con sus obras, sus incidencias a cargo, sus horas y sus trabajos facturables. Empresas y personas salen de Ajustes y viven aquí.",
+          "en": "«Intervinientes» replaces «Trabajos»: the client, the builder, subcontractors, suppliers, technicians and workers, each with its projects, the incidents it answers for, its hours and its billable jobs. Companies and people leave Settings and live here."
+        },
+        {
+          "es": "Más visual: el Resumen es tu cartera de obras por cliente, en tarjetas con su salud y su plazo, con los plazos de todas y la evolución de las incidencias; dentro de una obra, gráficos de incidencias por capítulo, sobrecostes previstos y reales, trámites y horas.",
+          "en": "More visual: the Summary is your portfolio of projects by client, on cards with their health and timeline, with every project's dates and the incidents' trend; inside a project, charts of incidents by chapter, estimated and real extra costs, procedures and hours."
         }
       ],
-      "version": "0.3.2",
+      "version": "0.4.0",
       "tables": [
         "obras_projects",
         "obras_units",
@@ -5072,9 +5102,9 @@
         "obras_settings"
       ],
       "package": {
-        "path": "apps/obras/obras-0.3.2.tgz",
-        "sha256": "30e58410946f75819afb4123b8e24f0fde99737f91bc941d5bce98705eb0874c",
-        "size": 422460,
+        "path": "apps/obras/obras-0.4.0.tgz",
+        "sha256": "734fd42fcd5829362f2739f70902c6356f5e4994b5d19749aa996144d5b23810",
+        "size": 559882,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
