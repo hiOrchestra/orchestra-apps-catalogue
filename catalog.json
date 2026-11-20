@@ -4899,15 +4899,15 @@
         "user": "Whoever manages building projects",
         "frequency": "Daily",
         "questions": [
-          "What is open in each project?",
-          "What is the next step of each procedure?",
+          "What waits for me across my projects?",
+          "How is each project going?",
           "What do I send the client this month?"
         ],
         "primaryAction": "Record what a site visit found",
         "answers": [
-          "Open incidents by project and chapter, the severe first, each with its delay.",
-          "Every licence, connection, insurance and deposit with its state and dated next step.",
-          "A monthly report per project, drafted from what the module holds, to review and print."
+          "What needs attention, in order: severe and late incidents, stuck procedures, reports, hours to validate and jobs to invoice, each with its next step.",
+          "Each project in one screen: open incidents by chapter, paperwork, extra costs, units sold and its last visits.",
+          "A monthly report per project, drafted from what the module holds, to review, print and mark as sent."
         ]
       },
       "how": [
@@ -4948,8 +4948,8 @@
       "icon": "hard-hat",
       "screenshots": [
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/obras/screens/1-incidencias.png",
-          "caption": "What is open, by chapter, the severe first",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/obras/screens/1-resumen.png",
+          "caption": "What waits for you across your projects, in order",
           "surface": "desk",
           "device": "desktop"
         },
@@ -4961,6 +4961,32 @@
         }
       ],
       "changelog": {
+        "0.3.0": [
+          {
+            "es": "Obras se ordena por lo que vienes a hacer, no por tablas: «Resumen» dice lo que te espera en todas tus obras, por orden y con su botón; «Visita de obra» es para apuntar desde el móvil; «Informes», «Horas» y «Trabajos» dicen cuál es el paso siguiente.",
+            "en": "Obras is organised by what you come to do, not by tables: «Resumen» says what waits for you across your projects, in order and with its button; «Visita de obra» is for noting from a phone; «Informes», «Horas» and «Trabajos» say what the next step is."
+          },
+          {
+            "es": "Cada obra es un sitio al que entras: su estado de un vistazo y, dentro, sus incidencias, visitas, trámites, informes, horas y su ficha.",
+            "en": "Each project is a place you go into: its state at a glance and, inside, its incidents, visits, procedures, reports, hours and its card."
+          },
+          {
+            "es": "En la visita apuntas una cosa detrás de otra (qué pasa, gravedad, dónde y una foto) y repasas lo que sigue abierto en esa obra, con «Resuelta» y «Nota».",
+            "en": "On a visit you note one thing after another (what, how severe, where and a photo) and check what is still open in that project, with «Resuelta» and «Nota»."
+          },
+          {
+            "es": "Los informes dicen en qué punto están (por preparar, borrador, por revisar, revisado, enviado) y se marcan como enviados; los trabajos de un cliente se marcan facturados de una vez.",
+            "en": "Reports say where they stand (to prepare, draft, to review, reviewed, sent) and can be marked as sent; a client's jobs are marked invoiced in one go."
+          },
+          {
+            "es": "Empresas y personas pasan a Ajustes, y «Cómo funciona» está una sola vez, arriba.",
+            "en": "Companies and people move to Settings, and «Cómo funciona» is there once, on top."
+          },
+          {
+            "es": "Tu agente hace cada cosa en una sola llamada: lo pendiente, cómo va una obra, una visita entera y los informes del mes.",
+            "en": "Your agent does each thing in one call: what is pending, how a project is going, a whole visit and the month's reports."
+          }
+        ],
         "0.2.0": [
           {
             "es": "El parte de horas completo: entrada, salida, pausa, horas ordinarias, extra y de desplazamiento, km, quién valida y si está pagado, con sumas por operario, obra y semana y lo que falta por validar y por pagar.",
@@ -4996,23 +5022,31 @@
       },
       "whatsNew": [
         {
-          "es": "El parte de horas completo: entrada, salida, pausa, horas ordinarias, extra y de desplazamiento, km, quién valida y si está pagado, con sumas por operario, obra y semana y lo que falta por validar y por pagar.",
-          "en": "The full timesheet: entry, exit, break, ordinary, overtime and travel hours, km, who validates and whether it is paid, summed by worker, project and week, with what is left to validate and pay."
+          "es": "Obras se ordena por lo que vienes a hacer, no por tablas: «Resumen» dice lo que te espera en todas tus obras, por orden y con su botón; «Visita de obra» es para apuntar desde el móvil; «Informes», «Horas» y «Trabajos» dicen cuál es el paso siguiente.",
+          "en": "Obras is organised by what you come to do, not by tables: «Resumen» says what waits for you across your projects, in order and with its button; «Visita de obra» is for noting from a phone; «Informes», «Horas» and «Trabajos» say what the next step is."
         },
         {
-          "es": "Trabajos facturables a clientes, con tarifa e importe (horas × tarifa), y empresas y personas.",
-          "en": "Billable jobs for clients, with rate and total (hours × rate), and companies and people."
+          "es": "Cada obra es un sitio al que entras: su estado de un vistazo y, dentro, sus incidencias, visitas, trámites, informes, horas y su ficha.",
+          "en": "Each project is a place you go into: its state at a glance and, inside, its incidents, visits, procedures, reports, hours and its card."
         },
         {
-          "es": "Las incidencias tienen estado (abierta, en curso, pendiente, cerrada) y observaciones; las obras, código, grupo, tipo, responsable y color.",
-          "en": "Incidents have a state (open, in progress, waiting, closed) and remarks; projects a code, group, kind, responsible and colour."
+          "es": "En la visita apuntas una cosa detrás de otra (qué pasa, gravedad, dónde y una foto) y repasas lo que sigue abierto en esa obra, con «Resuelta» y «Nota».",
+          "en": "On a visit you note one thing after another (what, how severe, where and a photo) and check what is still open in that project, with «Resuelta» and «Nota»."
         },
         {
-          "es": "El informe mensual puede incluir «Hores i treballs del mes» (Ajustes), y se pueden traer tal cual las tablas que ya llevabas: incidencias y su historial, horas, trabajos, obras, empresas y personas.",
-          "en": "The monthly report can include \"Hores i treballs del mes\" (Settings), and the tables you already kept come in as they are: incidents and their history, hours, jobs, projects, companies and people."
+          "es": "Los informes dicen en qué punto están (por preparar, borrador, por revisar, revisado, enviado) y se marcan como enviados; los trabajos de un cliente se marcan facturados de una vez.",
+          "en": "Reports say where they stand (to prepare, draft, to review, reviewed, sent) and can be marked as sent; a client's jobs are marked invoiced in one go."
+        },
+        {
+          "es": "Empresas y personas pasan a Ajustes, y «Cómo funciona» está una sola vez, arriba.",
+          "en": "Companies and people move to Settings, and «Cómo funciona» is there once, on top."
+        },
+        {
+          "es": "Tu agente hace cada cosa en una sola llamada: lo pendiente, cómo va una obra, una visita entera y los informes del mes.",
+          "en": "Your agent does each thing in one call: what is pending, how a project is going, a whole visit and the month's reports."
         }
       ],
-      "version": "0.2.0",
+      "version": "0.3.0",
       "tables": [
         "obras_projects",
         "obras_units",
@@ -5030,9 +5064,9 @@
         "obras_settings"
       ],
       "package": {
-        "path": "apps/obras/obras-0.2.0.tgz",
-        "sha256": "6bb6e74462d9ab41b27a39b05caca056f7df070300926fb53d11f25d8ea26961",
-        "size": 407274,
+        "path": "apps/obras/obras-0.3.0.tgz",
+        "sha256": "6922bd3910eb324c6b749081a160b8b775499af28f75205d782664b93631a6d2",
+        "size": 421083,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
