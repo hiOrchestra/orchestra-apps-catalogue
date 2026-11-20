@@ -69,6 +69,12 @@
         }
       ],
       "changelog": {
+        "0.15.1": [
+          {
+            "es": "Los diálogos se leen enteros dentro de la oficina: el título y los botones siempre a la vista, nunca bajo la barra ni contra la caja donde escribes a tu agente.",
+            "en": "Dialogs can be read whole inside the office: the title and the buttons always in view, never under the bar or against the box where you write to your agent."
+          }
+        ],
         "0.15.0": [
           {
             "es": "Cuando hay artículos listos para publicar y a la publicación le falta algo (decir dónde publica la empresa, o la clave de la web), sale arriba del todo, en «Para completar esta página», con su botón. Quien no puede resolverlo avisa a un administrador desde ahí.",
@@ -204,15 +210,11 @@
       },
       "whatsNew": [
         {
-          "es": "Cuando hay artículos listos para publicar y a la publicación le falta algo (decir dónde publica la empresa, o la clave de la web), sale arriba del todo, en «Para completar esta página», con su botón. Quien no puede resolverlo avisa a un administrador desde ahí.",
-          "en": "When articles are ready to publish and publishing still needs something (saying where the company publishes, or the website's key), it shows at the very top, in «Para completar esta página», with its button. Whoever cannot resolve it asks an admin from there."
-        },
-        {
-          "es": "La cabecera de la Mesa de redacción y de cada artículo tiene una sola línea de contexto y «Cómo funciona» a la derecha, con la explicación de la pestaña en la que estás.",
-          "en": "The header of the newsroom and of each article has one line of context and «Cómo funciona» on the right, explaining the tab you are in."
+          "es": "Los diálogos se leen enteros dentro de la oficina: el título y los botones siempre a la vista, nunca bajo la barra ni contra la caja donde escribes a tu agente.",
+          "en": "Dialogs can be read whole inside the office: the title and the buttons always in view, never under the bar or against the box where you write to your agent."
         }
       ],
-      "version": "0.15.0",
+      "version": "0.15.1",
       "tables": [
         "articles_articles",
         "articles_rules",
@@ -227,9 +229,9 @@
         "articles_links"
       ],
       "package": {
-        "path": "apps/articles/articles-0.15.0.tgz",
-        "sha256": "92adcc863cfc8dbb03dbdf1b4b82e80a63ebe1c5193184a7454872b99173b12d",
-        "size": 688820,
+        "path": "apps/articles/articles-0.15.1.tgz",
+        "sha256": "86a07ae8dae28018b42c843db38ccedd07c786ba9333917ed7ed50b1340e2c1d",
+        "size": 692007,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -4395,6 +4397,12 @@
         }
       ],
       "changelog": {
+        "1.13.1": [
+          {
+            "es": "Los diálogos se leen enteros dentro de la oficina: el título y los botones siempre a la vista, nunca bajo la barra ni contra la caja donde escribes a tu agente.",
+            "en": "Dialogs can be read whole inside the office: the title and the buttons always in view, never under the bar or against the box where you write to your agent."
+          }
+        ],
         "1.13.0": [
           {
             "es": "Lo que a una página le falta para estar completa ya no está escondido en un párrafo: sale arriba del todo, en «Para completar esta página», con para qué sirve y su botón («Elegir cuenta», «Añadir la clave», «Conectar»). Solo lo de esa página; cuando se resuelve, desaparece.",
@@ -4714,19 +4722,11 @@
       },
       "whatsNew": [
         {
-          "es": "Lo que a una página le falta para estar completa ya no está escondido en un párrafo: sale arriba del todo, en «Para completar esta página», con para qué sirve y su botón («Elegir cuenta», «Añadir la clave», «Conectar»). Solo lo de esa página; cuando se resuelve, desaparece.",
-          "en": "What a page still needs to be complete is no longer buried in a paragraph: it is at the very top, in «Para completar esta página», with what it is for and its button («Elegir cuenta», «Añadir la clave», «Conectar»). Only what that page needs; once resolved, it is gone."
-        },
-        {
-          "es": "Si no puedes resolverlo tú (las claves del módulo las pone un propietario o administrador), el botón es «Avisar a un administrador»: le deja la petición en su Trabajo con lo que falta y dónde, y la página dice a quién se lo pediste y cuándo.",
-          "en": "If you cannot resolve it yourself (an owner or admin enters the module's keys), the button is «Avisar a un administrador»: it leaves the request in their Trabajo with what is missing and where, and the page says whom you asked and when."
-        },
-        {
-          "es": "La cabecera es la misma en todas las páginas: el título, una sola línea con tu web, el país y lo que se busca (pulsa esta última para cambiarla en Ajustes) y «Cómo funciona» a la derecha, con la explicación del sitio en el que estás.",
-          "en": "The header is the same on every page: the title, one line with your site, the country and what is searched (press that one to change it in Ajustes) and «Cómo funciona» on the right, explaining the place you are in."
+          "es": "Los diálogos se leen enteros dentro de la oficina: el título y los botones siempre a la vista, nunca bajo la barra ni contra la caja donde escribes a tu agente.",
+          "en": "Dialogs can be read whole inside the office: the title and the buttons always in view, never under the bar or against the box where you write to your agent."
         }
       ],
-      "version": "1.13.0",
+      "version": "1.13.1",
       "tables": [
         "oportunidadesseo_oportunidades",
         "oportunidadesseo_acciones",
@@ -4747,9 +4747,9 @@
         "oportunidadesseo_cache"
       ],
       "package": {
-        "path": "apps/oportunidadesseo/oportunidadesseo-1.13.0.tgz",
-        "sha256": "e7a9988fcd118db9a8f35d28816908fb70b1831b90907c5a1a2a8609a553ff4d",
-        "size": 655900,
+        "path": "apps/oportunidadesseo/oportunidadesseo-1.13.1.tgz",
+        "sha256": "2a052e8b3f778ab3de70af5adcd380a92462e751e108d7e55370190a22fb3d7f",
+        "size": 655950,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -4961,6 +4961,16 @@
         }
       ],
       "changelog": {
+        "0.3.1": [
+          {
+            "es": "Los formularios se leen enteros dentro de la oficina: el título y los botones siempre a la vista, nunca bajo la barra ni contra la caja donde escribes a tu agente. Los largos («Editar ficha de la obra», un parte de horas, un trabajo) se abren como un panel a la derecha; en el móvil, desde abajo.",
+            "en": "Forms can be read whole inside the office: the title and the buttons always in view, never under the bar or against the box where you write to your agent. Long ones («Editar ficha de la obra», a timesheet entry, a job) open as a panel on the right; on a phone, from the bottom."
+          },
+          {
+            "es": "El color de una obra se elige tocando una muestra; el código hexadecimal queda en «Otro color», para quien lo tenga.",
+            "en": "A project's colour is picked by tapping a swatch; the hex code stays under «Otro color», for whoever has one."
+          }
+        ],
         "0.3.0": [
           {
             "es": "Obras se ordena por lo que vienes a hacer, no por tablas: «Resumen» dice lo que te espera en todas tus obras, por orden y con su botón; «Visita de obra» es para apuntar desde el móvil; «Informes», «Horas» y «Trabajos» dicen cuál es el paso siguiente.",
@@ -5022,31 +5032,15 @@
       },
       "whatsNew": [
         {
-          "es": "Obras se ordena por lo que vienes a hacer, no por tablas: «Resumen» dice lo que te espera en todas tus obras, por orden y con su botón; «Visita de obra» es para apuntar desde el móvil; «Informes», «Horas» y «Trabajos» dicen cuál es el paso siguiente.",
-          "en": "Obras is organised by what you come to do, not by tables: «Resumen» says what waits for you across your projects, in order and with its button; «Visita de obra» is for noting from a phone; «Informes», «Horas» and «Trabajos» say what the next step is."
+          "es": "Los formularios se leen enteros dentro de la oficina: el título y los botones siempre a la vista, nunca bajo la barra ni contra la caja donde escribes a tu agente. Los largos («Editar ficha de la obra», un parte de horas, un trabajo) se abren como un panel a la derecha; en el móvil, desde abajo.",
+          "en": "Forms can be read whole inside the office: the title and the buttons always in view, never under the bar or against the box where you write to your agent. Long ones («Editar ficha de la obra», a timesheet entry, a job) open as a panel on the right; on a phone, from the bottom."
         },
         {
-          "es": "Cada obra es un sitio al que entras: su estado de un vistazo y, dentro, sus incidencias, visitas, trámites, informes, horas y su ficha.",
-          "en": "Each project is a place you go into: its state at a glance and, inside, its incidents, visits, procedures, reports, hours and its card."
-        },
-        {
-          "es": "En la visita apuntas una cosa detrás de otra (qué pasa, gravedad, dónde y una foto) y repasas lo que sigue abierto en esa obra, con «Resuelta» y «Nota».",
-          "en": "On a visit you note one thing after another (what, how severe, where and a photo) and check what is still open in that project, with «Resuelta» and «Nota»."
-        },
-        {
-          "es": "Los informes dicen en qué punto están (por preparar, borrador, por revisar, revisado, enviado) y se marcan como enviados; los trabajos de un cliente se marcan facturados de una vez.",
-          "en": "Reports say where they stand (to prepare, draft, to review, reviewed, sent) and can be marked as sent; a client's jobs are marked invoiced in one go."
-        },
-        {
-          "es": "Empresas y personas pasan a Ajustes, y «Cómo funciona» está una sola vez, arriba.",
-          "en": "Companies and people move to Settings, and «Cómo funciona» is there once, on top."
-        },
-        {
-          "es": "Tu agente hace cada cosa en una sola llamada: lo pendiente, cómo va una obra, una visita entera y los informes del mes.",
-          "en": "Your agent does each thing in one call: what is pending, how a project is going, a whole visit and the month's reports."
+          "es": "El color de una obra se elige tocando una muestra; el código hexadecimal queda en «Otro color», para quien lo tenga.",
+          "en": "A project's colour is picked by tapping a swatch; the hex code stays under «Otro color», for whoever has one."
         }
       ],
-      "version": "0.3.0",
+      "version": "0.3.1",
       "tables": [
         "obras_projects",
         "obras_units",
@@ -5064,9 +5058,9 @@
         "obras_settings"
       ],
       "package": {
-        "path": "apps/obras/obras-0.3.0.tgz",
-        "sha256": "6922bd3910eb324c6b749081a160b8b775499af28f75205d782664b93631a6d2",
-        "size": 421083,
+        "path": "apps/obras/obras-0.3.1.tgz",
+        "sha256": "250ff78d1b3cffc09e52a8f8a42fddda44c96a4857f25aa9ff09cc6a35223c2d",
+        "size": 424145,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
