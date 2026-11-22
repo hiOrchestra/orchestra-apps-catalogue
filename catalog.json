@@ -4973,6 +4973,16 @@
         }
       ],
       "changelog": {
+        "0.5.0": [
+          {
+            "es": "La primera vez que abres Obras, sin ninguna obra tuya todavía, ves un ejemplo ya relleno —una obra inventada con sus incidencias, visitas, trámites, informe, horas e intervinientes— para entender cómo funciona cada sitio. Está marcado como ejemplo en todas partes y no cuenta en nada tuyo.",
+            "en": "The first time you open Obras, with no project of yours yet, you see a filled-in example — an invented project with its incidents, visits, procedures, report, hours and people — to understand how each place works. It is marked as an example everywhere and counts in nothing of yours."
+          },
+          {
+            "es": "«Quitar el ejemplo» lo quita para siempre, y se va solo con tu primera obra; si lo quieres volver a ver, «Ver un ejemplo». Tu agente sabe que es inventado y nunca lo da por real.",
+            "en": "«Quitar el ejemplo» takes it away for good, and it leaves by itself with your first project; to see it again, «Ver un ejemplo». Your agent knows it is invented and never takes it for real."
+          }
+        ],
         "0.4.0": [
           {
             "es": "El menú es siempre la gestión de todas tus obras —Resumen, Obras, Visitas de obra, Informes, Horas, Intervinientes— y ya no desaparece: una obra se abre dentro de «Obras», con sus pestañas y «Obras › su nombre» arriba.",
@@ -5068,23 +5078,15 @@
       },
       "whatsNew": [
         {
-          "es": "El menú es siempre la gestión de todas tus obras —Resumen, Obras, Visitas de obra, Informes, Horas, Intervinientes— y ya no desaparece: una obra se abre dentro de «Obras», con sus pestañas y «Obras › su nombre» arriba.",
-          "en": "The menu always manages all your projects — Resumen, Obras, Visitas de obra, Informes, Horas, Intervinientes — and no longer goes away: a project opens inside «Obras», with its tabs and «Obras › its name» on top."
+          "es": "La primera vez que abres Obras, sin ninguna obra tuya todavía, ves un ejemplo ya relleno —una obra inventada con sus incidencias, visitas, trámites, informe, horas e intervinientes— para entender cómo funciona cada sitio. Está marcado como ejemplo en todas partes y no cuenta en nada tuyo.",
+          "en": "The first time you open Obras, with no project of yours yet, you see a filled-in example — an invented project with its incidents, visits, procedures, report, hours and people — to understand how each place works. It is marked as an example everywhere and counts in nothing of yours."
         },
         {
-          "es": "En las vistas de todas las obras cada fila dice de qué obra es, con su color, y se puede filtrar por obra. Nada se apunta sin obra: la visita dice bien claro en cuál estás («Visita a … · hoy») y cada formulario empieza por su obra.",
-          "en": "In the views across projects every row says which project it belongs to, with its colour, and can be filtered by project. Nothing is recorded without a project: the visit says plainly where you are («Visita a … · hoy») and every form starts with its project."
-        },
-        {
-          "es": "«Intervinientes» sustituye a «Trabajos»: el cliente, la constructora, subcontratas, proveedores, técnicos y operarios, cada uno con sus obras, sus incidencias a cargo, sus horas y sus trabajos facturables. Empresas y personas salen de Ajustes y viven aquí.",
-          "en": "«Intervinientes» replaces «Trabajos»: the client, the builder, subcontractors, suppliers, technicians and workers, each with its projects, the incidents it answers for, its hours and its billable jobs. Companies and people leave Settings and live here."
-        },
-        {
-          "es": "Más visual: el Resumen es tu cartera de obras por cliente, en tarjetas con su salud y su plazo, con los plazos de todas y la evolución de las incidencias; dentro de una obra, gráficos de incidencias por capítulo, sobrecostes previstos y reales, trámites y horas.",
-          "en": "More visual: the Summary is your portfolio of projects by client, on cards with their health and timeline, with every project's dates and the incidents' trend; inside a project, charts of incidents by chapter, estimated and real extra costs, procedures and hours."
+          "es": "«Quitar el ejemplo» lo quita para siempre, y se va solo con tu primera obra; si lo quieres volver a ver, «Ver un ejemplo». Tu agente sabe que es inventado y nunca lo da por real.",
+          "en": "«Quitar el ejemplo» takes it away for good, and it leaves by itself with your first project; to see it again, «Ver un ejemplo». Your agent knows it is invented and never takes it for real."
         }
       ],
-      "version": "0.4.0",
+      "version": "0.5.0",
       "tables": [
         "obras_projects",
         "obras_units",
@@ -5102,9 +5104,9 @@
         "obras_settings"
       ],
       "package": {
-        "path": "apps/obras/obras-0.4.0.tgz",
-        "sha256": "734fd42fcd5829362f2739f70902c6356f5e4994b5d19749aa996144d5b23810",
-        "size": 559882,
+        "path": "apps/obras/obras-0.5.0.tgz",
+        "sha256": "16ede2f31a53a3a69d1fde07e2b3e0ea7713593cf4b2785b11c29b2c0e685461",
+        "size": 557617,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
