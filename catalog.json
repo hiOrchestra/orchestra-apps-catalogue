@@ -70,6 +70,12 @@
         }
       ],
       "changelog": {
+        "0.15.4": [
+          {
+            "es": "«Cómo funciona» solo habla de la otra parte de tu oficina cuando la tienes.",
+            "en": "«Cómo funciona» only mentions the other part of your office when you have it."
+          }
+        ],
         "0.15.3": [
           {
             "es": "«Cómo funciona» se lee sin saber nada de antes: cada paso dice qué es, para qué sirve, qué botón pulsar y qué hace tu agente; los ejemplos son inventados.",
@@ -227,15 +233,11 @@
       },
       "whatsNew": [
         {
-          "es": "«Cómo funciona» se lee sin saber nada de antes: cada paso dice qué es, para qué sirve, qué botón pulsar y qué hace tu agente; los ejemplos son inventados.",
-          "en": "«Cómo funciona» reads with no prior knowledge: each step says what it is, what it is for, which button to press and what your agent does; the examples are invented."
-        },
-        {
-          "es": "Los ejemplos y textos ya no nombran a clientes reales.",
-          "en": "Examples and texts no longer name real customers."
+          "es": "«Cómo funciona» solo habla de la otra parte de tu oficina cuando la tienes.",
+          "en": "«Cómo funciona» only mentions the other part of your office when you have it."
         }
       ],
-      "version": "0.15.3",
+      "version": "0.15.4",
       "tables": [
         "articles_articles",
         "articles_rules",
@@ -250,9 +252,9 @@
         "articles_links"
       ],
       "package": {
-        "path": "apps/articles/articles-0.15.3.tgz",
-        "sha256": "d3418381ff9cc8f4dd87d70c0bd2dd15c06c140602bd896945035ce10dffe097",
-        "size": 690736,
+        "path": "apps/articles/articles-0.15.4.tgz",
+        "sha256": "4be22779c9b6f196988aed2cd778f2973487af771f8265ea0a39688853e69e11",
+        "size": 690747,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -4335,6 +4337,12 @@
         }
       ],
       "changelog": {
+        "1.13.4": [
+          {
+            "es": "«Cómo funciona» solo habla de la otra parte de tu oficina cuando la tienes.",
+            "en": "«Cómo funciona» only mentions the other part of your office when you have it."
+          }
+        ],
         "1.13.3": [
           {
             "es": "«Cómo funciona» se lee sin saber nada de antes: cada paso dice qué es, para qué sirve, qué botón pulsar y qué hace tu agente; los ejemplos son inventados.",
@@ -4680,19 +4688,11 @@
       },
       "whatsNew": [
         {
-          "es": "«Cómo funciona» se lee sin saber nada de antes: cada paso dice qué es, para qué sirve, qué botón pulsar y qué hace tu agente; los ejemplos son inventados.",
-          "en": "«Cómo funciona» reads with no prior knowledge: each step says what it is, what it is for, which button to press and what your agent does; the examples are invented."
-        },
-        {
-          "es": "Los textos de la página dicen lo que pasa sin palabras internas.",
-          "en": "The page's texts say what happens without inside words."
-        },
-        {
-          "es": "Los ejemplos y textos ya no nombran a clientes reales.",
-          "en": "Examples and texts no longer name real customers."
+          "es": "«Cómo funciona» solo habla de la otra parte de tu oficina cuando la tienes.",
+          "en": "«Cómo funciona» only mentions the other part of your office when you have it."
         }
       ],
-      "version": "1.13.3",
+      "version": "1.13.4",
       "tables": [
         "oportunidadesseo_oportunidades",
         "oportunidadesseo_acciones",
@@ -4713,9 +4713,9 @@
         "oportunidadesseo_cache"
       ],
       "package": {
-        "path": "apps/oportunidadesseo/oportunidadesseo-1.13.3.tgz",
-        "sha256": "aabff28a251ec08ff19ce85064e3ba9d69b8ceb83a8c0347c44f888b09f9d1e1",
-        "size": 653244,
+        "path": "apps/oportunidadesseo/oportunidadesseo-1.13.4.tgz",
+        "sha256": "602019289c13ebef68b4c642839267658ac695c84973ec0067a8f1ba203d6dcb",
+        "size": 653246,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
