@@ -2170,36 +2170,35 @@
       "id": "invoices",
       "name": "Invoices",
       "category": "Finance",
-      "summary": "Quotes and invoices your clients accept and pay online.",
-      "promise": "Quotes and invoices your clients accept and pay from a link, with reminders drafted for whoever is late.",
+      "summary": "Quotes, invoices and recurring fees your clients accept and pay from a link.",
+      "promise": "Quotes, invoices and recurring fees: clients accept and pay from a link, and every fee makes its own invoice on its day.",
       "like": "Holded",
-      "description": "Write a quote (or let the agent draft it from one sentence), issue it with the next number, and send the client a link where they accept it or pay the invoice by bank transfer or card. The agent drafts payment reminders for overdue invoices; nothing is sent until you approve it. Not certified fiscal software: it does not submit anything to a tax authority (no Verifactu, SII or e-invoicing).",
+      "description": "Write a quote (or ask your agent for it in one sentence), issue it with the next number, and the client accepts it from a link; it becomes an invoice with one button. Recurring fees (maintenance, a monthly plan, hosting each quarter) make their invoice on their day, as a draft for you or issued by itself if you choose. What you are owed, what is late and your income month by month, at a glance. Emails go out from your team's mailbox only when you press Send. Not certified fiscal software: it submits nothing to a tax authority (no Verifactu, SII or e-invoicing).",
       "brief": {
         "user": "The owner, or whoever keeps the books, of a small company or a freelancer",
         "frequency": "Several times a week",
         "questions": [
           "How much am I owed, and who is late?",
           "Which quotes are waiting for an answer?",
-          "What did I invoice this client?"
+          "What do I bill every month, and when is the next one?"
         ],
         "primaryAction": "Issue an invoice or a quote, and send it to the client",
         "answers": [
-          "What is owed and what is overdue, client by client, with a reminder drafted for each late invoice.",
-          "Quotes sent and not yet answered, with the client accepting or declining from their link.",
-          "Every quote and invoice of a client, with its number, status and link."
+          "What is owed and what is overdue, the oldest first, with a payment reminder ready for your yes.",
+          "Quotes issued and not yet answered; the client accepts or declines from their link, and you are told.",
+          "Every recurring fee with its amount, how often and the next day; its invoice is made by itself."
         ]
       },
       "how": [
         {
-          "actor": "agent",
-          "role": "drafter",
-          "title": "The agent drafts a quote from one sentence",
-          "text": "You write what it is for; it writes the lines. Or you write the quote yourself."
+          "actor": "person",
+          "title": "You write the quote, or ask your agent",
+          "text": "Who and what («1.000 € to set up the web»): the lines and the totals, with IVA and IRPF."
         },
         {
           "actor": "person",
           "title": "You issue it and send it",
-          "text": "It takes the next number and goes out with a link, from your Gmail.",
+          "text": "It takes the next number and a link; your agent sends the email you approved from the team's mailbox.",
           "via": [
             "gmail"
           ]
@@ -2207,10 +2206,9 @@
         {
           "actor": "arrives",
           "title": "The client accepts or pays from the link",
-          "text": "By bank transfer, or by card when Stripe is on; it is marked paid by itself.",
+          "text": "Accepted quotes become invoices with one button; recurring fees make theirs on their day.",
           "via": [
-            "web",
-            "stripe"
+            "web"
           ]
         }
       ],
@@ -2231,29 +2229,15 @@
       "needs": {
         "agent": {
           "required": true,
-          "why": "Drafts quotes from a sentence and writes payment reminders for you to approve."
-        },
-        "integrations": [
-          {
-            "slug": "gmail",
-            "why": "Sends quotes, invoices and reminders from your address, only when you press Send or Approve.",
-            "optional": true
-          },
-          {
-            "slug": "stripe",
-            "why": "A Pay by card button on each invoice, marked paid by itself. Card details never reach your workspace.",
-            "optional": true
-          }
-        ]
+          "why": "The team's agent drafts quotes and fees when asked, and sends the emails you approve from the team's mailbox."
+        }
       },
       "outward": [
-        "Sends emails from your Gmail, only the ones you send or approve.",
-        "Creates a Stripe payment link for each invoice, when you turn Stripe on.",
-        "Publishes a page per document that only someone with its link can open."
+        "Emails your agent sends from the team's mailbox, only the ones you approve.",
+        "A page per document that only someone with its link can open."
       ],
       "outwardVia": [
         "gmail",
-        "stripe",
         "web"
       ],
       "by": "Orchestra",
@@ -2263,78 +2247,97 @@
       "icon": "invoices",
       "screenshots": [
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/invoices/screens/1-overview.png",
-          "caption": "What you are owed, who is late, and the quotes waiting for an answer",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/invoices/screens/1-resumen.png",
+          "caption": "What you are owed, what is late, what waits for you and your income month by month",
           "surface": "desk",
           "device": "desktop"
         },
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/invoices/screens/2-invoice.png",
-          "caption": "An invoice exactly as the client sees it, with its link, email and payment beside it",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/invoices/screens/2-presupuesto.png",
+          "caption": "A quote as the client sees it, with its link and what can be done now",
+          "surface": "desk",
+          "device": "desktop"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/invoices/screens/4-recurrentes.png",
+          "caption": "Recurring fees: how much, how often and the next one",
           "surface": "desk",
           "device": "desktop"
         },
         {
           "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/invoices/screens/3-invoice-phone.png",
-          "caption": "The client's page on a phone: pay by card or bank transfer, or save it as a PDF",
+          "caption": "The client's page on a phone: accept the quote, or pay the invoice",
           "surface": "public",
-          "device": "mobile"
+          "device": "phone"
         }
       ],
-      "version": "0.2.2",
+      "changelog": {
+        "0.3.0": [
+          {
+            "es": "Facturas se abre en la oficina, con su menú: Resumen (cómo vas de cobros, con tus ingresos mes a mes), Presupuestos, Facturas, Recurrentes y Clientes. Tus datos y tu IBAN, en Ajustes.",
+            "en": "Invoices opens in the office, with its menu: Resumen (how you are doing with payments, income month by month), Quotes, Invoices, Recurring and Clients. Your details and IBAN, in Settings."
+          },
+          {
+            "es": "Facturas recurrentes: un mantenimiento o una cuota hace su factura sola cada mes, trimestre o año, en borrador para que la revises o emitida sola si lo eliges. {periodo} pone «noviembre 2026».",
+            "en": "Recurring fees: maintenance or a monthly plan makes its invoice every month, quarter or year, as a draft for you or issued by itself if you choose."
+          },
+          {
+            "es": "Tu numeración, tal cual: «DUG-» y 3 cifras dan DUG-2026-012; las facturas antiguas se traen con su número y la siguiente sigue a la última.",
+            "en": "Your own numbering (DUG-2026-012); past invoices come in with their numbers and the next one follows."
+          },
+          {
+            "es": "Los correos los envía tu agente desde el correo del equipo, solo cuando pulsas «Enviar». Un enlace de pago con tarjeta se pone a mano en cada factura.",
+            "en": "Emails are sent by your agent from the team's mailbox, only when you press Send. A card payment link is set on each invoice."
+          }
+        ]
+      },
+      "whatsNew": [
+        {
+          "es": "Facturas se abre en la oficina, con su menú: Resumen (cómo vas de cobros, con tus ingresos mes a mes), Presupuestos, Facturas, Recurrentes y Clientes. Tus datos y tu IBAN, en Ajustes.",
+          "en": "Invoices opens in the office, with its menu: Resumen (how you are doing with payments, income month by month), Quotes, Invoices, Recurring and Clients. Your details and IBAN, in Settings."
+        },
+        {
+          "es": "Facturas recurrentes: un mantenimiento o una cuota hace su factura sola cada mes, trimestre o año, en borrador para que la revises o emitida sola si lo eliges. {periodo} pone «noviembre 2026».",
+          "en": "Recurring fees: maintenance or a monthly plan makes its invoice every month, quarter or year, as a draft for you or issued by itself if you choose."
+        },
+        {
+          "es": "Tu numeración, tal cual: «DUG-» y 3 cifras dan DUG-2026-012; las facturas antiguas se traen con su número y la siguiente sigue a la última.",
+          "en": "Your own numbering (DUG-2026-012); past invoices come in with their numbers and the next one follows."
+        },
+        {
+          "es": "Los correos los envía tu agente desde el correo del equipo, solo cuando pulsas «Enviar». Un enlace de pago con tarjeta se pone a mano en cada factura.",
+          "en": "Emails are sent by your agent from the team's mailbox, only when you press Send. A card payment link is set on each invoice."
+        }
+      ],
+      "version": "0.3.0",
       "tables": [
+        "inv_documents",
+        "inv_clients",
+        "inv_recurring",
         "inv_settings",
         "inv_series",
-        "inv_clients",
-        "inv_documents",
         "inv_emails",
         "inv_links",
         "inv_responses"
       ],
       "package": {
-        "path": "apps/invoices/invoices-0.2.2.tgz",
-        "sha256": "b057b0363def3971974e3e2165b1697533d44868bd75e15e45bd69e70c1991b9",
-        "size": 89061,
+        "path": "apps/invoices/invoices-0.3.0.tgz",
+        "sha256": "e5265dde1a5e6dc38f80de9d4be3e8048abbde307bfaec8777b6e0d64ef043ac",
+        "size": 508696,
         "installer": "install.js",
         "manifest": "app.json",
-        "roles": [
-          {
-            "id": "drafter",
-            "name": "Drafter",
-            "required": true,
-            "why": "Writes the lines of a quote from a sentence a person wrote, and drafts payment reminders for overdue invoices, answering only the JSON a script checks. Reminders wait for a person's OK; it never sends or issues anything on its own."
-          }
-        ],
-        "connections": [
-          {
-            "id": "gmail",
-            "integration": "gmail",
-            "optional": true,
-            "why": "Quotes, invoices and approved reminders are emailed from it.",
-            "from": {
-              "table": "inv_settings",
-              "column": "gmail_account"
-            }
-          },
-          {
-            "id": "stripe",
-            "integration": "stripe",
-            "optional": true,
-            "why": "Card payments: a Pay button on each invoice, marked paid when the client pays (only with card payments on in Ajustes)."
-          }
-        ],
+        "roles": [],
+        "connections": [],
         "variables": [],
-        "channels": [
-          "telegram"
-        ],
-        "processes": 6,
+        "channels": [],
+        "processes": 1,
         "skills": [],
         "related": [
           {
             "app": "crm",
             "why": {
-              "es": "Se factura a los clientes que lleva el CRM.",
-              "en": "You invoice the customers the CRM keeps."
+              "es": "El presupuesto se prepara en una oportunidad del CRM (origin «CRM #<id>»), y el CRM lee su estado.",
+              "en": "A quote is drafted on a CRM deal (origin «CRM #<id>»), and the CRM reads its state."
             }
           },
           {
@@ -2344,58 +2347,6 @@
               "en": "Income (invoices) and expenses go together to the accountant."
             }
           }
-        ],
-        "suggestedTasks": [
-          {
-            "id": "cobros-pendientes",
-            "title": {
-              "es": "Cobros pendientes",
-              "en": "Money owed"
-            },
-            "why": {
-              "es": "Cada lunes, quién te debe, desde cuándo, qué recordatorios esperan tu visto bueno y qué presupuestos siguen sin respuesta.",
-              "en": "Every Monday, who owes you, since when, which reminders wait for your OK and which quotes still have no answer."
-            },
-            "role": "drafter",
-            "schedule": {
-              "cron": "0 9 * * 1",
-              "tz": "Europe/Madrid",
-              "label": {
-                "es": "Los lunes a las 9:00",
-                "en": "Mondays at 9:00"
-              }
-            },
-            "prompt": {
-              "es": "Repasa los cobros de Invoices.\n1. Facturas emitidas sin cobrar (inv_documents, kind = 'invoice', status = 'Issued'): cliente, número, importe (total), vencimiento (due_date), días de retraso y recordatorios ya enviados (reminders, last_reminder_at). Suma lo pendiente y lo vencido.\n2. Recordatorios que esperan aprobación (inv_emails, status = 'Review') y envíos fallidos (status = 'Failed').\n3. Presupuestos enviados sin respuesta (kind = 'quote', status = 'Sent') de más de 7 días, y borradores sin emitir de más de 7 días (status = 'Draft').\n\nTrabaja solo con `module read, id invoices, sql \"<SELECT …>\"` y `module do, id invoices, command <acción>, args '{…}'` (si dudas de una tabla o una acción, `module guide, id invoices`). Nunca emites, envías, anulas ni marcas como pagado nada, ni apruebas un recordatorio: eso lo hace una persona. Termina con un resumen breve para el canal del equipo: como mucho 8 líneas, con cifras y lo que espera a una persona. Si no hay nada que contar, dilo en una línea.",
-              "en": "Go over Invoices' collections.\n1. Issued invoices not paid (inv_documents, kind = 'invoice', status = 'Issued'): client, number, amount (total), due date (due_date), days late and reminders already sent (reminders, last_reminder_at). Add up what is owed and what is overdue.\n2. Reminders waiting for approval (inv_emails, status = 'Review') and failed sends (status = 'Failed').\n3. Quotes sent with no answer (kind = 'quote', status = 'Sent') for more than 7 days, and drafts not issued for more than 7 days (status = 'Draft').\n\nWork only through `module read, id invoices, sql \"<SELECT …>\"` and `module do, id invoices, command <action>, args '{…}'` (if unsure of a table or an action, `module guide, id invoices`). You never issue, send, void or mark anything paid, nor approve a reminder: a person does. End with a short summary for the team's channel: 8 lines at most, with numbers and what waits on a person. If there is nothing to report, say so in one line."
-            },
-            "deliver": "channel"
-          },
-          {
-            "id": "resumen-mensual",
-            "title": {
-              "es": "Resumen mensual de facturación",
-              "en": "Monthly billing summary"
-            },
-            "why": {
-              "es": "El día 1 de cada mes, lo facturado y cobrado el mes anterior, lo pendiente y los clientes que más pesan.",
-              "en": "On the 1st of each month, what was billed and collected last month, what is owed and the biggest clients."
-            },
-            "role": "drafter",
-            "schedule": {
-              "cron": "0 9 1 * *",
-              "tz": "Europe/Madrid",
-              "label": {
-                "es": "El día 1 de cada mes a las 9:00",
-                "en": "The 1st of each month at 9:00"
-              }
-            },
-            "prompt": {
-              "es": "Resume el mes anterior en Invoices.\n1. Facturado (facturas emitidas en el mes, issue_date; subtotal, impuestos y total) y cobrado (paid_at en el mes), frente al mes anterior.\n2. Pendiente de cobro a final de mes y lo vencido, por cliente.\n3. Presupuestos: enviados, aceptados y rechazados en el mes, con la tasa de aceptación.\n4. Los cinco clientes con más facturación y cuánto del total suponen.\n\nTrabaja solo con `module read, id invoices, sql \"<SELECT …>\"` y `module do, id invoices, command <acción>, args '{…}'` (si dudas de una tabla o una acción, `module guide, id invoices`). Solo lees: no cambias nada, ni emites ni envías. Termina con un resumen breve para el canal del equipo: como mucho 8 líneas, con cifras y lo que espera a una persona. Si no hay nada que contar, dilo en una línea.",
-              "en": "Summarise last month in Invoices.\n1. Billed (invoices issued in the month, issue_date; subtotal, taxes and total) and collected (paid_at in the month), against the month before.\n2. What is owed at month end and what is overdue, by client.\n3. Quotes: sent, accepted and declined in the month, with the acceptance rate.\n4. The five clients with the most billing and their share of the total.\n\nWork only through `module read, id invoices, sql \"<SELECT …>\"` and `module do, id invoices, command <action>, args '{…}'` (if unsure of a table or an action, `module guide, id invoices`). You only read: you change nothing, issue nothing, send nothing. End with a short summary for the team's channel: 8 lines at most, with numbers and what waits on a person. If there is nothing to report, say so in one line."
-            },
-            "deliver": "channel"
-          }
         ]
       },
       "emoji": "🧾",
@@ -2403,56 +2354,52 @@
         "es": {
           "name": "Facturas",
           "category": "Finanzas",
-          "summary": "Presupuestos y facturas que tus clientes aceptan y pagan online.",
-          "promise": "Presupuestos y facturas que tus clientes aceptan y pagan desde un enlace, con recordatorios redactados para quien va tarde.",
-          "description": "Escribe un presupuesto (o deja que el agente lo redacte desde una frase), emítelo con el siguiente número y envía al cliente un enlace donde lo acepta o paga la factura por transferencia o tarjeta. El agente redacta recordatorios de pago para las facturas vencidas; no se envía nada hasta que lo apruebas. No es software fiscal certificado: no envía nada a ninguna agencia tributaria (ni Verifactu, ni SII, ni factura electrónica).",
+          "summary": "Presupuestos, facturas y facturas recurrentes que tus clientes aceptan y pagan desde un enlace.",
+          "promise": "Presupuestos, facturas y cuotas: tus clientes aceptan y pagan desde un enlace, y cada cuota hace su factura sola.",
+          "description": "Escribe un presupuesto (o pídeselo a tu agente en una frase), emítelo con el siguiente número y tu cliente lo acepta desde un enlace; se convierte en factura con un botón. Las facturas recurrentes (mantenimiento, una cuota mensual, un hosting cada trimestre) hacen su factura el día que toca, en borrador para ti o emitida sola si lo eliges. Lo que te deben, lo vencido y tus ingresos mes a mes, de un vistazo. Los correos salen del correo de tu equipo solo cuando pulsas Enviar. No es software fiscal certificado: no envía nada a ninguna agencia tributaria (ni Verifactu, ni SII, ni factura electrónica).",
           "brief": {
             "user": "El dueño, o quien lleva las cuentas, de una empresa pequeña o un autónomo",
             "frequency": "Varias veces por semana",
             "questions": [
               "¿Cuánto me deben, y quién va tarde?",
               "¿Qué presupuestos esperan respuesta?",
-              "¿Qué le facturé a este cliente?"
+              "¿Qué cobro cada mes, y cuándo sale la próxima?"
             ],
             "primaryAction": "Emitir una factura o un presupuesto y enviarlo al cliente",
             "answers": [
-              "Lo que te deben y lo vencido, cliente a cliente, con un recordatorio redactado para cada factura atrasada.",
-              "Los presupuestos enviados que aún no tienen respuesta; el cliente los acepta o rechaza desde su enlace.",
-              "Cada presupuesto y factura de un cliente, con su número, estado y enlace."
+              "Lo que te deben y lo vencido, lo más antiguo primero, con un recordatorio de pago listo para tu visto bueno.",
+              "Los presupuestos emitidos sin respuesta; tu cliente los acepta o rechaza desde su enlace y te enteras.",
+              "Cada factura recurrente con su importe, cada cuánto y el día de la próxima; su factura se hace sola."
             ]
           },
           "how": [
             {
-              "title": "El agente redacta un presupuesto con una frase",
-              "text": "Escribes para qué es y él escribe las líneas. O lo escribes tú."
+              "title": "Escribes el presupuesto, o se lo pides a tu agente",
+              "text": "A quién y qué («1.000 € de puesta en marcha»): las líneas y los totales, con IVA e IRPF."
             },
             {
               "title": "Lo emites y lo envías",
-              "text": "Toma el siguiente número y sale con un enlace, desde tu Gmail."
+              "text": "Toma el siguiente número y un enlace; tu agente envía el correo que apruebas desde el correo del equipo."
             },
             {
-              "title": "El cliente acepta o paga desde el enlace",
-              "text": "Por transferencia, o con tarjeta si activas Stripe; se marca pagada sola."
+              "title": "Tu cliente acepta o paga desde el enlace",
+              "text": "Un presupuesto aceptado se convierte en factura con un botón; las cuotas hacen la suya el día que toca."
             }
           ],
           "needs": {
             "agent": {
-              "why": "Redacta presupuestos desde una frase y escribe recordatorios de pago para que los apruebes."
-            },
-            "integrations": {
-              "gmail": "Envía presupuestos, facturas y recordatorios desde tu dirección, solo cuando pulsas Enviar o Aprobar.",
-              "stripe": "Un botón de Pagar con tarjeta en cada factura, que se marca pagada sola. Los datos de la tarjeta nunca llegan a tu espacio."
+              "why": "El agente del equipo prepara presupuestos y cuotas cuando se lo pides, y envía los correos que apruebas desde el correo del equipo."
             }
           },
           "outward": [
-            "Envía correos desde tu Gmail, solo los que envías o apruebas.",
-            "Crea un enlace de pago de Stripe para cada factura, cuando activas Stripe.",
-            "Publica una página por documento que solo puede abrir quien tenga su enlace."
+            "Correos que tu agente envía desde el correo del equipo, solo los que apruebas.",
+            "Una página por documento que solo puede abrir quien tenga su enlace."
           ],
           "captions": [
-            "Lo que te deben, quién va tarde y los presupuestos que esperan respuesta",
-            "Una factura tal como la ve el cliente, con su enlace, correo y pago al lado",
-            "La página del cliente en un móvil: pagar con tarjeta o transferencia, o guardarla en PDF"
+            "Lo que te deben, lo vencido, lo que te espera y tus ingresos mes a mes",
+            "Un presupuesto tal como lo ve tu cliente, con su enlace y lo que puedes hacer ahora",
+            "Las facturas recurrentes: cuánto, cada cuánto y la próxima",
+            "La página del cliente en un móvil: aceptar el presupuesto o pagar la factura"
           ]
         }
       }
