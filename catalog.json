@@ -351,7 +351,6 @@
       "category": "Sales",
       "summary": "Leads, deals, companies and contacts, with the agent doing the follow-up.",
       "promise": "Whoever writes to you lands in the CRM, read by your agent; each deal has its next step proposed and its email written. You decide.",
-      "like": "HubSpot",
       "description": "Leads from your website, bookings and email in one inbox, read by the agent; deals with their kind of service, value once and per month, pipeline stage and next step; companies and contacts with a timeline of every email, meeting and note. Nothing becomes a deal and no email goes without you.",
       "brief": {
         "user": "Founders and the sales team of a small services company",
@@ -438,14 +437,32 @@
         }
       ],
       "changelog": {
-        "0.4.2": [
+        "0.4.3": [
           {
-            "es": "Los nombres de HubSpot: Entradas ahora es Leads, y Clientes son dos sitios, Empresas y Contactos, cada uno con su lista. El historial de cada negocio, empresa y contacto es su Cronología, y se añade con «Registrar actividad».",
-            "en": "HubSpot's names: Entradas is now Leads, and Clientes is two places, Empresas and Contactos, each with its own list. Each deal's, company's and contact's history is its Cronología, added to with «Registrar actividad»."
+            "es": "Cada negocio muestra su presupuesto y sus facturas al momento, con su número, su estado y su importe; un borrador se lee «Borrador · su concepto».",
+            "en": "Each deal shows its quote and invoices live, with their number, state and amount; a draft reads «Borrador · its title»."
           },
           {
-            "es": "Un negocio siempre dice de quién es: «Negocio con esepe&CO · Web + 3 landings», en su página, en cada lista y en Facturas. Las etapas forman el pipeline.",
-            "en": "A deal always says whose it is: «Negocio con esepe&CO · Web + 3 landings», on its page, in every list and in Invoices. The stages make the pipeline."
+            "es": "Las empresas tienen razón social, la que sale en sus facturas.",
+            "en": "Companies have a legal name, the one their invoices carry."
+          },
+          {
+            "es": "El pipeline, de un vistazo: todas las etapas en una sola tira, cada una con cuántos negocios tiene y lo que valen, y al final ganados y perdidos.",
+            "en": "The pipeline at a glance: every stage in one strip, each with how many deals and their value, and won and lost at the end."
+          },
+          {
+            "es": "Se llama CRM en todas partes, y «Cómo funciona» lo explica desde cero.",
+            "en": "It is called CRM everywhere, and «Cómo funciona» explains it from scratch."
+          }
+        ],
+        "0.4.2": [
+          {
+            "es": "Nombres de siempre: Entradas ahora es Leads, y Clientes son dos sitios, Empresas y Contactos, cada uno con su lista. El historial de cada negocio, empresa y contacto es su Cronología, y se añade con «Registrar actividad».",
+            "en": "The usual names: Entradas is now Leads, and Clientes is two places, Empresas and Contactos, each with its own list. Each deal's, company's and contact's history is its Cronología, added to with «Registrar actividad»."
+          },
+          {
+            "es": "Un negocio siempre dice de quién es: «Negocio con Reformas Ribera · Web + 2 landings», en su página, en cada lista y en Facturas. Las etapas forman el pipeline.",
+            "en": "A deal always says whose it is: «Negocio con Reformas Ribera · Web + 2 landings», on its page, in every list and in Invoices. The stages make the pipeline."
           },
           {
             "es": "Solo cambian las palabras: tus datos, tus etapas y tus enlaces siguen igual.",
@@ -468,8 +485,8 @@
         ],
         "0.4.0": [
           {
-            "es": "Ventas funciona dentro de la oficina: cuatro sitios en el menú de la izquierda —Hoy, Entradas, Negocios y Clientes— y cada negocio, empresa y persona con su página. Tus datos siguen ahí: empresas, personas, negocios, historial y correos.",
-            "en": "Sales works inside the office: four places in the menu on the left —Hoy, Entradas, Negocios and Clientes— and each deal, company and person with its page. Your data is all there: companies, people, deals, timeline and emails."
+            "es": "El CRM funciona dentro de la oficina: cuatro sitios en el menú de la izquierda —Hoy, Entradas, Negocios y Clientes— y cada negocio, empresa y persona con su página. Tus datos siguen ahí: empresas, personas, negocios, historial y correos.",
+            "en": "The CRM works inside the office: four places in the menu on the left —Hoy, Entradas, Negocios and Clientes— and each deal, company and person with its page. Your data is all there: companies, people, deals, timeline and emails."
           },
           {
             "es": "Entradas: quien te escribe desde tu web, una reserva o un correo llega aquí, nunca a Trabajo. Tu agente la lee y te dice si encaja; tú la conviertes en negocio o la descartas.",
@@ -495,19 +512,23 @@
       },
       "whatsNew": [
         {
-          "es": "Los nombres de HubSpot: Entradas ahora es Leads, y Clientes son dos sitios, Empresas y Contactos, cada uno con su lista. El historial de cada negocio, empresa y contacto es su Cronología, y se añade con «Registrar actividad».",
-          "en": "HubSpot's names: Entradas is now Leads, and Clientes is two places, Empresas and Contactos, each with its own list. Each deal's, company's and contact's history is its Cronología, added to with «Registrar actividad»."
+          "es": "Cada negocio muestra su presupuesto y sus facturas al momento, con su número, su estado y su importe; un borrador se lee «Borrador · su concepto».",
+          "en": "Each deal shows its quote and invoices live, with their number, state and amount; a draft reads «Borrador · its title»."
         },
         {
-          "es": "Un negocio siempre dice de quién es: «Negocio con esepe&CO · Web + 3 landings», en su página, en cada lista y en Facturas. Las etapas forman el pipeline.",
-          "en": "A deal always says whose it is: «Negocio con esepe&CO · Web + 3 landings», on its page, in every list and in Invoices. The stages make the pipeline."
+          "es": "Las empresas tienen razón social, la que sale en sus facturas.",
+          "en": "Companies have a legal name, the one their invoices carry."
         },
         {
-          "es": "Solo cambian las palabras: tus datos, tus etapas y tus enlaces siguen igual.",
-          "en": "Only the words change: your data, your stages and your links stay as they were."
+          "es": "El pipeline, de un vistazo: todas las etapas en una sola tira, cada una con cuántos negocios tiene y lo que valen, y al final ganados y perdidos.",
+          "en": "The pipeline at a glance: every stage in one strip, each with how many deals and their value, and won and lost at the end."
+        },
+        {
+          "es": "Se llama CRM en todas partes, y «Cómo funciona» lo explica desde cero.",
+          "en": "It is called CRM everywhere, and «Cómo funciona» explains it from scratch."
         }
       ],
-      "version": "0.4.2",
+      "version": "0.4.3",
       "tables": [
         "crm_deals",
         "crm_companies",
@@ -519,9 +540,9 @@
         "crm_settings"
       ],
       "package": {
-        "path": "apps/crm/crm-0.4.2.tgz",
-        "sha256": "7f5f8aba56de3167c225ecd45c2339b6a6aabe4404841e2e10bf2c1d19927b62",
-        "size": 363209,
+        "path": "apps/crm/crm-0.4.3.tgz",
+        "sha256": "3e3fdce96ea8450770888c2993e01072cf8ee4c64d57ad0f4c20f90c9f68bb11",
+        "size": 364314,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -538,7 +559,7 @@
           "category": "Ventas",
           "summary": "Leads, negocios, empresas y contactos, con tu agente haciendo el seguimiento.",
           "promise": "Quien te escribe llega al CRM como lead, leído por tu agente; cada negocio tiene su siguiente paso propuesto y su correo escrito. Tú decides.",
-          "description": "Los leads de tu web, tus reservas y tu correo en una sola bandeja, leídos por tu agente; los negocios —«Negocio con esepe&CO · Web + 3 landings»— con su tipo de servicio, lo que valen una vez y cada mes, su etapa del pipeline y su siguiente paso; empresas y contactos con la cronología de cada correo, reunión y nota. Con los nombres de HubSpot. Nada se convierte en negocio ni sale ningún correo sin ti.",
+          "description": "Los leads de tu web, tus reservas y tu correo en una sola bandeja, leídos por tu agente; los negocios —«Negocio con Reformas Ribera · Web + 2 landings»— con su tipo de servicio, lo que valen una vez y cada mes, su etapa del pipeline y su siguiente paso; empresas y contactos con la cronología de cada correo, reunión y nota. Nada se convierte en negocio ni sale ningún correo sin ti.",
           "brief": {
             "user": "Quien lleva las ventas de una pequeña empresa de servicios",
             "frequency": "Cada día",
@@ -2104,7 +2125,6 @@
       "category": "Finance",
       "summary": "Quotes, invoices and recurring fees your clients accept and pay from a link.",
       "promise": "Quotes, invoices and recurring fees: clients accept and pay from a link, and every fee makes its own invoice on its day.",
-      "like": "Holded",
       "description": "Write a quote (or ask your agent for it in one sentence), issue it with the next number, and the client accepts it from a link; it becomes an invoice with one button. Recurring fees (maintenance, a monthly plan, hosting each quarter) make their invoice on their day, as a draft for you or issued by itself if you choose. What you are owed, what is late and your income month by month, at a glance. Emails go out from your team's mailbox only when you press Send. Not certified fiscal software: it submits nothing to a tax authority (no Verifactu, SII or e-invoicing).",
       "brief": {
         "user": "The owner, or whoever keeps the books, of a small company or a freelancer",
@@ -2204,10 +2224,24 @@
         }
       ],
       "changelog": {
+        "0.4.2": [
+          {
+            "es": "Cada presupuesto y factura lleva la razón social y el NIF del cliente, con su nombre comercial al lado si es otro.",
+            "en": "Every quote and invoice carries the client's legal name and tax ID, with its trade name beside it when different."
+          },
+          {
+            "es": "Un borrador ya no se lee «#2»: se lee «Borrador · su concepto».",
+            "en": "A draft no longer reads «#2»: it reads «Borrador · its title»."
+          },
+          {
+            "es": "«Cómo funciona» lo explica desde cero.",
+            "en": "«Cómo funciona» explains it from scratch."
+          }
+        ],
         "0.4.1": [
           {
-            "es": "Las palabras del CRM, al día: tus clientes son las empresas del CRM, y un presupuesto hecho desde un negocio lo nombra como el CRM («Negocio con esepe&CO · Web + 3 landings»). Tus Clientes de aquí siguen igual.",
-            "en": "The CRM's words, up to date: your clients are the CRM's companies, and a quote made from a deal names it as the CRM does («Negocio con esepe&CO · Web + 3 landings»). Your Clientes here stay as they were."
+            "es": "Las palabras del CRM, al día: tus clientes son las empresas del CRM, y un presupuesto hecho desde un negocio lo nombra como el CRM («Negocio con Reformas Ribera · Web + 2 landings»). Tus Clientes de aquí siguen igual.",
+            "en": "The CRM's words, up to date: your clients are the CRM's companies, and a quote made from a deal names it as the CRM does («Negocio con Reformas Ribera · Web + 2 landings»). Your Clientes here stay as they were."
           }
         ],
         "0.4.0": [
@@ -2234,8 +2268,8 @@
             "en": "Recurring fees: maintenance or a monthly plan makes its invoice every month, quarter or year, as a draft for you or issued by itself if you choose."
           },
           {
-            "es": "Tu numeración, tal cual: «DUG-» y 3 cifras dan DUG-2026-012; las facturas antiguas se traen con su número y la siguiente sigue a la última.",
-            "en": "Your own numbering (DUG-2026-012); past invoices come in with their numbers and the next one follows."
+            "es": "Tu numeración, tal cual: «FAC-» y 3 cifras dan FAC-2026-012; las facturas antiguas se traen con su número y la siguiente sigue a la última.",
+            "en": "Your own numbering (FAC-2026-012); past invoices come in with their numbers and the next one follows."
           },
           {
             "es": "Los correos los envía tu agente desde el correo del equipo, solo cuando pulsas «Enviar». Un enlace de pago con tarjeta se pone a mano en cada factura.",
@@ -2245,11 +2279,19 @@
       },
       "whatsNew": [
         {
-          "es": "Las palabras del CRM, al día: tus clientes son las empresas del CRM, y un presupuesto hecho desde un negocio lo nombra como el CRM («Negocio con esepe&CO · Web + 3 landings»). Tus Clientes de aquí siguen igual.",
-          "en": "The CRM's words, up to date: your clients are the CRM's companies, and a quote made from a deal names it as the CRM does («Negocio con esepe&CO · Web + 3 landings»). Your Clientes here stay as they were."
+          "es": "Cada presupuesto y factura lleva la razón social y el NIF del cliente, con su nombre comercial al lado si es otro.",
+          "en": "Every quote and invoice carries the client's legal name and tax ID, with its trade name beside it when different."
+        },
+        {
+          "es": "Un borrador ya no se lee «#2»: se lee «Borrador · su concepto».",
+          "en": "A draft no longer reads «#2»: it reads «Borrador · its title»."
+        },
+        {
+          "es": "«Cómo funciona» lo explica desde cero.",
+          "en": "«Cómo funciona» explains it from scratch."
         }
       ],
-      "version": "0.4.1",
+      "version": "0.4.2",
       "tables": [
         "inv_documents",
         "inv_clients",
@@ -2261,9 +2303,9 @@
         "inv_responses"
       ],
       "package": {
-        "path": "apps/invoices/invoices-0.4.1.tgz",
-        "sha256": "c24850852e89a9e611a5c68ad5a17953af2afb9e92d67fe986c2499e23cf2e6e",
-        "size": 515099,
+        "path": "apps/invoices/invoices-0.4.2.tgz",
+        "sha256": "52221987368b27e709a5f851ef568dad639b89390e1075753e02d77c297574f0",
+        "size": 517900,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
