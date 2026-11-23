@@ -70,6 +70,12 @@
         }
       ],
       "changelog": {
+        "0.15.8": [
+          {
+            "es": "Lo que el módulo hace solo está clasificado: lo que viene con el módulo se pone en marcha sin que tengas que hacer nada. La lectura diaria de tu web se llama «Leer tu web cada mañana».",
+            "en": "What the module does on its own is classified: what comes with the module starts by itself, with nothing for you to do. The daily read of your site is now called «Read your site every morning»."
+          }
+        ],
         "0.15.7": [
           {
             "es": "Un artículo dice en su título cómo volver: «Mesa de redacción › …».",
@@ -259,11 +265,11 @@
       },
       "whatsNew": [
         {
-          "es": "Un artículo dice en su título cómo volver: «Mesa de redacción › …».",
-          "en": "An article's title says the way back: «Mesa de redacción › …»."
+          "es": "Lo que el módulo hace solo está clasificado: lo que viene con el módulo se pone en marcha sin que tengas que hacer nada. La lectura diaria de tu web se llama «Leer tu web cada mañana».",
+          "en": "What the module does on its own is classified: what comes with the module starts by itself, with nothing for you to do. The daily read of your site is now called «Read your site every morning»."
         }
       ],
-      "version": "0.15.7",
+      "version": "0.15.8",
       "tables": [
         "articles_articles",
         "articles_rules",
@@ -278,9 +284,9 @@
         "articles_links"
       ],
       "package": {
-        "path": "apps/articles/articles-0.15.7.tgz",
-        "sha256": "f7b8c84fa594dc08ce278e424b5bec3513d3b082db3e25355da14b848e104fd3",
-        "size": 692378,
+        "path": "apps/articles/articles-0.15.8.tgz",
+        "sha256": "474c30d3f68ff704181bbc618bbf95fc4ae4faf0be5a54e128328fa606baf42d",
+        "size": 692396,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -465,6 +471,20 @@
         }
       ],
       "changelog": {
+        "0.5.4": [
+          {
+            "es": "Las propuestas de tu agente dicen su porqué en una sola frase, en tus palabras («Sin contacto desde hace 107 días»), y lo que falta para hacerlas («Falta: el correo de Laura») en la propia propuesta. La firma de los correos, si está vacía, se dice una vez arriba de la página, no en cada propuesta.",
+            "en": "Your agent's proposals say why in one sentence, in your words («No contact for 107 days»), and what is missing to do them («Missing: Laura's email») on the proposal itself. An empty email signature is said once at the top of the page, not in every proposal."
+          },
+          {
+            "es": "Un cliente con una venta ganada hace poco ya no sale «En riesgo · Sin contacto»: ganar una venta cuenta como contacto.",
+            "en": "A customer with a recently won sale no longer reads «At risk · No contact»: winning a sale counts as contact."
+          },
+          {
+            "es": "En la página de un cliente, sus servicios contratados ya no muestran «(periodo)»; y una venta cerrada dice el día en que se ganó o se perdió en lugar de repetir la etapa, sin la antigua «Cuota hasta: Sin fin».",
+            "en": "On a customer's page, contracted services no longer show «(periodo)»; and a closed sale shows the day it was won or lost instead of repeating its stage, without the old «Fee until: No end»."
+          }
+        ],
         "0.5.3": [
           {
             "es": "El menú de la izquierda se queda en cada página: una ficha marca la sección a la que pertenece, y su título dice cómo llegaste («Clientes › …»), cada parte un enlace.",
@@ -650,15 +670,19 @@
       },
       "whatsNew": [
         {
-          "es": "El menú de la izquierda se queda en cada página: una ficha marca la sección a la que pertenece, y su título dice cómo llegaste («Clientes › …»), cada parte un enlace.",
-          "en": "The menu on the left stays on every page: a record's page highlights the section it belongs to, and its title says how you got there («Clientes › …»), each part a link."
+          "es": "Las propuestas de tu agente dicen su porqué en una sola frase, en tus palabras («Sin contacto desde hace 107 días»), y lo que falta para hacerlas («Falta: el correo de Laura») en la propia propuesta. La firma de los correos, si está vacía, se dice una vez arriba de la página, no en cada propuesta.",
+          "en": "Your agent's proposals say why in one sentence, in your words («No contact for 107 days»), and what is missing to do them («Missing: Laura's email») on the proposal itself. An empty email signature is said once at the top of the page, not in every proposal."
         },
         {
-          "es": "«Proponer el siguiente paso», «Cliente en riesgo» y «Abrir el proyecto de un negocio ganado» son opcionales: apagados hasta que los enciendas en Ajustes › Lo que tu equipo hace solo. Lo demás viene con el módulo y está siempre encendido.",
-          "en": "«Propose the next step», «Customer at risk» and «Open a won deal's project» are optional: off until you turn them on in Settings › What your team does on its own. The rest comes with the module and is always on."
+          "es": "Un cliente con una venta ganada hace poco ya no sale «En riesgo · Sin contacto»: ganar una venta cuenta como contacto.",
+          "en": "A customer with a recently won sale no longer reads «At risk · No contact»: winning a sale counts as contact."
+        },
+        {
+          "es": "En la página de un cliente, sus servicios contratados ya no muestran «(periodo)»; y una venta cerrada dice el día en que se ganó o se perdió en lugar de repetir la etapa, sin la antigua «Cuota hasta: Sin fin».",
+          "en": "On a customer's page, contracted services no longer show «(periodo)»; and a closed sale shows the day it was won or lost instead of repeating its stage, without the old «Fee until: No end»."
         }
       ],
-      "version": "0.5.3",
+      "version": "0.5.4",
       "tables": [
         "crm_deals",
         "crm_items",
@@ -673,9 +697,9 @@
         "crm_settings"
       ],
       "package": {
-        "path": "apps/crm/crm-0.5.3.tgz",
-        "sha256": "b8510ce4b832b8f8f3a32ce417d2d4bb1986c72cdc13a00042631680f4d1afdf",
-        "size": 405502,
+        "path": "apps/crm/crm-0.5.4.tgz",
+        "sha256": "bf6803fee100e71edc1513cfce85bef4ae95652a1bc5c01a297ab8d5b4ddfd8c",
+        "size": 409779,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -2357,6 +2381,12 @@
         }
       ],
       "changelog": {
+        "0.5.6": [
+          {
+            "es": "Un presupuesto aceptado que ya tiene su factura (aunque la hicieras a mano) no recibe otra en borrador; puedes enlazar a mano una factura con su presupuesto. La tarea diaria se llama «Poner Facturas al día cada mañana».",
+            "en": "An accepted quote that already has its invoice (even one you made by hand) never gets a second draft; you can link an invoice to its quote by hand. The daily job is now called «Bring Facturas up to date every morning»."
+          }
+        ],
         "0.5.5": [
           {
             "es": "El menú de la izquierda se queda en cada página: una ficha marca la sección a la que pertenece, y su título dice cómo llegaste («Facturas › …»), cada parte un enlace.",
@@ -2494,11 +2524,11 @@
       },
       "whatsNew": [
         {
-          "es": "El menú de la izquierda se queda en cada página: una ficha marca la sección a la que pertenece, y su título dice cómo llegaste («Facturas › …»), cada parte un enlace.",
-          "en": "The menu on the left stays on every page: a record's page highlights the section it belongs to, and its title says how you got there («Facturas › …»), each part a link."
+          "es": "Un presupuesto aceptado que ya tiene su factura (aunque la hicieras a mano) no recibe otra en borrador; puedes enlazar a mano una factura con su presupuesto. La tarea diaria se llama «Poner Facturas al día cada mañana».",
+          "en": "An accepted quote that already has its invoice (even one you made by hand) never gets a second draft; you can link an invoice to its quote by hand. The daily job is now called «Bring Facturas up to date every morning»."
         }
       ],
-      "version": "0.5.5",
+      "version": "0.5.6",
       "tables": [
         "inv_documents",
         "inv_clients",
@@ -2510,9 +2540,9 @@
         "inv_responses"
       ],
       "package": {
-        "path": "apps/invoices/invoices-0.5.5.tgz",
-        "sha256": "863c88d8f56b2c334b90a4c61c97bee5edcd64cf0483660f3d3b148723723b6a",
-        "size": 563507,
+        "path": "apps/invoices/invoices-0.5.6.tgz",
+        "sha256": "b4f8db0ad39c9971bbcb60af05657ab867534c15f1a67d7ea06c0c77c94adbdc",
+        "size": 564709,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -4542,6 +4572,12 @@
         }
       ],
       "changelog": {
+        "1.13.8": [
+          {
+            "es": "Lo que el módulo hace solo está clasificado: lo que viene con el módulo se pone en marcha sin que tengas que hacer nada; lo opcional sigue apagado hasta que lo enciendas.",
+            "en": "What the module does on its own is classified: what comes with the module starts by itself; what is optional stays off until you turn it on."
+          }
+        ],
         "1.13.7": [
           {
             "es": "El menú de la izquierda se queda en cada página: una ficha marca la sección a la que pertenece, y su título dice cómo llegaste («Objetivos › …»), cada parte un enlace.",
@@ -4923,15 +4959,11 @@
       },
       "whatsNew": [
         {
-          "es": "El menú de la izquierda se queda en cada página: una ficha marca la sección a la que pertenece, y su título dice cómo llegaste («Objetivos › …»), cada parte un enlace.",
-          "en": "The menu on the left stays on every page: a record's page highlights the section it belongs to, and its title says how you got there («Objetivos › …»), each part a link."
-        },
-        {
-          "es": "«Posición de los objetivos» (cada lunes, unos 0,002 $ por objetivo) es opcional: apagado hasta que lo enciendas en Ajustes › Lo que tu equipo hace solo. «Revisar posiciones» sigue a mano.",
-          "en": "«Goal positions» (every Monday, about $0.002 per goal) is optional: off until you turn it on in Settings › What your team does on its own. «Check positions» still works by hand."
+          "es": "Lo que el módulo hace solo está clasificado: lo que viene con el módulo se pone en marcha sin que tengas que hacer nada; lo opcional sigue apagado hasta que lo enciendas.",
+          "en": "What the module does on its own is classified: what comes with the module starts by itself; what is optional stays off until you turn it on."
         }
       ],
-      "version": "1.13.7",
+      "version": "1.13.8",
       "tables": [
         "oportunidadesseo_oportunidades",
         "oportunidadesseo_acciones",
@@ -4952,9 +4984,9 @@
         "oportunidadesseo_cache"
       ],
       "package": {
-        "path": "apps/oportunidadesseo/oportunidadesseo-1.13.7.tgz",
-        "sha256": "716b01a4a8024d12a8299eb58f3fe16f3e5f7dad57eda7eb9405daa1b59d82d8",
-        "size": 655710,
+        "path": "apps/oportunidadesseo/oportunidadesseo-1.13.8.tgz",
+        "sha256": "123bb45690ad5a55c18c6c4b13b1183afef71936a3ad09e23c077109e606ea4e",
+        "size": 655717,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -5167,6 +5199,12 @@
         }
       ],
       "changelog": {
+        "0.5.6": [
+          {
+            "es": "Lo que el módulo hace solo está clasificado: lo que viene con el módulo se pone en marcha sin que tengas que hacer nada.",
+            "en": "What the module does on its own is classified: what comes with the module starts by itself, with nothing for you to do."
+          }
+        ],
         "0.5.5": [
           {
             "es": "El menú de la izquierda se queda en cada página: una ficha marca la sección a la que pertenece, y su título dice cómo llegaste («Obras › …»), cada parte un enlace.",
@@ -5318,11 +5356,11 @@
       },
       "whatsNew": [
         {
-          "es": "El menú de la izquierda se queda en cada página: una ficha marca la sección a la que pertenece, y su título dice cómo llegaste («Obras › …»), cada parte un enlace.",
-          "en": "The menu on the left stays on every page: a record's page highlights the section it belongs to, and its title says how you got there («Obras › …»), each part a link."
+          "es": "Lo que el módulo hace solo está clasificado: lo que viene con el módulo se pone en marcha sin que tengas que hacer nada.",
+          "en": "What the module does on its own is classified: what comes with the module starts by itself, with nothing for you to do."
         }
       ],
-      "version": "0.5.5",
+      "version": "0.5.6",
       "tables": [
         "obras_projects",
         "obras_units",
@@ -5340,8 +5378,8 @@
         "obras_settings"
       ],
       "package": {
-        "path": "apps/obras/obras-0.5.5.tgz",
-        "sha256": "6c5366f46c1852960d5424e0c09657f1ac8ea77168db29e7fac7bb095708907f",
+        "path": "apps/obras/obras-0.5.6.tgz",
+        "sha256": "87b814652e9b4a561b0d066a8eb98888eaaf71503f7aa913a6a3f152a915dcca",
         "size": 564688,
         "installer": "install.js",
         "manifest": "app.json",
