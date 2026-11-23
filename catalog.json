@@ -463,6 +463,12 @@
         }
       ],
       "changelog": {
+        "0.4.10": [
+          {
+            "es": "Un negocio perdido ya no suma su cuota en ningún total; los negocios se ordenan por las etapas tal como están en Ajustes; y buscar sin escribir nada vuelve a listar todos.",
+            "en": "A lost deal no longer adds its fee to any total; deals follow the stages as they are in Ajustes; and a search with nothing typed lists them all again."
+          }
+        ],
         "0.4.9": [
           {
             "es": "«Nuevo negocio» pregunta en orden: ¿con quién?, ¿qué vendes?, ¿cómo va? La empresa y el contacto se eligen de los que ya tienes (o se crean ahí mismo, y si se parece a uno que ya está te pregunta «¿Es esta?»); el contacto muestra primero los de esa empresa.",
@@ -598,15 +604,11 @@
       },
       "whatsNew": [
         {
-          "es": "«Nuevo negocio» pregunta en orden: ¿con quién?, ¿qué vendes?, ¿cómo va? La empresa y el contacto se eligen de los que ya tienes (o se crean ahí mismo, y si se parece a uno que ya está te pregunta «¿Es esta?»); el contacto muestra primero los de esa empresa.",
-          "en": "«Nuevo negocio» asks in order: who with, what you sell, how it is going. The company and the contact are picked from the ones you have (or made right there, asking «¿Es esta?» when one looks the same); the contact lists that company's people first."
-        },
-        {
-          "es": "Cada formulario dice qué hace falta: lo que no es obligatorio dice «opcional», y si el botón no se puede pulsar, una línea dice qué falta. La cuota solo aparece si el negocio tiene una.",
-          "en": "Every form says what it needs: what is not required says «opcional», and when the button cannot be pressed, one line says what is missing. The fee only shows when the deal has one."
+          "es": "Un negocio perdido ya no suma su cuota en ningún total; los negocios se ordenan por las etapas tal como están en Ajustes; y buscar sin escribir nada vuelve a listar todos.",
+          "en": "A lost deal no longer adds its fee to any total; deals follow the stages as they are in Ajustes; and a search with nothing typed lists them all again."
         }
       ],
-      "version": "0.4.9",
+      "version": "0.4.10",
       "tables": [
         "crm_deals",
         "crm_companies",
@@ -618,9 +620,9 @@
         "crm_settings"
       ],
       "package": {
-        "path": "apps/crm/crm-0.4.9.tgz",
-        "sha256": "cb254aac04f8fd172b0d07b0eed8826f4a1bb4788478cff633f08e4baebd9fde",
-        "size": 378957,
+        "path": "apps/crm/crm-0.4.10.tgz",
+        "sha256": "beb77aa3e6cc1fc073de02fabfdc734ac18ed9312d63f4785922c02112d32b7d",
+        "size": 379045,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
