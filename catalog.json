@@ -463,6 +463,12 @@
         }
       ],
       "changelog": {
+        "0.4.8": [
+          {
+            "es": "Contactos va por la última vez que hablaste con cada uno, el más reciente primero; quien aún no tiene actividad, al final. Y la cabecera de cada sitio dice lo suyo: en Contactos, cuántos hay y cuántos no tienen correo; en Empresas, cuántas tienen negocios abiertos.",
+            "en": "Contactos follows the last time you spoke with each one, the latest first; those with no activity yet go last. And each place's header says its own fact: in Contactos, how many and how many have no email; in Empresas, how many have open deals."
+          }
+        ],
         "0.4.7": [
           {
             "es": "En «Lo que tu equipo hace solo» solo ves lo que puede pasar: abrir el proyecto de un negocio ganado aparece cuando tienes Proyectos, y preparar un presupuesto cuando tienes Facturas.",
@@ -582,11 +588,11 @@
       },
       "whatsNew": [
         {
-          "es": "En «Lo que tu equipo hace solo» solo ves lo que puede pasar: abrir el proyecto de un negocio ganado aparece cuando tienes Proyectos, y preparar un presupuesto cuando tienes Facturas.",
-          "en": "In «Lo que tu equipo hace solo» you only see what can happen: opening a won deal's project shows when you have Proyectos, and making a quote when you have Invoices."
+          "es": "Contactos va por la última vez que hablaste con cada uno, el más reciente primero; quien aún no tiene actividad, al final. Y la cabecera de cada sitio dice lo suyo: en Contactos, cuántos hay y cuántos no tienen correo; en Empresas, cuántas tienen negocios abiertos.",
+          "en": "Contactos follows the last time you spoke with each one, the latest first; those with no activity yet go last. And each place's header says its own fact: in Contactos, how many and how many have no email; in Empresas, how many have open deals."
         }
       ],
-      "version": "0.4.7",
+      "version": "0.4.8",
       "tables": [
         "crm_deals",
         "crm_companies",
@@ -598,9 +604,9 @@
         "crm_settings"
       ],
       "package": {
-        "path": "apps/crm/crm-0.4.7.tgz",
-        "sha256": "3369976ca1d906c3f6c8b00094387208d083339cdb1ce9765e4552635c0f88b5",
-        "size": 371365,
+        "path": "apps/crm/crm-0.4.8.tgz",
+        "sha256": "c3bbe272f6a31c08540f495a0207752f1cb5df70cbc5974f4cf97f57576acc8a",
+        "size": 372562,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
