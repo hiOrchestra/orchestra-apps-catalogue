@@ -5237,6 +5237,28 @@
         }
       ],
       "changelog": {
+        "0.5.7": [
+          {
+            "es": "Los formularios largos se ordenan por preguntas («¿Qué pasa?», «¿Dónde?», «¿Para quién?»…), con lo menos usado plegado en «Más».",
+            "en": "Long forms are ordered by questions («What is wrong?», «Where?», «For whom?»…), with what is used least folded under «More»."
+          },
+          {
+            "es": "El cliente, el operario, la empresa y la persona de contacto se eligen de tus intervinientes, con «+ Nueva empresa» ahí mismo; ya no se escriben a mano. Si cambias el nombre de una ficha, cambia en todas partes.",
+            "en": "The client, the worker, the company and the contact person are picked from those involved, with «+ New company» right there; they are no longer typed. Renaming a card renames it everywhere."
+          },
+          {
+            "es": "El tipo de obra, lo que hace una persona y lo que es una empresa se eligen de una lista; «Otro…» pregunta cuál.",
+            "en": "The kind of project, what a person does and what a company is are chosen from a list; «Other…» asks which."
+          },
+          {
+            "es": "El sobrecoste de una incidencia solo se pide si lo tiene, y si está certificado, facturado o pagado, solo cuando está aprobado.",
+            "en": "An incident's extra cost is asked only when it has one, and whether it is certified, invoiced or paid only once it is approved."
+          },
+          {
+            "es": "El color del informe, si nadie lo había cambiado, pasa al gris oscuro que se lee bien (#78716C). Un color elegido se queda.",
+            "en": "The report's colour, if nobody had changed it, moves to the dark grey that reads well (#78716C). A colour someone chose stays."
+          }
+        ],
         "0.5.6": [
           {
             "es": "Lo que el módulo hace solo está clasificado: lo que viene con el módulo se pone en marcha sin que tengas que hacer nada.",
@@ -5394,11 +5416,27 @@
       },
       "whatsNew": [
         {
-          "es": "Lo que el módulo hace solo está clasificado: lo que viene con el módulo se pone en marcha sin que tengas que hacer nada.",
-          "en": "What the module does on its own is classified: what comes with the module starts by itself, with nothing for you to do."
+          "es": "Los formularios largos se ordenan por preguntas («¿Qué pasa?», «¿Dónde?», «¿Para quién?»…), con lo menos usado plegado en «Más».",
+          "en": "Long forms are ordered by questions («What is wrong?», «Where?», «For whom?»…), with what is used least folded under «More»."
+        },
+        {
+          "es": "El cliente, el operario, la empresa y la persona de contacto se eligen de tus intervinientes, con «+ Nueva empresa» ahí mismo; ya no se escriben a mano. Si cambias el nombre de una ficha, cambia en todas partes.",
+          "en": "The client, the worker, the company and the contact person are picked from those involved, with «+ New company» right there; they are no longer typed. Renaming a card renames it everywhere."
+        },
+        {
+          "es": "El tipo de obra, lo que hace una persona y lo que es una empresa se eligen de una lista; «Otro…» pregunta cuál.",
+          "en": "The kind of project, what a person does and what a company is are chosen from a list; «Other…» asks which."
+        },
+        {
+          "es": "El sobrecoste de una incidencia solo se pide si lo tiene, y si está certificado, facturado o pagado, solo cuando está aprobado.",
+          "en": "An incident's extra cost is asked only when it has one, and whether it is certified, invoiced or paid only once it is approved."
+        },
+        {
+          "es": "El color del informe, si nadie lo había cambiado, pasa al gris oscuro que se lee bien (#78716C). Un color elegido se queda.",
+          "en": "The report's colour, if nobody had changed it, moves to the dark grey that reads well (#78716C). A colour someone chose stays."
         }
       ],
-      "version": "0.5.6",
+      "version": "0.5.7",
       "tables": [
         "obras_projects",
         "obras_units",
@@ -5416,9 +5454,9 @@
         "obras_settings"
       ],
       "package": {
-        "path": "apps/obras/obras-0.5.6.tgz",
-        "sha256": "87b814652e9b4a561b0d066a8eb98888eaaf71503f7aa913a6a3f152a915dcca",
-        "size": 564688,
+        "path": "apps/obras/obras-0.5.7.tgz",
+        "sha256": "e31d53b310055cf73eaad72c6aa0393699851628b85e4582982f4e0d7c5580be",
+        "size": 572805,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
