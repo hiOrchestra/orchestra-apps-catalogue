@@ -463,6 +463,16 @@
         }
       ],
       "changelog": {
+        "0.4.9": [
+          {
+            "es": "«Nuevo negocio» pregunta en orden: ¿con quién?, ¿qué vendes?, ¿cómo va? La empresa y el contacto se eligen de los que ya tienes (o se crean ahí mismo, y si se parece a uno que ya está te pregunta «¿Es esta?»); el contacto muestra primero los de esa empresa.",
+            "en": "«Nuevo negocio» asks in order: who with, what you sell, how it is going. The company and the contact are picked from the ones you have (or made right there, asking «¿Es esta?» when one looks the same); the contact lists that company's people first."
+          },
+          {
+            "es": "Cada formulario dice qué hace falta: lo que no es obligatorio dice «opcional», y si el botón no se puede pulsar, una línea dice qué falta. La cuota solo aparece si el negocio tiene una.",
+            "en": "Every form says what it needs: what is not required says «opcional», and when the button cannot be pressed, one line says what is missing. The fee only shows when the deal has one."
+          }
+        ],
         "0.4.8": [
           {
             "es": "Contactos va por la última vez que hablaste con cada uno, el más reciente primero; quien aún no tiene actividad, al final. Y la cabecera de cada sitio dice lo suyo: en Contactos, cuántos hay y cuántos no tienen correo; en Empresas, cuántas tienen negocios abiertos.",
@@ -588,11 +598,15 @@
       },
       "whatsNew": [
         {
-          "es": "Contactos va por la última vez que hablaste con cada uno, el más reciente primero; quien aún no tiene actividad, al final. Y la cabecera de cada sitio dice lo suyo: en Contactos, cuántos hay y cuántos no tienen correo; en Empresas, cuántas tienen negocios abiertos.",
-          "en": "Contactos follows the last time you spoke with each one, the latest first; those with no activity yet go last. And each place's header says its own fact: in Contactos, how many and how many have no email; in Empresas, how many have open deals."
+          "es": "«Nuevo negocio» pregunta en orden: ¿con quién?, ¿qué vendes?, ¿cómo va? La empresa y el contacto se eligen de los que ya tienes (o se crean ahí mismo, y si se parece a uno que ya está te pregunta «¿Es esta?»); el contacto muestra primero los de esa empresa.",
+          "en": "«Nuevo negocio» asks in order: who with, what you sell, how it is going. The company and the contact are picked from the ones you have (or made right there, asking «¿Es esta?» when one looks the same); the contact lists that company's people first."
+        },
+        {
+          "es": "Cada formulario dice qué hace falta: lo que no es obligatorio dice «opcional», y si el botón no se puede pulsar, una línea dice qué falta. La cuota solo aparece si el negocio tiene una.",
+          "en": "Every form says what it needs: what is not required says «opcional», and when the button cannot be pressed, one line says what is missing. The fee only shows when the deal has one."
         }
       ],
-      "version": "0.4.8",
+      "version": "0.4.9",
       "tables": [
         "crm_deals",
         "crm_companies",
@@ -604,9 +618,9 @@
         "crm_settings"
       ],
       "package": {
-        "path": "apps/crm/crm-0.4.8.tgz",
-        "sha256": "c3bbe272f6a31c08540f495a0207752f1cb5df70cbc5974f4cf97f57576acc8a",
-        "size": 372562,
+        "path": "apps/crm/crm-0.4.9.tgz",
+        "sha256": "cb254aac04f8fd172b0d07b0eed8826f4a1bb4788478cff633f08e4baebd9fde",
+        "size": 378957,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -5070,6 +5084,12 @@
         }
       ],
       "changelog": {
+        "0.5.4": [
+          {
+            "es": "Cada formulario dice qué hace falta: lo que no es obligatorio dice «opcional», y si el botón no se puede pulsar, una línea dice qué falta («Falta: la obra»). Los importes llevan su «€» y los ejemplos dicen que son ejemplos.",
+            "en": "Every form says what it needs: what is not required says «opcional», and when the button cannot be pressed, one line says what is missing («Falta: la obra»). Amounts show their «€» and examples say they are examples."
+          }
+        ],
         "0.5.3": [
           {
             "es": "Ajustes del informe, ordenado: dos tarjetas —«Empresa» e «Informe»—, cada una con una frase de lo que cambia; el idioma con dos botones y las horas y trabajos del mes con un interruptor.",
@@ -5209,19 +5229,11 @@
       },
       "whatsNew": [
         {
-          "es": "Ajustes del informe, ordenado: dos tarjetas —«Empresa» e «Informe»—, cada una con una frase de lo que cambia; el idioma con dos botones y las horas y trabajos del mes con un interruptor.",
-          "en": "Report settings, in order: two cards — «Company» and «Report» — each with a sentence on what it changes; the language with two buttons and the month's hours and jobs with a switch."
-        },
-        {
-          "es": "El color de tu marca se elige de una paleta o el tuyo propio, y te avisa si no se distinguiría del papel blanco o del negro de las gráficas. El que ya tenías sigue igual.",
-          "en": "Your brand colour is picked from a palette or your own, and it tells you when it would not stand out from the white paper or the charts' black. The one you had stays as it was."
-        },
-        {
-          "es": "Ves quién cambió cada cosa y cuándo, también tu agente.",
-          "en": "You see who changed each thing and when, your agent too."
+          "es": "Cada formulario dice qué hace falta: lo que no es obligatorio dice «opcional», y si el botón no se puede pulsar, una línea dice qué falta («Falta: la obra»). Los importes llevan su «€» y los ejemplos dicen que son ejemplos.",
+          "en": "Every form says what it needs: what is not required says «opcional», and when the button cannot be pressed, one line says what is missing («Falta: la obra»). Amounts show their «€» and examples say they are examples."
         }
       ],
-      "version": "0.5.3",
+      "version": "0.5.4",
       "tables": [
         "obras_projects",
         "obras_units",
@@ -5239,9 +5251,9 @@
         "obras_settings"
       ],
       "package": {
-        "path": "apps/obras/obras-0.5.3.tgz",
-        "sha256": "d28ada589ea95d652e72fae0a587b8580547c8f18c0b28393c108c08ed459e8d",
-        "size": 558545,
+        "path": "apps/obras/obras-0.5.4.tgz",
+        "sha256": "6b7e7a0e318dcb891764f72442760beebb6cf37cd4807d151e908d6becb94b96",
+        "size": 565438,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
