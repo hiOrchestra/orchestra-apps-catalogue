@@ -424,6 +424,20 @@
         }
       ],
       "changelog": {
+        "0.4.1": [
+          {
+            "es": "Tus clientes, en un solo sitio: Facturas ya no tiene su propia lista; sus presupuestos y facturas apuntan a las empresas de aquí. Cambias un nombre y sale cambiado en todas partes.",
+            "en": "Your clients in one place: Invoices no longer keeps its own list; its quotes and invoices point at the companies here. Rename one and it changes everywhere."
+          },
+          {
+            "es": "Cada empresa muestra sus presupuestos, facturas y facturas recurrentes, y cada negocio su presupuesto, leídos al momento de Facturas.",
+            "en": "Each company shows its quotes, invoices and recurring fees, and each deal its quote, read live from Invoices."
+          },
+          {
+            "es": "Unir dos empresas repetidas mueve también sus facturas. Una empresa con facturas se archiva, nunca se borra.",
+            "en": "Merging two duplicate companies moves their invoices too. A company with invoices is archived, never deleted."
+          }
+        ],
         "0.4.0": [
           {
             "es": "Ventas funciona dentro de la oficina: cuatro sitios en el menú de la izquierda —Hoy, Entradas, Negocios y Clientes— y cada negocio, empresa y persona con su página. Tus datos siguen ahí: empresas, personas, negocios, historial y correos.",
@@ -453,31 +467,19 @@
       },
       "whatsNew": [
         {
-          "es": "Ventas funciona dentro de la oficina: cuatro sitios en el menú de la izquierda —Hoy, Entradas, Negocios y Clientes— y cada negocio, empresa y persona con su página. Tus datos siguen ahí: empresas, personas, negocios, historial y correos.",
-          "en": "Sales works inside the office: four places in the menu on the left —Hoy, Entradas, Negocios and Clientes— and each deal, company and person with its page. Your data is all there: companies, people, deals, timeline and emails."
+          "es": "Tus clientes, en un solo sitio: Facturas ya no tiene su propia lista; sus presupuestos y facturas apuntan a las empresas de aquí. Cambias un nombre y sale cambiado en todas partes.",
+          "en": "Your clients in one place: Invoices no longer keeps its own list; its quotes and invoices point at the companies here. Rename one and it changes everywhere."
         },
         {
-          "es": "Entradas: quien te escribe desde tu web, una reserva o un correo llega aquí, nunca a Trabajo. Tu agente la lee y te dice si encaja; tú la conviertes en negocio o la descartas.",
-          "en": "Entradas: whoever writes from your website, a booking or an email lands here, never in Trabajo. Your agent reads it and tells you whether it fits; you make it a deal or discard it."
+          "es": "Cada empresa muestra sus presupuestos, facturas y facturas recurrentes, y cada negocio su presupuesto, leídos al momento de Facturas.",
+          "en": "Each company shows its quotes, invoices and recurring fees, and each deal its quote, read live from Invoices."
         },
         {
-          "es": "Cada negocio dice su tipo de servicio (consultoría, desarrollo…) y lo que vale una vez y cada mes. Tus etapas están en español; si las habías cambiado, se quedan como estaban.",
-          "en": "Each deal says its kind of service (consulting, development…) and what it is worth once and per month. Your stages are in Spanish; if you had changed them, they stay as they were."
-        },
-        {
-          "es": "Tu agente propone el siguiente paso de cada negocio con el correo ya escrito, y lo envía desde su Gmail cuando lo apruebas. Ya no hay sincronización automática de Gmail y Calendar: tu agente apunta en el historial los correos y reuniones que lee.",
-          "en": "Your agent proposes each deal's next step with the email already written, and sends it from its Gmail once you approve it. Gmail and Calendar no longer sync by themselves: your agent notes the emails and meetings it reads on the timeline."
-        },
-        {
-          "es": "Con Facturas, pides el presupuesto de un negocio y tu agente lo prepara allí; con Proyectos, cada negocio ganado abrirá su proyecto.",
-          "en": "With Invoices, you ask for a deal's quote and your agent makes it there; with Proyectos, each won deal will open its project."
-        },
-        {
-          "es": "Cada cliente está una sola vez: al añadir una empresa o una persona que ya tienes (mismo NIF, web, correo o nombre) se completa la que había. Dos fichas repetidas se unen en una, y archivar guarda la ficha con su historial en vez de borrarla.",
-          "en": "Each client is here once: adding a company or person you already have (same tax id, website, email or name) completes the existing one. Two duplicates can be merged into one, and archiving keeps the record with its history instead of deleting it."
+          "es": "Unir dos empresas repetidas mueve también sus facturas. Una empresa con facturas se archiva, nunca se borra.",
+          "en": "Merging two duplicate companies moves their invoices too. A company with invoices is archived, never deleted."
         }
       ],
-      "version": "0.4.0",
+      "version": "0.4.1",
       "tables": [
         "crm_deals",
         "crm_companies",
@@ -489,9 +491,9 @@
         "crm_settings"
       ],
       "package": {
-        "path": "apps/crm/crm-0.4.0.tgz",
-        "sha256": "c5b1eeb64d9ab2be1938dc90644a66841deca83aeb87a5249173a046feef8393",
-        "size": 359179,
+        "path": "apps/crm/crm-0.4.1.tgz",
+        "sha256": "b169c5ccdf83ea8eb0e965280d3711f1a780d73dc5b37b34212edcc069287f83",
+        "size": 361916,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -2174,6 +2176,20 @@
         }
       ],
       "changelog": {
+        "0.4.0": [
+          {
+            "es": "Tus clientes son los del CRM: eliges el cliente de una lista, nunca lo escribes, y si es nuevo se crea en el CRM sin salir del presupuesto (antes te pregunta «¿Es esta?» si ya hay uno parecido).",
+            "en": "Your clients are the CRM's: you pick the client from a list, never type it, and a new one is made in the CRM without leaving the quote (asking «Is it this one?» first if there is a similar one)."
+          },
+          {
+            "es": "Cambias el nombre o el NIF de un cliente en el CRM y sale cambiado en todos tus borradores. Una factura emitida guarda los datos de su día.",
+            "en": "Change a client's name or tax ID in the CRM and every draft shows it. An issued invoice keeps the details of its day."
+          },
+          {
+            "es": "Al instalar Facturas se instala también el CRM. Tus clientes de antes pasan solos al CRM, sin repetirse.",
+            "en": "Installing Invoices installs the CRM too. Your existing clients move to the CRM by themselves, without duplicates."
+          }
+        ],
         "0.3.0": [
           {
             "es": "Facturas se abre en la oficina, con su menú: Resumen (cómo vas de cobros, con tus ingresos mes a mes), Presupuestos, Facturas, Recurrentes y Clientes. Tus datos y tu IBAN, en Ajustes.",
@@ -2195,23 +2211,19 @@
       },
       "whatsNew": [
         {
-          "es": "Facturas se abre en la oficina, con su menú: Resumen (cómo vas de cobros, con tus ingresos mes a mes), Presupuestos, Facturas, Recurrentes y Clientes. Tus datos y tu IBAN, en Ajustes.",
-          "en": "Invoices opens in the office, with its menu: Resumen (how you are doing with payments, income month by month), Quotes, Invoices, Recurring and Clients. Your details and IBAN, in Settings."
+          "es": "Tus clientes son los del CRM: eliges el cliente de una lista, nunca lo escribes, y si es nuevo se crea en el CRM sin salir del presupuesto (antes te pregunta «¿Es esta?» si ya hay uno parecido).",
+          "en": "Your clients are the CRM's: you pick the client from a list, never type it, and a new one is made in the CRM without leaving the quote (asking «Is it this one?» first if there is a similar one)."
         },
         {
-          "es": "Facturas recurrentes: un mantenimiento o una cuota hace su factura sola cada mes, trimestre o año, en borrador para que la revises o emitida sola si lo eliges. {periodo} pone «noviembre 2026».",
-          "en": "Recurring fees: maintenance or a monthly plan makes its invoice every month, quarter or year, as a draft for you or issued by itself if you choose."
+          "es": "Cambias el nombre o el NIF de un cliente en el CRM y sale cambiado en todos tus borradores. Una factura emitida guarda los datos de su día.",
+          "en": "Change a client's name or tax ID in the CRM and every draft shows it. An issued invoice keeps the details of its day."
         },
         {
-          "es": "Tu numeración, tal cual: «DUG-» y 3 cifras dan DUG-2026-012; las facturas antiguas se traen con su número y la siguiente sigue a la última.",
-          "en": "Your own numbering (DUG-2026-012); past invoices come in with their numbers and the next one follows."
-        },
-        {
-          "es": "Los correos los envía tu agente desde el correo del equipo, solo cuando pulsas «Enviar». Un enlace de pago con tarjeta se pone a mano en cada factura.",
-          "en": "Emails are sent by your agent from the team's mailbox, only when you press Send. A card payment link is set on each invoice."
+          "es": "Al instalar Facturas se instala también el CRM. Tus clientes de antes pasan solos al CRM, sin repetirse.",
+          "en": "Installing Invoices installs the CRM too. Your existing clients move to the CRM by themselves, without duplicates."
         }
       ],
-      "version": "0.3.0",
+      "version": "0.4.0",
       "tables": [
         "inv_documents",
         "inv_clients",
@@ -2223,9 +2235,9 @@
         "inv_responses"
       ],
       "package": {
-        "path": "apps/invoices/invoices-0.3.0.tgz",
-        "sha256": "e5265dde1a5e6dc38f80de9d4be3e8048abbde307bfaec8777b6e0d64ef043ac",
-        "size": 508696,
+        "path": "apps/invoices/invoices-0.4.0.tgz",
+        "sha256": "d05efe7179dbbc17d3d18858795c977ac6e09997075178196fa3d01f724a2586",
+        "size": 514289,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -2234,14 +2246,16 @@
         "channels": [],
         "processes": 1,
         "skills": [],
+        "requires": [
+          "crm"
+        ],
+        "requiresUses": {
+          "crm": {
+            "es": "los clientes del CRM",
+            "en": "the CRM's clients"
+          }
+        },
         "related": [
-          {
-            "app": "crm",
-            "why": {
-              "es": "El presupuesto se prepara en una oportunidad del CRM (origin «CRM #<id>»), y el CRM lee su estado.",
-              "en": "A quote is drafted on a CRM deal (origin «CRM #<id>»), and the CRM reads its state."
-            }
-          },
           {
             "app": "expenses",
             "why": {
