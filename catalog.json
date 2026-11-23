@@ -70,6 +70,16 @@
         }
       ],
       "changelog": {
+        "0.15.5": [
+          {
+            "es": "En Ajustes, «Lo que tu equipo hace solo»: cada cosa que tu equipo puede hacer sin que se lo pidas tiene su interruptor, dice qué pasa cuando está encendida y se abre en Automatizaciones.",
+            "en": "In Settings, «Lo que tu equipo hace solo»: each thing your team can do without being asked has its switch, says what happens when it is on and opens in Automatizaciones."
+          },
+          {
+            "es": "Nuevo: tu agente puede escribir solo el primer borrador de cada idea con su encargo y dejarlo en revisión.",
+            "en": "New: your agent can write the first draft of each idea with a brief by itself and leave it in review."
+          }
+        ],
         "0.15.4": [
           {
             "es": "«Cómo funciona» solo habla de la otra parte de tu oficina cuando la tienes.",
@@ -233,11 +243,15 @@
       },
       "whatsNew": [
         {
-          "es": "«Cómo funciona» solo habla de la otra parte de tu oficina cuando la tienes.",
-          "en": "«Cómo funciona» only mentions the other part of your office when you have it."
+          "es": "En Ajustes, «Lo que tu equipo hace solo»: cada cosa que tu equipo puede hacer sin que se lo pidas tiene su interruptor, dice qué pasa cuando está encendida y se abre en Automatizaciones.",
+          "en": "In Settings, «Lo que tu equipo hace solo»: each thing your team can do without being asked has its switch, says what happens when it is on and opens in Automatizaciones."
+        },
+        {
+          "es": "Nuevo: tu agente puede escribir solo el primer borrador de cada idea con su encargo y dejarlo en revisión.",
+          "en": "New: your agent can write the first draft of each idea with a brief by itself and leave it in review."
         }
       ],
-      "version": "0.15.4",
+      "version": "0.15.5",
       "tables": [
         "articles_articles",
         "articles_rules",
@@ -252,9 +266,9 @@
         "articles_links"
       ],
       "package": {
-        "path": "apps/articles/articles-0.15.4.tgz",
-        "sha256": "4be22779c9b6f196988aed2cd778f2973487af771f8265ea0a39688853e69e11",
-        "size": 690747,
+        "path": "apps/articles/articles-0.15.5.tgz",
+        "sha256": "59783a4f87a672b9f6a8e7f59393c4708eefb2719429ac0bd768592a4f095887",
+        "size": 691455,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -439,6 +453,12 @@
         }
       ],
       "changelog": {
+        "0.4.4": [
+          {
+            "es": "En Ajustes, «Lo que tu equipo hace solo»: cada cosa que tu equipo puede hacer sin que se lo pidas tiene su interruptor, dice qué pasa cuando está encendida y se abre en Automatizaciones.",
+            "en": "In Settings, «Lo que tu equipo hace solo»: each thing your team can do without being asked has its switch, says what happens when it is on and opens in Automatizaciones."
+          }
+        ],
         "0.4.3": [
           {
             "es": "Cada negocio muestra su presupuesto y sus facturas al momento, con su número, su estado y su importe; un borrador se lee «Borrador · su concepto».",
@@ -514,23 +534,11 @@
       },
       "whatsNew": [
         {
-          "es": "Cada negocio muestra su presupuesto y sus facturas al momento, con su número, su estado y su importe; un borrador se lee «Borrador · su concepto».",
-          "en": "Each deal shows its quote and invoices live, with their number, state and amount; a draft reads «Borrador · its title»."
-        },
-        {
-          "es": "Las empresas tienen razón social, la que sale en sus facturas.",
-          "en": "Companies have a legal name, the one their invoices carry."
-        },
-        {
-          "es": "El pipeline, de un vistazo: todas las etapas en una sola tira, cada una con cuántos negocios tiene y lo que valen, y al final ganados y perdidos.",
-          "en": "The pipeline at a glance: every stage in one strip, each with how many deals and their value, and won and lost at the end."
-        },
-        {
-          "es": "Se llama CRM en todas partes, y «Cómo funciona» lo explica desde cero.",
-          "en": "It is called CRM everywhere, and «Cómo funciona» explains it from scratch."
+          "es": "En Ajustes, «Lo que tu equipo hace solo»: cada cosa que tu equipo puede hacer sin que se lo pidas tiene su interruptor, dice qué pasa cuando está encendida y se abre en Automatizaciones.",
+          "en": "In Settings, «Lo que tu equipo hace solo»: each thing your team can do without being asked has its switch, says what happens when it is on and opens in Automatizaciones."
         }
       ],
-      "version": "0.4.3",
+      "version": "0.4.4",
       "tables": [
         "crm_deals",
         "crm_companies",
@@ -542,9 +550,9 @@
         "crm_settings"
       ],
       "package": {
-        "path": "apps/crm/crm-0.4.3.tgz",
-        "sha256": "3e3fdce96ea8450770888c2993e01072cf8ee4c64d57ad0f4c20f90c9f68bb11",
-        "size": 364314,
+        "path": "apps/crm/crm-0.4.4.tgz",
+        "sha256": "2e001d161cb61920b6579a880dddcc5b846c4d7324dbb02befdabcc7cab4a4f6",
+        "size": 365280,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -2226,6 +2234,12 @@
         }
       ],
       "changelog": {
+        "0.4.3": [
+          {
+            "es": "En Ajustes, «Lo que tu equipo hace solo»: cada cosa que tu equipo puede hacer sin que se lo pidas tiene su interruptor, dice qué pasa cuando está encendida y se abre en Automatizaciones.",
+            "en": "In Settings, «Lo que tu equipo hace solo»: each thing your team can do without being asked has its switch, says what happens when it is on and opens in Automatizaciones."
+          }
+        ],
         "0.4.2": [
           {
             "es": "Cada presupuesto y factura lleva la razón social y el NIF del cliente, con su nombre comercial al lado si es otro.",
@@ -2281,19 +2295,11 @@
       },
       "whatsNew": [
         {
-          "es": "Cada presupuesto y factura lleva la razón social y el NIF del cliente, con su nombre comercial al lado si es otro.",
-          "en": "Every quote and invoice carries the client's legal name and tax ID, with its trade name beside it when different."
-        },
-        {
-          "es": "Un borrador ya no se lee «#2»: se lee «Borrador · su concepto».",
-          "en": "A draft no longer reads «#2»: it reads «Borrador · its title»."
-        },
-        {
-          "es": "«Cómo funciona» lo explica desde cero.",
-          "en": "«Cómo funciona» explains it from scratch."
+          "es": "En Ajustes, «Lo que tu equipo hace solo»: cada cosa que tu equipo puede hacer sin que se lo pidas tiene su interruptor, dice qué pasa cuando está encendida y se abre en Automatizaciones.",
+          "en": "In Settings, «Lo que tu equipo hace solo»: each thing your team can do without being asked has its switch, says what happens when it is on and opens in Automatizaciones."
         }
       ],
-      "version": "0.4.2",
+      "version": "0.4.3",
       "tables": [
         "inv_documents",
         "inv_clients",
@@ -2305,9 +2311,9 @@
         "inv_responses"
       ],
       "package": {
-        "path": "apps/invoices/invoices-0.4.2.tgz",
-        "sha256": "52221987368b27e709a5f851ef568dad639b89390e1075753e02d77c297574f0",
-        "size": 517900,
+        "path": "apps/invoices/invoices-0.4.3.tgz",
+        "sha256": "d96adeb7a3b8d61d18b188f886c15e2681a15f86c1c687fd85652adbba674d5e",
+        "size": 518535,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -4337,6 +4343,12 @@
         }
       ],
       "changelog": {
+        "1.13.5": [
+          {
+            "es": "En Ajustes, «Lo que tu equipo hace solo»: cada cosa que tu equipo puede hacer sin que se lo pidas tiene su interruptor, dice qué pasa cuando está encendida y se abre en Automatizaciones.",
+            "en": "In Settings, «Lo que tu equipo hace solo»: each thing your team can do without being asked has its switch, says what happens when it is on and opens in Automatizaciones."
+          }
+        ],
         "1.13.4": [
           {
             "es": "«Cómo funciona» solo habla de la otra parte de tu oficina cuando la tienes.",
@@ -4688,11 +4700,11 @@
       },
       "whatsNew": [
         {
-          "es": "«Cómo funciona» solo habla de la otra parte de tu oficina cuando la tienes.",
-          "en": "«Cómo funciona» only mentions the other part of your office when you have it."
+          "es": "En Ajustes, «Lo que tu equipo hace solo»: cada cosa que tu equipo puede hacer sin que se lo pidas tiene su interruptor, dice qué pasa cuando está encendida y se abre en Automatizaciones.",
+          "en": "In Settings, «Lo que tu equipo hace solo»: each thing your team can do without being asked has its switch, says what happens when it is on and opens in Automatizaciones."
         }
       ],
-      "version": "1.13.4",
+      "version": "1.13.5",
       "tables": [
         "oportunidadesseo_oportunidades",
         "oportunidadesseo_acciones",
@@ -4713,9 +4725,9 @@
         "oportunidadesseo_cache"
       ],
       "package": {
-        "path": "apps/oportunidadesseo/oportunidadesseo-1.13.4.tgz",
-        "sha256": "602019289c13ebef68b4c642839267658ac695c84973ec0067a8f1ba203d6dcb",
-        "size": 653246,
+        "path": "apps/oportunidadesseo/oportunidadesseo-1.13.5.tgz",
+        "sha256": "4cfa6cf88c3e76c8abcd3e9e6337210112f56f4020deac19f62115b75e6a5e97",
+        "size": 653710,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -4928,6 +4940,12 @@
         }
       ],
       "changelog": {
+        "0.5.2": [
+          {
+            "es": "En Ajustes, «Lo que tu equipo hace solo»: cada cosa que tu equipo puede hacer sin que se lo pidas tiene su interruptor, dice qué pasa cuando está encendida y se abre en Automatizaciones.",
+            "en": "In Settings, «Lo que tu equipo hace solo»: each thing your team can do without being asked has its switch, says what happens when it is on and opens in Automatizaciones."
+          }
+        ],
         "0.5.1": [
           {
             "es": "«Cómo funciona» se lee sin saber nada de antes: cada paso dice qué es, para qué sirve, qué botón pulsar y qué hace tu agente; los ejemplos son inventados.",
@@ -5047,19 +5065,11 @@
       },
       "whatsNew": [
         {
-          "es": "«Cómo funciona» se lee sin saber nada de antes: cada paso dice qué es, para qué sirve, qué botón pulsar y qué hace tu agente; los ejemplos son inventados.",
-          "en": "«Cómo funciona» reads with no prior knowledge: each step says what it is, what it is for, which button to press and what your agent does; the examples are invented."
-        },
-        {
-          "es": "Al importar datos antiguos, las tablas de agentes, áreas y ejes se reconocen por su forma, no por el nombre de una empresa.",
-          "en": "When importing old data, tables of agents, areas and axes are recognised by their shape, not by one company's name."
-        },
-        {
-          "es": "Los ejemplos y textos ya no nombran a clientes reales.",
-          "en": "Examples and texts no longer name real customers."
+          "es": "En Ajustes, «Lo que tu equipo hace solo»: cada cosa que tu equipo puede hacer sin que se lo pidas tiene su interruptor, dice qué pasa cuando está encendida y se abre en Automatizaciones.",
+          "en": "In Settings, «Lo que tu equipo hace solo»: each thing your team can do without being asked has its switch, says what happens when it is on and opens in Automatizaciones."
         }
       ],
-      "version": "0.5.1",
+      "version": "0.5.2",
       "tables": [
         "obras_projects",
         "obras_units",
@@ -5077,9 +5087,9 @@
         "obras_settings"
       ],
       "package": {
-        "path": "apps/obras/obras-0.5.1.tgz",
-        "sha256": "ee9c47c2bfc79c71c2af12de7e5343bd9d7826f817b11abaa3f8a3b5cd38218d",
-        "size": 557806,
+        "path": "apps/obras/obras-0.5.2.tgz",
+        "sha256": "22a4dd537468294b3f0982f0e467f93da99b28bd66e1bb6984d6ca453f12d467",
+        "size": 558134,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
