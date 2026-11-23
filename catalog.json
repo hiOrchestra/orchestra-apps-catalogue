@@ -463,6 +463,12 @@
         }
       ],
       "changelog": {
+        "0.5.2": [
+          {
+            "es": "Ajustes ya no muestra los «Tipos de servicio» antiguos: lo que vendes está en «Servicios y productos», agrupado por categorías.",
+            "en": "Settings no longer show the old «kinds of service»: what you sell is in «Servicios y productos», grouped by category."
+          }
+        ],
         "0.5.1": [
           {
             "es": "Quitar una venta (un error, un duplicado) quita también los servicios contratados que había creado.",
@@ -632,11 +638,11 @@
       },
       "whatsNew": [
         {
-          "es": "Quitar una venta (un error, un duplicado) quita también los servicios contratados que había creado.",
-          "en": "Removing a sale (a mistake, a duplicate) also removes the contracted services it had made."
+          "es": "Ajustes ya no muestra los «Tipos de servicio» antiguos: lo que vendes está en «Servicios y productos», agrupado por categorías.",
+          "en": "Settings no longer show the old «kinds of service»: what you sell is in «Servicios y productos», grouped by category."
         }
       ],
-      "version": "0.5.1",
+      "version": "0.5.2",
       "tables": [
         "crm_deals",
         "crm_items",
@@ -651,9 +657,9 @@
         "crm_settings"
       ],
       "package": {
-        "path": "apps/crm/crm-0.5.1.tgz",
-        "sha256": "149e96becebcb9cb53de4e438c5803f68de028c2b5f36e4e627af8fe029bad87",
-        "size": 405924,
+        "path": "apps/crm/crm-0.5.2.tgz",
+        "sha256": "5a6473ac37fab06763f448209b83415b4fe6f5df7b8462d4ec4635395ca7e0c3",
+        "size": 405917,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
