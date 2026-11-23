@@ -375,22 +375,22 @@
       "id": "crm",
       "name": "CRM",
       "category": "Sales",
-      "summary": "Leads, deals, companies and contacts, with the agent doing the follow-up.",
-      "promise": "Whoever writes to you lands in the CRM, read by your agent; each deal has its next step proposed and its email written. You decide.",
-      "description": "Leads from your website, bookings and email in one inbox, read by the agent; deals with their kind of service, value once and per month, pipeline stage and next step; companies and contacts with a timeline of every email, meeting and note. Nothing becomes a deal and no email goes without you.",
+      "summary": "Customers through their life — leads, sales, what they buy and have — with the agent doing the follow-up.",
+      "promise": "Each customer with its stage, what it has and pays, and whether it may leave; each sale with its lines and next step, its email written. You decide.",
+      "description": "Whoever writes to you lands as a Lead, read by your agent; each sale carries its lines from your catalogue («810 € una vez + 12 €/mes») and its next step; once won, what recurs becomes the customer's contracted services, with renewals and ends watched; customers at risk are listed with why. Companies and contacts keep a timeline of every email, meeting and note. Nothing is sent without you.",
       "brief": {
         "user": "Founders and the sales team of a small services company",
         "frequency": "Every day",
         "questions": [
           "What do I have to do today, and why?",
-          "Who arrived, and is it worth it?",
-          "At what stage is each deal, and which one is stuck?"
+          "Who are my customers, and where is each one?",
+          "What am I trying to sell, and how is it going?"
         ],
-        "primaryAction": "Decide a lead, or take the next step of a deal",
+        "primaryAction": "Answer a lead, take the next step of a sale or of a customer at risk",
         "answers": [
-          "Today lists what waits for you in order: leads to decide, the steps your agent proposes with their email, emails to approve and late steps.",
-          "Each lead arrives here, never in Trabajo, with what your agent reads in it: whether it fits, why and what it could be worth.",
-          "The pipeline shows each stage with its deals and value, once and per month, and marks the deals with no news."
+          "Hoy lists what waits for you in order: who wrote to you, the steps your agent proposes with their email, customers at risk with why, and what renews soon.",
+          "Each company has its stage — Lead, In conversation, Customer, Former customer — set by itself, with what it has contracted, what it pays a month and whether it may leave.",
+          "Each sale says what its lines are worth, once and per month, and its stage; once won, what recurs becomes the customer's contracted service."
         ]
       },
       "how": [
@@ -463,6 +463,28 @@
         }
       ],
       "changelog": {
+        "0.5.0": [
+          {
+            "es": "Leads, ventas y clientes son ahora una sola historia: cada empresa tiene su etapa —Lead, En conversación, Cliente o Antiguo cliente— que se pone sola con lo que pasa, y quien te escribe aparece como Lead con su mensaje, para contestarle desde Hoy.",
+            "en": "Leads, sales and customers are now one story: each company has its stage —Lead, In conversation, Customer or Former customer— set by itself from what happens, and whoever writes to you shows as a Lead with their message, to answer from Hoy."
+          },
+          {
+            "es": "«Servicios y productos»: tu catálogo, con su precio, si se cobra una vez o cada mes, trimestre o año, su permanencia, su renovación y cómo se factura. Tus antiguos tipos de servicio son ahora sus categorías.",
+            "en": "«Servicios y productos»: your catalogue, with its price, whether it is charged once or every month, quarter or year, its minimum term, its renewal and how it is billed. Your old kinds of service are now its categories."
+          },
+          {
+            "es": "Cada venta lleva sus líneas del catálogo y dice lo que vale: «810 € una vez + 12 €/mes». Al ganarla, lo recurrente pasa a ser un servicio contratado del cliente: su página dice lo que tiene, lo que paga al mes y lo que se renueva.",
+            "en": "Each sale carries its lines from the catalogue and says what it is worth: «810 € una vez + 12 €/mes». Once won, what recurs becomes one of the customer's contracted services: their page says what they have, what they pay a month and what renews."
+          },
+          {
+            "es": "Clientes en riesgo: sin contacto hace días, una factura vencida, una renovación o un final cerca, o una queja. Hoy los lista con el porqué, y tu agente te propone qué hacer con el correo escrito.",
+            "en": "Customers at risk: no contact for days, an overdue invoice, a renewal or an end coming, or a complaint. Hoy lists them with why, and your agent proposes what to do with the email written."
+          },
+          {
+            "es": "En la página de cada cliente, «Facturación»: lo que le has facturado, lo que te debe y sus facturas recurrentes, al momento. Tus ventas actuales pasan solas a líneas; no se pierde nada.",
+            "en": "On each customer's page, «Facturación»: what you billed them, what they owe and their recurring fees, live. Your current sales become lines by themselves; nothing is lost."
+          }
+        ],
         "0.4.10": [
           {
             "es": "Un negocio perdido ya no suma su cuota en ningún total; los negocios se ordenan por las etapas tal como están en Ajustes; y buscar sin escribir nada vuelve a listar todos.",
@@ -604,13 +626,32 @@
       },
       "whatsNew": [
         {
-          "es": "Un negocio perdido ya no suma su cuota en ningún total; los negocios se ordenan por las etapas tal como están en Ajustes; y buscar sin escribir nada vuelve a listar todos.",
-          "en": "A lost deal no longer adds its fee to any total; deals follow the stages as they are in Ajustes; and a search with nothing typed lists them all again."
+          "es": "Leads, ventas y clientes son ahora una sola historia: cada empresa tiene su etapa —Lead, En conversación, Cliente o Antiguo cliente— que se pone sola con lo que pasa, y quien te escribe aparece como Lead con su mensaje, para contestarle desde Hoy.",
+          "en": "Leads, sales and customers are now one story: each company has its stage —Lead, In conversation, Customer or Former customer— set by itself from what happens, and whoever writes to you shows as a Lead with their message, to answer from Hoy."
+        },
+        {
+          "es": "«Servicios y productos»: tu catálogo, con su precio, si se cobra una vez o cada mes, trimestre o año, su permanencia, su renovación y cómo se factura. Tus antiguos tipos de servicio son ahora sus categorías.",
+          "en": "«Servicios y productos»: your catalogue, with its price, whether it is charged once or every month, quarter or year, its minimum term, its renewal and how it is billed. Your old kinds of service are now its categories."
+        },
+        {
+          "es": "Cada venta lleva sus líneas del catálogo y dice lo que vale: «810 € una vez + 12 €/mes». Al ganarla, lo recurrente pasa a ser un servicio contratado del cliente: su página dice lo que tiene, lo que paga al mes y lo que se renueva.",
+          "en": "Each sale carries its lines from the catalogue and says what it is worth: «810 € una vez + 12 €/mes». Once won, what recurs becomes one of the customer's contracted services: their page says what they have, what they pay a month and what renews."
+        },
+        {
+          "es": "Clientes en riesgo: sin contacto hace días, una factura vencida, una renovación o un final cerca, o una queja. Hoy los lista con el porqué, y tu agente te propone qué hacer con el correo escrito.",
+          "en": "Customers at risk: no contact for days, an overdue invoice, a renewal or an end coming, or a complaint. Hoy lists them with why, and your agent proposes what to do with the email written."
+        },
+        {
+          "es": "En la página de cada cliente, «Facturación»: lo que le has facturado, lo que te debe y sus facturas recurrentes, al momento. Tus ventas actuales pasan solas a líneas; no se pierde nada.",
+          "en": "On each customer's page, «Facturación»: what you billed them, what they owe and their recurring fees, live. Your current sales become lines by themselves; nothing is lost."
         }
       ],
-      "version": "0.4.10",
+      "version": "0.5.0",
       "tables": [
         "crm_deals",
+        "crm_items",
+        "crm_lines",
+        "crm_services",
         "crm_companies",
         "crm_contacts",
         "crm_leads",
@@ -620,9 +661,9 @@
         "crm_settings"
       ],
       "package": {
-        "path": "apps/crm/crm-0.4.10.tgz",
-        "sha256": "beb77aa3e6cc1fc073de02fabfdc734ac18ed9312d63f4785922c02112d32b7d",
-        "size": 379045,
+        "path": "apps/crm/crm-0.5.0.tgz",
+        "sha256": "94e08876c3d11b65da74d3aea72a88f972df7ab9f4d731353ca40559589f80e2",
+        "size": 405886,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -637,22 +678,22 @@
         "es": {
           "name": "CRM",
           "category": "Ventas",
-          "summary": "Leads, negocios, empresas y contactos, con tu agente haciendo el seguimiento.",
-          "promise": "Quien te escribe llega al CRM como lead, leído por tu agente; cada negocio tiene su siguiente paso propuesto y su correo escrito. Tú decides.",
-          "description": "Los leads de tu web, tus reservas y tu correo en una sola bandeja, leídos por tu agente; los negocios —«Negocio con Reformas Ribera · Web + 2 landings»— con su tipo de servicio, lo que valen una vez y cada mes, su etapa del pipeline y su siguiente paso; empresas y contactos con la cronología de cada correo, reunión y nota. Nada se convierte en negocio ni sale ningún correo sin ti.",
+          "summary": "Tus clientes a lo largo de su vida —leads, ventas, lo que compran y lo que tienen— con tu agente haciendo el seguimiento.",
+          "promise": "Cada cliente con su etapa, lo que tiene y paga, y si puede irse; cada venta con sus líneas y su siguiente paso, con el correo escrito. Tú decides.",
+          "description": "Quien te escribe llega como Lead, leído por tu agente; cada venta lleva sus líneas de tu catálogo («810 € una vez + 12 €/mes») y su siguiente paso; al ganarla, lo recurrente pasa a ser un servicio contratado del cliente, con sus renovaciones y finales vigilados; los clientes en riesgo salen con el porqué. Empresas y contactos guardan la cronología de cada correo, reunión y nota. No sale nada sin ti.",
           "brief": {
             "user": "Quien lleva las ventas de una pequeña empresa de servicios",
             "frequency": "Cada día",
             "questions": [
               "¿Qué tengo que hacer hoy, y por qué?",
-              "¿Quién ha llegado, y merece la pena?",
-              "¿En qué etapa está cada negocio, y cuál está parado?"
+              "¿Quiénes son mis clientes, y en qué punto está cada uno?",
+              "¿Qué intento vender, y cómo va?"
             ],
-            "primaryAction": "Decidir un lead, o dar el siguiente paso de un negocio",
+            "primaryAction": "Contestar a un lead, o dar el siguiente paso de una venta o de un cliente en riesgo",
             "answers": [
-              "Hoy te dice lo que te espera por orden: leads por decidir, los pasos que te propone tu agente con su correo, correos por aprobar y pasos atrasados.",
-              "Cada lead llega aquí, nunca a Trabajo, con lo que tu agente ve en él: si encaja, por qué y lo que podría valer.",
-              "El pipeline muestra cada etapa con sus negocios y lo que valen, una vez y cada mes, y marca los que llevan días sin noticias."
+              "Hoy te dice lo que te espera por orden: quién te ha escrito, los pasos que te propone tu agente con su correo, los clientes en riesgo con el porqué y lo que se renueva pronto.",
+              "Cada empresa tiene su etapa —Lead, En conversación, Cliente, Antiguo cliente— que se pone sola, con lo que tiene contratado, lo que paga al mes y si puede irse.",
+              "Cada venta dice lo que valen sus líneas, una vez y cada mes, y su etapa; al ganarla, lo recurrente pasa a ser un servicio contratado del cliente."
             ]
           },
           "how": [
@@ -2304,6 +2345,20 @@
         }
       ],
       "changelog": {
+        "0.5.4": [
+          {
+            "es": "Un presupuesto hecho desde una venta del CRM trae sus líneas: lo que se vende, una vez o cada mes, con su precio y su descuento.",
+            "en": "A quote made from a CRM sale brings its lines: what is sold, once or every month, with its price and discount."
+          },
+          {
+            "es": "Cada factura recurrente puede apuntar al servicio contratado del cliente en el CRM: una nueva toma de él el cliente, cada cuánto se factura y su línea; y el CRM sabe qué factura del cliente está sin pagar.",
+            "en": "Each recurring fee can point at the customer's contracted service in the CRM: a new one takes its client, how often it is billed and its line from it; and the CRM knows which of the customer's invoices is unpaid."
+          },
+          {
+            "es": "Tus clientes se llevan en un solo sitio, el CRM: lo que le has facturado a cada uno, lo que te debe y sus facturas recurrentes se ven ahora en su página del CRM. Aquí, cada lista se filtra por cliente.",
+            "en": "Your clients are kept in one place, the CRM: what you billed each one, what they owe and their recurring fees now show on their CRM page. Here, each list filters by client."
+          }
+        ],
         "0.5.3": [
           {
             "es": "Sin IBAN, el documento ya no muestra una «Forma de pago» con solo la nota de la transferencia.",
@@ -2421,11 +2476,19 @@
       },
       "whatsNew": [
         {
-          "es": "Sin IBAN, el documento ya no muestra una «Forma de pago» con solo la nota de la transferencia.",
-          "en": "With no IBAN, the document no longer shows a «Forma de pago» holding only the transfer note."
+          "es": "Un presupuesto hecho desde una venta del CRM trae sus líneas: lo que se vende, una vez o cada mes, con su precio y su descuento.",
+          "en": "A quote made from a CRM sale brings its lines: what is sold, once or every month, with its price and discount."
+        },
+        {
+          "es": "Cada factura recurrente puede apuntar al servicio contratado del cliente en el CRM: una nueva toma de él el cliente, cada cuánto se factura y su línea; y el CRM sabe qué factura del cliente está sin pagar.",
+          "en": "Each recurring fee can point at the customer's contracted service in the CRM: a new one takes its client, how often it is billed and its line from it; and the CRM knows which of the customer's invoices is unpaid."
+        },
+        {
+          "es": "Tus clientes se llevan en un solo sitio, el CRM: lo que le has facturado a cada uno, lo que te debe y sus facturas recurrentes se ven ahora en su página del CRM. Aquí, cada lista se filtra por cliente.",
+          "en": "Your clients are kept in one place, the CRM: what you billed each one, what they owe and their recurring fees now show on their CRM page. Here, each list filters by client."
         }
       ],
-      "version": "0.5.3",
+      "version": "0.5.4",
       "tables": [
         "inv_documents",
         "inv_clients",
@@ -2437,9 +2500,9 @@
         "inv_responses"
       ],
       "package": {
-        "path": "apps/invoices/invoices-0.5.3.tgz",
-        "sha256": "da5ebff4387d78329f62591c1d8ce66c83f25b1c96fd3c8c053f5c788ea1bf9f",
-        "size": 559692,
+        "path": "apps/invoices/invoices-0.5.4.tgz",
+        "sha256": "6615f844adc7c5e9fb7f96a35996cba357d10754e663319674d2e06e246d02db",
+        "size": 559904,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
