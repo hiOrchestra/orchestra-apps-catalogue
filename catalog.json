@@ -335,45 +335,44 @@
       "id": "crm",
       "name": "CRM",
       "category": "Sales",
-      "summary": "Contacts, companies and deals, with the agent doing the follow-up.",
-      "promise": "Every deal has its next step proposed and its email drafted. You approve it and it goes out from your Gmail.",
+      "summary": "Leads, deals and clients, with the agent doing the follow-up.",
+      "promise": "Whoever writes to you lands in the CRM, read by your agent; each deal has its next step proposed and its email written. You decide.",
       "like": "HubSpot",
-      "description": "A pipeline of deals, the people and companies behind them, and a timeline of every email and meeting. The agent enriches companies, proposes the next step for each deal and drafts the email; nothing is sent until you approve it.",
+      "description": "Leads from your website, bookings and email in one inbox, read by the agent; deals with their kind of service, value once and per month, stage and next step; companies and people with a timeline of every email, meeting and note. Nothing becomes a deal and no email goes without you.",
       "brief": {
-        "user": "Founders and the sales team of a small company",
+        "user": "Founders and the sales team of a small services company",
         "frequency": "Every day",
         "questions": [
-          "Who do I have to talk to today, and why?",
-          "At what stage is each deal, and which one is stuck?",
-          "What happened with this person or company?"
+          "What do I have to do today, and why?",
+          "Who arrived, and is it worth it?",
+          "At what stage is each deal, and which one is stuck?"
         ],
-        "primaryAction": "Do or approve the next step of a deal",
+        "primaryAction": "Decide a lead, or take the next step of a deal",
         "answers": [
-          "Each day the agent proposes the next step for your deals, and says why.",
-          "The pipeline shows every deal by stage and marks the ones that have stopped moving.",
-          "Each person and company keeps a timeline of every email and meeting."
+          "Today lists what waits for you in order: leads to decide, the steps your agent proposes with their email, emails to approve and late steps.",
+          "Each lead arrives here, never in Trabajo, with what your agent reads in it: whether it fits, why and what it could be worth.",
+          "The pipeline shows each stage with its deals and value, once and per month, and marks the deals with no news."
         ]
       },
       "how": [
         {
           "actor": "arrives",
-          "title": "Mail, meetings and leads come in",
-          "text": "With sync on, your Gmail and Calendar fill each contact's timeline; leads from Forms come in too.",
+          "title": "A lead arrives",
+          "text": "From your website's form, a booking or an email: it lands in Entradas, never in Trabajo.",
           "via": [
-            "gmail",
-            "googlecalendar"
+            "web",
+            "email"
           ]
         },
         {
-          "actor": "agent",
-          "role": "assistant",
-          "title": "The agent fills in and proposes",
-          "text": "It looks each new company up on the web, then suggests the next step for each deal and drafts the email."
+          "actor": "app",
+          "title": "Your agent reads it and proposes",
+          "text": "It says whether each lead fits and, for every deal, the next step with the email already written."
         },
         {
           "actor": "person",
-          "title": "You approve it, and it goes out",
-          "text": "Approved drafts go out from your Gmail. Nothing is sent without you.",
+          "title": "You decide",
+          "text": "You make a lead a deal or discard it, take a step, approve an email: your agent sends it from its Gmail.",
           "via": [
             "gmail"
           ]
@@ -390,32 +389,13 @@
       "needs": {
         "agent": {
           "required": true,
-          "why": "Enriches companies and proposes next steps with a draft email."
-        },
-        "integrations": [
-          {
-            "slug": "gmail",
-            "why": "Reads mail with your contacts and sends the emails you approve.",
-            "optional": true
-          },
-          {
-            "slug": "googlecalendar",
-            "why": "Adds your meetings with contacts to their timeline.",
-            "optional": true
-          },
-          {
-            "slug": "hubspot",
-            "why": "Imports your existing companies, contacts and deals once.",
-            "optional": true
-          }
-        ]
+          "why": "The team's agent reads each lead, proposes each deal's next step with its email, sends the emails you approve and notes what is said."
+        }
       },
       "outward": [
-        "Sends emails from your Gmail, only the drafts you approve.",
-        "Reads your Gmail and Google Calendar when you turn sync on (read only)."
+        "Emails you approve, sent by your agent from its Gmail."
       ],
       "outwardVia": [
-        "gmail",
         "gmail"
       ],
       "by": "Orchestra",
@@ -425,235 +405,155 @@
       "icon": "crm",
       "screenshots": [
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/crm/screens/1-today.png",
-          "caption": "Today: who to talk to, the steps the agent suggests and the emails waiting for your OK",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/crm/screens/1-hoy.png",
+          "caption": "Today: what waits for you, in order, with each decision on its line",
           "surface": "desk",
           "device": "desktop"
         },
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/crm/screens/2-pipeline.png",
-          "caption": "The pipeline by stage, with what each stage is worth",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/crm/screens/2-entradas.png",
+          "caption": "Leads: what they wrote, what your agent reads in it, and your decision",
           "surface": "desk",
           "device": "desktop"
         },
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/crm/screens/3-deal.png",
-          "caption": "A deal: its next step, the agent's suggestion and the whole history",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/crm/screens/3-negocio.png",
+          "caption": "A deal: its value, the next step your agent proposes with its email, and the whole timeline",
           "surface": "desk",
           "device": "desktop"
         }
       ],
-      "version": "0.3.2",
-      "tables": [
-        "crm_settings",
-        "crm_companies",
-        "crm_contacts",
-        "crm_deals",
-        "crm_activities",
-        "crm_tasks",
-        "crm_drafts"
-      ],
-      "package": {
-        "path": "apps/crm/crm-0.3.2.tgz",
-        "sha256": "158bfee96a0052ee1303710a5ff7a806e1642e94967415e71c9cfde6ffaa5fdd",
-        "size": 71477,
-        "installer": "install.js",
-        "manifest": "app.json",
-        "roles": [
+      "changelog": {
+        "0.4.0": [
           {
-            "id": "assistant",
-            "name": "Sales assistant",
-            "required": true,
-            "why": "Looks each new company up on the web and fills in what it finds, with its sources; once a day suggests the next step on open deals and, when it fits, an email. It answers only JSON a script checks; emails wait for a person to approve them, and it never sends on its own."
-          }
-        ],
-        "connections": [
-          {
-            "id": "gmail",
-            "integration": "gmail",
-            "optional": true,
-            "why": "Reads mail with your contacts onto their timeline, and sends the emails you approve.",
-            "from": {
-              "table": "crm_settings",
-              "column": "gmail_account"
-            }
+            "es": "Ventas funciona dentro de la oficina: cuatro sitios en el menú de la izquierda —Hoy, Entradas, Negocios y Clientes— y cada negocio, empresa y persona con su página. Tus datos siguen ahí: empresas, personas, negocios, historial y correos.",
+            "en": "Sales works inside the office: four places in the menu on the left —Hoy, Entradas, Negocios and Clientes— and each deal, company and person with its page. Your data is all there: companies, people, deals, timeline and emails."
           },
           {
-            "id": "googlecalendar",
-            "integration": "googlecalendar",
-            "optional": true,
-            "why": "Reads meetings with your contacts onto their timeline (read only).",
-            "from": {
-              "table": "crm_settings",
-              "column": "gmail_account"
-            }
+            "es": "Entradas: quien te escribe desde tu web, una reserva o un correo llega aquí, nunca a Trabajo. Tu agente la lee y te dice si encaja; tú la conviertes en negocio o la descartas.",
+            "en": "Entradas: whoever writes from your website, a booking or an email lands here, never in Trabajo. Your agent reads it and tells you whether it fits; you make it a deal or discard it."
           },
           {
-            "id": "hubspot",
-            "integration": "hubspot",
-            "optional": true,
-            "why": "A one-time copy of your HubSpot companies, contacts and deals (read only)."
-          }
-        ],
-        "variables": [],
-        "channels": [],
-        "processes": 7,
-        "skills": [],
-        "related": [
-          {
-            "app": "helpdesk",
-            "why": {
-              "es": "Quien escribe al soporte es un contacto: su historial de tickets ayuda a entender la relación.",
-              "en": "Whoever writes to support is a contact: their tickets help understand the relationship."
-            }
+            "es": "Cada negocio dice su tipo de servicio (consultoría, desarrollo…) y lo que vale una vez y cada mes. Tus etapas están en español; si las habías cambiado, se quedan como estaban.",
+            "en": "Each deal says its kind of service (consulting, development…) and what it is worth once and per month. Your stages are in Spanish; if you had changed them, they stay as they were."
           },
           {
-            "app": "booking",
-            "why": {
-              "es": "Quien reserva una reunión puede pasar al CRM como contacto, con su oportunidad.",
-              "en": "Whoever books a meeting can become a contact in the CRM, with their opportunity."
-            }
+            "es": "Tu agente propone el siguiente paso de cada negocio con el correo ya escrito, y lo envía desde su Gmail cuando lo apruebas. Ya no hay sincronización automática de Gmail y Calendar: tu agente apunta en el historial los correos y reuniones que lee.",
+            "en": "Your agent proposes each deal's next step with the email already written, and sends it from its Gmail once you approve it. Gmail and Calendar no longer sync by themselves: your agent notes the emails and meetings it reads on the timeline."
           },
           {
-            "app": "invoices",
-            "why": {
-              "es": "Una oportunidad ganada se factura en Facturas, al mismo cliente.",
-              "en": "A won deal is invoiced in Invoices, to the same customer."
-            }
+            "es": "Con Facturas, pides el presupuesto de un negocio y tu agente lo prepara allí; con Proyectos, cada negocio ganado abrirá su proyecto.",
+            "en": "With Invoices, you ask for a deal's quote and your agent makes it there; with Proyectos, each won deal will open its project."
           },
           {
-            "app": "esign",
-            "why": {
-              "es": "Los firmantes de un contrato suelen ser contactos del CRM.",
-              "en": "A contract's signers are usually CRM contacts."
-            }
-          },
-          {
-            "app": "forms",
-            "why": {
-              "es": "Las respuestas a un formulario pueden convertirse en contactos.",
-              "en": "Form answers can become contacts."
-            }
-          },
-          {
-            "app": "outreach",
-            "why": {
-              "es": "Las campañas se envían a contactos y listas que vienen del CRM.",
-              "en": "Campaigns go to contacts and lists that come from the CRM."
-            }
-          }
-        ],
-        "suggestedTasks": [
-          {
-            "id": "repaso-del-dia",
-            "title": {
-              "es": "Repaso del día en el CRM",
-              "en": "Today in the CRM"
-            },
-            "why": {
-              "es": "Cada mañana, lo que el equipo comercial tiene que mover hoy: oportunidades paradas o con el paso vencido, tareas del día y emails por aprobar.",
-              "en": "Every morning, what the sales team has to move today: stalled deals or overdue next steps, today's tasks and emails to approve."
-            },
-            "role": "assistant",
-            "schedule": {
-              "cron": "0 9 * * 1-5",
-              "tz": "Europe/Madrid",
-              "label": {
-                "es": "Laborables a las 9:00",
-                "en": "Weekdays at 9:00"
-              }
-            },
-            "prompt": {
-              "es": "Repasa el CRM para hoy.\n1. Oportunidades abiertas (crm_deals, status = 'Open') con el próximo paso vencido (next_step_due antes de hoy), sin próximo paso, o paradas (sin cambio de etapa en más días que crm_settings.stuck_days): nombre, importe, responsable y qué falta.\n2. Tareas abiertas que vencen hoy o están atrasadas (crm_tasks, status = 'Open') y tareas sugeridas sin decidir (status = 'Suggested').\n3. Emails que esperan aprobación (crm_drafts, status = 'Review') y los que fallaron (status = 'Failed').\n4. Contactos sugeridos por el correo sin decidir (crm_contacts, status = 'Suggested'): cuántos y, de los cinco más prometedores, por qué.\nSi ves en una oportunidad algo que el equipo debe saber (un correo reciente, un cambio en la empresa), déjalo como nota con `add_note`.\n\nTrabaja solo con `module read, id crm, sql \"<SELECT …>\"` y `module do, id crm, command <acción>, args '{…}'` (si dudas de una tabla o una acción, `module guide, id crm`). Nunca apruebas ni envías un email, y no cierras ni mueves oportunidades: eso lo decide una persona. Termina con un resumen breve para el canal del equipo: como mucho 8 líneas, con cifras y lo que espera a una persona. Si no hay nada que contar, dilo en una línea.",
-              "en": "Go over the CRM for today.\n1. Open deals (crm_deals, status = 'Open') whose next step is overdue (next_step_due before today), with no next step, or stalled (no stage change in more days than crm_settings.stuck_days): name, amount, owner and what is missing.\n2. Open tasks due today or overdue (crm_tasks, status = 'Open') and suggested tasks nobody decided (status = 'Suggested').\n3. Emails waiting for approval (crm_drafts, status = 'Review') and the ones that failed (status = 'Failed').\n4. Contacts suggested from mail and not decided (crm_contacts, status = 'Suggested'): how many and, for the five most promising, why.\nWhen a deal has something the team should know (a recent email, a change at the company), leave it as a note with `add_note`.\n\nWork only through `module read, id crm, sql \"<SELECT …>\"` and `module do, id crm, command <action>, args '{…}'` (if unsure of a table or an action, `module guide, id crm`). You never approve or send an email, and you do not close or move deals: a person decides that. End with a short summary for the team's channel: 8 lines at most, with numbers and what waits on a person. If there is nothing to report, say so in one line."
-            },
-            "deliver": "channel"
-          },
-          {
-            "id": "resumen-semanal",
-            "title": {
-              "es": "Resumen semanal del pipeline",
-              "en": "Weekly pipeline summary"
-            },
-            "why": {
-              "es": "Cada lunes, cómo cambió el pipeline: lo ganado y perdido, lo nuevo, el valor por etapa y dónde se atasca.",
-              "en": "Every Monday, how the pipeline changed: won and lost, what is new, value by stage and where it gets stuck."
-            },
-            "role": "assistant",
-            "schedule": {
-              "cron": "30 8 * * 1",
-              "tz": "Europe/Madrid",
-              "label": {
-                "es": "Los lunes a las 8:30",
-                "en": "Mondays at 8:30"
-              }
-            },
-            "prompt": {
-              "es": "Resume los últimos 7 días del CRM.\n1. Oportunidades ganadas y perdidas (crm_deals.closed_at en la semana) con su importe y, de las perdidas, el motivo (lost_reason).\n2. Oportunidades nuevas, y el valor abierto por etapa (status = 'Open', suma de amount por stage) frente a la semana anterior si se puede deducir.\n3. Dónde se atasca: la etapa con más oportunidades paradas y las tres más grandes sin próximo paso.\n4. Actividad: emails enviados (crm_drafts, status = 'Sent'), reuniones y notas (crm_activities por type).\nCierra con como mucho tres recomendaciones concretas para esta semana.\n\nTrabaja solo con `module read, id crm, sql \"<SELECT …>\"` y `module do, id crm, command <acción>, args '{…}'` (si dudas de una tabla o una acción, `module guide, id crm`). Solo lees: no cambias nada, ni apruebas ni envías. Termina con un resumen breve para el canal del equipo: como mucho 8 líneas, con cifras y lo que espera a una persona. Si no hay nada que contar, dilo en una línea.",
-              "en": "Summarise the CRM's last 7 days.\n1. Deals won and lost (crm_deals.closed_at in the week) with their amount and, for the lost ones, the reason (lost_reason).\n2. New deals, and the open value by stage (status = 'Open', sum of amount by stage) against the week before when it can be told.\n3. Where it gets stuck: the stage with the most stalled deals, and the three biggest with no next step.\n4. Activity: emails sent (crm_drafts, status = 'Sent'), meetings and notes (crm_activities by type).\nClose with at most three concrete recommendations for this week.\n\nWork only through `module read, id crm, sql \"<SELECT …>\"` and `module do, id crm, command <action>, args '{…}'` (if unsure of a table or an action, `module guide, id crm`). You only read: you change nothing, approve nothing, send nothing. End with a short summary for the team's channel: 8 lines at most, with numbers and what waits on a person. If there is nothing to report, say so in one line."
-            },
-            "deliver": "channel"
+            "es": "Cada cliente está una sola vez: al añadir una empresa o una persona que ya tienes (mismo NIF, web, correo o nombre) se completa la que había. Dos fichas repetidas se unen en una, y archivar guarda la ficha con su historial en vez de borrarla.",
+            "en": "Each client is here once: adding a company or person you already have (same tax id, website, email or name) completes the existing one. Two duplicates can be merged into one, and archiving keeps the record with its history instead of deleting it."
           }
         ]
+      },
+      "whatsNew": [
+        {
+          "es": "Ventas funciona dentro de la oficina: cuatro sitios en el menú de la izquierda —Hoy, Entradas, Negocios y Clientes— y cada negocio, empresa y persona con su página. Tus datos siguen ahí: empresas, personas, negocios, historial y correos.",
+          "en": "Sales works inside the office: four places in the menu on the left —Hoy, Entradas, Negocios and Clientes— and each deal, company and person with its page. Your data is all there: companies, people, deals, timeline and emails."
+        },
+        {
+          "es": "Entradas: quien te escribe desde tu web, una reserva o un correo llega aquí, nunca a Trabajo. Tu agente la lee y te dice si encaja; tú la conviertes en negocio o la descartas.",
+          "en": "Entradas: whoever writes from your website, a booking or an email lands here, never in Trabajo. Your agent reads it and tells you whether it fits; you make it a deal or discard it."
+        },
+        {
+          "es": "Cada negocio dice su tipo de servicio (consultoría, desarrollo…) y lo que vale una vez y cada mes. Tus etapas están en español; si las habías cambiado, se quedan como estaban.",
+          "en": "Each deal says its kind of service (consulting, development…) and what it is worth once and per month. Your stages are in Spanish; if you had changed them, they stay as they were."
+        },
+        {
+          "es": "Tu agente propone el siguiente paso de cada negocio con el correo ya escrito, y lo envía desde su Gmail cuando lo apruebas. Ya no hay sincronización automática de Gmail y Calendar: tu agente apunta en el historial los correos y reuniones que lee.",
+          "en": "Your agent proposes each deal's next step with the email already written, and sends it from its Gmail once you approve it. Gmail and Calendar no longer sync by themselves: your agent notes the emails and meetings it reads on the timeline."
+        },
+        {
+          "es": "Con Facturas, pides el presupuesto de un negocio y tu agente lo prepara allí; con Proyectos, cada negocio ganado abrirá su proyecto.",
+          "en": "With Invoices, you ask for a deal's quote and your agent makes it there; with Proyectos, each won deal will open its project."
+        },
+        {
+          "es": "Cada cliente está una sola vez: al añadir una empresa o una persona que ya tienes (mismo NIF, web, correo o nombre) se completa la que había. Dos fichas repetidas se unen en una, y archivar guarda la ficha con su historial en vez de borrarla.",
+          "en": "Each client is here once: adding a company or person you already have (same tax id, website, email or name) completes the existing one. Two duplicates can be merged into one, and archiving keeps the record with its history instead of deleting it."
+        }
+      ],
+      "version": "0.4.0",
+      "tables": [
+        "crm_deals",
+        "crm_companies",
+        "crm_contacts",
+        "crm_leads",
+        "crm_activities",
+        "crm_tasks",
+        "crm_drafts",
+        "crm_settings"
+      ],
+      "package": {
+        "path": "apps/crm/crm-0.4.0.tgz",
+        "sha256": "c5b1eeb64d9ab2be1938dc90644a66841deca83aeb87a5249173a046feef8393",
+        "size": 359179,
+        "installer": "install.js",
+        "manifest": "app.json",
+        "roles": [],
+        "connections": [],
+        "variables": [],
+        "channels": [],
+        "processes": 0,
+        "skills": []
       },
       "emoji": "🤝",
       "i18n": {
         "es": {
           "name": "CRM",
           "category": "Ventas",
-          "summary": "Contactos, empresas y oportunidades, con el agente haciendo el seguimiento.",
-          "promise": "Cada oportunidad tiene su siguiente paso propuesto y su correo redactado. Tú lo apruebas y sale desde tu Gmail.",
-          "description": "Un embudo de oportunidades, las personas y empresas que hay detrás y una línea de tiempo de cada correo y reunión. El agente completa las empresas, propone el siguiente paso de cada oportunidad y redacta el correo; no se envía nada hasta que lo apruebas.",
+          "summary": "Entradas, negocios y clientes, con tu agente haciendo el seguimiento.",
+          "promise": "Quien te escribe llega al CRM, leído por tu agente; cada negocio tiene su siguiente paso propuesto y su correo escrito. Tú decides.",
+          "description": "Las entradas de tu web, tus reservas y tu correo en una sola bandeja, leídas por tu agente; los negocios con su tipo de servicio, lo que valen una vez y cada mes, su etapa y su siguiente paso; empresas y personas con el historial de cada correo, reunión y nota. Nada se convierte en negocio ni sale ningún correo sin ti.",
           "brief": {
-            "user": "Fundadores y el equipo comercial de una empresa pequeña",
+            "user": "Quien lleva las ventas de una pequeña empresa de servicios",
             "frequency": "Cada día",
             "questions": [
-              "¿Con quién tengo que hablar hoy, y por qué?",
-              "¿En qué etapa está cada oportunidad, y cuál está parada?",
-              "¿Qué pasó con esta persona o empresa?"
+              "¿Qué tengo que hacer hoy, y por qué?",
+              "¿Quién ha llegado, y merece la pena?",
+              "¿En qué etapa está cada negocio, y cuál está parado?"
             ],
-            "primaryAction": "Hacer o aprobar el siguiente paso de una oportunidad",
+            "primaryAction": "Decidir una entrada, o dar el siguiente paso de un negocio",
             "answers": [
-              "Cada día el agente propone el siguiente paso de tus oportunidades, y te dice por qué.",
-              "El embudo muestra cada oportunidad por etapa y marca las que llevan tiempo paradas.",
-              "Cada persona y empresa guarda una línea de tiempo con cada correo y reunión."
+              "Hoy te dice lo que te espera por orden: entradas por decidir, los pasos que te propone tu agente con su correo, correos por aprobar y pasos atrasados.",
+              "Cada entrada llega aquí, nunca a Trabajo, con lo que tu agente ve en ella: si encaja, por qué y lo que podría valer.",
+              "El embudo muestra cada etapa con sus negocios y lo que valen, una vez y cada mes, y marca los que llevan días sin noticias."
             ]
           },
           "how": [
             {
-              "title": "Entran correos, reuniones y leads",
-              "text": "Con la sincronización activa, tu Gmail y tu Calendar llenan la línea de tiempo de cada contacto; los leads de Formularios también entran."
+              "title": "Llega una entrada",
+              "text": "Del formulario de tu web, una reserva o un correo: cae en Entradas, nunca en Trabajo."
             },
             {
-              "title": "El agente completa y propone",
-              "text": "Busca cada empresa nueva en la web y después sugiere el siguiente paso de cada oportunidad y redacta el correo."
+              "title": "Tu agente la lee y propone",
+              "text": "Te dice si cada entrada encaja y, en cada negocio, el siguiente paso con el correo ya escrito."
             },
             {
-              "title": "Tú lo apruebas y sale",
-              "text": "Los borradores aprobados salen desde tu Gmail. Nada se envía sin ti."
+              "title": "Tú decides",
+              "text": "Conviertes una entrada en negocio o la descartas, tomas un paso, apruebas un correo: tu agente lo envía desde su Gmail."
             }
           ],
           "needs": {
             "agent": {
-              "why": "Completa las empresas y propone los siguientes pasos con un borrador de correo."
-            },
-            "integrations": {
-              "gmail": "Lee el correo con tus contactos y envía los correos que apruebas.",
-              "googlecalendar": "Añade tus reuniones con contactos a su línea de tiempo.",
-              "hubspot": "Importa una vez tus empresas, contactos y oportunidades."
+              "why": "El agente del equipo lee cada entrada, propone el siguiente paso de cada negocio con su correo, envía los que apruebas y apunta lo que se habla."
             }
           },
           "outward": [
-            "Envía correos desde tu Gmail, solo los borradores que apruebas.",
-            "Lee tu Gmail y tu Google Calendar cuando activas la sincronización (solo lectura)."
+            "Los correos que apruebas, enviados por tu agente desde su Gmail."
           ],
           "captions": [
-            "Hoy: con quién hablar, los pasos que sugiere el agente y los correos que esperan tu OK",
-            "El embudo por etapas, con lo que vale cada una",
-            "Una oportunidad: su siguiente paso, la sugerencia del agente y todo el historial"
+            "Hoy: lo que te espera, por orden, con cada decisión en su línea",
+            "Entradas: lo que escribieron, lo que ve tu agente y tu decisión",
+            "Un negocio: lo que vale, el paso que propone tu agente con su correo y todo el historial"
           ]
         }
-      }
+      },
+      "office": true
     },
     {
       "id": "helpdesk",
