@@ -2272,6 +2272,36 @@
         }
       ],
       "changelog": {
+        "0.5.0": [
+          {
+            "es": "«Diseño»: sube tu logo, elige entre tres plantillas (Clásico, Moderno, Minimal), un color que se lea bien en papel, una letra y qué partes se muestran, y míralo al momento con una factura de ejemplo, una larga de tres páginas o una tuya.",
+            "en": "«Diseño»: upload your logo, choose one of three templates, a colour that reads on paper, a typeface and what shows, and see it at once on a sample invoice, a long three-page one or one of yours."
+          },
+          {
+            "es": "«Descargar PDF» e «Imprimir» en cada presupuesto y factura, también en borrador (marcado BORRADOR), sin enviarlo a nadie. Tu cliente ve exactamente lo mismo en su enlace.",
+            "en": "«Descargar PDF» and «Imprimir» on every quote and invoice, drafts too (marked DRAFT), sending nothing. Your client sees exactly the same on their link."
+          },
+          {
+            "es": "Las facturas largas pasan de página sin cortar ninguna línea: la cabecera y los títulos de las columnas se repiten, los totales y la forma de pago van juntos en la última y cada página dice «Página 1 de 3».",
+            "en": "Long invoices flow over pages without cutting a line: the header and column titles repeat, totals and payment stay together on the last one, and every page says «Página 1 de 3»."
+          },
+          {
+            "es": "Lo que la ley pide en una factura sale siempre, elijas lo que elijas.",
+            "en": "What the law asks of an invoice is always printed, whatever you choose."
+          },
+          {
+            "es": "Cada documento va «A la atención de» el «Contacto principal» del cliente en el CRM (o el del negocio), y puedes cambiarlo en cada uno.",
+            "en": "Each document is addressed to the client's main contact in the CRM (or the deal's), and you can change it on each one."
+          },
+          {
+            "es": "Una factura puede vencer «a la recepción» en lugar de un día; las facturas antiguas que traes conservan su negocio del CRM, no se les inventa vencimiento y pueden estar cobradas sin fecha.",
+            "en": "An invoice can be due «on receipt» instead of a day; past invoices you bring keep their CRM deal, get no invented due date and can be paid with no date."
+          },
+          {
+            "es": "Las facturas recurrentes dicen su próximo periodo («Hosting · nov 2026 – ene 2027»), y Ajustes está ordenado en tres grupos con números, porcentajes y días claros.",
+            "en": "Recurring invoices show their next period, and Settings is arranged in three groups with clear numbers, percents and days."
+          }
+        ],
         "0.4.3": [
           {
             "es": "En Ajustes, «Lo que tu equipo hace solo»: cada cosa que tu equipo puede hacer sin que se lo pidas tiene su interruptor, dice qué pasa cuando está encendida y se abre en Automatizaciones.",
@@ -2333,11 +2363,35 @@
       },
       "whatsNew": [
         {
-          "es": "En Ajustes, «Lo que tu equipo hace solo»: cada cosa que tu equipo puede hacer sin que se lo pidas tiene su interruptor, dice qué pasa cuando está encendida y se abre en Automatizaciones.",
-          "en": "In Settings, «Lo que tu equipo hace solo»: each thing your team can do without being asked has its switch, says what happens when it is on and opens in Automatizaciones."
+          "es": "«Diseño»: sube tu logo, elige entre tres plantillas (Clásico, Moderno, Minimal), un color que se lea bien en papel, una letra y qué partes se muestran, y míralo al momento con una factura de ejemplo, una larga de tres páginas o una tuya.",
+          "en": "«Diseño»: upload your logo, choose one of three templates, a colour that reads on paper, a typeface and what shows, and see it at once on a sample invoice, a long three-page one or one of yours."
+        },
+        {
+          "es": "«Descargar PDF» e «Imprimir» en cada presupuesto y factura, también en borrador (marcado BORRADOR), sin enviarlo a nadie. Tu cliente ve exactamente lo mismo en su enlace.",
+          "en": "«Descargar PDF» and «Imprimir» on every quote and invoice, drafts too (marked DRAFT), sending nothing. Your client sees exactly the same on their link."
+        },
+        {
+          "es": "Las facturas largas pasan de página sin cortar ninguna línea: la cabecera y los títulos de las columnas se repiten, los totales y la forma de pago van juntos en la última y cada página dice «Página 1 de 3».",
+          "en": "Long invoices flow over pages without cutting a line: the header and column titles repeat, totals and payment stay together on the last one, and every page says «Página 1 de 3»."
+        },
+        {
+          "es": "Lo que la ley pide en una factura sale siempre, elijas lo que elijas.",
+          "en": "What the law asks of an invoice is always printed, whatever you choose."
+        },
+        {
+          "es": "Cada documento va «A la atención de» el «Contacto principal» del cliente en el CRM (o el del negocio), y puedes cambiarlo en cada uno.",
+          "en": "Each document is addressed to the client's main contact in the CRM (or the deal's), and you can change it on each one."
+        },
+        {
+          "es": "Una factura puede vencer «a la recepción» en lugar de un día; las facturas antiguas que traes conservan su negocio del CRM, no se les inventa vencimiento y pueden estar cobradas sin fecha.",
+          "en": "An invoice can be due «on receipt» instead of a day; past invoices you bring keep their CRM deal, get no invented due date and can be paid with no date."
+        },
+        {
+          "es": "Las facturas recurrentes dicen su próximo periodo («Hosting · nov 2026 – ene 2027»), y Ajustes está ordenado en tres grupos con números, porcentajes y días claros.",
+          "en": "Recurring invoices show their next period, and Settings is arranged in three groups with clear numbers, percents and days."
         }
       ],
-      "version": "0.4.3",
+      "version": "0.5.0",
       "tables": [
         "inv_documents",
         "inv_clients",
@@ -2349,9 +2403,9 @@
         "inv_responses"
       ],
       "package": {
-        "path": "apps/invoices/invoices-0.4.3.tgz",
-        "sha256": "d96adeb7a3b8d61d18b188f886c15e2681a15f86c1c687fd85652adbba674d5e",
-        "size": 518535,
+        "path": "apps/invoices/invoices-0.5.0.tgz",
+        "sha256": "fe647893551ae31d6a694d6b8b0010ee3698ec1d3a9348019cc1b3647a9776dd",
+        "size": 561531,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
