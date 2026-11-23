@@ -453,6 +453,24 @@
         }
       ],
       "changelog": {
+        "0.4.6": [
+          {
+            "es": "Los negocios guardan su historia: el día en que se ganaron o se perdieron, aunque los añadas hoy; y un siguiente paso sin fecha queda «sin fecha», nunca atrasado.",
+            "en": "Deals keep their history: the day they were won or lost, even when added today; and a next step with no date stays «no date», never late."
+          },
+          {
+            "es": "Cada empresa tiene su contacto principal, a quien se factura y se escribe. Si tiene un solo contacto, se pone solo.",
+            "en": "Each company has its main contact, who is billed and written to. With one contact, it is set by itself."
+          },
+          {
+            "es": "Una cuota puede terminar («Cuota hasta») y deja de contar; un negocio puede estar «Ganado · si llega la subvención»; y cada negocio tiene su moneda, sin mezclarla nunca en los totales.",
+            "en": "A fee can end («Fee until») and stops counting; a deal can be «Won · if the grant comes»; and each deal has its currency, never mixed into the totals."
+          },
+          {
+            "es": "En Negocios ves los ganados debajo de los abiertos, y en Datos todos.",
+            "en": "In Deals you see the won ones below the open ones, and every one in Data."
+          }
+        ],
         "0.4.5": [
           {
             "es": "Ajustes, rehecho: las etapas del pipeline son una tabla —nombre, probabilidad con − y +, y si cierra el negocio (ganado o perdido)—, que ordenas arrastrando o con las flechas, y te dice qué significa cada una («Un negocio en «Propuesta» cuenta el 60 % de su valor en el previsto»).",
@@ -548,19 +566,23 @@
       },
       "whatsNew": [
         {
-          "es": "Ajustes, rehecho: las etapas del pipeline son una tabla —nombre, probabilidad con − y +, y si cierra el negocio (ganado o perdido)—, que ordenas arrastrando o con las flechas, y te dice qué significa cada una («Un negocio en «Propuesta» cuenta el 60 % de su valor en el previsto»).",
-          "en": "Settings, remade: the pipeline stages are a table — name, probability with − and +, and whether it closes the deal (won or lost) — reordered by dragging or with the arrows, saying what each means."
+          "es": "Los negocios guardan su historia: el día en que se ganaron o se perdieron, aunque los añadas hoy; y un siguiente paso sin fecha queda «sin fecha», nunca atrasado.",
+          "en": "Deals keep their history: the day they were won or lost, even when added today; and a next step with no date stays «no date», never late."
         },
         {
-          "es": "Los tipos de servicio y los orígenes son listas: añades, renombras, quitas y ordenas cada uno; los días hasta «parado» se cambian con − y +.",
-          "en": "Kinds of service and sources are lists: add, rename, remove and reorder each one; the days until «stuck» change with − and +."
+          "es": "Cada empresa tiene su contacto principal, a quien se factura y se escribe. Si tiene un solo contacto, se pone solo.",
+          "en": "Each company has its main contact, who is billed and written to. With one contact, it is set by itself."
         },
         {
-          "es": "Ves quién cambió cada cosa y cuándo, también lo que cambió tu agente: «Cambiado por Aria, para Marta, hace 5 min: añadió «Mantenimiento» a Tipos de servicio».",
-          "en": "You see who changed each thing and when, your agent's changes too: «Changed by Aria, for Marta, 5 min ago: added «Mantenimiento» to Kinds of service»."
+          "es": "Una cuota puede terminar («Cuota hasta») y deja de contar; un negocio puede estar «Ganado · si llega la subvención»; y cada negocio tiene su moneda, sin mezclarla nunca en los totales.",
+          "en": "A fee can end («Fee until») and stops counting; a deal can be «Won · if the grant comes»; and each deal has its currency, never mixed into the totals."
+        },
+        {
+          "es": "En Negocios ves los ganados debajo de los abiertos, y en Datos todos.",
+          "en": "In Deals you see the won ones below the open ones, and every one in Data."
         }
       ],
-      "version": "0.4.5",
+      "version": "0.4.6",
       "tables": [
         "crm_deals",
         "crm_companies",
@@ -572,9 +594,9 @@
         "crm_settings"
       ],
       "package": {
-        "path": "apps/crm/crm-0.4.5.tgz",
-        "sha256": "3c1f51f5d8dc626d02f1b549ce6f7a35d3014c07312e9ad3c6e64f7b14a4ea16",
-        "size": 365772,
+        "path": "apps/crm/crm-0.4.6.tgz",
+        "sha256": "570220837cb22f778cd74d350e75e0b11bddd2aa4b85f315b16857839800e396",
+        "size": 371352,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
