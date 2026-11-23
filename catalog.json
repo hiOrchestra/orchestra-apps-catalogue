@@ -396,8 +396,8 @@
       "how": [
         {
           "actor": "arrives",
-          "title": "A lead arrives",
-          "text": "From your website's form, a booking or an email: it lands in Leads, never in Trabajo.",
+          "title": "Someone writes to you",
+          "text": "From your website's form, a booking or an email: they become a Lead, with their message, never a task in Trabajo.",
           "via": [
             "web",
             "email"
@@ -406,12 +406,12 @@
         {
           "actor": "app",
           "title": "Your agent reads it and proposes",
-          "text": "It says whether each lead fits and, for every deal, the next step with the email already written."
+          "text": "It says whether each lead fits; for every sale and every customer at risk, the next step with the email already written."
         },
         {
           "actor": "person",
           "title": "You decide",
-          "text": "You make a lead a deal or discard it, take a step, approve an email: your agent sends it from its Gmail.",
+          "text": "You open a sale or discard a lead, take a step, approve an email: your agent sends it from its Gmail.",
           "via": [
             "gmail"
           ]
@@ -463,6 +463,12 @@
         }
       ],
       "changelog": {
+        "0.5.1": [
+          {
+            "es": "Quitar una venta (un error, un duplicado) quita también los servicios contratados que había creado.",
+            "en": "Removing a sale (a mistake, a duplicate) also removes the contracted services it had made."
+          }
+        ],
         "0.5.0": [
           {
             "es": "Leads, ventas y clientes son ahora una sola historia: cada empresa tiene su etapa —Lead, En conversación, Cliente o Antiguo cliente— que se pone sola con lo que pasa, y quien te escribe aparece como Lead con su mensaje, para contestarle desde Hoy.",
@@ -626,27 +632,11 @@
       },
       "whatsNew": [
         {
-          "es": "Leads, ventas y clientes son ahora una sola historia: cada empresa tiene su etapa —Lead, En conversación, Cliente o Antiguo cliente— que se pone sola con lo que pasa, y quien te escribe aparece como Lead con su mensaje, para contestarle desde Hoy.",
-          "en": "Leads, sales and customers are now one story: each company has its stage —Lead, In conversation, Customer or Former customer— set by itself from what happens, and whoever writes to you shows as a Lead with their message, to answer from Hoy."
-        },
-        {
-          "es": "«Servicios y productos»: tu catálogo, con su precio, si se cobra una vez o cada mes, trimestre o año, su permanencia, su renovación y cómo se factura. Tus antiguos tipos de servicio son ahora sus categorías.",
-          "en": "«Servicios y productos»: your catalogue, with its price, whether it is charged once or every month, quarter or year, its minimum term, its renewal and how it is billed. Your old kinds of service are now its categories."
-        },
-        {
-          "es": "Cada venta lleva sus líneas del catálogo y dice lo que vale: «810 € una vez + 12 €/mes». Al ganarla, lo recurrente pasa a ser un servicio contratado del cliente: su página dice lo que tiene, lo que paga al mes y lo que se renueva.",
-          "en": "Each sale carries its lines from the catalogue and says what it is worth: «810 € una vez + 12 €/mes». Once won, what recurs becomes one of the customer's contracted services: their page says what they have, what they pay a month and what renews."
-        },
-        {
-          "es": "Clientes en riesgo: sin contacto hace días, una factura vencida, una renovación o un final cerca, o una queja. Hoy los lista con el porqué, y tu agente te propone qué hacer con el correo escrito.",
-          "en": "Customers at risk: no contact for days, an overdue invoice, a renewal or an end coming, or a complaint. Hoy lists them with why, and your agent proposes what to do with the email written."
-        },
-        {
-          "es": "En la página de cada cliente, «Facturación»: lo que le has facturado, lo que te debe y sus facturas recurrentes, al momento. Tus ventas actuales pasan solas a líneas; no se pierde nada.",
-          "en": "On each customer's page, «Facturación»: what you billed them, what they owe and their recurring fees, live. Your current sales become lines by themselves; nothing is lost."
+          "es": "Quitar una venta (un error, un duplicado) quita también los servicios contratados que había creado.",
+          "en": "Removing a sale (a mistake, a duplicate) also removes the contracted services it had made."
         }
       ],
-      "version": "0.5.0",
+      "version": "0.5.1",
       "tables": [
         "crm_deals",
         "crm_items",
@@ -661,9 +651,9 @@
         "crm_settings"
       ],
       "package": {
-        "path": "apps/crm/crm-0.5.0.tgz",
-        "sha256": "94e08876c3d11b65da74d3aea72a88f972df7ab9f4d731353ca40559589f80e2",
-        "size": 405886,
+        "path": "apps/crm/crm-0.5.1.tgz",
+        "sha256": "149e96becebcb9cb53de4e438c5803f68de028c2b5f36e4e627af8fe029bad87",
+        "size": 405924,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -698,16 +688,16 @@
           },
           "how": [
             {
-              "title": "Llega un lead",
-              "text": "Del formulario de tu web, una reserva o un correo: cae en Leads, nunca en Trabajo."
+              "title": "Alguien te escribe",
+              "text": "Por el formulario de tu web, una reserva o un correo: pasa a ser un Lead, con su mensaje, nunca una tarea en Trabajo."
             },
             {
-              "title": "Tu agente la lee y propone",
-              "text": "Te dice si cada lead encaja y, en cada negocio, el siguiente paso con el correo ya escrito."
+              "title": "Tu agente lo lee y te propone",
+              "text": "Te dice si cada lead encaja; para cada venta y cada cliente en riesgo, el siguiente paso con el correo ya escrito."
             },
             {
               "title": "Tú decides",
-              "text": "Conviertes un lead en negocio o lo descartas, tomas un paso, apruebas un correo: tu agente lo envía desde su Gmail."
+              "text": "Abres una venta o descartas un lead, das un paso, apruebas un correo: tu agente lo envía desde su Gmail."
             }
           ],
           "needs": {
