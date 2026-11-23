@@ -2302,6 +2302,12 @@
         }
       ],
       "changelog": {
+        "0.5.3": [
+          {
+            "es": "Sin IBAN, el documento ya no muestra una «Forma de pago» con solo la nota de la transferencia.",
+            "en": "With no IBAN, the document no longer shows a «Forma de pago» holding only the transfer note."
+          }
+        ],
         "0.5.2": [
           {
             "es": "La página que abre tu cliente lleva tu diseño (logo, color y letra): arriba qué es y cómo está («Por pagar · vence el…», «Pagada el…», «Espera tu respuesta»), debajo cómo pagar con tu IBAN y el concepto para copiar, «Descargar PDF» y el documento.",
@@ -2413,15 +2419,11 @@
       },
       "whatsNew": [
         {
-          "es": "La página que abre tu cliente lleva tu diseño (logo, color y letra): arriba qué es y cómo está («Por pagar · vence el…», «Pagada el…», «Espera tu respuesta»), debajo cómo pagar con tu IBAN y el concepto para copiar, «Descargar PDF» y el documento.",
-          "en": "The page your client opens wears your design: what it is and where it stands on top, how to pay with your IBAN and the reference to copy, «Descargar PDF», then the document."
-        },
-        {
-          "es": "Sin IBAN ni enlace de pago tu cliente no ve una caja vacía: eres tú quien ve que falta, arriba de tus páginas.",
-          "en": "With no IBAN or payment link your client never sees an empty box: you see what is missing, on top of your pages."
+          "es": "Sin IBAN, el documento ya no muestra una «Forma de pago» con solo la nota de la transferencia.",
+          "en": "With no IBAN, the document no longer shows a «Forma de pago» holding only the transfer note."
         }
       ],
-      "version": "0.5.2",
+      "version": "0.5.3",
       "tables": [
         "inv_documents",
         "inv_clients",
@@ -2433,9 +2435,9 @@
         "inv_responses"
       ],
       "package": {
-        "path": "apps/invoices/invoices-0.5.2.tgz",
-        "sha256": "15043a48582c857480c517cc0f0640cfc96c11ed45cdcd9d611f0df3000a7156",
-        "size": 559531,
+        "path": "apps/invoices/invoices-0.5.3.tgz",
+        "sha256": "da5ebff4387d78329f62591c1d8ce66c83f25b1c96fd3c8c053f5c788ea1bf9f",
+        "size": 559692,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
