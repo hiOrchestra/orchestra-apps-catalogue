@@ -2381,6 +2381,12 @@
         }
       ],
       "changelog": {
+        "0.5.8": [
+          {
+            "es": "Un IBAN que no cuadra se avisa debajo del IBAN (antes salía debajo de «Banco»).",
+            "en": "An IBAN that does not add up is said under the IBAN (it showed under «Banco»)."
+          }
+        ],
         "0.5.7": [
           {
             "es": "Guardar en Ajustes vuelve a funcionar: los cambios de «Cobros» (y de cualquier otro grupo) se guardan.",
@@ -2546,27 +2552,11 @@
       },
       "whatsNew": [
         {
-          "es": "Guardar en Ajustes vuelve a funcionar: los cambios de «Cobros» (y de cualquier otro grupo) se guardan.",
-          "en": "Saving in Settings works again: changes to «Cobros» (and any other group) are kept."
-        },
-        {
-          "es": "Tus datos bancarios, cada uno en su casilla: el IBAN se comprueba al guardarlo (país, longitud y cifras de control, diciéndote qué falla) y sale en grupos de cuatro; el titular es tu razón social salvo que pongas otro; banco y BIC/SWIFT, opcionales. En la factura salen en líneas con su nombre. Si ya tenías tus datos escritos en una sola casilla, se reparten solos cuando no hay duda; si la hay, se siguen imprimiendo como estaban y tus páginas te avisan hasta que pongas el IBAN.",
-          "en": "Your bank details, one per box: the IBAN is checked when saved (country, length and check digits, saying what is wrong) and shown in groups of four; the holder is your legal name unless you set another; bank and BIC/SWIFT optional. On the invoice, one labelled line each. If your details were written in one box, they are split by themselves when there is no doubt; otherwise they still print as they were and your pages remind you until you set the IBAN."
-        },
-        {
-          "es": "Tu dirección, también separada: calle y número, código postal, municipio y provincia. Lo que ya tenías escrito se reparte solo cuando no hay duda; si la hay, se queda como estaba.",
-          "en": "Your address, split too: street, postcode, town and province. What you had written is split by itself when there is no doubt; otherwise it stays as it was."
-        },
-        {
-          "es": "El borrador se ordena por preguntas: ¿para quién?, ¿qué le vendes?, ¿hasta cuándo vale? (o ¿cuándo te paga?) y más. «A la atención de» se elige entre las personas del cliente en el CRM (o «+ Nuevo contacto», que se crea allí). La fecha y las condiciones son dos casillas: las condiciones salen en su propio apartado.",
-          "en": "The draft is ordered by questions: for whom, what you sell, until when it is valid (or when you get paid), and more. «A la atención de» is picked from the client's people in the CRM (or «+ Nuevo contacto», made there). The date and the conditions are two boxes; the conditions print in their own block."
-        },
-        {
-          "es": "«Vence» se elige entre «En 30 días», «Un día», «A la recepción» u «Otra condición»; «Cada» en una factura recurrente, entre Mes, Trimestre y Año, con un toque. Los ejemplos de las casillas dicen «Por ejemplo, …» y nunca parecen un valor ya puesto.",
-          "en": "«Vence» is one of «In 30 days», «A day», «On receipt» or «Another condition»; a recurring fee's «Cada» is Month, Quarter or Year, one tap. Field hints say «Por ejemplo, …» and never look like a value already there."
+          "es": "Un IBAN que no cuadra se avisa debajo del IBAN (antes salía debajo de «Banco»).",
+          "en": "An IBAN that does not add up is said under the IBAN (it showed under «Banco»)."
         }
       ],
-      "version": "0.5.7",
+      "version": "0.5.8",
       "tables": [
         "inv_documents",
         "inv_clients",
@@ -2578,9 +2568,9 @@
         "inv_responses"
       ],
       "package": {
-        "path": "apps/invoices/invoices-0.5.7.tgz",
-        "sha256": "4cd667ebb8e8a6e95502ca1abb6c396505cc02a8361208bddf92fe29e960284b",
-        "size": 578021,
+        "path": "apps/invoices/invoices-0.5.8.tgz",
+        "sha256": "c45f790872e5919fa6ba8d31793fecd3ef15460fe07f81ddb351478c07cce96f",
+        "size": 579058,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
