@@ -453,6 +453,12 @@
         }
       ],
       "changelog": {
+        "0.4.7": [
+          {
+            "es": "En «Lo que tu equipo hace solo» solo ves lo que puede pasar: abrir el proyecto de un negocio ganado aparece cuando tienes Proyectos, y preparar un presupuesto cuando tienes Facturas.",
+            "en": "In «Lo que tu equipo hace solo» you only see what can happen: opening a won deal's project shows when you have Proyectos, and making a quote when you have Invoices."
+          }
+        ],
         "0.4.6": [
           {
             "es": "Los negocios guardan su historia: el día en que se ganaron o se perdieron, aunque los añadas hoy; y un siguiente paso sin fecha queda «sin fecha», nunca atrasado.",
@@ -566,23 +572,11 @@
       },
       "whatsNew": [
         {
-          "es": "Los negocios guardan su historia: el día en que se ganaron o se perdieron, aunque los añadas hoy; y un siguiente paso sin fecha queda «sin fecha», nunca atrasado.",
-          "en": "Deals keep their history: the day they were won or lost, even when added today; and a next step with no date stays «no date», never late."
-        },
-        {
-          "es": "Cada empresa tiene su contacto principal, a quien se factura y se escribe. Si tiene un solo contacto, se pone solo.",
-          "en": "Each company has its main contact, who is billed and written to. With one contact, it is set by itself."
-        },
-        {
-          "es": "Una cuota puede terminar («Cuota hasta») y deja de contar; un negocio puede estar «Ganado · si llega la subvención»; y cada negocio tiene su moneda, sin mezclarla nunca en los totales.",
-          "en": "A fee can end («Fee until») and stops counting; a deal can be «Won · if the grant comes»; and each deal has its currency, never mixed into the totals."
-        },
-        {
-          "es": "En Negocios ves los ganados debajo de los abiertos, y en Datos todos.",
-          "en": "In Deals you see the won ones below the open ones, and every one in Data."
+          "es": "En «Lo que tu equipo hace solo» solo ves lo que puede pasar: abrir el proyecto de un negocio ganado aparece cuando tienes Proyectos, y preparar un presupuesto cuando tienes Facturas.",
+          "en": "In «Lo que tu equipo hace solo» you only see what can happen: opening a won deal's project shows when you have Proyectos, and making a quote when you have Invoices."
         }
       ],
-      "version": "0.4.6",
+      "version": "0.4.7",
       "tables": [
         "crm_deals",
         "crm_companies",
@@ -594,9 +588,9 @@
         "crm_settings"
       ],
       "package": {
-        "path": "apps/crm/crm-0.4.6.tgz",
-        "sha256": "570220837cb22f778cd74d350e75e0b11bddd2aa4b85f315b16857839800e396",
-        "size": 371352,
+        "path": "apps/crm/crm-0.4.7.tgz",
+        "sha256": "3369976ca1d906c3f6c8b00094387208d083339cdb1ce9765e4552635c0f88b5",
+        "size": 371365,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
