@@ -1,5 +1,6 @@
 {
   "version": 1,
+  "officeModulesOnly": true,
   "apps": [
     {
       "id": "articles",
@@ -327,7 +328,8 @@
             "El artículo, con el agente al lado y lo que la revisión aún señala"
           ]
         }
-      }
+      },
+      "office": true
     },
     {
       "id": "crm",
@@ -2402,7 +2404,8 @@
             "La página del cliente en un móvil: aceptar el presupuesto o pagar la factura"
           ]
         }
-      }
+      },
+      "office": true
     },
     {
       "id": "tables",
@@ -4844,7 +4847,8 @@
             "Un objetivo: su posición, su siguiente paso, sus acciones y su evolución"
           ]
         }
-      }
+      },
+      "office": true
     },
     {
       "id": "obras",
@@ -5105,7 +5109,8 @@
             "El informe mensual, tal como lo recibe el cliente"
           ]
         }
-      }
+      },
+      "office": true
     }
   ]
 }
