@@ -70,6 +70,16 @@
         }
       ],
       "changelog": {
+        "0.15.6": [
+          {
+            "es": "Ajustes › General, ordenado: tres tarjetas —tu sitio, cómo escribe tu empresa y el SEO de cada artículo—, cada una con una frase de lo que cambia.",
+            "en": "Settings › General, in order: three cards — your site, how your company writes and each article's SEO — each with a sentence on what it changes."
+          },
+          {
+            "es": "Los límites del título y la descripción en Google se cambian con − y + en caracteres, y las veces que sale la palabra clave en veces; el idioma de la revisión, con dos botones. Ves quién cambió cada cosa, también tu agente.",
+            "en": "The limits of the title and description in Google change with − and + in characters, and the keyword count in times; the review language with two buttons. You see who changed each thing, your agent too."
+          }
+        ],
         "0.15.5": [
           {
             "es": "En Ajustes, «Lo que tu equipo hace solo»: cada cosa que tu equipo puede hacer sin que se lo pidas tiene su interruptor, dice qué pasa cuando está encendida y se abre en Automatizaciones.",
@@ -243,15 +253,15 @@
       },
       "whatsNew": [
         {
-          "es": "En Ajustes, «Lo que tu equipo hace solo»: cada cosa que tu equipo puede hacer sin que se lo pidas tiene su interruptor, dice qué pasa cuando está encendida y se abre en Automatizaciones.",
-          "en": "In Settings, «Lo que tu equipo hace solo»: each thing your team can do without being asked has its switch, says what happens when it is on and opens in Automatizaciones."
+          "es": "Ajustes › General, ordenado: tres tarjetas —tu sitio, cómo escribe tu empresa y el SEO de cada artículo—, cada una con una frase de lo que cambia.",
+          "en": "Settings › General, in order: three cards — your site, how your company writes and each article's SEO — each with a sentence on what it changes."
         },
         {
-          "es": "Nuevo: tu agente puede escribir solo el primer borrador de cada idea con su encargo y dejarlo en revisión.",
-          "en": "New: your agent can write the first draft of each idea with a brief by itself and leave it in review."
+          "es": "Los límites del título y la descripción en Google se cambian con − y + en caracteres, y las veces que sale la palabra clave en veces; el idioma de la revisión, con dos botones. Ves quién cambió cada cosa, también tu agente.",
+          "en": "The limits of the title and description in Google change with − and + in characters, and the keyword count in times; the review language with two buttons. You see who changed each thing, your agent too."
         }
       ],
-      "version": "0.15.5",
+      "version": "0.15.6",
       "tables": [
         "articles_articles",
         "articles_rules",
@@ -266,9 +276,9 @@
         "articles_links"
       ],
       "package": {
-        "path": "apps/articles/articles-0.15.5.tgz",
-        "sha256": "59783a4f87a672b9f6a8e7f59393c4708eefb2719429ac0bd768592a4f095887",
-        "size": 691455,
+        "path": "apps/articles/articles-0.15.6.tgz",
+        "sha256": "f8d3c38bbe77fc684c92cd2c7fc790b84200d3304d1a1655720e8e011dd544f7",
+        "size": 691370,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -4425,6 +4435,20 @@
         }
       ],
       "changelog": {
+        "1.13.6": [
+          {
+            "es": "Ajustes, ordenado: siete tarjetas, cada una con una frase de lo que cambia. Competidores, temas, zonas y preguntas a una IA son listas: añades, renombras, quitas y ordenas cada uno, sin separarlos con «;».",
+            "en": "Settings, in order: seven cards, each with a sentence on what it changes. Competitors, topics, areas and questions for an AI are lists: add, rename, remove and reorder each one, no «;» to separate them."
+          },
+          {
+            "es": "Relevancia y dificultad se ponen en %, el volumen mínimo en búsquedas al mes y las semanas con − y +; el top que cuenta como ganado se elige entre 3, 5 y 10.",
+            "en": "Relevance and difficulty are set in %, the minimum volume in searches a month and the weeks with − and +; the top that counts as won is chosen among 3, 5 and 10."
+          },
+          {
+            "es": "Ves quién cambió cada cosa y cuándo, también lo que cambió tu agente. Lo que tenías escrito sigue igual.",
+            "en": "You see who changed each thing and when, your agent's changes too. What you had written stays as it was."
+          }
+        ],
         "1.13.5": [
           {
             "es": "En Ajustes, «Lo que tu equipo hace solo»: cada cosa que tu equipo puede hacer sin que se lo pidas tiene su interruptor, dice qué pasa cuando está encendida y se abre en Automatizaciones.",
@@ -4782,11 +4806,19 @@
       },
       "whatsNew": [
         {
-          "es": "En Ajustes, «Lo que tu equipo hace solo»: cada cosa que tu equipo puede hacer sin que se lo pidas tiene su interruptor, dice qué pasa cuando está encendida y se abre en Automatizaciones.",
-          "en": "In Settings, «Lo que tu equipo hace solo»: each thing your team can do without being asked has its switch, says what happens when it is on and opens in Automatizaciones."
+          "es": "Ajustes, ordenado: siete tarjetas, cada una con una frase de lo que cambia. Competidores, temas, zonas y preguntas a una IA son listas: añades, renombras, quitas y ordenas cada uno, sin separarlos con «;».",
+          "en": "Settings, in order: seven cards, each with a sentence on what it changes. Competitors, topics, areas and questions for an AI are lists: add, rename, remove and reorder each one, no «;» to separate them."
+        },
+        {
+          "es": "Relevancia y dificultad se ponen en %, el volumen mínimo en búsquedas al mes y las semanas con − y +; el top que cuenta como ganado se elige entre 3, 5 y 10.",
+          "en": "Relevance and difficulty are set in %, the minimum volume in searches a month and the weeks with − and +; the top that counts as won is chosen among 3, 5 and 10."
+        },
+        {
+          "es": "Ves quién cambió cada cosa y cuándo, también lo que cambió tu agente. Lo que tenías escrito sigue igual.",
+          "en": "You see who changed each thing and when, your agent's changes too. What you had written stays as it was."
         }
       ],
-      "version": "1.13.5",
+      "version": "1.13.6",
       "tables": [
         "oportunidadesseo_oportunidades",
         "oportunidadesseo_acciones",
@@ -4807,9 +4839,9 @@
         "oportunidadesseo_cache"
       ],
       "package": {
-        "path": "apps/oportunidadesseo/oportunidadesseo-1.13.5.tgz",
-        "sha256": "4cfa6cf88c3e76c8abcd3e9e6337210112f56f4020deac19f62115b75e6a5e97",
-        "size": 653710,
+        "path": "apps/oportunidadesseo/oportunidadesseo-1.13.6.tgz",
+        "sha256": "cb9fa1f64df4944c282625c1846baebe78ac51528f1bd37a173a378f5ea5db43",
+        "size": 654192,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -5022,6 +5054,20 @@
         }
       ],
       "changelog": {
+        "0.5.3": [
+          {
+            "es": "Ajustes del informe, ordenado: dos tarjetas —«Empresa» e «Informe»—, cada una con una frase de lo que cambia; el idioma con dos botones y las horas y trabajos del mes con un interruptor.",
+            "en": "Report settings, in order: two cards — «Company» and «Report» — each with a sentence on what it changes; the language with two buttons and the month's hours and jobs with a switch."
+          },
+          {
+            "es": "El color de tu marca se elige de una paleta o el tuyo propio, y te avisa si no se distinguiría del papel blanco o del negro de las gráficas. El que ya tenías sigue igual.",
+            "en": "Your brand colour is picked from a palette or your own, and it tells you when it would not stand out from the white paper or the charts' black. The one you had stays as it was."
+          },
+          {
+            "es": "Ves quién cambió cada cosa y cuándo, también tu agente.",
+            "en": "You see who changed each thing and when, your agent too."
+          }
+        ],
         "0.5.2": [
           {
             "es": "En Ajustes, «Lo que tu equipo hace solo»: cada cosa que tu equipo puede hacer sin que se lo pidas tiene su interruptor, dice qué pasa cuando está encendida y se abre en Automatizaciones.",
@@ -5147,11 +5193,19 @@
       },
       "whatsNew": [
         {
-          "es": "En Ajustes, «Lo que tu equipo hace solo»: cada cosa que tu equipo puede hacer sin que se lo pidas tiene su interruptor, dice qué pasa cuando está encendida y se abre en Automatizaciones.",
-          "en": "In Settings, «Lo que tu equipo hace solo»: each thing your team can do without being asked has its switch, says what happens when it is on and opens in Automatizaciones."
+          "es": "Ajustes del informe, ordenado: dos tarjetas —«Empresa» e «Informe»—, cada una con una frase de lo que cambia; el idioma con dos botones y las horas y trabajos del mes con un interruptor.",
+          "en": "Report settings, in order: two cards — «Company» and «Report» — each with a sentence on what it changes; the language with two buttons and the month's hours and jobs with a switch."
+        },
+        {
+          "es": "El color de tu marca se elige de una paleta o el tuyo propio, y te avisa si no se distinguiría del papel blanco o del negro de las gráficas. El que ya tenías sigue igual.",
+          "en": "Your brand colour is picked from a palette or your own, and it tells you when it would not stand out from the white paper or the charts' black. The one you had stays as it was."
+        },
+        {
+          "es": "Ves quién cambió cada cosa y cuándo, también tu agente.",
+          "en": "You see who changed each thing and when, your agent too."
         }
       ],
-      "version": "0.5.2",
+      "version": "0.5.3",
       "tables": [
         "obras_projects",
         "obras_units",
@@ -5169,9 +5223,9 @@
         "obras_settings"
       ],
       "package": {
-        "path": "apps/obras/obras-0.5.2.tgz",
-        "sha256": "22a4dd537468294b3f0982f0e467f93da99b28bd66e1bb6984d6ca453f12d467",
-        "size": 558134,
+        "path": "apps/obras/obras-0.5.3.tgz",
+        "sha256": "d28ada589ea95d652e72fae0a587b8580547c8f18c0b28393c108c08ed459e8d",
+        "size": 558545,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
