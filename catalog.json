@@ -471,6 +471,20 @@
         }
       ],
       "changelog": {
+        "0.6.0": [
+          {
+            "es": "Al ganar una venta, su proyecto se abre en Trabajo, en el equipo que elijas en Ajustes («Equipo que entrega los proyectos»), con el nombre de la venta y, si la sabes, su fecha objetivo. En la venta ves cómo va al momento: lo abierto, lo hecho y lo siguiente. Nada se copia: el trabajo se lleva en Trabajo.",
+            "en": "When you win a sale, its project opens in Trabajo, in the team you choose in the settings («Team that delivers the projects»), named after the sale and, if you know it, with its target date. On the sale you see how it goes, live: what is open, what is done and what is next. Nothing is copied: the work is kept in Trabajo."
+          },
+          {
+            "es": "La dirección de cada empresa va en sus casillas: calle y número, código postal, municipio y provincia. Las que ya tenías se separan solas cuando se leen sin dudas; las demás se quedan como estaban y su ficha te pide completarlas. Tus presupuestos y facturas la imprimen igual que siempre.",
+            "en": "Each company's address has its own boxes: street and number, postcode, town and province. The ones you had are split by themselves when they read without doubt; the rest stay as they were and the company asks you to complete them. Your quotes and invoices print it as always."
+          },
+          {
+            "es": "El porqué de cada propuesta ya no acaba en «;», y en «Hoy» lo que le falta a la página ya no va pegado a «Tu turno».",
+            "en": "Each proposal's why no longer ends in «;», and on «Hoy» what the page still needs no longer sits flush against «Tu turno»."
+          }
+        ],
         "0.5.4": [
           {
             "es": "Las propuestas de tu agente dicen su porqué en una sola frase, en tus palabras («Sin contacto desde hace 107 días»), y lo que falta para hacerlas («Falta: el correo de Laura») en la propia propuesta. La firma de los correos, si está vacía, se dice una vez arriba de la página, no en cada propuesta.",
@@ -670,19 +684,19 @@
       },
       "whatsNew": [
         {
-          "es": "Las propuestas de tu agente dicen su porqué en una sola frase, en tus palabras («Sin contacto desde hace 107 días»), y lo que falta para hacerlas («Falta: el correo de Laura») en la propia propuesta. La firma de los correos, si está vacía, se dice una vez arriba de la página, no en cada propuesta.",
-          "en": "Your agent's proposals say why in one sentence, in your words («No contact for 107 days»), and what is missing to do them («Missing: Laura's email») on the proposal itself. An empty email signature is said once at the top of the page, not in every proposal."
+          "es": "Al ganar una venta, su proyecto se abre en Trabajo, en el equipo que elijas en Ajustes («Equipo que entrega los proyectos»), con el nombre de la venta y, si la sabes, su fecha objetivo. En la venta ves cómo va al momento: lo abierto, lo hecho y lo siguiente. Nada se copia: el trabajo se lleva en Trabajo.",
+          "en": "When you win a sale, its project opens in Trabajo, in the team you choose in the settings («Team that delivers the projects»), named after the sale and, if you know it, with its target date. On the sale you see how it goes, live: what is open, what is done and what is next. Nothing is copied: the work is kept in Trabajo."
         },
         {
-          "es": "Un cliente con una venta ganada hace poco ya no sale «En riesgo · Sin contacto»: ganar una venta cuenta como contacto.",
-          "en": "A customer with a recently won sale no longer reads «At risk · No contact»: winning a sale counts as contact."
+          "es": "La dirección de cada empresa va en sus casillas: calle y número, código postal, municipio y provincia. Las que ya tenías se separan solas cuando se leen sin dudas; las demás se quedan como estaban y su ficha te pide completarlas. Tus presupuestos y facturas la imprimen igual que siempre.",
+          "en": "Each company's address has its own boxes: street and number, postcode, town and province. The ones you had are split by themselves when they read without doubt; the rest stay as they were and the company asks you to complete them. Your quotes and invoices print it as always."
         },
         {
-          "es": "En la página de un cliente, sus servicios contratados ya no muestran «(periodo)»; y una venta cerrada dice el día en que se ganó o se perdió en lugar de repetir la etapa, sin la antigua «Cuota hasta: Sin fin».",
-          "en": "On a customer's page, contracted services no longer show «(periodo)»; and a closed sale shows the day it was won or lost instead of repeating its stage, without the old «Fee until: No end»."
+          "es": "El porqué de cada propuesta ya no acaba en «;», y en «Hoy» lo que le falta a la página ya no va pegado a «Tu turno».",
+          "en": "Each proposal's why no longer ends in «;», and on «Hoy» what the page still needs no longer sits flush against «Tu turno»."
         }
       ],
-      "version": "0.5.4",
+      "version": "0.6.0",
       "tables": [
         "crm_deals",
         "crm_items",
@@ -697,9 +711,9 @@
         "crm_settings"
       ],
       "package": {
-        "path": "apps/crm/crm-0.5.4.tgz",
-        "sha256": "bf6803fee100e71edc1513cfce85bef4ae95652a1bc5c01a297ab8d5b4ddfd8c",
-        "size": 409779,
+        "path": "apps/crm/crm-0.6.0.tgz",
+        "sha256": "016a58e02d41cf8dab1e57e5520b5fa2aa98ebdfdf5a4e136c3ad05ad42f6c37",
+        "size": 413759,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -2381,6 +2395,12 @@
         }
       ],
       "changelog": {
+        "0.5.9": [
+          {
+            "es": "La dirección de tu cliente sale de sus casillas en el CRM (calle y número, código postal, municipio y provincia), igual que la tuya. Las facturas y presupuestos ya emitidos la conservan tal como salieron.",
+            "en": "Your client's address comes from its boxes in the CRM (street and number, postcode, town and province), like yours. Invoices and quotes already issued keep it exactly as they went out."
+          }
+        ],
         "0.5.8": [
           {
             "es": "Un IBAN que no cuadra se avisa debajo del IBAN (antes salía debajo de «Banco»).",
@@ -2552,11 +2572,11 @@
       },
       "whatsNew": [
         {
-          "es": "Un IBAN que no cuadra se avisa debajo del IBAN (antes salía debajo de «Banco»).",
-          "en": "An IBAN that does not add up is said under the IBAN (it showed under «Banco»)."
+          "es": "La dirección de tu cliente sale de sus casillas en el CRM (calle y número, código postal, municipio y provincia), igual que la tuya. Las facturas y presupuestos ya emitidos la conservan tal como salieron.",
+          "en": "Your client's address comes from its boxes in the CRM (street and number, postcode, town and province), like yours. Invoices and quotes already issued keep it exactly as they went out."
         }
       ],
-      "version": "0.5.8",
+      "version": "0.5.9",
       "tables": [
         "inv_documents",
         "inv_clients",
@@ -2568,9 +2588,9 @@
         "inv_responses"
       ],
       "package": {
-        "path": "apps/invoices/invoices-0.5.8.tgz",
-        "sha256": "c45f790872e5919fa6ba8d31793fecd3ef15460fe07f81ddb351478c07cce96f",
-        "size": 579058,
+        "path": "apps/invoices/invoices-0.5.9.tgz",
+        "sha256": "5fe12c51437ea42fec4de1669aa413b2448a05716df6cad2914a2f2b50f971e2",
+        "size": 579759,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -5227,6 +5247,24 @@
         }
       ],
       "changelog": {
+        "0.6.0": [
+          {
+            "es": "El cliente de cada obra y de cada trabajo es ahora una empresa de tu CRM: lo eliges de la lista del CRM o lo creas ahí mismo con «+ Nueva empresa». Si le cambias el nombre en el CRM, cambia también aquí. Obras necesita el CRM y lo instala si no lo tienes.",
+            "en": "Each obra's and each job's client is now a company of your CRM: you pick it from the CRM's list or make it right there with «+ New company». Renaming it in the CRM renames it here too. Obras needs the CRM and installs it if you do not have it."
+          },
+          {
+            "es": "Tus clientes ya no están en «Intervinientes»: los encontramos en tu CRM (por su CIF o su nombre) o los creamos ahí, y cada obra apunta al suyo. En el CRM, la ficha de cada cliente te enseña sus obras y sus trabajos; desde una obra, «Abrir en el CRM» te lleva a él.",
+            "en": "Your clients are no longer in «Intervinientes»: we found them in your CRM (by tax id or name) or made them there, and each obra points at its own. In the CRM, each client's page shows its obras and its jobs; from an obra, «Open in the CRM» takes you there."
+          },
+          {
+            "es": "«Intervinientes» es para quien trabaja en tus obras: constructoras, subcontratas, proveedores, técnicos y operarios. Una empresa que era cliente y también, por ejemplo, tu proveedor se queda aquí como proveedor.",
+            "en": "«Intervinientes» is for who works in your obras: builders, subcontractors, suppliers, technical staff and workers. A company that was a client and also, say, your supplier stays here as a supplier."
+          },
+          {
+            "es": "La dirección de la obra va cada cosa en su casilla: calle y número, código postal, municipio y provincia. Si la tenías como «08001 Barcelona» ya la hemos repartido; si no se podía leer bien, la obra te pide que la completes.",
+            "en": "The obra's address has one box per thing: street and number, postcode, town and province. If you had it as «08001 Barcelona» it is already split; if it could not be read for sure, the obra asks you to complete it."
+          }
+        ],
         "0.5.7": [
           {
             "es": "Los formularios largos se ordenan por preguntas («¿Qué pasa?», «¿Dónde?», «¿Para quién?»…), con lo menos usado plegado en «Más».",
@@ -5406,27 +5444,23 @@
       },
       "whatsNew": [
         {
-          "es": "Los formularios largos se ordenan por preguntas («¿Qué pasa?», «¿Dónde?», «¿Para quién?»…), con lo menos usado plegado en «Más».",
-          "en": "Long forms are ordered by questions («What is wrong?», «Where?», «For whom?»…), with what is used least folded under «More»."
+          "es": "El cliente de cada obra y de cada trabajo es ahora una empresa de tu CRM: lo eliges de la lista del CRM o lo creas ahí mismo con «+ Nueva empresa». Si le cambias el nombre en el CRM, cambia también aquí. Obras necesita el CRM y lo instala si no lo tienes.",
+          "en": "Each obra's and each job's client is now a company of your CRM: you pick it from the CRM's list or make it right there with «+ New company». Renaming it in the CRM renames it here too. Obras needs the CRM and installs it if you do not have it."
         },
         {
-          "es": "El cliente, el operario, la empresa y la persona de contacto se eligen de tus intervinientes, con «+ Nueva empresa» ahí mismo; ya no se escriben a mano. Si cambias el nombre de una ficha, cambia en todas partes.",
-          "en": "The client, the worker, the company and the contact person are picked from those involved, with «+ New company» right there; they are no longer typed. Renaming a card renames it everywhere."
+          "es": "Tus clientes ya no están en «Intervinientes»: los encontramos en tu CRM (por su CIF o su nombre) o los creamos ahí, y cada obra apunta al suyo. En el CRM, la ficha de cada cliente te enseña sus obras y sus trabajos; desde una obra, «Abrir en el CRM» te lleva a él.",
+          "en": "Your clients are no longer in «Intervinientes»: we found them in your CRM (by tax id or name) or made them there, and each obra points at its own. In the CRM, each client's page shows its obras and its jobs; from an obra, «Open in the CRM» takes you there."
         },
         {
-          "es": "El tipo de obra, lo que hace una persona y lo que es una empresa se eligen de una lista; «Otro…» pregunta cuál.",
-          "en": "The kind of project, what a person does and what a company is are chosen from a list; «Other…» asks which."
+          "es": "«Intervinientes» es para quien trabaja en tus obras: constructoras, subcontratas, proveedores, técnicos y operarios. Una empresa que era cliente y también, por ejemplo, tu proveedor se queda aquí como proveedor.",
+          "en": "«Intervinientes» is for who works in your obras: builders, subcontractors, suppliers, technical staff and workers. A company that was a client and also, say, your supplier stays here as a supplier."
         },
         {
-          "es": "El sobrecoste de una incidencia solo se pide si lo tiene, y si está certificado, facturado o pagado, solo cuando está aprobado.",
-          "en": "An incident's extra cost is asked only when it has one, and whether it is certified, invoiced or paid only once it is approved."
-        },
-        {
-          "es": "El color del informe, si nadie lo había cambiado, pasa al gris oscuro que se lee bien (#78716C). Un color elegido se queda.",
-          "en": "The report's colour, if nobody had changed it, moves to the dark grey that reads well (#78716C). A colour someone chose stays."
+          "es": "La dirección de la obra va cada cosa en su casilla: calle y número, código postal, municipio y provincia. Si la tenías como «08001 Barcelona» ya la hemos repartido; si no se podía leer bien, la obra te pide que la completes.",
+          "en": "The obra's address has one box per thing: street and number, postcode, town and province. If you had it as «08001 Barcelona» it is already split; if it could not be read for sure, the obra asks you to complete it."
         }
       ],
-      "version": "0.5.7",
+      "version": "0.6.0",
       "tables": [
         "obras_projects",
         "obras_units",
@@ -5444,9 +5478,9 @@
         "obras_settings"
       ],
       "package": {
-        "path": "apps/obras/obras-0.5.7.tgz",
-        "sha256": "e31d53b310055cf73eaad72c6aa0393699851628b85e4582982f4e0d7c5580be",
-        "size": 572805,
+        "path": "apps/obras/obras-0.6.0.tgz",
+        "sha256": "033829e5b26fdd8f14d76bb9c4fd750a04bbf056e52e8c8bb69027d6526835b1",
+        "size": 575782,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -5454,7 +5488,16 @@
         "variables": [],
         "channels": [],
         "processes": 0,
-        "skills": []
+        "skills": [],
+        "requires": [
+          "crm"
+        ],
+        "requiresUses": {
+          "crm": {
+            "es": "los clientes del CRM",
+            "en": "the CRM's clients"
+          }
+        }
       },
       "emoji": "🏗️",
       "i18n": {
