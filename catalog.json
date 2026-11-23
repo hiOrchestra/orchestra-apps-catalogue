@@ -335,10 +335,10 @@
       "id": "crm",
       "name": "CRM",
       "category": "Sales",
-      "summary": "Leads, deals and clients, with the agent doing the follow-up.",
+      "summary": "Leads, deals, companies and contacts, with the agent doing the follow-up.",
       "promise": "Whoever writes to you lands in the CRM, read by your agent; each deal has its next step proposed and its email written. You decide.",
       "like": "HubSpot",
-      "description": "Leads from your website, bookings and email in one inbox, read by the agent; deals with their kind of service, value once and per month, stage and next step; companies and people with a timeline of every email, meeting and note. Nothing becomes a deal and no email goes without you.",
+      "description": "Leads from your website, bookings and email in one inbox, read by the agent; deals with their kind of service, value once and per month, pipeline stage and next step; companies and contacts with a timeline of every email, meeting and note. Nothing becomes a deal and no email goes without you.",
       "brief": {
         "user": "Founders and the sales team of a small services company",
         "frequency": "Every day",
@@ -358,7 +358,7 @@
         {
           "actor": "arrives",
           "title": "A lead arrives",
-          "text": "From your website's form, a booking or an email: it lands in Entradas, never in Trabajo.",
+          "text": "From your website's form, a booking or an email: it lands in Leads, never in Trabajo.",
           "via": [
             "web",
             "email"
@@ -411,7 +411,7 @@
           "device": "desktop"
         },
         {
-          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/crm/screens/2-entradas.png",
+          "url": "https://raw.githubusercontent.com/hiOrchestra/orchestra-apps-catalogue/dev/apps/crm/screens/2-leads.png",
           "caption": "Leads: what they wrote, what your agent reads in it, and your decision",
           "surface": "desk",
           "device": "desktop"
@@ -424,6 +424,20 @@
         }
       ],
       "changelog": {
+        "0.4.2": [
+          {
+            "es": "Los nombres de HubSpot: Entradas ahora es Leads, y Clientes son dos sitios, Empresas y Contactos, cada uno con su lista. El historial de cada negocio, empresa y contacto es su Cronología, y se añade con «Registrar actividad».",
+            "en": "HubSpot's names: Entradas is now Leads, and Clientes is two places, Empresas and Contactos, each with its own list. Each deal's, company's and contact's history is its Cronología, added to with «Registrar actividad»."
+          },
+          {
+            "es": "Un negocio siempre dice de quién es: «Negocio con esepe&CO · Web + 3 landings», en su página, en cada lista y en Facturas. Las etapas forman el pipeline.",
+            "en": "A deal always says whose it is: «Negocio con esepe&CO · Web + 3 landings», on its page, in every list and in Invoices. The stages make the pipeline."
+          },
+          {
+            "es": "Solo cambian las palabras: tus datos, tus etapas y tus enlaces siguen igual.",
+            "en": "Only the words change: your data, your stages and your links stay as they were."
+          }
+        ],
         "0.4.1": [
           {
             "es": "Tus clientes, en un solo sitio: Facturas ya no tiene su propia lista; sus presupuestos y facturas apuntan a las empresas de aquí. Cambias un nombre y sale cambiado en todas partes.",
@@ -467,19 +481,19 @@
       },
       "whatsNew": [
         {
-          "es": "Tus clientes, en un solo sitio: Facturas ya no tiene su propia lista; sus presupuestos y facturas apuntan a las empresas de aquí. Cambias un nombre y sale cambiado en todas partes.",
-          "en": "Your clients in one place: Invoices no longer keeps its own list; its quotes and invoices point at the companies here. Rename one and it changes everywhere."
+          "es": "Los nombres de HubSpot: Entradas ahora es Leads, y Clientes son dos sitios, Empresas y Contactos, cada uno con su lista. El historial de cada negocio, empresa y contacto es su Cronología, y se añade con «Registrar actividad».",
+          "en": "HubSpot's names: Entradas is now Leads, and Clientes is two places, Empresas and Contactos, each with its own list. Each deal's, company's and contact's history is its Cronología, added to with «Registrar actividad»."
         },
         {
-          "es": "Cada empresa muestra sus presupuestos, facturas y facturas recurrentes, y cada negocio su presupuesto, leídos al momento de Facturas.",
-          "en": "Each company shows its quotes, invoices and recurring fees, and each deal its quote, read live from Invoices."
+          "es": "Un negocio siempre dice de quién es: «Negocio con esepe&CO · Web + 3 landings», en su página, en cada lista y en Facturas. Las etapas forman el pipeline.",
+          "en": "A deal always says whose it is: «Negocio con esepe&CO · Web + 3 landings», on its page, in every list and in Invoices. The stages make the pipeline."
         },
         {
-          "es": "Unir dos empresas repetidas mueve también sus facturas. Una empresa con facturas se archiva, nunca se borra.",
-          "en": "Merging two duplicate companies moves their invoices too. A company with invoices is archived, never deleted."
+          "es": "Solo cambian las palabras: tus datos, tus etapas y tus enlaces siguen igual.",
+          "en": "Only the words change: your data, your stages and your links stay as they were."
         }
       ],
-      "version": "0.4.1",
+      "version": "0.4.2",
       "tables": [
         "crm_deals",
         "crm_companies",
@@ -491,9 +505,9 @@
         "crm_settings"
       ],
       "package": {
-        "path": "apps/crm/crm-0.4.1.tgz",
-        "sha256": "b169c5ccdf83ea8eb0e965280d3711f1a780d73dc5b37b34212edcc069287f83",
-        "size": 361916,
+        "path": "apps/crm/crm-0.4.2.tgz",
+        "sha256": "7f5f8aba56de3167c225ecd45c2339b6a6aabe4404841e2e10bf2c1d19927b62",
+        "size": 363209,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -508,9 +522,9 @@
         "es": {
           "name": "CRM",
           "category": "Ventas",
-          "summary": "Entradas, negocios y clientes, con tu agente haciendo el seguimiento.",
-          "promise": "Quien te escribe llega al CRM, leído por tu agente; cada negocio tiene su siguiente paso propuesto y su correo escrito. Tú decides.",
-          "description": "Las entradas de tu web, tus reservas y tu correo en una sola bandeja, leídas por tu agente; los negocios con su tipo de servicio, lo que valen una vez y cada mes, su etapa y su siguiente paso; empresas y personas con el historial de cada correo, reunión y nota. Nada se convierte en negocio ni sale ningún correo sin ti.",
+          "summary": "Leads, negocios, empresas y contactos, con tu agente haciendo el seguimiento.",
+          "promise": "Quien te escribe llega al CRM como lead, leído por tu agente; cada negocio tiene su siguiente paso propuesto y su correo escrito. Tú decides.",
+          "description": "Los leads de tu web, tus reservas y tu correo en una sola bandeja, leídos por tu agente; los negocios —«Negocio con esepe&CO · Web + 3 landings»— con su tipo de servicio, lo que valen una vez y cada mes, su etapa del pipeline y su siguiente paso; empresas y contactos con la cronología de cada correo, reunión y nota. Con los nombres de HubSpot. Nada se convierte en negocio ni sale ningún correo sin ti.",
           "brief": {
             "user": "Quien lleva las ventas de una pequeña empresa de servicios",
             "frequency": "Cada día",
@@ -519,30 +533,30 @@
               "¿Quién ha llegado, y merece la pena?",
               "¿En qué etapa está cada negocio, y cuál está parado?"
             ],
-            "primaryAction": "Decidir una entrada, o dar el siguiente paso de un negocio",
+            "primaryAction": "Decidir un lead, o dar el siguiente paso de un negocio",
             "answers": [
-              "Hoy te dice lo que te espera por orden: entradas por decidir, los pasos que te propone tu agente con su correo, correos por aprobar y pasos atrasados.",
-              "Cada entrada llega aquí, nunca a Trabajo, con lo que tu agente ve en ella: si encaja, por qué y lo que podría valer.",
-              "El embudo muestra cada etapa con sus negocios y lo que valen, una vez y cada mes, y marca los que llevan días sin noticias."
+              "Hoy te dice lo que te espera por orden: leads por decidir, los pasos que te propone tu agente con su correo, correos por aprobar y pasos atrasados.",
+              "Cada lead llega aquí, nunca a Trabajo, con lo que tu agente ve en él: si encaja, por qué y lo que podría valer.",
+              "El pipeline muestra cada etapa con sus negocios y lo que valen, una vez y cada mes, y marca los que llevan días sin noticias."
             ]
           },
           "how": [
             {
-              "title": "Llega una entrada",
-              "text": "Del formulario de tu web, una reserva o un correo: cae en Entradas, nunca en Trabajo."
+              "title": "Llega un lead",
+              "text": "Del formulario de tu web, una reserva o un correo: cae en Leads, nunca en Trabajo."
             },
             {
               "title": "Tu agente la lee y propone",
-              "text": "Te dice si cada entrada encaja y, en cada negocio, el siguiente paso con el correo ya escrito."
+              "text": "Te dice si cada lead encaja y, en cada negocio, el siguiente paso con el correo ya escrito."
             },
             {
               "title": "Tú decides",
-              "text": "Conviertes una entrada en negocio o la descartas, tomas un paso, apruebas un correo: tu agente lo envía desde su Gmail."
+              "text": "Conviertes un lead en negocio o lo descartas, tomas un paso, apruebas un correo: tu agente lo envía desde su Gmail."
             }
           ],
           "needs": {
             "agent": {
-              "why": "El agente del equipo lee cada entrada, propone el siguiente paso de cada negocio con su correo, envía los que apruebas y apunta lo que se habla."
+              "why": "El agente del equipo lee cada lead, propone el siguiente paso de cada negocio con su correo, envía los que apruebas y registra lo que se habla en la cronología."
             }
           },
           "outward": [
@@ -550,8 +564,8 @@
           ],
           "captions": [
             "Hoy: lo que te espera, por orden, con cada decisión en su línea",
-            "Entradas: lo que escribieron, lo que ve tu agente y tu decisión",
-            "Un negocio: lo que vale, el paso que propone tu agente con su correo y todo el historial"
+            "Leads: lo que escribieron, lo que ve tu agente y tu decisión",
+            "Un negocio con su empresa: lo que vale, el paso que propone tu agente con su correo y toda la cronología"
           ]
         }
       },
@@ -2176,6 +2190,12 @@
         }
       ],
       "changelog": {
+        "0.4.1": [
+          {
+            "es": "Las palabras del CRM, al día: tus clientes son las empresas del CRM, y un presupuesto hecho desde un negocio lo nombra como el CRM («Negocio con esepe&CO · Web + 3 landings»). Tus Clientes de aquí siguen igual.",
+            "en": "The CRM's words, up to date: your clients are the CRM's companies, and a quote made from a deal names it as the CRM does («Negocio con esepe&CO · Web + 3 landings»). Your Clientes here stay as they were."
+          }
+        ],
         "0.4.0": [
           {
             "es": "Tus clientes son los del CRM: eliges el cliente de una lista, nunca lo escribes, y si es nuevo se crea en el CRM sin salir del presupuesto (antes te pregunta «¿Es esta?» si ya hay uno parecido).",
@@ -2211,19 +2231,11 @@
       },
       "whatsNew": [
         {
-          "es": "Tus clientes son los del CRM: eliges el cliente de una lista, nunca lo escribes, y si es nuevo se crea en el CRM sin salir del presupuesto (antes te pregunta «¿Es esta?» si ya hay uno parecido).",
-          "en": "Your clients are the CRM's: you pick the client from a list, never type it, and a new one is made in the CRM without leaving the quote (asking «Is it this one?» first if there is a similar one)."
-        },
-        {
-          "es": "Cambias el nombre o el NIF de un cliente en el CRM y sale cambiado en todos tus borradores. Una factura emitida guarda los datos de su día.",
-          "en": "Change a client's name or tax ID in the CRM and every draft shows it. An issued invoice keeps the details of its day."
-        },
-        {
-          "es": "Al instalar Facturas se instala también el CRM. Tus clientes de antes pasan solos al CRM, sin repetirse.",
-          "en": "Installing Invoices installs the CRM too. Your existing clients move to the CRM by themselves, without duplicates."
+          "es": "Las palabras del CRM, al día: tus clientes son las empresas del CRM, y un presupuesto hecho desde un negocio lo nombra como el CRM («Negocio con esepe&CO · Web + 3 landings»). Tus Clientes de aquí siguen igual.",
+          "en": "The CRM's words, up to date: your clients are the CRM's companies, and a quote made from a deal names it as the CRM does («Negocio con esepe&CO · Web + 3 landings»). Your Clientes here stay as they were."
         }
       ],
-      "version": "0.4.0",
+      "version": "0.4.1",
       "tables": [
         "inv_documents",
         "inv_clients",
@@ -2235,9 +2247,9 @@
         "inv_responses"
       ],
       "package": {
-        "path": "apps/invoices/invoices-0.4.0.tgz",
-        "sha256": "d05efe7179dbbc17d3d18858795c977ac6e09997075178196fa3d01f724a2586",
-        "size": 514289,
+        "path": "apps/invoices/invoices-0.4.1.tgz",
+        "sha256": "c24850852e89a9e611a5c68ad5a17953af2afb9e92d67fe986c2499e23cf2e6e",
+        "size": 515099,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -2251,8 +2263,8 @@
         ],
         "requiresUses": {
           "crm": {
-            "es": "los clientes del CRM",
-            "en": "the CRM's clients"
+            "es": "las empresas del CRM",
+            "en": "the CRM's companies"
           }
         },
         "related": [
