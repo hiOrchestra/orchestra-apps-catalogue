@@ -453,6 +453,20 @@
         }
       ],
       "changelog": {
+        "0.4.5": [
+          {
+            "es": "Ajustes, rehecho: las etapas del pipeline son una tabla —nombre, probabilidad con − y +, y si cierra el negocio (ganado o perdido)—, que ordenas arrastrando o con las flechas, y te dice qué significa cada una («Un negocio en «Propuesta» cuenta el 60 % de su valor en el previsto»).",
+            "en": "Settings, remade: the pipeline stages are a table — name, probability with − and +, and whether it closes the deal (won or lost) — reordered by dragging or with the arrows, saying what each means."
+          },
+          {
+            "es": "Los tipos de servicio y los orígenes son listas: añades, renombras, quitas y ordenas cada uno; los días hasta «parado» se cambian con − y +.",
+            "en": "Kinds of service and sources are lists: add, rename, remove and reorder each one; the days until «stuck» change with − and +."
+          },
+          {
+            "es": "Ves quién cambió cada cosa y cuándo, también lo que cambió tu agente: «Cambiado por Aria, para Marta, hace 5 min: añadió «Mantenimiento» a Tipos de servicio».",
+            "en": "You see who changed each thing and when, your agent's changes too: «Changed by Aria, for Marta, 5 min ago: added «Mantenimiento» to Kinds of service»."
+          }
+        ],
         "0.4.4": [
           {
             "es": "En Ajustes, «Lo que tu equipo hace solo»: cada cosa que tu equipo puede hacer sin que se lo pidas tiene su interruptor, dice qué pasa cuando está encendida y se abre en Automatizaciones.",
@@ -534,11 +548,19 @@
       },
       "whatsNew": [
         {
-          "es": "En Ajustes, «Lo que tu equipo hace solo»: cada cosa que tu equipo puede hacer sin que se lo pidas tiene su interruptor, dice qué pasa cuando está encendida y se abre en Automatizaciones.",
-          "en": "In Settings, «Lo que tu equipo hace solo»: each thing your team can do without being asked has its switch, says what happens when it is on and opens in Automatizaciones."
+          "es": "Ajustes, rehecho: las etapas del pipeline son una tabla —nombre, probabilidad con − y +, y si cierra el negocio (ganado o perdido)—, que ordenas arrastrando o con las flechas, y te dice qué significa cada una («Un negocio en «Propuesta» cuenta el 60 % de su valor en el previsto»).",
+          "en": "Settings, remade: the pipeline stages are a table — name, probability with − and +, and whether it closes the deal (won or lost) — reordered by dragging or with the arrows, saying what each means."
+        },
+        {
+          "es": "Los tipos de servicio y los orígenes son listas: añades, renombras, quitas y ordenas cada uno; los días hasta «parado» se cambian con − y +.",
+          "en": "Kinds of service and sources are lists: add, rename, remove and reorder each one; the days until «stuck» change with − and +."
+        },
+        {
+          "es": "Ves quién cambió cada cosa y cuándo, también lo que cambió tu agente: «Cambiado por Aria, para Marta, hace 5 min: añadió «Mantenimiento» a Tipos de servicio».",
+          "en": "You see who changed each thing and when, your agent's changes too: «Changed by Aria, for Marta, 5 min ago: added «Mantenimiento» to Kinds of service»."
         }
       ],
-      "version": "0.4.4",
+      "version": "0.4.5",
       "tables": [
         "crm_deals",
         "crm_companies",
@@ -550,9 +572,9 @@
         "crm_settings"
       ],
       "package": {
-        "path": "apps/crm/crm-0.4.4.tgz",
-        "sha256": "2e001d161cb61920b6579a880dddcc5b846c4d7324dbb02befdabcc7cab4a4f6",
-        "size": 365280,
+        "path": "apps/crm/crm-0.4.5.tgz",
+        "sha256": "3c1f51f5d8dc626d02f1b549ce6f7a35d3014c07312e9ad3c6e64f7b14a4ea16",
+        "size": 365772,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
