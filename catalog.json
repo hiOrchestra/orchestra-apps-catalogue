@@ -2288,6 +2288,16 @@
         }
       ],
       "changelog": {
+        "0.5.2": [
+          {
+            "es": "La página que abre tu cliente lleva tu diseño (logo, color y letra): arriba qué es y cómo está («Por pagar · vence el…», «Pagada el…», «Espera tu respuesta»), debajo cómo pagar con tu IBAN y el concepto para copiar, «Descargar PDF» y el documento.",
+            "en": "The page your client opens wears your design: what it is and where it stands on top, how to pay with your IBAN and the reference to copy, «Descargar PDF», then the document."
+          },
+          {
+            "es": "Sin IBAN ni enlace de pago tu cliente no ve una caja vacía: eres tú quien ve que falta, arriba de tus páginas.",
+            "en": "With no IBAN or payment link your client never sees an empty box: you see what is missing, on top of your pages."
+          }
+        ],
         "0.5.1": [
           {
             "es": "«Descargar PDF», «Imprimir» y «Vista previa» siempre a la vista encima del documento, sin buscarlos en «Más».",
@@ -2389,15 +2399,15 @@
       },
       "whatsNew": [
         {
-          "es": "«Descargar PDF», «Imprimir» y «Vista previa» siempre a la vista encima del documento, sin buscarlos en «Más».",
-          "en": "«Descargar PDF», «Imprimir» and «Vista previa» always in view above the document, never under «Más»."
+          "es": "La página que abre tu cliente lleva tu diseño (logo, color y letra): arriba qué es y cómo está («Por pagar · vence el…», «Pagada el…», «Espera tu respuesta»), debajo cómo pagar con tu IBAN y el concepto para copiar, «Descargar PDF» y el documento.",
+          "en": "The page your client opens wears your design: what it is and where it stands on top, how to pay with your IBAN and the reference to copy, «Descargar PDF», then the document."
         },
         {
-          "es": "Un borrador se ve al lado mientras lo escribes, tal como lo recibirá tu cliente.",
-          "en": "A draft is shown beside its editor as you write it, as your client will get it."
+          "es": "Sin IBAN ni enlace de pago tu cliente no ve una caja vacía: eres tú quien ve que falta, arriba de tus páginas.",
+          "en": "With no IBAN or payment link your client never sees an empty box: you see what is missing, on top of your pages."
         }
       ],
-      "version": "0.5.1",
+      "version": "0.5.2",
       "tables": [
         "inv_documents",
         "inv_clients",
@@ -2409,9 +2419,9 @@
         "inv_responses"
       ],
       "package": {
-        "path": "apps/invoices/invoices-0.5.1.tgz",
-        "sha256": "a43aff426612a369b50bcae3620f288dcdd5d397a0aef44b271f556bc6ce030a",
-        "size": 557537,
+        "path": "apps/invoices/invoices-0.5.2.tgz",
+        "sha256": "15043a48582c857480c517cc0f0640cfc96c11ed45cdcd9d611f0df3000a7156",
+        "size": 559531,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
