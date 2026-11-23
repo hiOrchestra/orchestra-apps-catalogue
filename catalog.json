@@ -70,6 +70,12 @@
         }
       ],
       "changelog": {
+        "0.15.7": [
+          {
+            "es": "Un artículo dice en su título cómo volver: «Mesa de redacción › …».",
+            "en": "An article's title says the way back: «Mesa de redacción › …»."
+          }
+        ],
         "0.15.6": [
           {
             "es": "Ajustes › General, ordenado: tres tarjetas —tu sitio, cómo escribe tu empresa y el SEO de cada artículo—, cada una con una frase de lo que cambia.",
@@ -253,15 +259,11 @@
       },
       "whatsNew": [
         {
-          "es": "Ajustes › General, ordenado: tres tarjetas —tu sitio, cómo escribe tu empresa y el SEO de cada artículo—, cada una con una frase de lo que cambia.",
-          "en": "Settings › General, in order: three cards — your site, how your company writes and each article's SEO — each with a sentence on what it changes."
-        },
-        {
-          "es": "Los límites del título y la descripción en Google se cambian con − y + en caracteres, y las veces que sale la palabra clave en veces; el idioma de la revisión, con dos botones. Ves quién cambió cada cosa, también tu agente.",
-          "en": "The limits of the title and description in Google change with − and + in characters, and the keyword count in times; the review language with two buttons. You see who changed each thing, your agent too."
+          "es": "Un artículo dice en su título cómo volver: «Mesa de redacción › …».",
+          "en": "An article's title says the way back: «Mesa de redacción › …»."
         }
       ],
-      "version": "0.15.6",
+      "version": "0.15.7",
       "tables": [
         "articles_articles",
         "articles_rules",
@@ -276,9 +278,9 @@
         "articles_links"
       ],
       "package": {
-        "path": "apps/articles/articles-0.15.6.tgz",
-        "sha256": "f8d3c38bbe77fc684c92cd2c7fc790b84200d3304d1a1655720e8e011dd544f7",
-        "size": 691370,
+        "path": "apps/articles/articles-0.15.7.tgz",
+        "sha256": "f7b8c84fa594dc08ce278e424b5bec3513d3b082db3e25355da14b848e104fd3",
+        "size": 692378,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -463,6 +465,16 @@
         }
       ],
       "changelog": {
+        "0.5.3": [
+          {
+            "es": "El menú de la izquierda se queda en cada página: una ficha marca la sección a la que pertenece, y su título dice cómo llegaste («Clientes › …»), cada parte un enlace.",
+            "en": "The menu on the left stays on every page: a record's page highlights the section it belongs to, and its title says how you got there («Clientes › …»), each part a link."
+          },
+          {
+            "es": "«Proponer el siguiente paso», «Cliente en riesgo» y «Abrir el proyecto de un negocio ganado» son opcionales: apagados hasta que los enciendas en Ajustes › Lo que tu equipo hace solo. Lo demás viene con el módulo y está siempre encendido.",
+            "en": "«Propose the next step», «Customer at risk» and «Open a won deal's project» are optional: off until you turn them on in Settings › What your team does on its own. The rest comes with the module and is always on."
+          }
+        ],
         "0.5.2": [
           {
             "es": "Ajustes ya no muestra los «Tipos de servicio» antiguos: lo que vendes está en «Servicios y productos», agrupado por categorías.",
@@ -638,11 +650,15 @@
       },
       "whatsNew": [
         {
-          "es": "Ajustes ya no muestra los «Tipos de servicio» antiguos: lo que vendes está en «Servicios y productos», agrupado por categorías.",
-          "en": "Settings no longer show the old «kinds of service»: what you sell is in «Servicios y productos», grouped by category."
+          "es": "El menú de la izquierda se queda en cada página: una ficha marca la sección a la que pertenece, y su título dice cómo llegaste («Clientes › …»), cada parte un enlace.",
+          "en": "The menu on the left stays on every page: a record's page highlights the section it belongs to, and its title says how you got there («Clientes › …»), each part a link."
+        },
+        {
+          "es": "«Proponer el siguiente paso», «Cliente en riesgo» y «Abrir el proyecto de un negocio ganado» son opcionales: apagados hasta que los enciendas en Ajustes › Lo que tu equipo hace solo. Lo demás viene con el módulo y está siempre encendido.",
+          "en": "«Propose the next step», «Customer at risk» and «Open a won deal's project» are optional: off until you turn them on in Settings › What your team does on its own. The rest comes with the module and is always on."
         }
       ],
-      "version": "0.5.2",
+      "version": "0.5.3",
       "tables": [
         "crm_deals",
         "crm_items",
@@ -657,9 +673,9 @@
         "crm_settings"
       ],
       "package": {
-        "path": "apps/crm/crm-0.5.2.tgz",
-        "sha256": "5a6473ac37fab06763f448209b83415b4fe6f5df7b8462d4ec4635395ca7e0c3",
-        "size": 405917,
+        "path": "apps/crm/crm-0.5.3.tgz",
+        "sha256": "b8510ce4b832b8f8f3a32ce417d2d4bb1986c72cdc13a00042631680f4d1afdf",
+        "size": 405502,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -2341,6 +2357,12 @@
         }
       ],
       "changelog": {
+        "0.5.5": [
+          {
+            "es": "El menú de la izquierda se queda en cada página: una ficha marca la sección a la que pertenece, y su título dice cómo llegaste («Facturas › …»), cada parte un enlace.",
+            "en": "The menu on the left stays on every page: a record's page highlights the section it belongs to, and its title says how you got there («Facturas › …»), each part a link."
+          }
+        ],
         "0.5.4": [
           {
             "es": "Un presupuesto hecho desde una venta del CRM trae sus líneas: lo que se vende, una vez o cada mes, con su precio y su descuento.",
@@ -2472,19 +2494,11 @@
       },
       "whatsNew": [
         {
-          "es": "Un presupuesto hecho desde una venta del CRM trae sus líneas: lo que se vende, una vez o cada mes, con su precio y su descuento.",
-          "en": "A quote made from a CRM sale brings its lines: what is sold, once or every month, with its price and discount."
-        },
-        {
-          "es": "Cada factura recurrente puede apuntar al servicio contratado del cliente en el CRM: una nueva toma de él el cliente, cada cuánto se factura y su línea; y el CRM sabe qué factura del cliente está sin pagar.",
-          "en": "Each recurring fee can point at the customer's contracted service in the CRM: a new one takes its client, how often it is billed and its line from it; and the CRM knows which of the customer's invoices is unpaid."
-        },
-        {
-          "es": "Tus clientes se llevan en un solo sitio, el CRM: lo que le has facturado a cada uno, lo que te debe y sus facturas recurrentes se ven ahora en su página del CRM. Aquí, cada lista se filtra por cliente.",
-          "en": "Your clients are kept in one place, the CRM: what you billed each one, what they owe and their recurring fees now show on their CRM page. Here, each list filters by client."
+          "es": "El menú de la izquierda se queda en cada página: una ficha marca la sección a la que pertenece, y su título dice cómo llegaste («Facturas › …»), cada parte un enlace.",
+          "en": "The menu on the left stays on every page: a record's page highlights the section it belongs to, and its title says how you got there («Facturas › …»), each part a link."
         }
       ],
-      "version": "0.5.4",
+      "version": "0.5.5",
       "tables": [
         "inv_documents",
         "inv_clients",
@@ -2496,9 +2510,9 @@
         "inv_responses"
       ],
       "package": {
-        "path": "apps/invoices/invoices-0.5.4.tgz",
-        "sha256": "6615f844adc7c5e9fb7f96a35996cba357d10754e663319674d2e06e246d02db",
-        "size": 559904,
+        "path": "apps/invoices/invoices-0.5.5.tgz",
+        "sha256": "863c88d8f56b2c334b90a4c61c97bee5edcd64cf0483660f3d3b148723723b6a",
+        "size": 563507,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -4528,6 +4542,16 @@
         }
       ],
       "changelog": {
+        "1.13.7": [
+          {
+            "es": "El menú de la izquierda se queda en cada página: una ficha marca la sección a la que pertenece, y su título dice cómo llegaste («Objetivos › …»), cada parte un enlace.",
+            "en": "The menu on the left stays on every page: a record's page highlights the section it belongs to, and its title says how you got there («Objetivos › …»), each part a link."
+          },
+          {
+            "es": "«Posición de los objetivos» (cada lunes, unos 0,002 $ por objetivo) es opcional: apagado hasta que lo enciendas en Ajustes › Lo que tu equipo hace solo. «Revisar posiciones» sigue a mano.",
+            "en": "«Goal positions» (every Monday, about $0.002 per goal) is optional: off until you turn it on in Settings › What your team does on its own. «Check positions» still works by hand."
+          }
+        ],
         "1.13.6": [
           {
             "es": "Ajustes, ordenado: siete tarjetas, cada una con una frase de lo que cambia. Competidores, temas, zonas y preguntas a una IA son listas: añades, renombras, quitas y ordenas cada uno, sin separarlos con «;».",
@@ -4899,19 +4923,15 @@
       },
       "whatsNew": [
         {
-          "es": "Ajustes, ordenado: siete tarjetas, cada una con una frase de lo que cambia. Competidores, temas, zonas y preguntas a una IA son listas: añades, renombras, quitas y ordenas cada uno, sin separarlos con «;».",
-          "en": "Settings, in order: seven cards, each with a sentence on what it changes. Competitors, topics, areas and questions for an AI are lists: add, rename, remove and reorder each one, no «;» to separate them."
+          "es": "El menú de la izquierda se queda en cada página: una ficha marca la sección a la que pertenece, y su título dice cómo llegaste («Objetivos › …»), cada parte un enlace.",
+          "en": "The menu on the left stays on every page: a record's page highlights the section it belongs to, and its title says how you got there («Objetivos › …»), each part a link."
         },
         {
-          "es": "Relevancia y dificultad se ponen en %, el volumen mínimo en búsquedas al mes y las semanas con − y +; el top que cuenta como ganado se elige entre 3, 5 y 10.",
-          "en": "Relevance and difficulty are set in %, the minimum volume in searches a month and the weeks with − and +; the top that counts as won is chosen among 3, 5 and 10."
-        },
-        {
-          "es": "Ves quién cambió cada cosa y cuándo, también lo que cambió tu agente. Lo que tenías escrito sigue igual.",
-          "en": "You see who changed each thing and when, your agent's changes too. What you had written stays as it was."
+          "es": "«Posición de los objetivos» (cada lunes, unos 0,002 $ por objetivo) es opcional: apagado hasta que lo enciendas en Ajustes › Lo que tu equipo hace solo. «Revisar posiciones» sigue a mano.",
+          "en": "«Goal positions» (every Monday, about $0.002 per goal) is optional: off until you turn it on in Settings › What your team does on its own. «Check positions» still works by hand."
         }
       ],
-      "version": "1.13.6",
+      "version": "1.13.7",
       "tables": [
         "oportunidadesseo_oportunidades",
         "oportunidadesseo_acciones",
@@ -4932,9 +4952,9 @@
         "oportunidadesseo_cache"
       ],
       "package": {
-        "path": "apps/oportunidadesseo/oportunidadesseo-1.13.6.tgz",
-        "sha256": "cb9fa1f64df4944c282625c1846baebe78ac51528f1bd37a173a378f5ea5db43",
-        "size": 654192,
+        "path": "apps/oportunidadesseo/oportunidadesseo-1.13.7.tgz",
+        "sha256": "716b01a4a8024d12a8299eb58f3fe16f3e5f7dad57eda7eb9405daa1b59d82d8",
+        "size": 655710,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -5147,6 +5167,12 @@
         }
       ],
       "changelog": {
+        "0.5.5": [
+          {
+            "es": "El menú de la izquierda se queda en cada página: una ficha marca la sección a la que pertenece, y su título dice cómo llegaste («Obras › …»), cada parte un enlace.",
+            "en": "The menu on the left stays on every page: a record's page highlights the section it belongs to, and its title says how you got there («Obras › …»), each part a link."
+          }
+        ],
         "0.5.4": [
           {
             "es": "Cada formulario dice qué hace falta: lo que no es obligatorio dice «opcional», y si el botón no se puede pulsar, una línea dice qué falta («Falta: la obra»). Los importes llevan su «€» y los ejemplos dicen que son ejemplos.",
@@ -5292,11 +5318,11 @@
       },
       "whatsNew": [
         {
-          "es": "Cada formulario dice qué hace falta: lo que no es obligatorio dice «opcional», y si el botón no se puede pulsar, una línea dice qué falta («Falta: la obra»). Los importes llevan su «€» y los ejemplos dicen que son ejemplos.",
-          "en": "Every form says what it needs: what is not required says «opcional», and when the button cannot be pressed, one line says what is missing («Falta: la obra»). Amounts show their «€» and examples say they are examples."
+          "es": "El menú de la izquierda se queda en cada página: una ficha marca la sección a la que pertenece, y su título dice cómo llegaste («Obras › …»), cada parte un enlace.",
+          "en": "The menu on the left stays on every page: a record's page highlights the section it belongs to, and its title says how you got there («Obras › …»), each part a link."
         }
       ],
-      "version": "0.5.4",
+      "version": "0.5.5",
       "tables": [
         "obras_projects",
         "obras_units",
@@ -5314,9 +5340,9 @@
         "obras_settings"
       ],
       "package": {
-        "path": "apps/obras/obras-0.5.4.tgz",
-        "sha256": "6b7e7a0e318dcb891764f72442760beebb6cf37cd4807d151e908d6becb94b96",
-        "size": 565438,
+        "path": "apps/obras/obras-0.5.5.tgz",
+        "sha256": "6c5366f46c1852960d5424e0c09657f1ac8ea77168db29e7fac7bb095708907f",
+        "size": 564688,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
