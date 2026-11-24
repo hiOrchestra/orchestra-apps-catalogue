@@ -2399,6 +2399,12 @@
         }
       ],
       "changelog": {
+        "0.8.5": [
+          {
+            "es": "Arreglado: la vista previa parpadeaba en algunos tamaños de ventana.",
+            "en": "Fixed: the preview flickered at some window sizes."
+          }
+        ],
         "0.8.4": [
           {
             "es": "El enlace de tu cliente descarga el PDF original también cuando pesa.",
@@ -2666,11 +2672,11 @@
       },
       "whatsNew": [
         {
-          "es": "El enlace de tu cliente descarga el PDF original también cuando pesa.",
-          "en": "Your client's link downloads the original PDF even when it is heavy."
+          "es": "Arreglado: la vista previa parpadeaba en algunos tamaños de ventana.",
+          "en": "Fixed: the preview flickered at some window sizes."
         }
       ],
-      "version": "0.8.4",
+      "version": "0.8.5",
       "tables": [
         "inv_documents",
         "inv_clients",
@@ -2685,9 +2691,9 @@
         "inv_responses"
       ],
       "package": {
-        "path": "apps/invoices/invoices-0.8.4.tgz",
-        "sha256": "0bb4162f2e948d9a270a2b067acd5c37682c4357a1e3bfec1c7f0d92ae2fac4f",
-        "size": 688019,
+        "path": "apps/invoices/invoices-0.8.5.tgz",
+        "sha256": "d97f8b67c0ef770dd36e125c935e7eb850958c27b46ee1e286ad15e3bfd96fa4",
+        "size": 689955,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
