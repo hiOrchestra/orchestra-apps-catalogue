@@ -4630,6 +4630,12 @@
         }
       ],
       "changelog": {
+        "1.13.9": [
+          {
+            "es": "Cuando la cuenta de DataForSEO se queda sin saldo, el módulo lo dice con palabras y dice dónde se recarga. Los demás errores de DataForSEO dicen también qué hacer.",
+            "en": "When the DataForSEO account runs out of money, the module says so in words and where to top it up. DataForSEO's other errors say what to do too."
+          }
+        ],
         "1.13.8": [
           {
             "es": "Lo que el módulo hace solo está clasificado: lo que viene con el módulo se pone en marcha sin que tengas que hacer nada; lo opcional sigue apagado hasta que lo enciendas.",
@@ -5017,11 +5023,11 @@
       },
       "whatsNew": [
         {
-          "es": "Lo que el módulo hace solo está clasificado: lo que viene con el módulo se pone en marcha sin que tengas que hacer nada; lo opcional sigue apagado hasta que lo enciendas.",
-          "en": "What the module does on its own is classified: what comes with the module starts by itself; what is optional stays off until you turn it on."
+          "es": "Cuando la cuenta de DataForSEO se queda sin saldo, el módulo lo dice con palabras y dice dónde se recarga. Los demás errores de DataForSEO dicen también qué hacer.",
+          "en": "When the DataForSEO account runs out of money, the module says so in words and where to top it up. DataForSEO's other errors say what to do too."
         }
       ],
-      "version": "1.13.8",
+      "version": "1.13.9",
       "tables": [
         "oportunidadesseo_oportunidades",
         "oportunidadesseo_acciones",
@@ -5042,9 +5048,9 @@
         "oportunidadesseo_cache"
       ],
       "package": {
-        "path": "apps/oportunidadesseo/oportunidadesseo-1.13.8.tgz",
-        "sha256": "123bb45690ad5a55c18c6c4b13b1183afef71936a3ad09e23c077109e606ea4e",
-        "size": 655717,
+        "path": "apps/oportunidadesseo/oportunidadesseo-1.13.9.tgz",
+        "sha256": "2edacb720c7971cc2fb2200f10e61d0d09abce1a5abdb5b932291b48755f4b2b",
+        "size": 656520,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
