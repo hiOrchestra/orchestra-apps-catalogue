@@ -2399,6 +2399,24 @@
         }
       ],
       "changelog": {
+        "0.9.0": [
+          {
+            "es": "Facturas, como una aplicación: tus listas a la izquierda por lo que toca hacer, el documento entero en el centro y sus datos a la derecha, en una sola pantalla.",
+            "en": "Invoices as an app: your lists at the left by what to do next, the whole document in the middle and its details at the right, on one screen."
+          },
+          {
+            "es": "Busca por cliente, número o importe en cualquier lista.",
+            "en": "Search by client, number or amount in any list."
+          },
+          {
+            "es": "Los borradores se guardan solos mientras los escribes.",
+            "en": "Drafts save themselves as you write."
+          },
+          {
+            "es": "Pulsa un texto de tu factura en Diseño para cambiarlo.",
+            "en": "Press a text of your invoice in Design to change it."
+          }
+        ],
         "0.8.5": [
           {
             "es": "Arreglado: la vista previa parpadeaba en algunos tamaños de ventana.",
@@ -2672,11 +2690,23 @@
       },
       "whatsNew": [
         {
-          "es": "Arreglado: la vista previa parpadeaba en algunos tamaños de ventana.",
-          "en": "Fixed: the preview flickered at some window sizes."
+          "es": "Facturas, como una aplicación: tus listas a la izquierda por lo que toca hacer, el documento entero en el centro y sus datos a la derecha, en una sola pantalla.",
+          "en": "Invoices as an app: your lists at the left by what to do next, the whole document in the middle and its details at the right, on one screen."
+        },
+        {
+          "es": "Busca por cliente, número o importe en cualquier lista.",
+          "en": "Search by client, number or amount in any list."
+        },
+        {
+          "es": "Los borradores se guardan solos mientras los escribes.",
+          "en": "Drafts save themselves as you write."
+        },
+        {
+          "es": "Pulsa un texto de tu factura en Diseño para cambiarlo.",
+          "en": "Press a text of your invoice in Design to change it."
         }
       ],
-      "version": "0.8.5",
+      "version": "0.9.0",
       "tables": [
         "inv_documents",
         "inv_clients",
@@ -2691,9 +2721,9 @@
         "inv_responses"
       ],
       "package": {
-        "path": "apps/invoices/invoices-0.8.5.tgz",
-        "sha256": "d97f8b67c0ef770dd36e125c935e7eb850958c27b46ee1e286ad15e3bfd96fa4",
-        "size": 689955,
+        "path": "apps/invoices/invoices-0.9.0.tgz",
+        "sha256": "93d1e7b5009a3e63494a80fb4ea1ae384a5b5bd8d9315201977c5af70ad1f575",
+        "size": 684775,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
