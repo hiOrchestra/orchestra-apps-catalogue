@@ -2399,6 +2399,42 @@
         }
       ],
       "changelog": {
+        "0.8.0": [
+          {
+            "es": "Lo que emites queda fijo: el PDF se guarda al emitirlo y ya no cambia, aunque cambies el diseño o tus datos. En Presupuestos y Facturas ves el archivo de cada uno, con sus propiedades al lado.",
+            "en": "What you issue is fixed: its PDF is kept when it is issued and never changes, even if you change the design or your details. Quotes and Invoices show each one's file, with its properties beside it."
+          },
+          {
+            "es": "El estado (cobrada, vencida, aceptado…) ya no aparece dentro del documento, tampoco en el enlace de tu cliente: va fuera, donde puede cambiar.",
+            "en": "How it stands (paid, overdue, accepted…) is no longer inside the document, nor in your client's link: it is said outside, where it can change."
+          },
+          {
+            "es": "Varios diseños, con uno en uso: duplica, prueba, cambia el nombre y elige con cuál sale lo nuevo. Un borrador puede llevar otro.",
+            "en": "Several designs, one in use: duplicate, try, rename and choose which one new documents take. A draft may take another."
+          },
+          {
+            "es": "Las facturas que trajiste guardan su PDF original: súbelos, o elígelos de los archivos de tus equipos, y cada uno va con su número.",
+            "en": "The invoices you brought in keep their original PDF: upload them, or choose them from your teams' files, and each goes with its number."
+          },
+          {
+            "es": "Descarga de una vez todas las de un año o un trimestre.",
+            "en": "Download a whole year or quarter at once."
+          },
+          {
+            "es": "«Copiar el enlace» copia, también dentro de la oficina.",
+            "en": "«Copy the link» copies, inside the office too."
+          }
+        ],
+        "0.7.1": [
+          {
+            "es": "Tu factura, también por el chat: suelta el PDF en la conversación y tu agente la usa como diseño, te enseña cómo queda y te pregunta antes.",
+            "en": "Your invoice, from the chat too: drop the PDF in the conversation and your agent makes it the design, shows you how it looks and asks first."
+          },
+          {
+            "es": "La vista previa de Diseño enseña siempre lo que tienes encendido (con un IBAN de ejemplo si aún no tienes el tuyo), y una factura de otra empresa se avisa y no trae sus datos.",
+            "en": "The Design preview always shows what is switched on (with an example IBAN while yours is missing), and another company's invoice is pointed out and brings none of its details."
+          }
+        ],
         "0.7.0": [
           {
             "es": "Tu factura: sube en Diseño una factura que ya mandas (PDF) y las nuevas salen iguales, con tu letra, tu logo y cada cosa en su sitio. La comparas con la original antes de usarla, y puedes traer también tus datos y esas mismas facturas. Todo lo demás de Diseño sigue funcionando encima.",
@@ -2598,29 +2634,48 @@
       },
       "whatsNew": [
         {
-          "es": "Tu factura: sube en Diseño una factura que ya mandas (PDF) y las nuevas salen iguales, con tu letra, tu logo y cada cosa en su sitio. La comparas con la original antes de usarla, y puedes traer también tus datos y esas mismas facturas. Todo lo demás de Diseño sigue funcionando encima.",
-          "en": "Your invoice: upload one you already send (PDF) in Design and the new ones come out the same, with your letters, your logo and everything in its place. You compare it with the original before using it, and can bring your details and those very invoices too. Everything else in Design still works on top."
+          "es": "Lo que emites queda fijo: el PDF se guarda al emitirlo y ya no cambia, aunque cambies el diseño o tus datos. En Presupuestos y Facturas ves el archivo de cada uno, con sus propiedades al lado.",
+          "en": "What you issue is fixed: its PDF is kept when it is issued and never changes, even if you change the design or your details. Quotes and Invoices show each one's file, with its properties beside it."
         },
         {
-          "es": "Cada línea puede ir bajo un apartado («Hosting»), y un documento puede llevar un dato más junto a las fechas («Período»).",
-          "en": "Each line can go under a heading («Hosting»), and a document can carry one more fact beside the dates («Period»)."
+          "es": "El estado (cobrada, vencida, aceptado…) ya no aparece dentro del documento, tampoco en el enlace de tu cliente: va fuera, donde puede cambiar.",
+          "en": "How it stands (paid, overdue, accepted…) is no longer inside the document, nor in your client's link: it is said outside, where it can change."
+        },
+        {
+          "es": "Varios diseños, con uno en uso: duplica, prueba, cambia el nombre y elige con cuál sale lo nuevo. Un borrador puede llevar otro.",
+          "en": "Several designs, one in use: duplicate, try, rename and choose which one new documents take. A draft may take another."
+        },
+        {
+          "es": "Las facturas que trajiste guardan su PDF original: súbelos, o elígelos de los archivos de tus equipos, y cada uno va con su número.",
+          "en": "The invoices you brought in keep their original PDF: upload them, or choose them from your teams' files, and each goes with its number."
+        },
+        {
+          "es": "Descarga de una vez todas las de un año o un trimestre.",
+          "en": "Download a whole year or quarter at once."
+        },
+        {
+          "es": "«Copiar el enlace» copia, también dentro de la oficina.",
+          "en": "«Copy the link» copies, inside the office too."
         }
       ],
-      "version": "0.7.0",
+      "version": "0.8.0",
       "tables": [
         "inv_documents",
         "inv_clients",
         "inv_recurring",
         "inv_settings",
+        "inv_designs",
+        "inv_logos",
         "inv_series",
         "inv_emails",
         "inv_links",
+        "inv_link_files",
         "inv_responses"
       ],
       "package": {
-        "path": "apps/invoices/invoices-0.7.0.tgz",
-        "sha256": "6c25603443d3250d6157e3b8ebcc6544df05193304e74a99147cdf568185ae58",
-        "size": 654330,
+        "path": "apps/invoices/invoices-0.8.0.tgz",
+        "sha256": "c9a5eee2928953c4b94ce706bce71ae4f35f318409f52e5796344eb82846711a",
+        "size": 685924,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
