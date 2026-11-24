@@ -70,6 +70,12 @@
         }
       ],
       "changelog": {
+        "0.15.9": [
+          {
+            "es": "Si una ejecución falla o la corta un reinicio, lo que quedó sin hacer se retoma solo en la siguiente comprobación. Los correos que se envían no se repiten nunca.",
+            "en": "When a run fails or a restart cuts it, what was left undone is taken up again by itself at the next check. Emails that go out are never repeated."
+          }
+        ],
         "0.15.8": [
           {
             "es": "Lo que el módulo hace solo está clasificado: lo que viene con el módulo se pone en marcha sin que tengas que hacer nada. La lectura diaria de tu web se llama «Leer tu web cada mañana».",
@@ -265,11 +271,11 @@
       },
       "whatsNew": [
         {
-          "es": "Lo que el módulo hace solo está clasificado: lo que viene con el módulo se pone en marcha sin que tengas que hacer nada. La lectura diaria de tu web se llama «Leer tu web cada mañana».",
-          "en": "What the module does on its own is classified: what comes with the module starts by itself, with nothing for you to do. The daily read of your site is now called «Read your site every morning»."
+          "es": "Si una ejecución falla o la corta un reinicio, lo que quedó sin hacer se retoma solo en la siguiente comprobación. Los correos que se envían no se repiten nunca.",
+          "en": "When a run fails or a restart cuts it, what was left undone is taken up again by itself at the next check. Emails that go out are never repeated."
         }
       ],
-      "version": "0.15.8",
+      "version": "0.15.9",
       "tables": [
         "articles_articles",
         "articles_rules",
@@ -284,9 +290,9 @@
         "articles_links"
       ],
       "package": {
-        "path": "apps/articles/articles-0.15.8.tgz",
-        "sha256": "474c30d3f68ff704181bbc618bbf95fc4ae4faf0be5a54e128328fa606baf42d",
-        "size": 692396,
+        "path": "apps/articles/articles-0.15.9.tgz",
+        "sha256": "841c882a85db973ab0b73f41b733626de171067d7a84e8a5cc0753f6c3b88f6c",
+        "size": 692471,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -471,6 +477,12 @@
         }
       ],
       "changelog": {
+        "0.6.1": [
+          {
+            "es": "Si una ejecución falla o la corta un reinicio, lo que quedó sin hacer se retoma solo en la siguiente comprobación. Los correos que se envían no se repiten nunca.",
+            "en": "When a run fails or a restart cuts it, what was left undone is taken up again by itself at the next check. Emails that go out are never repeated."
+          }
+        ],
         "0.6.0": [
           {
             "es": "Al ganar una venta, su proyecto se abre en Trabajo, en el equipo que elijas en Ajustes («Equipo que entrega los proyectos»), con el nombre de la venta y, si la sabes, su fecha objetivo. En la venta ves cómo va al momento: lo abierto, lo hecho y lo siguiente. Nada se copia: el trabajo se lleva en Trabajo.",
@@ -684,19 +696,11 @@
       },
       "whatsNew": [
         {
-          "es": "Al ganar una venta, su proyecto se abre en Trabajo, en el equipo que elijas en Ajustes («Equipo que entrega los proyectos»), con el nombre de la venta y, si la sabes, su fecha objetivo. En la venta ves cómo va al momento: lo abierto, lo hecho y lo siguiente. Nada se copia: el trabajo se lleva en Trabajo.",
-          "en": "When you win a sale, its project opens in Trabajo, in the team you choose in the settings («Team that delivers the projects»), named after the sale and, if you know it, with its target date. On the sale you see how it goes, live: what is open, what is done and what is next. Nothing is copied: the work is kept in Trabajo."
-        },
-        {
-          "es": "La dirección de cada empresa va en sus casillas: calle y número, código postal, municipio y provincia. Las que ya tenías se separan solas cuando se leen sin dudas; las demás se quedan como estaban y su ficha te pide completarlas. Tus presupuestos y facturas la imprimen igual que siempre.",
-          "en": "Each company's address has its own boxes: street and number, postcode, town and province. The ones you had are split by themselves when they read without doubt; the rest stay as they were and the company asks you to complete them. Your quotes and invoices print it as always."
-        },
-        {
-          "es": "El porqué de cada propuesta ya no acaba en «;», y en «Hoy» lo que le falta a la página ya no va pegado a «Tu turno».",
-          "en": "Each proposal's why no longer ends in «;», and on «Hoy» what the page still needs no longer sits flush against «Tu turno»."
+          "es": "Si una ejecución falla o la corta un reinicio, lo que quedó sin hacer se retoma solo en la siguiente comprobación. Los correos que se envían no se repiten nunca.",
+          "en": "When a run fails or a restart cuts it, what was left undone is taken up again by itself at the next check. Emails that go out are never repeated."
         }
       ],
-      "version": "0.6.0",
+      "version": "0.6.1",
       "tables": [
         "crm_deals",
         "crm_items",
@@ -711,9 +715,9 @@
         "crm_settings"
       ],
       "package": {
-        "path": "apps/crm/crm-0.6.0.tgz",
-        "sha256": "016a58e02d41cf8dab1e57e5520b5fa2aa98ebdfdf5a4e136c3ad05ad42f6c37",
-        "size": 413759,
+        "path": "apps/crm/crm-0.6.1.tgz",
+        "sha256": "4e325a35289eb988248ce04ef8892fe208b72597fd19fd6493035f9dc0504f6d",
+        "size": 413769,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -2395,6 +2399,12 @@
         }
       ],
       "changelog": {
+        "0.5.10": [
+          {
+            "es": "Si una ejecución falla o la corta un reinicio, lo que quedó sin hacer se retoma solo en la siguiente comprobación. Los correos que se envían no se repiten nunca.",
+            "en": "When a run fails or a restart cuts it, what was left undone is taken up again by itself at the next check. Emails that go out are never repeated."
+          }
+        ],
         "0.5.9": [
           {
             "es": "La dirección de tu cliente sale de sus casillas en el CRM (calle y número, código postal, municipio y provincia), igual que la tuya. Las facturas y presupuestos ya emitidos la conservan tal como salieron.",
@@ -2572,11 +2582,11 @@
       },
       "whatsNew": [
         {
-          "es": "La dirección de tu cliente sale de sus casillas en el CRM (calle y número, código postal, municipio y provincia), igual que la tuya. Las facturas y presupuestos ya emitidos la conservan tal como salieron.",
-          "en": "Your client's address comes from its boxes in the CRM (street and number, postcode, town and province), like yours. Invoices and quotes already issued keep it exactly as they went out."
+          "es": "Si una ejecución falla o la corta un reinicio, lo que quedó sin hacer se retoma solo en la siguiente comprobación. Los correos que se envían no se repiten nunca.",
+          "en": "When a run fails or a restart cuts it, what was left undone is taken up again by itself at the next check. Emails that go out are never repeated."
         }
       ],
-      "version": "0.5.9",
+      "version": "0.5.10",
       "tables": [
         "inv_documents",
         "inv_clients",
@@ -2588,9 +2598,9 @@
         "inv_responses"
       ],
       "package": {
-        "path": "apps/invoices/invoices-0.5.9.tgz",
-        "sha256": "5fe12c51437ea42fec4de1669aa413b2448a05716df6cad2914a2f2b50f971e2",
-        "size": 579759,
+        "path": "apps/invoices/invoices-0.5.10.tgz",
+        "sha256": "7183030da992cbdbb6c536303b516193341ebdaefb025ed8b105c6a00626441c",
+        "size": 579896,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
@@ -5247,6 +5257,12 @@
         }
       ],
       "changelog": {
+        "0.6.1": [
+          {
+            "es": "Si una ejecución falla o la corta un reinicio, lo que quedó sin hacer se retoma solo en la siguiente comprobación. Los correos que se envían no se repiten nunca.",
+            "en": "When a run fails or a restart cuts it, what was left undone is taken up again by itself at the next check. Emails that go out are never repeated."
+          }
+        ],
         "0.6.0": [
           {
             "es": "El cliente de cada obra y de cada trabajo es ahora una empresa de tu CRM: lo eliges de la lista del CRM o lo creas ahí mismo con «+ Nueva empresa». Si le cambias el nombre en el CRM, cambia también aquí. Obras necesita el CRM y lo instala si no lo tienes.",
@@ -5444,23 +5460,11 @@
       },
       "whatsNew": [
         {
-          "es": "El cliente de cada obra y de cada trabajo es ahora una empresa de tu CRM: lo eliges de la lista del CRM o lo creas ahí mismo con «+ Nueva empresa». Si le cambias el nombre en el CRM, cambia también aquí. Obras necesita el CRM y lo instala si no lo tienes.",
-          "en": "Each obra's and each job's client is now a company of your CRM: you pick it from the CRM's list or make it right there with «+ New company». Renaming it in the CRM renames it here too. Obras needs the CRM and installs it if you do not have it."
-        },
-        {
-          "es": "Tus clientes ya no están en «Intervinientes»: los encontramos en tu CRM (por su CIF o su nombre) o los creamos ahí, y cada obra apunta al suyo. En el CRM, la ficha de cada cliente te enseña sus obras y sus trabajos; desde una obra, «Abrir en el CRM» te lleva a él.",
-          "en": "Your clients are no longer in «Intervinientes»: we found them in your CRM (by tax id or name) or made them there, and each obra points at its own. In the CRM, each client's page shows its obras and its jobs; from an obra, «Open in the CRM» takes you there."
-        },
-        {
-          "es": "«Intervinientes» es para quien trabaja en tus obras: constructoras, subcontratas, proveedores, técnicos y operarios. Una empresa que era cliente y también, por ejemplo, tu proveedor se queda aquí como proveedor.",
-          "en": "«Intervinientes» is for who works in your obras: builders, subcontractors, suppliers, technical staff and workers. A company that was a client and also, say, your supplier stays here as a supplier."
-        },
-        {
-          "es": "La dirección de la obra va cada cosa en su casilla: calle y número, código postal, municipio y provincia. Si la tenías como «08001 Barcelona» ya la hemos repartido; si no se podía leer bien, la obra te pide que la completes.",
-          "en": "The obra's address has one box per thing: street and number, postcode, town and province. If you had it as «08001 Barcelona» it is already split; if it could not be read for sure, the obra asks you to complete it."
+          "es": "Si una ejecución falla o la corta un reinicio, lo que quedó sin hacer se retoma solo en la siguiente comprobación. Los correos que se envían no se repiten nunca.",
+          "en": "When a run fails or a restart cuts it, what was left undone is taken up again by itself at the next check. Emails that go out are never repeated."
         }
       ],
-      "version": "0.6.0",
+      "version": "0.6.1",
       "tables": [
         "obras_projects",
         "obras_units",
@@ -5478,9 +5482,9 @@
         "obras_settings"
       ],
       "package": {
-        "path": "apps/obras/obras-0.6.0.tgz",
-        "sha256": "033829e5b26fdd8f14d76bb9c4fd750a04bbf056e52e8c8bb69027d6526835b1",
-        "size": 575782,
+        "path": "apps/obras/obras-0.6.1.tgz",
+        "sha256": "58657fb5cad7e6709637cb2992b79acdaed4ae6c0c18d660e00f56b5ae66fecb",
+        "size": 575781,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
