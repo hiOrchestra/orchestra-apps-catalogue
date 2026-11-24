@@ -2399,6 +2399,12 @@
         }
       ],
       "changelog": {
+        "0.5.11": [
+          {
+            "es": "Al cobrar, anular o retirar un documento, los correos que esperaban sobre él (un recordatorio de pago, por ejemplo) se retiran también, y nunca se envían.",
+            "en": "When a document is paid, voided or withdrawn, the emails waiting about it (a payment reminder, for example) are withdrawn too, and never sent."
+          }
+        ],
         "0.5.10": [
           {
             "es": "Si una ejecución falla o la corta un reinicio, lo que quedó sin hacer se retoma solo en la siguiente comprobación. Los correos que se envían no se repiten nunca.",
@@ -2582,11 +2588,11 @@
       },
       "whatsNew": [
         {
-          "es": "Si una ejecución falla o la corta un reinicio, lo que quedó sin hacer se retoma solo en la siguiente comprobación. Los correos que se envían no se repiten nunca.",
-          "en": "When a run fails or a restart cuts it, what was left undone is taken up again by itself at the next check. Emails that go out are never repeated."
+          "es": "Al cobrar, anular o retirar un documento, los correos que esperaban sobre él (un recordatorio de pago, por ejemplo) se retiran también, y nunca se envían.",
+          "en": "When a document is paid, voided or withdrawn, the emails waiting about it (a payment reminder, for example) are withdrawn too, and never sent."
         }
       ],
-      "version": "0.5.10",
+      "version": "0.5.11",
       "tables": [
         "inv_documents",
         "inv_clients",
@@ -2598,9 +2604,9 @@
         "inv_responses"
       ],
       "package": {
-        "path": "apps/invoices/invoices-0.5.10.tgz",
-        "sha256": "7183030da992cbdbb6c536303b516193341ebdaefb025ed8b105c6a00626441c",
-        "size": 579896,
+        "path": "apps/invoices/invoices-0.5.11.tgz",
+        "sha256": "a8934edde281a29ff3066d3ce268a259618da1eb8fd8ed8e5bd2ab0756ffe11f",
+        "size": 580125,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
