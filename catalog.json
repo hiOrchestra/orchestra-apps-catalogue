@@ -2399,6 +2399,12 @@
         }
       ],
       "changelog": {
+        "0.8.1": [
+          {
+            "es": "«Elegir de Archivos» elige varios PDF a la vez, agrupados por su carpeta.",
+            "en": "«Choose from Files» takes several PDFs at once, grouped by folder."
+          }
+        ],
         "0.8.0": [
           {
             "es": "Lo que emites queda fijo: el PDF se guarda al emitirlo y ya no cambia, aunque cambies el diseño o tus datos. En Presupuestos y Facturas ves el archivo de cada uno, con sus propiedades al lado.",
@@ -2634,31 +2640,11 @@
       },
       "whatsNew": [
         {
-          "es": "Lo que emites queda fijo: el PDF se guarda al emitirlo y ya no cambia, aunque cambies el diseño o tus datos. En Presupuestos y Facturas ves el archivo de cada uno, con sus propiedades al lado.",
-          "en": "What you issue is fixed: its PDF is kept when it is issued and never changes, even if you change the design or your details. Quotes and Invoices show each one's file, with its properties beside it."
-        },
-        {
-          "es": "El estado (cobrada, vencida, aceptado…) ya no aparece dentro del documento, tampoco en el enlace de tu cliente: va fuera, donde puede cambiar.",
-          "en": "How it stands (paid, overdue, accepted…) is no longer inside the document, nor in your client's link: it is said outside, where it can change."
-        },
-        {
-          "es": "Varios diseños, con uno en uso: duplica, prueba, cambia el nombre y elige con cuál sale lo nuevo. Un borrador puede llevar otro.",
-          "en": "Several designs, one in use: duplicate, try, rename and choose which one new documents take. A draft may take another."
-        },
-        {
-          "es": "Las facturas que trajiste guardan su PDF original: súbelos, o elígelos de los archivos de tus equipos, y cada uno va con su número.",
-          "en": "The invoices you brought in keep their original PDF: upload them, or choose them from your teams' files, and each goes with its number."
-        },
-        {
-          "es": "Descarga de una vez todas las de un año o un trimestre.",
-          "en": "Download a whole year or quarter at once."
-        },
-        {
-          "es": "«Copiar el enlace» copia, también dentro de la oficina.",
-          "en": "«Copy the link» copies, inside the office too."
+          "es": "«Elegir de Archivos» elige varios PDF a la vez, agrupados por su carpeta.",
+          "en": "«Choose from Files» takes several PDFs at once, grouped by folder."
         }
       ],
-      "version": "0.8.0",
+      "version": "0.8.1",
       "tables": [
         "inv_documents",
         "inv_clients",
@@ -2673,9 +2659,9 @@
         "inv_responses"
       ],
       "package": {
-        "path": "apps/invoices/invoices-0.8.0.tgz",
-        "sha256": "c9a5eee2928953c4b94ce706bce71ae4f35f318409f52e5796344eb82846711a",
-        "size": 685924,
+        "path": "apps/invoices/invoices-0.8.1.tgz",
+        "sha256": "440277ae134060fd9efcf277d8035945c2ea7dc7f47170e08b77e7d592200291",
+        "size": 686087,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
