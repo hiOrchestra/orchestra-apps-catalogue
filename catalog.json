@@ -2399,6 +2399,16 @@
         }
       ],
       "changelog": {
+        "0.8.3": [
+          {
+            "es": "Diseño, los borradores y «Usar la mía»: el documento se ve entero y siempre a la vista, y los controles a su lado, sin bajar por la página.",
+            "en": "Design, drafts and «Use mine»: the document is seen whole and always in view, with the controls beside it, without scrolling the page."
+          },
+          {
+            "es": "Pulsa un texto de tu factura en el documento para cambiarlo.",
+            "en": "Press a text of your invoice on the document to change it."
+          }
+        ],
         "0.8.2": [
           {
             "es": "Tu agente apunta tus facturas antiguas desde sus PDF: le dices dónde están y las pone en Facturas, cada una con su archivo original.",
@@ -2650,15 +2660,15 @@
       },
       "whatsNew": [
         {
-          "es": "Tu agente apunta tus facturas antiguas desde sus PDF: le dices dónde están y las pone en Facturas, cada una con su archivo original.",
-          "en": "Your agent records your past invoices from their PDFs: tell it where they are and it puts them in Invoices, each with its original file."
+          "es": "Diseño, los borradores y «Usar la mía»: el documento se ve entero y siempre a la vista, y los controles a su lado, sin bajar por la página.",
+          "en": "Design, drafts and «Use mine»: the document is seen whole and always in view, with the controls beside it, without scrolling the page."
         },
         {
-          "es": "Arreglado: «Usar mi factura» no guardaba el diseño.",
-          "en": "Fixed: «Use my invoice» did not save the design."
+          "es": "Pulsa un texto de tu factura en el documento para cambiarlo.",
+          "en": "Press a text of your invoice on the document to change it."
         }
       ],
-      "version": "0.8.2",
+      "version": "0.8.3",
       "tables": [
         "inv_documents",
         "inv_clients",
@@ -2673,9 +2683,9 @@
         "inv_responses"
       ],
       "package": {
-        "path": "apps/invoices/invoices-0.8.2.tgz",
-        "sha256": "460c9bdf51d28a6e045280e81b5c9dfe514bdf4ac0c7b967c86af1740aa30ea3",
-        "size": 686968,
+        "path": "apps/invoices/invoices-0.8.3.tgz",
+        "sha256": "291f8f27340b7c8a176129ddd68a6f63cb8565bcf6099f2747cdbe8b826928f0",
+        "size": 686824,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
