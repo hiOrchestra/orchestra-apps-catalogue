@@ -2399,6 +2399,12 @@
         }
       ],
       "changelog": {
+        "0.8.4": [
+          {
+            "es": "El enlace de tu cliente descarga el PDF original también cuando pesa.",
+            "en": "Your client's link downloads the original PDF even when it is heavy."
+          }
+        ],
         "0.8.3": [
           {
             "es": "Diseño, los borradores y «Usar la mía»: el documento se ve entero y siempre a la vista, y los controles a su lado, sin bajar por la página.",
@@ -2660,15 +2666,11 @@
       },
       "whatsNew": [
         {
-          "es": "Diseño, los borradores y «Usar la mía»: el documento se ve entero y siempre a la vista, y los controles a su lado, sin bajar por la página.",
-          "en": "Design, drafts and «Use mine»: the document is seen whole and always in view, with the controls beside it, without scrolling the page."
-        },
-        {
-          "es": "Pulsa un texto de tu factura en el documento para cambiarlo.",
-          "en": "Press a text of your invoice on the document to change it."
+          "es": "El enlace de tu cliente descarga el PDF original también cuando pesa.",
+          "en": "Your client's link downloads the original PDF even when it is heavy."
         }
       ],
-      "version": "0.8.3",
+      "version": "0.8.4",
       "tables": [
         "inv_documents",
         "inv_clients",
@@ -2683,9 +2685,9 @@
         "inv_responses"
       ],
       "package": {
-        "path": "apps/invoices/invoices-0.8.3.tgz",
-        "sha256": "291f8f27340b7c8a176129ddd68a6f63cb8565bcf6099f2747cdbe8b826928f0",
-        "size": 686824,
+        "path": "apps/invoices/invoices-0.8.4.tgz",
+        "sha256": "0bb4162f2e948d9a270a2b067acd5c37682c4357a1e3bfec1c7f0d92ae2fac4f",
+        "size": 688019,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
