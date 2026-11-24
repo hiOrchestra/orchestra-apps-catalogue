@@ -2399,6 +2399,16 @@
         }
       ],
       "changelog": {
+        "0.8.2": [
+          {
+            "es": "Tu agente apunta tus facturas antiguas desde sus PDF: le dices dónde están y las pone en Facturas, cada una con su archivo original.",
+            "en": "Your agent records your past invoices from their PDFs: tell it where they are and it puts them in Invoices, each with its original file."
+          },
+          {
+            "es": "Arreglado: «Usar mi factura» no guardaba el diseño.",
+            "en": "Fixed: «Use my invoice» did not save the design."
+          }
+        ],
         "0.8.1": [
           {
             "es": "«Elegir de Archivos» elige varios PDF a la vez, agrupados por su carpeta.",
@@ -2640,11 +2650,15 @@
       },
       "whatsNew": [
         {
-          "es": "«Elegir de Archivos» elige varios PDF a la vez, agrupados por su carpeta.",
-          "en": "«Choose from Files» takes several PDFs at once, grouped by folder."
+          "es": "Tu agente apunta tus facturas antiguas desde sus PDF: le dices dónde están y las pone en Facturas, cada una con su archivo original.",
+          "en": "Your agent records your past invoices from their PDFs: tell it where they are and it puts them in Invoices, each with its original file."
+        },
+        {
+          "es": "Arreglado: «Usar mi factura» no guardaba el diseño.",
+          "en": "Fixed: «Use my invoice» did not save the design."
         }
       ],
-      "version": "0.8.1",
+      "version": "0.8.2",
       "tables": [
         "inv_documents",
         "inv_clients",
@@ -2659,9 +2673,9 @@
         "inv_responses"
       ],
       "package": {
-        "path": "apps/invoices/invoices-0.8.1.tgz",
-        "sha256": "440277ae134060fd9efcf277d8035945c2ea7dc7f47170e08b77e7d592200291",
-        "size": 686087,
+        "path": "apps/invoices/invoices-0.8.2.tgz",
+        "sha256": "460c9bdf51d28a6e045280e81b5c9dfe514bdf4ac0c7b967c86af1740aa30ea3",
+        "size": 686968,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
