@@ -2399,6 +2399,16 @@
         }
       ],
       "changelog": {
+        "0.7.0": [
+          {
+            "es": "Tu factura: sube en Diseño una factura que ya mandas (PDF) y las nuevas salen iguales, con tu letra, tu logo y cada cosa en su sitio. La comparas con la original antes de usarla, y puedes traer también tus datos y esas mismas facturas. Todo lo demás de Diseño sigue funcionando encima.",
+            "en": "Your invoice: upload one you already send (PDF) in Design and the new ones come out the same, with your letters, your logo and everything in its place. You compare it with the original before using it, and can bring your details and those very invoices too. Everything else in Design still works on top."
+          },
+          {
+            "es": "Cada línea puede ir bajo un apartado («Hosting»), y un documento puede llevar un dato más junto a las fechas («Período»).",
+            "en": "Each line can go under a heading («Hosting»), and a document can carry one more fact beside the dates («Period»)."
+          }
+        ],
         "0.5.11": [
           {
             "es": "Al cobrar, anular o retirar un documento, los correos que esperaban sobre él (un recordatorio de pago, por ejemplo) se retiran también, y nunca se envían.",
@@ -2588,11 +2598,15 @@
       },
       "whatsNew": [
         {
-          "es": "Al cobrar, anular o retirar un documento, los correos que esperaban sobre él (un recordatorio de pago, por ejemplo) se retiran también, y nunca se envían.",
-          "en": "When a document is paid, voided or withdrawn, the emails waiting about it (a payment reminder, for example) are withdrawn too, and never sent."
+          "es": "Tu factura: sube en Diseño una factura que ya mandas (PDF) y las nuevas salen iguales, con tu letra, tu logo y cada cosa en su sitio. La comparas con la original antes de usarla, y puedes traer también tus datos y esas mismas facturas. Todo lo demás de Diseño sigue funcionando encima.",
+          "en": "Your invoice: upload one you already send (PDF) in Design and the new ones come out the same, with your letters, your logo and everything in its place. You compare it with the original before using it, and can bring your details and those very invoices too. Everything else in Design still works on top."
+        },
+        {
+          "es": "Cada línea puede ir bajo un apartado («Hosting»), y un documento puede llevar un dato más junto a las fechas («Período»).",
+          "en": "Each line can go under a heading («Hosting»), and a document can carry one more fact beside the dates («Period»)."
         }
       ],
-      "version": "0.5.11",
+      "version": "0.7.0",
       "tables": [
         "inv_documents",
         "inv_clients",
@@ -2604,9 +2618,9 @@
         "inv_responses"
       ],
       "package": {
-        "path": "apps/invoices/invoices-0.5.11.tgz",
-        "sha256": "a8934edde281a29ff3066d3ce268a259618da1eb8fd8ed8e5bd2ab0756ffe11f",
-        "size": 580125,
+        "path": "apps/invoices/invoices-0.7.0.tgz",
+        "sha256": "6c25603443d3250d6157e3b8ebcc6544df05193304e74a99147cdf568185ae58",
+        "size": 654330,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
