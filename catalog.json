@@ -2399,6 +2399,12 @@
         }
       ],
       "changelog": {
+        "0.9.1": [
+          {
+            "es": "El cuadro para escribir a tu agente se centra en el documento, sin tapar sus datos.",
+            "en": "The box to write to your agent is centred on the document, over none of its details."
+          }
+        ],
         "0.9.0": [
           {
             "es": "Facturas, como una aplicación: tus listas a la izquierda por lo que toca hacer, el documento entero en el centro y sus datos a la derecha, en una sola pantalla.",
@@ -2690,23 +2696,11 @@
       },
       "whatsNew": [
         {
-          "es": "Facturas, como una aplicación: tus listas a la izquierda por lo que toca hacer, el documento entero en el centro y sus datos a la derecha, en una sola pantalla.",
-          "en": "Invoices as an app: your lists at the left by what to do next, the whole document in the middle and its details at the right, on one screen."
-        },
-        {
-          "es": "Busca por cliente, número o importe en cualquier lista.",
-          "en": "Search by client, number or amount in any list."
-        },
-        {
-          "es": "Los borradores se guardan solos mientras los escribes.",
-          "en": "Drafts save themselves as you write."
-        },
-        {
-          "es": "Pulsa un texto de tu factura en Diseño para cambiarlo.",
-          "en": "Press a text of your invoice in Design to change it."
+          "es": "El cuadro para escribir a tu agente se centra en el documento, sin tapar sus datos.",
+          "en": "The box to write to your agent is centred on the document, over none of its details."
         }
       ],
-      "version": "0.9.0",
+      "version": "0.9.1",
       "tables": [
         "inv_documents",
         "inv_clients",
@@ -2721,9 +2715,9 @@
         "inv_responses"
       ],
       "package": {
-        "path": "apps/invoices/invoices-0.9.0.tgz",
-        "sha256": "93d1e7b5009a3e63494a80fb4ea1ae384a5b5bd8d9315201977c5af70ad1f575",
-        "size": 684775,
+        "path": "apps/invoices/invoices-0.9.1.tgz",
+        "sha256": "f47aa78389e8d0d833d7a17b095fc8adaa3b328fafba5bbfd88338c42437bdac",
+        "size": 683618,
         "installer": "install.js",
         "manifest": "app.json",
         "roles": [],
